@@ -1,0 +1,428 @@
+﻿/*项目页面内样式集合*/
+body {
+    font-family:"微软雅黑";
+}
+.meta-banner-fluid,
+.meta-footer,
+.meta-header{
+	min-width: 1200px;
+}
+.container {
+	width:1200px;
+    margin:0px auto;
+    position:relative;
+}
+/*头部开始*/
+.head_top {
+    height:120px; 
+    margin:0px auto;
+    background-color:#318BE7;
+    background-image:url(../imgs/header_bg.jpg);
+    background-position:center;
+    background-size:auto 100%;
+}
+.head_top .head_logo { 
+    position:absolute;
+    left:10px;
+    top:30px;
+}
+.head_top .head_tool { 
+    position:absolute;
+    right:10px;
+    top:20px;
+}
+.head_top .head_tool a{ 
+    color:#fff;
+    font-size:16px;
+    margin:0 5px;
+}
+.head_menu {
+    background:#1369C0;
+}
+.head_menu ul li {
+    float:left;
+    height:40px;
+}
+.head_menu ul li a{
+    color:#fff;
+    line-height:40px;
+    display:block;
+    width:150px;
+    text-align:center;
+    font-size:16px;
+}
+.head_menu ul li.menu_line{
+    width:4px;
+    background-image:url(../imgs/menu_line.png);
+    background-repeat:no-repeat;
+    background-position:center;
+}
+/*头部结束*/
+/*中间广告*/
+.meta-banner-fluid {
+    background-image:url(../imgs/big_banner.jpg);
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:auto 100%;
+    height:380px;
+}
+/*主体内容*/
+.meta-row {
+    margin:25px auto;
+}
+.meta-row-second {
+    padding-top:10px;
+}
+.meta-row-left {
+    width:61%;
+    float:left;
+}
+.meta-row-right {
+    width:35.5%;
+    float:right;
+}
+.meta-row-centerL {
+    width:47.5%;
+    float:left;
+}
+.meta-row-centerR {
+    width:47.5%;
+    float:right;
+}
+.meta-title {
+    position:relative;
+    color:#222222;
+    font-size:20px;
+    font-weight:normal;
+    padding-left:15px;
+    border-bottom:1px solid #379eec;
+    margin-bottom:10px;
+}
+.meta-title:before{
+    content:"";
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    width:5px;
+    height:22px;
+    background-color:#379eec;
+}
+.meta-title a{
+    position:absolute;
+    right:0px;
+    bottom:0;
+    padding:5px 0 5px 10px;
+    color:#379eec;
+    font-size:12px;
+}
+.meta-title a:hover {
+    text-decoration:underline;
+}
+.new_box dl {
+    position:relative;
+    padding:20px 0;
+    border-bottom:1px dotted #e3e3e3; 
+}
+.new_box dl dt{
+    width:200px;
+    float:left;
+}
+.new_box dl dt img{
+    width:100%;
+    display:block;
+}
+.new_box dl dd{
+    width:70.5%;
+    float:right;
+    color:#333;
+}
+.new_box dl dd.new_title{
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+.new_box dl dd.new_time {
+    width:auto !important;
+    position:absolute;
+    bottom:20px;
+    right:10px;
+    color:#0085d0;
+    font-size:12px;
+}
+.new_box dl dd a{
+    color:#333;
+}
+.new_box dl dd a:hover{
+	color: #379eec;
+}
+.new_box_second dl.first_list dt{
+    width:150px;
+}
+.new_box_second dl.first_list dd{
+    width: 62%;
+    float:right;
+}
+.new_box_second dl dd.new_title{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.new_box_second dl{
+    padding:24px 0;
+}
+.new_box_second dl dd{
+    width:auto;
+    float:none;
+}
+.meta-row-centerL.new_box dl dd ,
+.meta-row-centerR.new_box dl dd {
+    width:62%;
+}
+.meta-row-centerL.new_box dl,
+.meta-row-centerR.new_box dl{
+    margin-bottom:10px;
+}
+.meta-list ul li {
+    overflow:hidden;
+}
+.meta-list ul li a{
+	color: #333333;
+	display: inline-block;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	line-height: 40px;
+	max-width: 68%;
+    float:left;
+	font-size: 18px;
+}
+.meta-list ul li a:hover{
+	color: #379eec;
+    text-decoration:underline;
+}
+.meta-list .meta-list-arrow{
+	float: left;
+	color: #666;
+	font-size: 18px;
+	margin-right: 5px;
+	line-height: 40px;
+}
+.meta-list .meta-list-time{
+	float: right;
+	font-size: 18px;
+	line-height: 40px;
+    color:#333333;
+    margin-right:5px;
+}
+
+.meta_stitle {
+    position:relative;
+    color:#fff;
+    font-size:20px;
+    font-weight:normal;
+    padding-left:15px;
+    margin-bottom:10px;
+    background-image:url(../imgs/title_bg.png);
+    background-repeat:no-repeat;
+    background-position:bottom left;
+}
+.meta_stitle:after{
+    content:'';
+    position:absolute;
+    bottom:0px;
+    left:10px;
+    right:0;
+    height:1px;
+    background-color:#379eec;
+}
+.meta_stitle a{
+    position:absolute;
+    right:0px;
+    bottom:0;
+    padding:5px 0 5px 10px;
+    color:#379eec;
+    font-size:12px;
+}
+.meta_stitle a:hover {
+    text-decoration:underline;
+}
+/*精彩幻灯*/
+.meta_imglist {
+    padding:30px 0;
+}
+.meta_imglist li{
+    float:left;
+    width:23.2%;
+}
+.meta_imglist li{
+    margin-left:2.4%;
+}
+.meta_imglist li:first-child{
+    margin-left:0;
+}
+.meta_imglist li img {
+    width:100%;
+}
+.meta_imglist li a {
+    display:block;
+    font-size:18px;
+    color:#454545;
+    text-align:center;
+}
+/*专题研究*/
+.meta-panel-title{
+	padding: 10px 0;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #1369C0;
+}
+.meta-panel-cont ul {
+    margin-bottom:0;
+    overflow: hidden;
+    zoom: 1;
+}
+.meta-panel-cont ul li{
+    float:left;
+    _display: inline;
+    overflow: hidden;
+    text-align: center;
+    margin:0px 8px;
+}
+.meta-panel-cont ul li a{
+    display:block;
+    position:relative;
+}
+.meta-panel-cont ul li img{
+    display:block;
+    width:224px;
+    height:120px;
+}
+.meta-panel-cont ul li span{
+    position:absolute;
+    right: 0;
+    left: 0;
+	bottom: 0;
+    color:#fff;
+    font-size:16px;
+	line-height:35px;
+	text-align: center;
+}
+:root .meta-panel-cont ul li span {
+    background-color: rgba(51,51,51,0.3);
+}
+/*底部*/
+.meta-footer{
+	margin-top:30px;
+    background-color:#1369C0;
+}
+.meta-copyright{
+	padding: 20px 0;
+	text-align: left;
+    position:relative;
+}
+.meta-copyright .meta-site-info{
+	color: #fff;
+    line-height:32px;
+    margin-bottom:0;
+}
+.meta-copyright .meta-links {
+    position:absolute;
+    top:38px;
+    right:0px;
+}
+.meta-links .meta-links-button {
+    color:#fff;
+    line-height:36px;
+    width:220px;
+    padding-left:20px;
+    background-color:#359CEB;
+    position:relative;
+    cursor:pointer;
+    font-size:15px;
+}
+.meta-links .meta-links-button:active{
+    background-color:#1585D7;
+}
+.meta-links .meta-links-button:after{
+    position:absolute;
+    right:20px;
+    top:15px;
+    content:"";
+    width: 0;
+    height: 0;
+    border-top: 6px dashed;
+    border-top: 6px solid\9;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+    
+	-webkit-transition:all .4s ease;
+	-moz-transition:all .4s ease;
+	-o-transition:all .4s ease;
+	transition: all .4s ease;
+}
+.meta-links .meta-links-item {
+    opacity:0.6;
+    /*display:none;*/
+    position: absolute;
+    bottom: 70%;
+    left: 0;
+    z-index: 999;
+    min-width: 220px;   
+    
+    -webkit-transition:all .3s ease;
+	-moz-transition:all .3s ease;
+	-o-transition:all .3s ease;
+	transition: all .3s ease; 
+}
+.meta-links .meta-links-item ul{
+    display:none;
+    padding: 5px 0;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 3px;
+}
+.meta-links .meta-links-item ul:after,
+.meta-links .meta-links-item ul:before{
+    border-top: 8px dashed;
+    border-top: 8px solid\9;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    content: " ";
+	width:0;
+	height:0;
+	position:absolute;
+	right:16px;
+}
+.meta-links .meta-links-item ul:after{
+	border-top-color:#fff;
+	bottom:3px;
+}
+.meta-links .meta-links-item ul:before{
+	border-top-color:#BBB;
+	bottom:2px;
+}
+.meta-links .meta-links-item li{
+    padding:5px 15px;
+}
+.meta-links.open .meta-links-item {
+    opacity:1;
+    bottom: 100%;
+}
+.meta-links.open .meta-links-item ul{
+    display:block;
+}
+.meta-links.open .meta-links-button:after{    
+	-webkit-transform:rotate(-180deg); 
+	-moz-transform:rotate(-180deg); 
+	-ms-transform:rotate(-180deg);
+	-o-transform:rotate(-180deg); 
+	transform: rotate(-180deg);	
+}
+
+/*子页面公共样式开始*/
+/*响应式*/
+@media screen and (max-width: 1400px){	
+	
+}
