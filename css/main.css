@@ -1,6 +1,10 @@
 ﻿/*项目页面内样式集合*/
 body {
     font-family:"微软雅黑";
+    line-height: 1.42857143;
+}
+a{
+    color:#337ab7;
 }
 .meta-banner-fluid,
 .meta-footer,
@@ -120,7 +124,7 @@ body {
 }
 .new_box dl {
     position:relative;
-    padding:20px 0;
+    padding:23px 0;
     border-bottom:1px dotted #e3e3e3; 
 }
 .new_box dl dt{
@@ -133,8 +137,11 @@ body {
 }
 .new_box dl dd{
     width:70.5%;
-    float:right;
+    float:left;
+    margin-left:15px;
     color:#333;
+    overflow: hidden;
+    max-height: 80px;
 }
 .new_box dl dd.new_title{
     font-size:20px;
@@ -147,7 +154,8 @@ body {
     bottom:20px;
     right:10px;
     color:#0085d0;
-    font-size:12px;
+    font-size:14px;
+    margin:0;
 }
 .new_box dl dd a{
     color:#333;
@@ -184,6 +192,7 @@ body {
 }
 .meta-list ul li {
     overflow:hidden;
+	font-size: 16px;
 }
 .meta-list ul li a{
 	color: #333333;
@@ -191,10 +200,9 @@ body {
 	overflow:hidden;
 	text-overflow:ellipsis;
 	white-space: nowrap;
-	line-height: 40px;
+	line-height: 38px;
 	max-width: 68%;
     float:left;
-	font-size: 18px;
 }
 .meta-list ul li a:hover{
 	color: #379eec;
@@ -203,18 +211,15 @@ body {
 .meta-list .meta-list-arrow{
 	float: left;
 	color: #666;
-	font-size: 18px;
 	margin-right: 5px;
-	line-height: 40px;
+	line-height: 38px;
 }
 .meta-list .meta-list-time{
 	float: right;
-	font-size: 18px;
-	line-height: 40px;
+	line-height: 38px;
     color:#333333;
     margin-right:5px;
 }
-
 .meta_stitle {
     position:relative;
     color:#fff;
@@ -250,17 +255,21 @@ body {
 }
 /*精彩幻灯*/
 .meta_imglist {
-    padding:30px 0;
+    padding:30px 0 10px;
 }
-.meta_imglist li{
+.meta_imglist ul {
+    margin-bottom:0;
+    overflow: hidden;
+    zoom: 1;
+}
+.meta_imglist ul li{
     float:left;
-    width:23.2%;
-}
-.meta_imglist li{
-    margin-left:2.4%;
-}
-.meta_imglist li:first-child{
-    margin-left:0;
+    _display: inline;
+    overflow: hidden;   
+    text-align: center;
+    margin:0px 12px;
+    position:relative;
+	width: 275px;
 }
 .meta_imglist li img {
     width:100%;
@@ -412,7 +421,257 @@ body {
 	margin: 15px auto 0;
 	display: block;
 }
+.meta-subbanner{
+    padding:80px 0;
+}
+.meta-subbanner .banseo {
+    width: 728px;
+    margin:0 auto;
+    position:relative;
+}
+.meta-subbanner .bantxt {
+    width: 100%;
+    height: 60px;
+    opacity: 1;
+    background-color: #eceff1;
+    border-radius: 5px;
+    padding-left: 50px;
+    border: 0px;
+    color: #000;
+}
+.meta-subbanner .bantxt:focus{ 
+    border-color:transparent;
+    box-shadow: none; 
+}
+.meta-subbanner .bantxt:focus + .seoicn {
+    color: #3ea1e2;
+    transition: all 1s ease 0s;
+}
+.meta-subbanner .seoicn {
+    position: absolute;
+    left: 20px;
+    top: 17px;
+    color: #b0bec5;
+    font-size: 18px;
+}
+.meta-subbanner .banbutt {       
+    position: absolute;
+    top: 0px;
+    right:0;
+    height: 60px;
+    width: 150px; 
+    color: #fff;
+    font-size: 16px;   
+    cursor: pointer; 
+    border:none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;    
+    background-color: #0076BD;
+    background: -webkit-linear-gradient(top,#008EE3 0,#007BC6 100%);
+    background: linear-gradient(to bottom,#008EE3 0,#007BC6 100%);
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;    
+}
+.meta-subbanner .banbutt:hover {
+    background-color: #0071B5;
+    background: -webkit-linear-gradient(top,#0085D5 0,#006AAA 100%);
+    background: linear-gradient(to bottom,#0085D5 0,#006AAA 100%);
+}
+/*新闻详情/单页*/
+.meta-content {
+    color:#333;
+    padding: 50px 20px 20px;
+}
+.meta-line {
+    border-bottom:1px #CCC solid;
+    text-align:right;
+    color:#666;
+}
+.meta-content-title{
+    font-size:24px;
+    font-weight:600;
+    text-align:center;
+    padding:0 0 20px;
+}
+.meta-content-info{
+    font-size:14px;
+    text-align:center;
+    color:#666;
+    line-height:30px;
+    margin-bottom:30px;
+}
+.meta-detail {
+    font-size: 14px;
+    padding-top:25px;
+}
+.meta-detail p {
+    line-height: 1.8;
+    font-size: 15px;
+    text-align: justify; 
+    margin: 0 0 10px;
+}
 /*子页面公共样式开始*/
+/*分页开始*/
+/*单页*/
+.meta-pagination {
+    text-align: center;
+    padding-top: 20px;
+}
+.pager {
+    padding-left: 0;
+    margin: 20px 0 0;
+    text-align: center;
+    list-style: none;
+    overflow:hidden;
+}
+.pager li {
+    display: inline;
+}
+.pager li > a,.pager li > span {
+    display: inline-block;
+    padding: 5px 14px;
+    background-color:#fff;
+    border: 1px solid #ddd;
+    border-radius:15px;
+}
+.pager .previous>a, .pager .previous>span {
+    float: left;
+}
+.pager .next > a, .pager .next > span {
+    float: right;
+}
+.meta-pagination .pager li > a, 
+.meta-pagination .pager li > span {
+    max-width: 380px;
+    min-width: 148px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+}
+.meta-pagination .pager li.next a {
+    padding-right: 35px;
+}
+.meta-pagination .pager li.next span[aria-hidden=true]{
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.pager li > a:hover, .pager li > a:focus {
+    background-color: #eee;
+    text-decoration: none;
+}
+.pager .disabled > a, 
+.pager .disabled > a:hover, 
+.pager .disabled > a:focus, 
+.pager .disabled > span {
+    background-color: #fff;
+    color: #777;
+    cursor: not-allowed;
+}
+/*列表*/
+/*bootstrap分页*/
+.pagination {
+    border-radius: 4px;
+    display: inline-block;
+    margin: 20px 0;
+    padding-left: 0;
+}
+.pagination > li {
+    display: inline;
+}
+.pagination > li > a, .pagination > li > span {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #337ab7;
+    float: left;
+    line-height: 1.42857;
+    margin-left: -1px;
+    padding: 6px 12px;
+    position: relative;
+    text-decoration: none;
+}
+.pagination > li:first-child > a, .pagination > li:first-child > span {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    margin-left: 0;
+}
+.pagination > li:last-child > a, .pagination > li:last-child > span {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover {
+    background-color: #eee;
+    border-color: #ddd;
+    color: #23527c;
+    z-index: 2;
+}
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+    background-color: #337ab7;
+    border-color: #337ab7;
+    color: #fff;
+    cursor: default;
+    z-index: 3;
+}
+.pagination > .disabled > a, .pagination > .disabled > a:focus, .pagination > .disabled > a:hover, .pagination > .disabled > span, .pagination > .disabled > span:focus, .pagination > .disabled > span:hover {
+    background-color: #fff;
+    border-color: #ddd;
+    color: #777;
+    cursor: not-allowed;
+}
+.et-page {
+    overflow:hidden;
+    padding:20px 0 10px;
+}
+.et-page ul.pagination{
+    margin:0px auto;
+    float:right;
+    user-select:none;
+}
+.et-page .et-pagenum {
+    float:left;
+}
+.et-page .et-pagenum select
+,.et-page .et-pagego input{
+    width:60px;
+    border-color:#CCC;
+    border-radius:4px;    
+    text-align:center;
+    margin:0px 10px;
+    outline: 0 none;
+}
+.et-page .et-pagego {
+    float:right;
+}
+.et-page .et-pagetotal {
+    margin:0px 10px;
+}
+.btnGoPage{
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #459DF6;
+    color: #fff;
+    user-select:none;
+}
+.btnGoPage:hover{
+    background-color:#55A6F7;
+}
+.btnGoPage:active{
+    background-color:#288EF4;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.125) inset;
+}
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+    background-color: #459DF6;
+    border-color: #459DF6;
+}
+/*分页结束*/
 /*响应式*/
 @media screen and (max-width: 1400px){	
 	
