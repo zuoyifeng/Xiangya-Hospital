@@ -522,7 +522,7 @@ a{
 }
 .consuldetail > div b{
     float:left; 
-    width:80px;   
+    width:110px;   
 }
 .consuldetail > div span{
     float:left;
@@ -533,7 +533,96 @@ a{
     margin-right:10px;
 }
 /*子页面公共样式开始*/
-
+/*表单页面样式*/
+.pop-form ul li{
+    padding:5px 0 20px;
+    overflow:hidden;
+}
+.pop-form ul li:last-child {
+    padding-bottom:0;
+}
+.pop-form ul .form-control {
+    min-width: 180px;
+    height:40px;
+}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: #fff;
+    border: none;
+    box-shadow: none;
+}
+.pop-form .text-label {
+    width:150px;
+    padding-left:20px;
+    text-align: left;
+    line-height:40px;
+    float:left;
+    font-size:15px;
+}
+.pop-form ul li .pop-right{
+    float:left;
+    width:75%;
+}
+.pop-form .pop-tips {
+    color: #808080;
+    font-size: 12px;
+    margin-top:2px;
+}
+.pop-form .upload_file {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+.pop-form .files_upRar {
+    display:inline-block;
+    vertical-align:2px;
+    color:#379eec;
+    max-width:480px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.pop-form .upload_file input {
+    border: medium solid transparent;
+    cursor: pointer;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom:0;
+}
+.pop-form ul li .empty-tip {
+    float:left;
+    width:20px;
+    line-height: 34px;
+    color:#f00;
+    text-align:center;
+}
+.pop-right label{
+    font-weight:normal;
+    margin:0 8px;
+    line-height:34px;
+}
+.pop-right label input[type="radio"],
+.pop-right label input[type="checkbox"]{
+    vertical-align:-2px;
+}
+.pop-right textarea{
+    display: block;
+    width: 100%;
+    padding:6px 12px;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 3px;
+    outline:none;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    resize:vertical;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+/*弹窗表单样式结束*/
 /*分页开始*/
 /*单页*/
 .meta-pagination {
@@ -697,10 +786,11 @@ input:-webkit-autofill {
 .pop-form-button {
     text-align:center;
     margin-top:20px;
+    padding-top:20px;
 }
 .btn-submit{
     color: #fff;
-    width:150px;
+    min-width:150px;
     height:40px;
     line-height:28px;
     font-size:16px;
@@ -715,11 +805,11 @@ input:-webkit-autofill {
 }
 .btn-shares {
     margin-left:0;
-    width:180px;
+    min-width:180px;
 }
 .btn-accept{
     color: #fff;
-    width:120px;
+    min-width:160px;
     height:40px;
     line-height:28px;
     font-size:16px;
@@ -1009,99 +1099,6 @@ input:-webkit-autofill {
     color: #379eec;
 }
 /*病历end*/
-
-
-
-/*表单页面样式*/
-.pop-form ul li{
-    padding:5px 0 20px;
-    overflow:hidden;
-}
-.pop-form ul li:last-child {
-    padding-bottom:0;
-}
-.pop-form ul .form-control {
-    min-width: 180px;
-    height:40px;
-}
-.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
-    background-color: #fff;
-    border: none;
-    box-shadow: none;
-}
-.pop-form .text-label {
-    width:150px;
-    padding-left:20px;
-    text-align: left;
-    line-height:40px;
-    float:left;
-    font-size:15px;
-}
-.pop-form ul li .pop-right{
-    float:left;
-    width:75%;
-}
-.pop-form .pop-tips {
-    color: #808080;
-    font-size: 12px;
-    margin-top:2px;
-}
-.pop-form .upload_file {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-}
-.pop-form .files_upRar {
-    display:inline-block;
-    vertical-align:2px;
-    color:#379eec;
-    max-width:480px;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    white-space: nowrap;
-}
-.pop-form .upload_file input {
-    border: medium solid transparent;
-    cursor: pointer;
-    margin: 0;
-    opacity: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom:0;
-}
-.pop-form ul li .empty-tip {
-    float:left;
-    width:20px;
-    line-height: 34px;
-    color:#f00;
-    text-align:center;
-}
-.pop-right label{
-    font-weight:normal;
-    margin:0 8px;
-    line-height:34px;
-}
-.pop-right label input[type="radio"],
-.pop-right label input[type="checkbox"]{
-    vertical-align:-2px;
-}
-.pop-right textarea{
-    display: block;
-    width: 100%;
-    padding:6px 12px;
-    background-color: #fff;
-    background-image: none;
-    border-radius: 3px;
-    outline:none;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #555;
-    resize:vertical;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-}
-/*弹窗表单样式结束*/
 /*bootstrap分页*/
 .pagination {
     border-radius: 4px;

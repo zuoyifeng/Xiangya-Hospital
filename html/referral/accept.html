@@ -44,7 +44,7 @@
                 <li class="menu_line"></li>
                 <li><a href="###">医联体论坛</a></li>
                 <li class="menu_line"></li>
-                <li><a href="###">医联体超市</a></li>
+                <li><a href="###">便民服务</a></li>
                 <li class="menu_line"></li>
                 <li><a href="###">在线咨询</a></li>
             </ul>
@@ -52,9 +52,27 @@
     </header>
     <div class="container">        
         <div class="consul_form clearfix">
-            <div class="consul_title">接收转诊单</div>
+            <div class="consul_title">转诊单</div>
             <div class="pop-form">
                 <ul>
+                    <li>
+                        <span class="text-label">患者姓名：</span>
+                        <div class="pop-right">
+                            <input class="form-control" value="张天娥" disabled type="text" id="realname" />
+                        </div>
+                    </li>
+                    <li>
+                        <span class="text-label">转往医疗机构：</span>
+                        <div class="pop-right">
+                            <input class="form-control" value="湘雅医院" disabled type="text" id="hospital" />
+                        </div>
+                    </li>
+                    <li>
+                        <span class="text-label">接诊医生：</span>
+                        <div class="pop-right">
+                            <input class="form-control" value="周桂花" disabled type="text" id="doctor" />
+                        </div>
+                    </li>
                     <li>
                         <span class="text-label">转诊时限：</span>
                         <div class="pop-right pop-sendtime">
@@ -62,30 +80,6 @@
                             <em>至</em>
                             <input class="form-control" type="text" id="endtime" onClick="WdatePicker({ el: this, dateFmt: 'yyyy-MM-dd', minDate: '#F{$dp.$D(\'startime\')}' })"/>
                             <p class="pop-tips">请根据病人病情状况，合理选择转诊时间</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="text-label">转往医疗机构：</span>
-                        <div class="pop-right">
-                            <select class="form-control" id="consulExpert">
-                                <option value="">请选择医疗机构费别</option>
-                                <option value="1">职工医保</option>
-                                <option value="2">居民医保</option>
-                                <option value="3">自费</option>
-                                <option value="4">其它</option>
-                            </select>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="text-label">接诊医生：</span>
-                        <div class="pop-right">
-                            <select class="form-control" id="consulExpert">
-                                <option value="">请选择医生团队</option>
-                                <option value="1">周伟康</option>
-                                <option value="2">李伊莲</option>
-                                <option value="3">李伊莲</option>
-                                <option value="4">刘贤达</option>
-                            </select>
                         </div>
                     </li>
                     <li>
@@ -100,6 +94,8 @@
                     <span class="et-btn btn-submit" id="subConsul">提交</span>
                 </div>
             </div>
+
+            <div class="form_bg"></div>
         </div>
     </div>
 
@@ -136,18 +132,18 @@
                 <div class="meta-siteinfo">
                     <img class="logo_bottom" src="../../imgs/logo_btom.png" />
                     <p>
-                        地址：湖南长沙湘雅路110号，湘雅医学院北院原图书馆3楼 <br>
-                        电话：（86）731 84805380 <br>
-                        传真：（86）731 823
+                        地址：中国湖南长沙市湘雅路87号<br>
+                        电话：0731-84328888 <br>
+                        传真：0731-84327332
                     </p>
                     <p>湘ICP备09002748号 Copyright 2007-2017 版权申明 | 联系我们 | 网站地图 </p>
                     <div class="img_code">
                         <div>
-                            <span>下载医学时间</span>
+                            <span>湘雅皮肤医生</span>
                             <img src="../../imgs/code.jpg" />
                         </div>
                         <div>
-                            <span>下载丁香园</span>
+                            <span>湘雅皮肤医联体</span>
                             <img src="../../imgs/code.jpg" />
                         </div>
                     </div>
@@ -159,7 +155,10 @@
     <script src="../../js/My97DatePicker/WdatePicker.js"></script>
     <script>
         $(function () {
-        
+            $('#subConsul').on('click', function () {
+                alert('接诊成功');
+                window.location.href = "../workbench/dashboard.html";
+            })
         })
     </script>
 </body>
