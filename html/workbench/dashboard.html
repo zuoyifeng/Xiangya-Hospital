@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
@@ -33,17 +33,21 @@
     </div>
     <div class="head_menu">
         <ul class="container clearfix">
-            <li><a href="###">首页·HOME</a></li>
+            <li><a href="../../index.html">首页·HOME</a></li>
             <li class="menu_line"></li>
-            <li><a href="###">医生工作台</a></li>
+            <li><a href="../workbench/dashboard.html">医生工作台</a></li>
             <li class="menu_line"></li>
-            <li><a href="###">会诊/转诊</a></li>
+            <li><a href="../consul/consuladd.html">会诊</a></li>
+            <li class="menu_line"></li>
+            <li><a href="../referral/referraladd.html">转诊</a></li>
             <li class="menu_line"></li>
             <li><a href="###">大数据平台</a></li>
             <li class="menu_line"></li>
             <li><a href="###">医联体论坛</a></li>
             <li class="menu_line"></li>
             <li><a href="###">医联体超市</a></li>
+            <li class="menu_line"></li>
+            <li><a href="###">在线咨询</a></li>
         </ul>
     </div>
 </header>
@@ -307,8 +311,23 @@
         </div>
     </div>
 </footer>
-
 <script src="../../js/jquery.min.js"></script>
-<script src="../../js/myworkbench.js"></script>
+<script>
+    $(function () {
+        //我的患者切换
+        $('#ya-category span').on('click', function () {
+            var i = $(this).index();
+            $(this).addClass('select').siblings().removeClass('select');
+            $('#ya-con li').eq(i).show().siblings().hide();
+        })
+        //会诊/转诊切换
+        $('#ya-twoConsult span').on('click', function () {
+            var i = $(this).index();
+            $(this).addClass('select').siblings().removeClass('select');
+            $('#ya-consultContent li').eq(i).show().siblings().hide();
+        })
+    })
+</script>
+
 </body>
 </html>

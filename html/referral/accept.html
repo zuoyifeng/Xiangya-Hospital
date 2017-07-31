@@ -34,11 +34,11 @@
             <ul class="container clearfix">
                 <li><a href="../../index.html">首页·HOME</a></li>
                 <li class="menu_line"></li>
-                <li><a href="###">医生工作台</a></li>
+                <li><a href="../workbench/dashboard.html">医生工作台</a></li>
                 <li class="menu_line"></li>
-                <li><a href="html/consul/addconsul.html">会诊</a></li>
+                <li><a href="../consul/consuladd.html">会诊</a></li>
                 <li class="menu_line"></li>
-                <li><a href="###">转诊</a></li>
+                <li><a href="../referral/referraladd.html">转诊</a></li>
                 <li class="menu_line"></li>
                 <li><a href="###">大数据平台</a></li>
                 <li class="menu_line"></li>
@@ -57,15 +57,27 @@
                 <ul>
                     <li>
                         <span class="text-label">转诊时限：</span>
-                        <div class="pop-right">
-                            <input class="form-control" type="text" id="accpetstartime" />
-                            <input class="form-control" type="text" id="accpetendtime" />
+                        <div class="pop-right pop-sendtime">
+                            <input class="form-control" type="text" id="startime" onClick="WdatePicker({ el: this, dateFmt: 'yyyy-MM-dd', minDate: '%y-%M-{%d}', maxDate: '#F{$dp.$D(\'endtime\')}' })" />
+                            <em>至</em>
+                            <input class="form-control" type="text" id="endtime" onClick="WdatePicker({ el: this, dateFmt: 'yyyy-MM-dd', minDate: '#F{$dp.$D(\'startime\')}' })"/>
                             <p class="pop-tips">请根据病人病情状况，合理选择转诊时间</p>
                         </div>
-                        <span class="empty-tip">*</span>
                     </li>
                     <li>
-                        <span class="text-label">转诊医生：</span>
+                        <span class="text-label">转往医疗机构：</span>
+                        <div class="pop-right">
+                            <select class="form-control" id="consulExpert">
+                                <option value="">请选择医疗机构费别</option>
+                                <option value="1">职工医保</option>
+                                <option value="2">居民医保</option>
+                                <option value="3">自费</option>
+                                <option value="4">其它</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="text-label">接诊医生：</span>
                         <div class="pop-right">
                             <select class="form-control" id="consulExpert">
                                 <option value="">请选择医生团队</option>
@@ -143,7 +155,12 @@
             </div>
         </div>
     </footer>
-
     <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/My97DatePicker/WdatePicker.js"></script>
+    <script>
+        $(function () {
+        
+        })
+    </script>
 </body>
 </html>
