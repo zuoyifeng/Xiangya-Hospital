@@ -51,7 +51,7 @@ a{
     color:#fff;
     line-height:40px;
     display:block;
-    width:150px;
+    width:140px;
     text-align:center;
     font-size:16px;
 }
@@ -380,8 +380,8 @@ a{
 }
 .meta-copyright .meta-sitemap a{
 	color: #fff;
-	font-size: 20px;
-	padding: 10px 20px;
+	font-size: 16px;
+	padding: 6px 20px;
 	cursor: pointer;
 	display: inline-block;
 }
@@ -507,13 +507,33 @@ a{
     font-size: 14px;
     padding-top:25px;
 }
-.meta-detail p {
+.meta-detail p ,.consuldetail>div{
     line-height: 1.8;
     font-size: 15px;
     text-align: justify; 
     margin: 0 0 10px;
 }
+.consuldetail {
+    padding:30px 20px 0;
+}
+.consuldetail > div {
+    margin-bottom:15px;
+    overflow:hidden;
+}
+.consuldetail > div b{
+    float:left; 
+    width:80px;   
+}
+.consuldetail > div span{
+    float:left;
+    max-width:85%; 
+}
+.consul_imgs img{
+    width:150px;
+    margin-right:10px;
+}
 /*子页面公共样式开始*/
+
 /*分页开始*/
 /*单页*/
 .meta-pagination {
@@ -573,6 +593,246 @@ a{
     cursor: not-allowed;
 }
 /*列表*/
+/*表单*/
+/*表单原始值*/
+.form-control ,input.form-control{
+    display: inline-block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+input[type=checkbox], input[type=radio] {
+    margin: 4px 0 0;
+    margin-top: 1px\9;
+    line-height: normal;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+/*按钮*/
+.et-btn{       
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.et-btn.active.focus, .et-btn.active:focus, .et-btn.focus, .et-btn.focus:active, .et-btn:active:focus, .et-btn:focus {
+    outline-offset: -2px;
+}
+.et-btn.focus, .et-btn:focus, .et-btn:hover {
+    text-decoration: none;
+}
+.et-btn.active, .et-btn:active {
+    background-image: none;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.125) inset;
+    outline: 0 none;
+}
+/*会诊转诊*/
+.consul_form ,.consul_referral{
+    padding:40px 0 20px;
+    position:relative;
+}
+.consul_title {
+    font-size:16px;
+    background:#f3f3f3;
+    height: 56px;
+    line-height: 56px;
+    padding-left: 20px;
+}
+.consul_form .pop-form {
+    width:720px;
+    margin-left:10px;
+    float:left;
+}
+.form_bg {
+    position:absolute;
+    right:50px;
+    top:130px;
+    bottom:100px;
+    width:400px;
+    background-image:url(../imgs/resul_bg.png);
+    background-position:center top;
+    background-repeat:no-repeat;
+}
+.refer_input {
+    display:none;
+}
+.pop-form ul {
+    margin:30px auto;
+}
+.pop-form-button {
+    text-align:center;
+    margin-top:20px;
+}
+.btn-submit{
+    color: #fff;
+    width:150px;
+    height:40px;
+    line-height:28px;
+    font-size:16px;
+    background:#E72231;
+    margin-left:60px;
+}
+.btn-submit:hover {
+    background:#EB414E;
+}
+.btn-submit:active {
+    background: #E01827;
+}
+.btn-shares {
+    margin-left:0;
+    width:180px;
+}
+.btn-accept{
+    color: #fff;
+    width:120px;
+    height:40px;
+    line-height:28px;
+    font-size:16px;
+    margin-right:40px;
+    background-color:#39BA82;
+}
+.btn-accept:hover {
+    background-color:#3EC48A;
+}
+.btn-accept:active {
+    background-color:#33A876;
+}
+.btn-refuse{
+    width:100px;
+    height:40px;
+    line-height:28px;
+    font-size:16px;
+    background-color:#D9686E;
+    color:#fff;
+}
+.btn-refuse:hover{
+    background-color:#DC7479;
+}
+.btn-refuse:active{
+    background-color:#D55960;
+}
+/*弹出框样式重置*/
+#fancybox-wrap,#fancybox-title{
+    box-sizing: content-box;
+}
+/*表单页面样式*/
+.pop-form ul li{
+    padding:5px 0 20px;
+    overflow:hidden;
+}
+.pop-form ul li:last-child {
+    padding-bottom:0;
+}
+.pop-form ul .form-control {
+    min-width: 180px;
+    height:40px;
+}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: #fff;
+    border: none;
+    box-shadow: none;
+}
+.pop-form .text-label {
+    width:150px;
+    padding-left:20px;
+    text-align: left;
+    line-height:40px;
+    float:left;
+    font-size:15px;
+}
+.pop-form ul li .pop-right{
+    float:left;
+    width:75%;
+}
+.pop-form .pop-tips {
+    color: #808080;
+    font-size: 12px;
+    margin-top:2px;
+}
+.pop-form .upload_file {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+.pop-form .files_upRar {
+    display:inline-block;
+    vertical-align:2px;
+    color:#379eec;
+    max-width:480px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.pop-form .upload_file input {
+    border: medium solid transparent;
+    cursor: pointer;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom:0;
+}
+.pop-form ul li .empty-tip {
+    float:left;
+    width:20px;
+    line-height: 34px;
+    color:#f00;
+    text-align:center;
+}
+.pop-right label{
+    font-weight:normal;
+    margin:0 8px;
+    line-height:34px;
+}
+.pop-right label input[type="radio"],
+.pop-right label input[type="checkbox"]{
+    vertical-align:-2px;
+}
+.pop-right textarea{
+    display: block;
+    width: 100%;
+    padding:6px 12px;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 3px;
+    outline:none;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    resize:vertical;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+/*弹窗表单样式结束*/
 /*bootstrap分页*/
 .pagination {
     border-radius: 4px;
@@ -642,6 +902,7 @@ a{
     text-align:center;
     margin:0px 10px;
     outline: 0 none;
+    padding:6px 3px;
 }
 .et-page .et-pagego {
     float:right;
