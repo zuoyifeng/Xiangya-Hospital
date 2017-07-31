@@ -193,11 +193,12 @@
     margin-right: 5px;
 }
 #ya-consultContent .ya-describe{
-    width: 400px;
+    width: 390px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    margin-left: 5px;
+    margin:0 5px 5px;
+    border-bottom: 1px solid #379eec;
     font-size: 12px;
 }
 #ya-consultContent .ya-describe span{
@@ -254,6 +255,7 @@
 }
 .ya-medicalRecord .ya-medicalInfo{
     margin-left: 10px;
+    margin-right: 10px;
     border-bottom: 1px solid #379eec;
     font-size: 12px;
 }
