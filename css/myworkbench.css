@@ -227,7 +227,7 @@
 
 }
 .ya-todoList .ya-todolistBox .ya-todolistTitle:hover{
-    border-bottom: 1px solid #379eec;
+    text-decoration: underline;
 }
 .ya-todoList .ya-todolistBox .ya-todolistTime{
     float: right;
