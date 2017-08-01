@@ -1337,6 +1337,61 @@ input:-webkit-autofill {
 
 /*病历end*/
 
+/*我的患者 分页begin*/
+.ya-myworkbench-box .ya-boxRight .ya-patients-page{
+    width:100%;
+}
+.ya-boxRight .ya-patients-page #ya-category{
+    height: 80px;
+}
+.ya-boxRight .ya-patients-page #ya-category span{
+    float: left;
+    width: 33.3%;
+    line-height: 80px;
+    text-align: center;
+    font-size: 20px;
+}
+.ya-boxRight .ya-patients-page #ya-category span.select{
+    color: #fff;
+    background: #d2e7ec;
+}
+.ya-boxRight .ya-patients-page #ya-con{
+    margin-top: 20px;
+}
+.ya-boxRight .ya-patients-page #ya-con li.show{
+    display: block;
+}
+.ya-boxRight .ya-patients-page #ya-con li{
+    display: none;
+}
+.ya-boxRight .ya-patients-page #ya-con li dl{
+    margin: 15px 0;
+}
+.ya-boxRight .ya-patients-page #ya-con dt{
+    float: left;
+}
+.ya-boxRight .ya-patients-page #ya-con dt img{
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin:0 20px;
+
+}
+.ya-boxRight .ya-patients-page #ya-con .ya-info span,
+.ya-boxRight .ya-patients-page #ya-con .ya-address,
+.ya-boxRight .ya-patients-page #ya-con .ya-patient-prev{
+    font-size: 16px;
+    color: #333;
+}
+
+.ya-boxRight .ya-patients-page #ya-con .ya-info span{
+    font-weight: 700;
+    margin-right: 40px;
+}
+.ya-boxRight .ya-patients-page #ya-con .ya-address{
+    margin: 10px 0;
+}
+/*我的患者 分页end*/
 /*bootstrap分页*/
 
 /*表单页面样式*/
