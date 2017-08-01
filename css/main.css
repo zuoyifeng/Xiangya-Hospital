@@ -1566,7 +1566,7 @@ input:-webkit-autofill {
     position: absolute;
     bottom: 0px;
     left: 0px;
-    width: 8px;
+    width: 5px;
     height: 60px;
     background-color: #66d8ec;
 }
