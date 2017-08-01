@@ -1392,6 +1392,162 @@ input:-webkit-autofill {
     margin: 10px 0;
 }
 /*我的患者 分页end*/
+
+/*我的会诊和我的转诊 分页begin*/
+.ya-myworkbench-box .ya-boxRight .ya-myConsult-page{
+    width: 100%;
+}
+.ya-boxRight .ya-myConsult-page .ya-consultTitle{
+    height: 80px;
+}
+.ya-boxRight .ya-myConsult-page .ya-consultTitle span{
+    float: left;
+    width: 50%;
+    line-height: 80px;
+    text-align: center;
+    font-size: 20px;
+}
+.ya-boxRight .ya-myConsult-page .ya-consultTitle span.select{
+    color: #fff;
+    background: #d2e7ec;
+}
+.ya-boxRight .ya-myConsult-page .ya-consultCon{
+    margin-top: 20px;
+}
+.ya-boxRight .ya-myConsult-page .ya-consultCon li.show{
+    display: block;
+}
+.ya-boxRight .ya-myConsult-page .ya-consultCon li{
+    display: none;
+}
+.ya-boxRight .ya-myConsult-page .ya-consultCon .ya-list-arrow,
+.ya-boxRight .ya-myConsult-page .ya-consultCon .ya-list-consult,
+.ya-boxRight .ya-myConsult-page .ya-consultCon .ya-list-time {
+    float: left;
+    font-size: 16px;
+    line-height: 45px;
+}
+.ya-boxRight .ya-myConsult-page .ya-consultCon .ya-list-time{
+    float: right;
+}
+.ya-boxRight .ya-myConsult-page .ya-consultCon .ya-describe{
+    width: 100%;
+    font-size: 16px;
+    line-height: 45px;
+    white-space: normal;
+}
+/*我的会诊和我的转诊 分页end*/
+/*待办事项 分页begin*/
+.ya-todolist-page .ya-todolistBox{
+    height: 70px;
+    font-size: 18px;
+    line-height: 70px;
+}
+.ya-todolist-page .ya-todolistBox .ya-todolistTime{
+    float: right;
+}
+/*待办事项 分页end*/
+/*我的随访 分页begin*/
+.ya-myworkbench-box .ya-boxRight .ya-myfollowup-page{
+    width: 100%;
+}
+.ya-boxRight .ya-myfollowup-page .ya-followDetail{
+    margin-top: 20px;
+}
+.ya-boxRight .ya-myfollowup-page .ya-followDetail li{
+    margin: 20px 0;
+}
+.ya-boxRight .ya-myfollowup-page .ya-followDetail dl dt{
+    float: left;
+}
+.ya-boxRight .ya-myfollowup-page .ya-followDetail dl dt img{
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 0 20px;
+}
+.ya-boxRight .ya-myfollowup-page .ya-followDetail dl dd{
+    font-size: 16px;
+    color: #333;
+    line-height: 30px;
+}
+.ya-boxRight .ya-myfollowup-page  .ya-followDetail  li span {
+
+    margin-right: 40px;
+}
+.ya-boxRight .ya-myfollowup-page  .ya-followDetail  .ya-followName,
+.ya-boxRight .ya-myfollowup-page  .ya-followDetail  .ya-followAge,
+.ya-boxRight .ya-myfollowup-page  .ya-followDetail  .ya-followTime{
+    font-weight: 700;
+}
+.ya-boxRight .ya-myfollowup-page  .ya-followDetail  .ya-followPlan,
+.ya-boxRight .ya-myfollowup-page  .ya-followDetail  .ya-followStage{
+    color: darkgray;
+}
+/*我的随访 分页end*/
+/*病历 分页begin*/
+.ya-myworkbench-box .ya-boxRight .ya-medicalrecord-page{
+    width: 100%;
+}
+.ya-boxRight .ya-medicalrecord-page .ya-medicalDetails{
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 40px;
+}
+.ya-boxRight .ya-medicalrecord-page .ya-medicalDetails span{
+    font-weight: 700;
+    margin-right: 40px;
+}
+.ya-boxRight .ya-medicalrecord-page .ya-medicalInfo{
+    font-size: 16px;
+}
+.ya-boxRight .ya-medicalrecord-page .ya-medicalInfo span{
+    font-size: 14px;
+    color: #379eec;
+}
+/*病历 分页end*/
+/*我的文件夹 分页begin*/
+.ya-myworkbench-box .ya-boxRight .ya-myflie-page {
+    width: 100%;
+}
+.ya-boxRight .ya-myflie-page #ya-category{
+    height: 80px;
+    line-height: 80px;
+}
+.ya-boxRight .ya-myflie-page #ya-category span.select {
+    color: #fff;
+    background: #d2e7ec;
+}
+.ya-boxRight .ya-myflie-page #ya-category span {
+    float: left;
+    width: 33.3%;
+    line-height: 80px;
+    text-align: center;
+    font-size: 20px;
+}
+.ya-boxRight .ya-myflie-page #ya-con{
+    margin-top: 20px;
+    font-size: 17px;
+}
+.ya-boxRight .ya-myflie-page #ya-con li.show{
+    display: block;
+}
+.ya-boxRight .ya-myflie-page #ya-con li{
+    display: none;
+}
+.ya-boxRight .ya-myflie-page #ya-con li div{
+    margin: 10px 0;
+    line-height: 50px;
+    color: #333;
+}
+.ya-boxRight .ya-myflie-page #ya-con li div .ya-todolistTitle{
+    color: #333;
+
+}
+.ya-boxRight .ya-myflie-page #ya-con li div .ya-todolistTime{
+    float: right;
+}
+/*我的文件夹 分页end*/
 /*bootstrap分页*/
 
 /*表单页面样式*/
