@@ -1342,18 +1342,19 @@ input:-webkit-autofill {
     width:100%;
 }
 .ya-boxRight .ya-patients-page #ya-category{
-    height: 80px;
+    height: 60px;
 }
 .ya-boxRight .ya-patients-page #ya-category span{
     float: left;
     width: 33.3%;
-    line-height: 80px;
+    line-height: 60px;
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
+    cursor: pointer;
 }
 .ya-boxRight .ya-patients-page #ya-category span.select{
     color: #fff;
-    background: #d2e7ec;
+    background: #18c0ec;
 }
 .ya-boxRight .ya-patients-page #ya-con{
     margin-top: 20px;
@@ -1380,7 +1381,7 @@ input:-webkit-autofill {
 .ya-boxRight .ya-patients-page #ya-con .ya-info span,
 .ya-boxRight .ya-patients-page #ya-con .ya-address,
 .ya-boxRight .ya-patients-page #ya-con .ya-patient-prev{
-    font-size: 16px;
+    font-size: 14px;
     color: #333;
 }
 
@@ -1398,18 +1399,19 @@ input:-webkit-autofill {
     width: 100%;
 }
 .ya-boxRight .ya-myConsult-page .ya-consultTitle{
-    height: 80px;
+    height: 60px;
 }
 .ya-boxRight .ya-myConsult-page .ya-consultTitle span{
     float: left;
     width: 50%;
-    line-height: 80px;
+    line-height: 60px;
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
+    cursor: pointer;
 }
 .ya-boxRight .ya-myConsult-page .ya-consultTitle span.select{
     color: #fff;
-    background: #d2e7ec;
+    background: #18c0ec;
 }
 .ya-boxRight .ya-myConsult-page .ya-consultCon{
     margin-top: 20px;
@@ -1424,7 +1426,7 @@ input:-webkit-autofill {
 .ya-boxRight .ya-myConsult-page .ya-consultCon .ya-list-consult,
 .ya-boxRight .ya-myConsult-page .ya-consultCon .ya-list-time {
     float: left;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 45px;
 }
 .ya-boxRight .ya-myConsult-page .ya-consultCon .ya-list-time{
@@ -1432,16 +1434,16 @@ input:-webkit-autofill {
 }
 .ya-boxRight .ya-myConsult-page .ya-consultCon .ya-describe{
     width: 100%;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 45px;
     white-space: normal;
 }
 /*我的会诊和我的转诊 分页end*/
 /*待办事项 分页begin*/
 .ya-todolist-page .ya-todolistBox{
-    height: 70px;
-    font-size: 18px;
-    line-height: 70px;
+    height: 50px;
+    font-size: 14px;
+    line-height: 50px;
 }
 .ya-todolist-page .ya-todolistBox .ya-todolistTime{
     float: right;
@@ -1467,7 +1469,7 @@ input:-webkit-autofill {
     margin: 0 20px;
 }
 .ya-boxRight .ya-myfollowup-page .ya-followDetail dl dd{
-    font-size: 16px;
+    font-size: 14px;
     color: #333;
     line-height: 30px;
 }
@@ -1480,14 +1482,20 @@ input:-webkit-autofill {
 .ya-boxRight .ya-myfollowup-page  .ya-followDetail  .ya-followTime{
     font-weight: 700;
 }
+.ya-boxRight .ya-myfollowup-page  .ya-followDetail  .ya-followAddress{
+    color: darkgray;
+}
 .ya-boxRight .ya-myfollowup-page  .ya-followDetail  .ya-followPlan,
 .ya-boxRight .ya-myfollowup-page  .ya-followDetail  .ya-followStage{
-    color: darkgray;
+
 }
 /*我的随访 分页end*/
 /*病历 分页begin*/
 .ya-myworkbench-box .ya-boxRight .ya-medicalrecord-page{
     width: 100%;
+}
+.ya-myworkbench-box .ya-boxRight .ya-medicalrecord-page a{
+    color: #333;
 }
 .ya-boxRight .ya-medicalrecord-page .ya-medicalDetails{
     margin-top: 20px;
@@ -1548,6 +1556,79 @@ input:-webkit-autofill {
     float: right;
 }
 /*我的文件夹 分页end*/
+/*患者详情 begin*/
+.ya-boxRight .ya-patientsdetail-page h3{
+    font-size: 20px;
+    line-height: 60px;
+}
+.ya-boxRight .ya-patientsdetail-page h3:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 8px;
+    height: 60px;
+    background-color: #66d8ec;
+}
+.ya-boxRight .ya-patientsdetail-page #ya-con{
+    margin: 10px 0;
+    border-bottom: 1px solid #DEDEDE;
+}
+.ya-boxRight .ya-patientsdetail-page #ya-con img{
+    float: left;
+    width: 120px;
+    height: 120px;
+    margin: 0 20px;
+}
+.ya-boxRight .ya-patientsdetail-page #ya-con .ya-detail{
+    overflow: hidden;
+    color: #333;
+    font-size: 16px;
+    line-height: 30px;
+}
+.ya-boxRight .ya-patientsdetail-page .ya-prevpatient{
+
+}
+.ya-boxRight .ya-patientsdetail-page .ya-prevpatient h4{
+    font-size: 18px;
+    color: #008EE3;
+    font-weight: 400;
+    margin-left:20px ;
+}
+.ya-boxRight .ya-patientsdetail-page .ya-prevpatient ul{
+    margin-left: 20px;
+    margin-top: 10px;
+    color: #333;
+    font-size: 16px;
+}
+.ya-boxRight .ya-patientsdetail-page .ya-prevpatient ul li{
+    margin-top: 10px;
+    border-bottom: 1px dashed #f5f5f5;
+}
+.ya-boxRight .ya-patientsdetail-page .ya-prevpatient ul .ya-describtime{
+   margin-right: 30px;
+}
+.ya-boxRight .ya-patientsdetail-page .ya-prevpatient ul .ya-describeword{
+    font-size: 16px;
+    margin-top:10px
+}
+.ya-boxRight .ya-patientsdetail-page .ya-prevpatient ul .ya-describeimg img{
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin: 10px 30px;
+}
+/*患者详情 end*/
+/*病历详情 begin*/
+.ya-boxRight #ya-medicalrecorddetail{
+
+}
+.ya-boxRight #ya-medicalrecorddetail #ya-con{
+    margin: 12px 20px;
+}
+/*病历详情 end*/
+
+
 /*bootstrap分页*/
 
 /*表单页面样式*/
