@@ -616,8 +616,6 @@ a {
 .consuldetail > div b {
     float: left;
     width: 110px;
-    float: left;
-    width: 80px;
 }
 
 .consuldetail > div span {
@@ -916,7 +914,17 @@ input:-webkit-autofill {
     margin: 0px 5px;
     font-style: normal;
 }
-
+.pop-row .form-control{
+    width:200px;
+}
+.pop-row .pop-rowtitle{
+    display:inline-block;
+    text-align: left;
+    line-height: 40px;
+    font-size: 15px;
+    width:120px;
+    margin:0px 0 0 150px;
+}
 .pop-form ul {
     margin: 30px auto;
 }
@@ -967,7 +975,9 @@ input:-webkit-autofill {
 .btn-accept:active {
     background-color: #33A876;
 }
-
+.btn-creat {
+   min-width: 120px;
+}
 .btn-refuse {
     width: 100px;
     height: 40px;

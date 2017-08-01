@@ -8,7 +8,6 @@
     <meta name="description" content="">
     <title>湘雅临床门户网站</title>
     <link href="../../css/reset.css" rel="stylesheet">
-    <link href="../../js/fancybox/fancybox.css" rel="stylesheet"/>
     <link href="../../css/main.css" rel="stylesheet">
     <link href="../../fonts/font-awesome.min.css" rel="stylesheet" />
     <!--[if lt IE 9]>
@@ -51,27 +50,67 @@
             </ul>
         </div>
     </header>
-    <div class="container">
-        <div class="consul_referral">
-            <div class="consul_title">转诊信息</div>
-            <div class="consuldetail">
-                <div><b>会诊医生：</b><span>周卫华</span></div>
-                <div><b>会诊意见：</b><span>经初步会诊为过敏性荨麻疹，通过逐渐脱敏疗法，从而达到根治过敏性风疹块的目的。在临床中，有些药物可以引起荨麻疹，如青霉素、四环素、氯霉素、链霉素、磺胺类药物、多粘霉素等抗生素，安乃近、阿司匹林等解热镇痛剂等等。</span></div>
-                <div><b>转诊名称：</b><span>长沙县皮肤科荨麻疹接诊情况</span></div>
-                <div><b>转诊目的：</b><span>经初步转诊为过敏性荨麻疹，主要体现在每次发作时手脚特别痒，然后身上就会出一些黄豆大的水疱状的疹子</span></div>
-                <div><b>病情描述：</b><span>由于过敏性机理引起的，每次发作时手脚特别痒，四肢麻木，呼吸也很困难，头也是麻木的，然后身上就会出一些黄豆大的水疱状的疹子。沿着划痕发生条状隆起，伴有瘙痒，不久消退。每次发病前都去过街上，而且基本都是晚上发作。</span></div>
-                <div class="consul_imgs">
-                    <b>患处图片：</b>
-                    <span>
-                        <a rel="upimg" href="../../imgs/img_01.jpg"><img src="../../imgs/img_01.jpg" /></a>
-                        <a rel="upimg" href="../../imgs/img_02.jpg"><img src="../../imgs/img_02.jpg" /></a>
-                        <a rel="upimg" href="../../imgs/img_03.jpg"><img src="../../imgs/img_03.jpg" /></a>
-                    </span>
-                </div>
-                <div><b>附件下载：</b><a href="http://www.baidu.com/">患者病历.rar</a></div>
+    <div class="container">   
+        <div class="ya-myworkbench-box clearfix">
+            <div class="ya-boxLeft">
+                <ul>
+                    <li class="active"><a href="#">个人中心</a></li>
+                    <li><a href="./myPatients.html">我的患者</a></li>
+                    <li><a href="#">会诊/转诊</a></li>
+                    <li><a href="#">待办事项</a></li>
+                    <li><a href="#">我的随访</a></li>
+                    <li><a href="#">病历</a></li>
+                    <li><a href="#">我的文件夹</a></li>
+                    <li><a href="#">我的话题</a></li>
+                    <li><a href="#">我的收藏</a></li>
+                </ul>
             </div>
-            <div class="pop-form-button">
-                <span class="et-btn btn-accept" id="acceptBtn">现在接收转诊</span>
+            <div class="ya-boxRight">
+                <div class="consul_title">创建病程</div>
+                <div class="pop-form">
+                    <ul>
+                        <li>
+                            <span class="text-label">病程描述：</span>
+                            <div class="pop-right pop-row">
+                                <select class="form-control" id="consulExpert">
+                                    <option value="">病程描述</option>
+                                    <option value="1">入院</option>
+                                    <option value="2">复查</option>
+                                    <option value="3">治疗</option>
+                                    <option value="4">康复</option>
+                                </select>
+                                <span class="pop-rowtitle">就诊日期：</span>
+                                <input class="form-control" type="text" id="startime" onClick="WdatePicker({ el: this, dateFmt: 'yyyy-MM-dd' })" />
+                            </div>
+                        </li>
+                        <li>
+                            <span class="text-label">添加照片：</span>
+                            <div class="pop-right">
+                                <span class="upload_file">
+                                    <i class="fa fa-file-photo-o fa-3x"></i>
+                                    <input type="file" id="uploadImages" />
+                                </span>
+                                <p class="pop-tips">请上传患者患处图片，最多可以传 10 张图片，格式仅供 .gif、.jpg、.png；单张图片大小 < 3Mb</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="text-label">病历文字描述：</span>
+                            <div class="pop-right">
+                                <textarea id="illnessCont" rows="7"></textarea>
+                                <p class="pop-tips">包括家庭遗传病史，对药物过敏等</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="text-label">备注：</span>
+                            <div class="pop-right">
+                                <textarea id="illnessCont" rows="7"></textarea>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="pop-form-button">
+                        <span class="et-btn btn-submit" id="subConsul">提交</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -128,20 +167,14 @@
             </div>
         </div>
     </footer>
+
     <script src="../../js/jquery.min.js"></script>
-    <script src="../../js/fancybox/jquery.fancybox-1.3.1.min.js"></script>
+    <script src="../../js/My97DatePicker/WdatePicker.js"></script>
     <script>
         $(function () {
-            $(".consul_imgs a[rel=upimg]").fancybox({
-                'titlePosition': 'over',
-                'centerOnScroll': true,
-                'cyclic': true,
-                'titleFormat': function (title, currentArray, currentIndex, currentOpts) {
-                    return '<span id="fancybox-title-over">' + (currentIndex + 1) + ' / ' + currentArray.length + '</span>';
-                }
-            });
-            $('#acceptBtn').on('click', function () {
-                window.location.href = "accept.html";
+            $('#subConsul').on('click', function () {
+                alert('新增病历成功');
+                window.location.href = "../workbench/patientadd.html";
             })
         })
     </script>
