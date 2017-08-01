@@ -1042,16 +1042,6 @@ input:-webkit-autofill {
 }
 
 /*我的患者 begin*/
-.ya-myworkbench-box .ya-boxRight .ya-myPatients {
-    /*margin-right: 30px;*/
-    /*margin-bottom: 10px;*/
-}
-
-.ya-myworkbench-box .ya-boxRight .ya-todoList {
-    /*margin-right: 30px;*/
-    /*margin-bottom: 10px;*/
-}
-
 .ya-myworkbench-box .ya-boxRight h3 {
     position: relative;
     color: #222222;
@@ -1305,38 +1295,36 @@ input:-webkit-autofill {
 .ya-myfollowUp .ya-followDetail .ya-followPlan,
 .ya-myfollowUp .ya-followDetail .ya-followStage {
     color: darkgray;
-}
 
+}
+.ya-myfollowUp .ya-followDetail .ya-followPlan{
+    float: left;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+.ya-myfollowUp .ya-followDetail .ya-followStage{
+    float: right;
+    width: 127px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 .ya-myfollowUp .ya-followDetail .ya-followAddress {
     margin: 4px;
 }
 
 /*我的随访end*/
 /*病历start*/
-.ya-my-followUp {
-
-}
-
-.ya-my-followUp .ya-followDetail {
-    font-size: 14px;
-}
-
-.ya-my-followUp .ya-followDetail img {
-    float: left;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
 .ya-medicalRecord .ya-medicalDetails {
     margin: 5px 0;
 }
-
 .ya-medicalRecord .ya-medicalDetails span {
     float: left;
     margin: 0 10px;
 }
-
 .ya-medicalRecord .ya-medicalInfo {
     margin: 0 10px 17px;
     font-size: 14px;
