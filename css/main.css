@@ -1568,8 +1568,8 @@ input:-webkit-autofill {
 /*我的文件夹 分页end*/
 /*患者详情 begin*/
 .ya-boxRight .ya-patientsdetail-page h3{
-    font-size: 20px;
-    line-height: 60px;
+    font-size: 16px;
+    line-height: 40px;
 }
 .ya-boxRight .ya-patientsdetail-page h3:before {
     content: "";
@@ -1577,8 +1577,8 @@ input:-webkit-autofill {
     bottom: 0px;
     left: 0px;
     width: 5px;
-    height: 60px;
-    background-color: #66d8ec;
+    height: 40px;
+    background-color: #18c0ec;
 }
 .ya-boxRight .ya-patientsdetail-page #ya-con{
     margin: 10px 0;
@@ -1593,14 +1593,14 @@ input:-webkit-autofill {
 .ya-boxRight .ya-patientsdetail-page #ya-con .ya-detail{
     overflow: hidden;
     color: #333;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 30px;
 }
 .ya-boxRight .ya-patientsdetail-page .ya-prevpatient{
 
 }
 .ya-boxRight .ya-patientsdetail-page .ya-prevpatient h4{
-    font-size: 18px;
+    font-size: 16px;
     color: #008EE3;
     font-weight: 400;
     margin-left:20px ;
@@ -1609,7 +1609,7 @@ input:-webkit-autofill {
     margin-left: 20px;
     margin-top: 10px;
     color: #333;
-    font-size: 16px;
+    font-size: 14px;
 }
 .ya-boxRight .ya-patientsdetail-page .ya-prevpatient ul li{
     margin-top: 10px;
@@ -1619,7 +1619,7 @@ input:-webkit-autofill {
    margin-right: 30px;
 }
 .ya-boxRight .ya-patientsdetail-page .ya-prevpatient ul .ya-describeword{
-    font-size: 16px;
+    font-size: 14px;
     margin-top:10px
 }
 .ya-boxRight .ya-patientsdetail-page .ya-prevpatient ul .ya-describeimg img{
