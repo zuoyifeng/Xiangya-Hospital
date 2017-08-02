@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
@@ -16,7 +16,7 @@
     <script src="../js/css3-mediaqueries.js"></script>
     <![endif]-->
 </head>
-<body>
+<body class="usercolumn">
 
 <header class="meta-header">
     <div class="head_top">
@@ -40,7 +40,7 @@
             <li class="menu_line"></li>
             <li><a href="../referral/referraladd.html">转诊</a></li>
             <li class="menu_line"></li>
-            <li><a href="###">大数据平台</a></li>
+            <li><a href="http://www.hancloudclinic.com:8084/FormParser">大数据平台</a></li>
             <li class="menu_line"></li>
             <li><a href="###">医联体论坛</a></li>
             <li class="menu_line"></li>
@@ -53,81 +53,82 @@
 <div class="container">
     <div class="ya-myworkbench-box clearfix">
         <div class="ya-boxLeft">
+            <div class="menu_left">
+                <span>医生工作台</span>
+            </div>
             <ul>
-                <li><a href="./dashboard.html">个人中心</a></li>
-                <li><a href="./mypatients.html">我的患者</a></li>
-                <li><a href="./myconsult.html">我的会诊</a></li>
-                <li class="active"><a href="#">我的转诊</a></li>
-                <li><a href="./todolist.html">待办事项</a></li>
-                <li><a href="./followup.html">我的随访</a></li>
-                <li><a href="./medicalrecord.html">病历</a></li>
-                <li><a href="./myfile.html">我的文件夹</a></li>
-                <li><a href="./mytopic.html">我的话题</a></li>
-                <li><a href="./mycollect.html">我的收藏</a></li>
+                <li><a href="dashboard.html">工作台总览</a></li>
+                <li><a href="todolist.html">待办事项</a></li>
+                <li><a href="myconsult.html">我的会诊</a></li>
+                <li class="active"><a href="transferconsult.html">我的转诊</a></li>
+                <li><a href="mypatients.html">我的患者</a></li>
+                <li><a href="followup.html">我的随访</a></li>
+                <li><a href="mytopic.html">我的话题</a></li>
+                <li><a href="mycollect.html">我的收藏</a></li>
+                <li><a href="medicalrecord.html">病历夹</a></li>
+                <li><a href="myfile.html">文件夹</a></li>
             </ul>
         </div>
         <div class="ya-boxRight">
             <!--我的转诊-->
-            <div class="ya-myConsult-page" id="ya-myConsult">
-                <div class="ya-consultTitle" class="clearfix">
-                    <span class="select">转入</span>
-                    <span>转出</span>
+            <div class="ya-myConsult">
+                <h3>
+                    我的转诊
+                    <a href="../referral/referraladd.html" class="ya-add"><i class="fa fa-plus"></i> 新增转诊</a>
+                </h3>
+                <div class="ya-tab">
+                    <span class="ya-tab-li active" show="turnIn">转入</span>
+                    <span class="line">|</span>
+                    <span class="ya-tab-li" show="turnOut">转出</span>
                 </div>
-                <ul class="ya-consultCon">
-                    <li class="show">
-                        <div class="clearfix">
-                            <span class="ya-list-arrow">·</span>
-                            <a href="###" target="_blank" class="ya-list-consult">病理会诊1</a>
-                            <span class="ya-list-time">2017-05-15</span>
-                        </div>
-                        <p class="ya-describe"><span>描述:</span>&nbsp;鼻腔里长一异物，活检后说是良性肿瘤需要病理会诊排除淋巴瘤.
-                            鼻腔里长一异物，活检后说是良性肿瘤需要病理会诊排除淋巴瘤.
-                            鼻腔里长一异物，活检后说是良性肿瘤需要病理会诊排除淋巴瘤.</p>
-                        <div class="clearfix">
-                            <span class="ya-list-arrow">·</span>
-                            <a href="###" target="_blank" class="ya-list-consult">病理会诊2</a>
-                            <span class="ya-list-time">2017-05-15</span>
-                        </div>
-                        <p class="ya-describe"><span>描述:</span>&nbsp;鼻腔里长一异物，活检后说是良性肿瘤需要病理会诊排除淋巴瘤.
-                            鼻腔里长一异物，活检后说是良性肿瘤需要病理会诊排除淋巴瘤.
-                            鼻腔里长一异物，活检后说是良性肿瘤需要病理会诊排除淋巴瘤.</p>
-                        <div class="clearfix">
-                            <span class="ya-list-arrow">·</span>
-                            <a href="###" target="_blank" class="ya-list-consult">病理会诊3</a>
-                            <span class="ya-list-time">2017-05-15</span>
-                        </div>
-                        <p class="ya-describe"><span>描述:</span>&nbsp;鼻腔里长一异物，活检后说是良性肿瘤需要病理会诊排除淋巴瘤.
-                            鼻腔里长一异物，活检后说是良性肿瘤需要病理会诊排除淋巴瘤.
-                            鼻腔里长一异物，活检后说是良性肿瘤需要病理会诊排除淋巴瘤.</p>
-                    </li>
-                    <li>
-                        <div class="clearfix">
-                            <span class="ya-list-arrow">·</span>
-                            <a href="###" target="_blank" class="ya-list-consult">病理会诊4</a>
-                            <span class="ya-list-time">2017-05-15</span>
-                        </div>
-                        <p class="ya-describe"><span>描述:</span>&nbsp;鼻腔里长一异物，活检后说是良性肿瘤需要病理会诊排除淋巴瘤.
-                            鼻腔里长一异物，活检后说是良性肿瘤需要病理会诊排除淋巴瘤.
-                            鼻腔里长一异物，活检后说是良性肿瘤需要病理会诊排除淋巴瘤.</p>
-                        <div class="clearfix">
-                            <span class="ya-list-arrow">·</span>
-                            <a href="###" target="_blank" class="ya-list-consult">病理会诊5</a>
-                            <span class="ya-list-time">2017-05-15</span>
-                        </div>
-                        <p class="ya-describe"><span>描述:</span>&nbsp;鼻腔里长一异物，活检后说是良性肿瘤需要病理会诊排除淋巴瘤.
-                            鼻腔里长一异物，活检后说是良性肿瘤需要病理会诊排除淋巴瘤.
-                            鼻腔里长一异物，活检后说是良性肿瘤需要病理会诊排除淋巴瘤.</p>
-                        <div class="clearfix">
-                            <span class="ya-list-arrow">·</span>
-                            <a href="###" target="_blank" class="ya-list-consult">病理会诊6</a>
-                            <span class="ya-list-time">2017-05-15</span>
-                        </div>
-                        <p class="ya-describe"><span>描述:</span>&nbsp;鼻腔里长一异物，活检后说是良性肿瘤需要病理会诊排除淋巴瘤.
-                            鼻腔里长一异物，活检后说是良性肿瘤需要病理会诊排除淋巴瘤.
-                            鼻腔里长一异物，活检后说是良性肿瘤需要病理会诊排除淋巴瘤.</p>
-                    </li>
-                </ul>
-
+                <div class="ya-tabcont">
+                    <ul class="ya-tab-ul" id="turnIn">
+                        <li>
+                            <a href="../referral/referral.html">
+                                <span class="ya-list-title">过敏性荨麻疹</span>
+                                <span class="ya-list-time">时间：2017-08-09</span>
+                                <p>会诊描述：皮肤划痕在刺激后6～8小时出现风团与红斑，风团持续24～48小时。迟发性皮损不只一条，沿划痕形成小段或点，损害较深或宽，甚至向两侧扩展成块。局部发热，有压痛。</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../referral/referral.html">
+                                <span class="ya-list-title">银屑病</span>
+                                <span class="ya-list-time">时间：2017-05-15</span>
+                                <p>会诊描述：全身皮肤弥漫性潮红、肿胀和脱屑，伴有发热、畏寒、不适等全身症状，浅表淋巴结肿大，白细胞计数增高。</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../referral/referral.html">
+                                <span class="ya-list-title">慢性湿疹</span>
+                                <span class="ya-list-time">时间：2017-05-15</span>
+                                <p>会诊描述：小腿、手、足、肘窝、腘窝、外阴、肛门等处。病程不定，易复发，经久不愈。</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="ya-tab-ul" id="turnOut" style="display:none;">
+                        <li>
+                            <a href="../referral/referral.html">
+                                <span class="ya-list-title">慢性湿疹</span>
+                                <span class="ya-list-time">时间：2017-05-15</span>
+                                <p>会诊描述：小腿、手、足、肘窝、腘窝、外阴、肛门等处。病程不定，易复发，经久不愈。</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../referral/referral.html">
+                                <span class="ya-list-title">过敏性荨麻疹</span>
+                                <span class="ya-list-time">时间：2017-08-09</span>
+                                <p>会诊描述：皮肤划痕在刺激后6～8小时出现风团与红斑，风团持续24～48小时。迟发性皮损不只一条，沿划痕形成小段或点，损害较深或宽，甚至向两侧扩展成块。局部发热，有压痛。</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../referral/referral.html">
+                                <span class="ya-list-title">银屑病</span>
+                                <span class="ya-list-time">时间：2017-05-15</span>
+                                <p>会诊描述：全身皮肤弥漫性潮红、肿胀和脱屑，伴有发热、畏寒、不适等全身症状，浅表淋巴结肿大，白细胞计数增高。</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -188,16 +189,15 @@
 
 <script src="../../js/jquery.min.js"></script>
 <script src="../../js/jqPaginator.min.js"></script>
-<script>
+    <script>
     $(function () {
-        //我的会诊切换
-        $('#ya-myConsult span').on('click', function () {
-            var i = $(this).index();
-            $(this).addClass('select').siblings().removeClass('select');
-            $('#ya-myConsult li').eq(i).show().siblings().hide();
-        })
-
+        //tab切换
+        $('.ya-tab>.ya-tab-li').on('click', function () {
+            $(this).addClass('active').siblings('span.ya-tab-li').removeClass('active');
+            var showid = $(this).attr('show');
+            $('.ya-tabcont #' + showid).show().siblings('.ya-tabcont .ya-tab-ul').hide();
+        });
     })
-</script>
+    </script>
 </body>
 </html>

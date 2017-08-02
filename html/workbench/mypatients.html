@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
@@ -16,7 +16,7 @@
     <script src="../js/css3-mediaqueries.js"></script>
     <![endif]-->
 </head>
-<body>
+<body class="usercolumn">
 
 <header class="meta-header">
     <div class="head_top">
@@ -40,7 +40,7 @@
             <li class="menu_line"></li>
             <li><a href="../referral/referraladd.html">转诊</a></li>
             <li class="menu_line"></li>
-            <li><a href="###">大数据平台</a></li>
+            <li><a href="http://www.hancloudclinic.com:8084/FormParser">大数据平台</a></li>
             <li class="menu_line"></li>
             <li><a href="###">医联体论坛</a></li>
             <li class="menu_line"></li>
@@ -53,120 +53,89 @@
 <div class="container">
     <div class="ya-myworkbench-box clearfix">
         <div class="ya-boxLeft">
+            <div class="menu_left">
+                <span>医生工作台</span>
+            </div>
             <ul>
-                <li><a href="./dashboard.html">个人中心</a></li>
-                <li class="active"><a href="#">我的患者</a></li>
-                <li><a href="./myconsult.html">我的会诊</a></li>
-                <li><a href="./transferconsult.html">我的转诊</a></li>
-                <li><a href="./todolist.html">待办事项</a></li>
-                <li><a href="./followup.html">我的随访</a></li>
-                <li><a href="./medicalrecord.html">病历</a></li>
-                <li><a href="./myfile.html">我的文件夹</a></li>
-                <li><a href="#">我的话题</a></li>
-                <li><a href="#">我的收藏</a></li>
+                <li><a href="dashboard.html">工作台总览</a></li>
+                <li><a href="todolist.html">待办事项</a></li>
+                <li><a href="myconsult.html">我的会诊</a></li>
+                <li><a href="transferconsult.html">我的转诊</a></li>
+                <li class="active"><a href="mypatients.html">我的患者</a></li>
+                <li><a href="followup.html">我的随访</a></li>
+                <li><a href="mytopic.html">我的话题</a></li>
+                <li><a href="mycollect.html">我的收藏</a></li>
+                <li><a href="medicalrecord.html">病历夹</a></li>
+                <li><a href="myfile.html">文件夹</a></li>
             </ul>
         </div>
         <div class="ya-boxRight">
             <!--我的患者-->
-            <div class="ya-patients-page">
-                <div id="ya-category">
-                    <span class="select">皮肤藓</span>
-                    <span>湿疹</span>
-                    <span>荨麻疹</span>
+            <div class="ya-myPatients">
+                <h3>
+                    我的患者
+                    <a href="patientadd.html" class="ya-add"><i class="fa fa-plus"></i> 添加患者</a>
+                </h3>
+                <div class="ya-tab">
+                    <span class="ya-tab-li active" show="xunMa">荨麻疹</span>
+                    <span class="line">|</span>
+                    <span class="ya-tab-li" show="shiZheng">湿疹</span>
+                    <span class="line">|</span>
+                    <span class="ya-tab-li" show="niuPixian">牛皮癣</span>
                 </div>
-                <ul id="ya-con">
-                    <li class="show">
-                        <a href="./patientsdetail.html">
-                            <dl class="clearfix">
-                                <dt><img src="../../imgs/head.jpg" alt=""></dt>
-                                <dd class="ya-info">
-                                    <span>姓名：张利</span>
-                                    <span>年龄：35</span>
-                                </dd>
-                                <dd class="ya-address">地址：长沙市芙蓉区车站北路</dd>
-                                <dd class="ya-patient-prev">以往病史：半年前躯干四肢近端起淡红色斑片，无自觉症状，两周左右逐渐变成
-                                灰褐色斑，皮损进行性增多。既往健康，否认有服药史。</dd>
-                            </dl>
-                        </a>
-                        <a href="./patientsdetail.html">
-                            <dl class="clearfix">
-                                <dt><img src="../../imgs/head.jpg" alt=""></dt>
-                                <dd class="ya-info"><span>姓名：李飞</span><span>年龄：25</span></dd>
-                                <dd class="ya-address">地址：湖南省长沙市开福区营盘东路85</dd>
-                                <dd class="ya-patient-prev">以往病史：半年前躯干四肢近端起淡红色斑片，无自觉症状，两周左右逐渐变成
-                                    灰褐色斑，皮损进行性增多。既往健康，否认有服药史。</dd>
-                            </dl>
-                        </a>
-                        <a href="./patientsdetail.html">
-                            <dl class="clearfix">
-                                <dt><img src="../../imgs/head.jpg" alt=""></dt>
-                                <dd class="ya-info"><span>姓名：赵杨</span><span>年龄：40</span></dd>
-                                <dd class="ya-address">地址：长沙市芙蓉区八一路298号</dd>
-                                <dd class="ya-patient-prev">以往病史：半年前躯干四肢近端起淡红色斑片，无自觉症状，两周左右逐渐变成
-                                    灰褐色斑，皮损进行性增多。既往健康，否认有服药史。</dd>
-                            </dl>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./patientsdetail.html">
-                            <dl class="clearfix">
-                                <dt><img src="../../imgs/head.jpg" alt=""></dt>
-                                <dd class="ya-info"><span>姓名：王丽</span><span>年龄：55</span></dd>
-                                <dd class="ya-address">地址：万家丽北路中段218号</dd>
-                                <dd class="ya-patient-prev">以往病史：半年前躯干四肢近端起淡红色斑片，无自觉症状，两周左右逐渐变成
-                                    灰褐色斑，皮损进行性增多。既往健康，否认有服药史。</dd>
-                            </dl>
-                        </a>
-                        <a href="./patientsdetail.html">
-                            <dl class="clearfix">
-                                <dt><img src="../../imgs/head.jpg" alt=""></dt>
-                                <dd class="ya-info"><span>姓名：蓝兰</span><span>年龄：48</span></dd>
-                                <dd class="ya-address">地址：长沙市芙蓉区车站北路</dd>
-                                <dd class="ya-patient-prev">以往病史：半年前躯干四肢近端起淡红色斑片，无自觉症状，两周左右逐渐变成
-                                    灰褐色斑，皮损进行性增多。既往健康，否认有服药史。</dd>
-                            </dl>
-                        </a>
-                        <a href="./patientsdetail.html">
-                            <dl class="clearfix">
-                                <dt><img src="../../imgs/head.jpg" alt=""></dt>
-                                <dd class="ya-info"><span>姓名：周小明</span><span>年龄：35</span></dd>
-                                <dd class="ya-address">地址：湖南省长沙市芙蓉区远大一路1021号</dd>
-                                <dd class="ya-patient-prev">以往病史：半年前躯干四肢近端起淡红色斑片，无自觉症状，两周左右逐渐变成
-                                    灰褐色斑，皮损进行性增多。既往健康，否认有服药史。</dd>
-                            </dl>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./patientsdetail.html">
-                            <dl class="clearfix">
-                                <dt><img src="../../imgs/head.jpg" alt=""></dt>
-                                <dd class="ya-info"><span>姓名：杨一</span><span>年龄：8</span></dd>
-                                <dd class="ya-address">地址：湖南省长沙市雨花区梓园路86号</dd>
-                                <dd class="ya-patient-prev">以往病史：半年前躯干四肢近端起淡红色斑片，无自觉症状，两周左右逐渐变成
-                                    灰褐色斑，皮损进行性增多。既往健康，否认有服药史。</dd>
-                            </dl>
-                        </a>
-                        <a href="./patientsdetail.html">
-                            <dl class="clearfix">
-                                <dt><img src="../../imgs/head.jpg" alt=""></dt>
-                                <dd class="ya-info"><span>姓名：程洲</span><span>年龄：25</span></dd>
-                                <dd class="ya-address">地址：湖南省长沙市芙蓉区人民中路139号</dd>
-                                <dd class="ya-patient-prev">以往病史：半年前躯干四肢近端起淡红色斑片，无自觉症状，两周左右逐渐变成
-                                    灰褐色斑，皮损进行性增多。既往健康，否认有服药史。</dd>
-                            </dl>
-                        </a>
-                        <a href="./patientsdetail.html">
-                            <dl class="clearfix">
-                                <dt><img src="../../imgs/head.jpg" alt=""></dt>
-                                <dd class="ya-info"><span>姓名：谭明</span><span>年龄：38</span></dd>
-                                <dd class="ya-address">地址：湖南省长沙市韶山北路501号</dd>
-                                <dd class="ya-patient-prev">以往病史：半年前躯干四肢近端起淡红色斑片，无自觉症状，两周左右逐渐变成
-                                    灰褐色斑，皮损进行性增多。既往健康，否认有服药史。</dd>
-                            </dl>
-                        </a>
-
-                    </li>
-                </ul>
+                <div class="ya-tabcont">
+                    <div class="ya-tab-ul ya-access ya-patient" id="xunMa">
+                        <dl class="clearfix">
+                            <dt><a href="patientsdetail.html"><img src="../../imgs/doctor02.jpg"></a></dt>
+                            <dd><a href="patientsdetail.html">周思源<em>年龄：28</em></a></dd>
+                            <dd class="ya-access-address">地址：湖南省长沙市开福区德雅路191号</dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt><a href="patientsdetail.html"><img src="../../imgs/doctor01.jpg"></a></dt>
+                            <dd><a href="patientsdetail.html">陆琪<em>年龄：21</em></a></dd>
+                            <dd class="ya-access-address">地址：湖南省长沙市开福区德雅路191号</dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt><a href="patientsdetail.html"><img src="../../imgs/doctor01.jpg"></a></dt>
+                            <dd><a href="patientsdetail.html">陈佳佳<em>年龄：22</em></a></dd>
+                            <dd class="ya-access-address">地址：湖南省长沙市开福区德雅路191号</dd>
+                        </dl>
+                    </div>
+                    <div class="ya-tab-ul ya-access ya-patient" id="shiZheng" style="display:none;">
+                        <dl class="clearfix">
+                            <dt><a href="patientsdetail.html"><img src="../../imgs/doctor01.jpg"></a></dt>
+                            <dd><a href="patientsdetail.html">陈佳佳<em>年龄：22</em></a></dd>
+                            <dd class="ya-access-address">地址：湖南省长沙市开福区德雅路191号</dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt><a href="patientsdetail.html"><img src="../../imgs/doctor02.jpg"></a></dt>
+                            <dd><a href="patientsdetail.html">周思源<em>年龄：21</em></a></dd>
+                            <dd class="ya-access-address">地址：湖南省长沙市开福区德雅路191号</dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt><a href="patientsdetail.html"><img src="../../imgs/doctor01.jpg"></a></dt>
+                            <dd><a href="patientsdetail.html">陆琪<em>年龄：23</em></a></dd>
+                            <dd class="ya-access-address">地址：湖南省长沙市开福区德雅路191号</dd>
+                        </dl>
+                    </div>
+                    <div class="ya-tab-ul ya-access ya-patient" id="niuPixian" style="display:none;">
+                        <dl class="clearfix">
+                            <dt><a href="patientsdetail.html"><img src="../../imgs/headpic01.jpg"></a></dt>
+                            <dd><a href="patientsdetail.html">周云达<em>年龄：28</em></a></dd>
+                            <dd class="ya-access-address">地址：湖南省长沙市开福区德雅路191号</dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt><a href="patientsdetail.html"><img src="../../imgs/doctor01.jpg"></a></dt>
+                            <dd><a href="patientsdetail.html">陆琪<em>年龄：29</em></a></dd>
+                            <dd class="ya-access-address">地址：湖南省长沙市开福区德雅路191号</dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt><a href="patientsdetail.html"><img src="../../imgs/doctor02.jpg"></a></dt>
+                            <dd><a href="patientsdetail.html">周思源<em>年龄：30</em></a></dd>
+                            <dd class="ya-access-address">地址：湖南省长沙市开福区德雅路191号</dd>
+                        </dl>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -227,15 +196,15 @@
 
 <script src="../../js/jquery.min.js"></script>
 <script src="../../js/jqPaginator.min.js"></script>
-<script>
+    <script>
     $(function () {
-        //我的患者切换
-        $('#ya-category span').on('click', function () {
-            var i = $(this).index();
-            $(this).addClass('select').siblings().removeClass('select');
-            $('#ya-con li').eq(i).show().siblings().hide();
-        })
+        //tab切换
+        $('.ya-tab>.ya-tab-li').on('click', function () {
+            $(this).addClass('active').siblings('span.ya-tab-li').removeClass('active');
+            var showid = $(this).attr('show');
+            $('.ya-tabcont #' + showid).show().siblings('.ya-tabcont .ya-tab-ul').hide();
+        });
     })
-</script>
+    </script>
 </body>
 </html>

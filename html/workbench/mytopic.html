@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
@@ -16,7 +16,7 @@
     <script src="../js/css3-mediaqueries.js"></script>
     <![endif]-->
 </head>
-<body>
+<body class="usercolumn">
 
 <header class="meta-header">
     <div class="head_top">
@@ -40,7 +40,7 @@
             <li class="menu_line"></li>
             <li><a href="../referral/referraladd.html">转诊</a></li>
             <li class="menu_line"></li>
-            <li><a href="###">大数据平台</a></li>
+            <li><a href="http://www.hancloudclinic.com:8084/FormParser">大数据平台</a></li>
             <li class="menu_line"></li>
             <li><a href="###">医联体论坛</a></li>
             <li class="menu_line"></li>
@@ -53,99 +53,52 @@
 <div class="container">
     <div class="ya-myworkbench-box clearfix">
         <div class="ya-boxLeft">
+            <div class="menu_left">
+                <span>医生工作台</span>
+            </div>
             <ul>
-                <li><a href="./dashboard.html">个人中心</a></li>
-                <li><a href="./mypatients.html">我的患者</a></li>
-                <li><a href="./myconsult.html">我的会诊</a></li>
-                <li><a href="./transferconsult.html">我的转诊</a></li>
+                <li><a href="dashboard.html">工作台总览</a></li>
                 <li><a href="todolist.html">待办事项</a></li>
-                <li><a href="./followup.html">我的随访</a></li>
-                <li><a href="./medicalrecord.html">病历</a></li>
-                <li><a href="./myfile.html">我的文件夹</a></li>
-                <li class="active"><a href="#">我的话题</a></li>
-                <li><a href="./mycollect.html">我的收藏</a></li>
+                <li><a href="myconsult.html">我的会诊</a></li>
+                <li><a href="transferconsult.html">我的转诊</a></li>
+                <li><a href="mypatients.html">我的患者</a></li>
+                <li><a href="followup.html">我的随访</a></li>
+                <li class="active"><a href="mytopic.html">我的话题</a></li>
+                <li><a href="mycollect.html">我的收藏</a></li>
+                <li><a href="medicalrecord.html">病历夹</a></li>
+                <li><a href="myfile.html">文件夹</a></li>
             </ul>
         </div>
         <div class="ya-boxRight">
-            <div class="ya-myflie-page">
-                <ul id="ya-con">
-                    <li class="show">
-                        <div class="ya-todolistBox clearfix">
-                            <i class="fa fa-user-md"></i>
-                            <a href="#" class="ya-todolistTitle" title="湘雅学术沙龙：张军教授讲座——队列研究及常见问题">·湘雅学术沙龙：张军教授讲座——队列研究及常见问题1</a>
-                        </div>
-                        <div class="ya-todolistBox clearfix">
-                            <i class="fa fa-user-md"></i>
-                            <a href="#" class="ya-todolistTitle" title="湘雅学术沙龙：张军教授讲座——队列研究及常见问题">·湘雅学术沙龙：张军教授讲座——队列研究及常见问题2</a>
-                        </div>
-                        <div class="ya-todolistBox clearfix">
-                            <i class="fa fa-user-md"></i>
-                            <a href="#" class="ya-todolistTitle" title="湘雅学术沙龙：张军教授讲座——队列研究及常见问题">·湘雅学术沙龙：张军教授讲座——队列研究及常见问题2</a>
-                        </div>
-                        <div class="ya-todolistBox clearfix">
-                            <i class="fa fa-user-md"></i>
-                            <a href="#" class="ya-todolistTitle" title="湘雅学术沙龙：张军教授讲座——队列研究及常见问题">·湘雅学术沙龙：张军教授讲座——队列研究及常见问题2</a>
-                        </div>
-                        <div class="ya-todolistBox clearfix">
-                            <i class="fa fa-user-md"></i>
-                            <a href="#" class="ya-todolistTitle" title="湘雅学术沙龙：张军教授讲座——队列研究及常见问题">·湘雅学术沙龙：张军教授讲座——队列研究及常见问题2</a>
-                        </div>
-                        <div class="ya-todolistBox clearfix">
-                            <i class="fa fa-user-md"></i>
-                            <a href="#" class="ya-todolistTitle" title="湘雅学术沙龙：张军教授讲座——队列研究及常见问题">·湘雅学术沙龙：张军教授讲座——队列研究及常见问题2</a>
-                        </div>
-                        <div class="ya-todolistBox clearfix">
-                            <i class="fa fa-user-md"></i>
-                            <a href="#" class="ya-todolistTitle" title="湘雅学术沙龙：张军教授讲座——队列研究及常见问题">·湘雅学术沙龙：张军教授讲座——队列研究及常见问题2</a>
-                        </div>
-                        <div class="ya-todolistBox clearfix">
-                            <i class="fa fa-user-md"></i>
-                            <a href="#" class="ya-todolistTitle" title="湘雅学术沙龙：张军教授讲座——队列研究及常见问题">·湘雅学术沙龙：张军教授讲座——队列研究及常见问题2</a>
-                        </div>
+            <div class="ya-todoList">
+                <h3>
+                    我的话题
+                </h3>
+                <ul>
+                    <li>
+                        <span class="meta-list-arrow">·</span>
+                        <a href="###" title="">关于长沙县门诊部皮肤科湿疹</a>
+                        <span class="meta-list-time">2017-08-10</span>
                     </li>
                     <li>
-                        <div class="ya-todolistBox clearfix">
-                            <i class="fa fa-user-md"></i>
-                            <a href="#" class="ya-todolistTitle" title="湘雅学术沙龙：张军教授讲座——队列研究及常见问题">·湘雅学术沙龙：张军教授讲座——队列研究及常见问题5</a>
-                            <span class="ya-todolistTime">2017-5-15</span>
-                        </div>
-                        <div class="ya-todolistBox clearfix">
-                            <i class="fa fa-user-md"></i>
-                            <a href="#" class="ya-todolistTitle" title="湘雅学术沙龙：张军教授讲座——队列研究及常见问题">·湘雅学术沙龙：张军教授讲座——队列研究及常见问题6</a>
-                            <span class="ya-todolistTime">2017-5-15</span>
-                        </div>
-                        <div class="ya-todolistBox clearfix">
-                            <i class="fa fa-user-md"></i>
-                            <a href="#" class="ya-todolistTitle" title="湘雅学术沙龙：张军教授讲座——队列研究及常见问题">·湘雅学术沙龙：张军教授讲座——队列研究及常见问题7</a>
-                            <span class="ya-todolistTime">2017-5-15</span>
-                        </div>
-                        <div class="ya-todolistBox clearfix">
-                            <i class="fa fa-user-md"></i>
-                            <a href="#" class="ya-todolistTitle" title="湘雅学术沙龙：张军教授讲座——队列研究及常见问题">·湘雅学术沙龙：张军教授讲座——队列研究及常见问题8</a>
-                            <span class="ya-todolistTime">2017-5-15</span>
-                        </div>
+                        <span class="meta-list-arrow">·</span>
+                        <a href="###" title="">关于浏阳市门诊部专家会议</a>
+                        <span class="meta-list-time">2017-08-09</span>
                     </li>
                     <li>
-                        <div class="ya-todolistBox clearfix">
-                            <i class="fa fa-user-md"></i>
-                            <a href="#" class="ya-todolistTitle" title="湘雅学术沙龙：张军教授讲座——队列研究及常见问题">·湘雅学术沙龙：张军教授讲座——队列研究及常见问题9</a>
-                            <span class="ya-todolistTime">2017-5-15</span>
-                        </div>
-                        <div class="ya-todolistBox clearfix">
-                            <i class="fa fa-user-md"></i>
-                            <a href="#" class="ya-todolistTitle" title="湘雅学术沙龙：张军教授讲座——队列研究及常见问题">·湘雅学术沙龙：张军教授讲座——队列研究及常见问题10</a>
-                            <span class="ya-todolistTime">2017-5-15</span>
-                        </div>
-                        <div class="ya-todolistBox clearfix">
-                            <i class="fa fa-user-md"></i>
-                            <a href="#" class="ya-todolistTitle" title="湘雅学术沙龙：张军教授讲座——队列研究及常见问题">·湘雅学术沙龙：张军教授讲座——队列研究及常见问题11</a>
-                            <span class="ya-todolistTime">2017-5-15</span>
-                        </div>
-                        <div class="ya-todolistBox clearfix">
-                            <i class="fa fa-user-md"></i>
-                            <a href="#" class="ya-todolistTitle" title="湘雅学术沙龙：张军教授讲座——队列研究及常见问题">·湘雅学术沙龙：张军教授讲座——队列研究及常见问题12</a>
-                            <span class="ya-todolistTime">2017-5-15</span>
-                        </div>
+                        <span class="meta-list-arrow">·</span>
+                        <a href="###" title="">关于长沙市天心区铁道社区医院专家会议</a>
+                        <span class="meta-list-time">2017-08-09</span>
+                    </li>
+                    <li>
+                        <span class="meta-list-arrow">·</span>
+                        <a href="###" title="">关于长沙市岳麓区湘雅医院皮肤科会议</a>
+                        <span class="meta-list-time">2017-07-29</span>
+                    </li>
+                    <li>
+                        <span class="meta-list-arrow">·</span>
+                        <a href="###" title="">关于长沙市岳麓区梅溪湖疾病中心皮肤科专家会议</a>
+                        <span class="meta-list-time">2017-07-29</span>
                     </li>
                 </ul>
             </div>

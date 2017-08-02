@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
@@ -16,7 +16,7 @@
     <script src="../js/css3-mediaqueries.js"></script>
     <![endif]-->
 </head>
-<body>
+<body class="usercolumn">
 
 <header class="meta-header">
     <div class="head_top">
@@ -40,7 +40,7 @@
             <li class="menu_line"></li>
             <li><a href="../referral/referraladd.html">转诊</a></li>
             <li class="menu_line"></li>
-            <li><a href="###">大数据平台</a></li>
+            <li><a href="http://www.hancloudclinic.com:8084/FormParser">大数据平台</a></li>
             <li class="menu_line"></li>
             <li><a href="###">医联体论坛</a></li>
             <li class="menu_line"></li>
@@ -53,69 +53,53 @@
 <div class="container">
     <div class="ya-myworkbench-box clearfix">
         <div class="ya-boxLeft">
+            <div class="menu_left">
+                <span>医生工作台</span>
+            </div>
             <ul>
-                <li><a href="./dashboard.html">个人中心</a></li>
-                <li><a href="./mypatients.html">我的患者</a></li>
-                <li><a href="./myconsult.html">我的会诊</a></li>
-                <li><a href="./transferconsult.html">我的转诊</a></li>
+                <li><a href="dashboard.html">工作台总览</a></li>
                 <li><a href="todolist.html">待办事项</a></li>
-                <li><a href="./followup.html">我的随访</a></li>
-                <li class="active"><a href="#">病历</a></li>
-                <li><a href="./myfile.html">我的文件夹</a></li>
-                <li><a href="./mytopic.html">我的话题</a></li>
+                <li><a href="myconsult.html">我的会诊</a></li>
+                <li><a href="transferconsult.html">我的转诊</a></li>
+                <li><a href="mypatients.html">我的患者</a></li>
+                <li><a href="followup.html">我的随访</a></li>
+                <li><a href="mytopic.html">我的话题</a></li>
                 <li><a href="mycollect.html">我的收藏</a></li>
+                <li class="active"><a href="medicalrecord.html">病历夹</a></li>
+                <li><a href="myfile.html">文件夹</a></li>
             </ul>
         </div>
         <div class="ya-boxRight">
-            <div class="ya-medicalrecord-page">
-                <a href="./medicalrecorddetail.html">
-                    <div class="ya-medicalDetails clearfix">
-                        <span>姓名：张长</span>
-                        <span>性别：男</span>
-                        <span>年龄：25</span>
-                    </div>
-                    <p class="ya-medicalInfo"><span>诊断信息：</span>尖锐湿疣可以考虑药物治疗配合物理疗法，如海极星、激光等。</p>
-                </a>
-                <a href="./medicalrecorddetail.html">
-                    <div class="ya-medicalDetails clearfix">
-                        <span>姓名：李里</span>
-                        <span>性别：男</span>
-                        <span>年龄：55</span>
-                    </div>
-                    <p class="ya-medicalInfo"><span>诊断信息：</span>如果初步诊断为肾病综合征，是一定需要住院治疗的</p>
-                </a>
-                <a href="./medicalrecorddetail.html">
-                    <div class="ya-medicalDetails clearfix">
-                        <span>姓名：王美</span>
-                        <span>性别：女</span>
-                        <span>年龄：47</span>
-                    </div>
-                    <p class="ya-medicalInfo"><span>诊断信息：</span>窦性心律，是正常的，表明您的心跳搏动这方面是正常的。
-                        完全性右束支传导阻滞，这说明心脏电生理的传导当中，您的右束支出现了问题，不能传导心电信号，但是左束支没有问题。
-                    </p>
-                </a>
-                <a href="./medicalrecorddetail.html">
-                    <div class="ya-medicalDetails clearfix">
-                        <span>姓名：王美</span>
-                        <span>性别：女</span>
-                        <span>年龄：47</span>
-                    </div>
-                    <p class="ya-medicalInfo"><span>诊断信息：</span>窦性心律，是正常的，表明您的心跳搏动这方面是正常的。
-                        完全性右束支传导阻滞，这说明心脏电生理的传导当中，您的右束支出现了问题，不能传导心电信号，但是左束支没有问题。
-                    </p>
-                </a>
-                <a href="./medicalrecorddetail.html">
-                    <div class="ya-medicalDetails clearfix">
-                        <span>姓名：王美</span>
-                        <span>性别：女</span>
-                        <span>年龄：47</span>
-                    </div>
-                    <p class="ya-medicalInfo"><span>诊断信息：</span>窦性心律，是正常的，表明您的心跳搏动这方面是正常的。
-                        完全性右束支传导阻滞，这说明心脏电生理的传导当中，您的右束支出现了问题，不能传导心电信号，但是左束支没有问题。
-                    </p>
-                </a>
-
-
+            <div class="ya-medicalRecord">
+                <h3>
+                    病历夹
+                    <a href="##" class="ya-add"><i class="fa fa-plus"></i> 新增</a>
+                </h3>
+                <div class="ya-tabcont ya-disease">
+                    <ul>
+                        <li>
+                            <a href="medicalrecorddetail.html">
+                                <span class="ya-list-title">周佳琪</span>
+                                <span class="ya-list-time">性别：女 年龄：23</span>
+                                <p>描述：皮肤划痕在刺激后6～8小时出现风团与红斑，风团持续24～48小时。迟发性皮损不只一条，沿划痕形成小段或点，损害较深或宽，甚至向两侧扩展成块。局部发热，有压痛。</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="medicalrecorddetail.html">
+                                <span class="ya-list-title">赖萌萌</span>
+                                <span class="ya-list-time">性别：女 年龄：26</span>
+                                <p>描述：全身皮肤弥漫性潮红、肿胀和脱屑，伴有发热、畏寒、不适等全身症状，浅表淋巴结肿大，白细胞计数增高。</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="medicalrecorddetail.html">
+                                <span class="ya-list-title">李丹</span>
+                                <span class="ya-list-time">性别：男 年龄：21</span>
+                                <p>描述：小腿、手、足、肘窝、腘窝、外阴、肛门等处。病程不定，易复发，经久不愈。</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

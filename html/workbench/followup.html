@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
@@ -16,7 +16,7 @@
     <script src="../js/css3-mediaqueries.js"></script>
     <![endif]-->
 </head>
-<body>
+<body class="usercolumn">
 
 <header class="meta-header">
     <div class="head_top">
@@ -40,7 +40,7 @@
             <li class="menu_line"></li>
             <li><a href="../referral/referraladd.html">转诊</a></li>
             <li class="menu_line"></li>
-            <li><a href="###">大数据平台</a></li>
+            <li><a href="http://www.hancloudclinic.com:8084/FormParser">大数据平台</a></li>
             <li class="menu_line"></li>
             <li><a href="###">医联体论坛</a></li>
             <li class="menu_line"></li>
@@ -53,77 +53,49 @@
 <div class="container">
     <div class="ya-myworkbench-box clearfix">
         <div class="ya-boxLeft">
+            <div class="menu_left">
+                <span>医生工作台</span>
+            </div>
             <ul>
-                <li><a href="./dashboard.html">个人中心</a></li>
-                <li><a href="./mypatients.html">我的患者</a></li>
-                <li><a href="./myconsult.html">我的会诊</a></li>
-                <li><a href="./transferconsult.html">我的转诊</a></li>
+                <li><a href="dashboard.html">工作台总览</a></li>
                 <li><a href="todolist.html">待办事项</a></li>
-                <li class="active"><a href="#">我的随访</a></li>
-                <li><a href="./medicalrecord.html">病历</a></li>
-                <li><a href="./myfile.html">我的文件夹</a></li>
-                <li><a href="./mytopic.html">我的话题</a></li>
+                <li><a href="myconsult.html">我的会诊</a></li>
+                <li><a href="transferconsult.html">我的转诊</a></li>
+                <li><a href="mypatients.html">我的患者</a></li>
+                <li class="active"><a href="followup.html">我的随访</a></li>
+                <li><a href="mytopic.html">我的话题</a></li>
                 <li><a href="mycollect.html">我的收藏</a></li>
+                <li><a href="medicalrecord.html">病历夹</a></li>
+                <li><a href="myfile.html">文件夹</a></li>
             </ul>
         </div>
         <div class="ya-boxRight">
             <!--我的随访-->
-            <div class="ya-myfollowup-page">
-                <ul class="ya-followDetail clearfix">
-                    <li>
-                        <a href="./followupdetail.html">
-                            <dl class="clearfix">
-                                <dt><img src="../../imgs/head.jpeg" alt=""></dt>
-                                <dd class="clearfix">
-                                    <span class="ya-followName">患者姓名：陆一</span>
-                                    <span class="ya-followAge">年龄：33</span>
-                                    <span class="ya-followTime">2017-5-15</span>
-                                    <p class="ya-followAddress">地址：湖南省长沙市开福区德雅路191号</p>
-                                    <div class="clearfix">
-                                        <span class="ya-followPlan" title="计划名称：前期用药，后期手术">计划名称：前期用药，后期手术</span>
-                                        <span class="ya-followStage" title="随访阶段：准备手术">随访阶段：准备手术</span>
-                                    </div>
-                                </dd>
-                            </dl>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./followupdetail.html">
-                            <dl class="clearfix">
-                                <dt><img src="../../imgs/head.jpeg" alt=""></dt>
-                                <dd class="clearfix">
-                                    <span class="ya-followName">患者姓名：陆一</span>
-                                    <span class="ya-followAge">年龄：33</span>
-                                    <span class="ya-followTime">2017-5-15</span>
-                                    <p class="ya-followAddress">地址：湖南省长沙市开福区德雅路191号</p>
-                                    <div class="clearfix">
-                                        <span class="ya-followPlan" title="计划名称：前期用药，后期手术">计划名称：前期用药，后期手术</span>
-                                        <span class="ya-followStage" title="随访阶段：准备手术">随访阶段：准备手术</span>
-                                    </div>
-
-                                </dd>
-                            </dl>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./followupdetail.html">
-                            <dl class="clearfix">
-                                <dt><img src="../../imgs/head.jpeg" alt=""></dt>
-                                <dd class="clearfix">
-                                    <span class="ya-followName">患者姓名：陆一</span>
-                                    <span class="ya-followAge">年龄：33</span>
-                                    <span class="ya-followTime">2017-5-15</span>
-                                    <p class="ya-followAddress">地址：湖南省长沙市开福区德雅路191号</p>
-                                    <div class="clearfix">
-                                        <span class="ya-followPlan" title="计划名称：前期用药，后期手术">计划名称：前期用药，后期手术</span>
-                                        <span class="ya-followStage" title="随访阶段：准备手术">随访阶段：准备手术</span>
-                                    </div>
-                                </dd>
-                            </dl>
-                        </a>
-                    </li>
-                </ul>
-
+            <div class="ya-myfollowUp">
+                <h3>
+                    我的随访
+                    <a href="##" class="ya-add"><i class="fa fa-plus"></i> 新增</a>
+                </h3>
+                <div class="ya-access">
+                    <dl class="clearfix">
+                        <dt><a href="followupdetail.html"><img src="../../imgs/doctor01.jpg"></a></dt>
+                        <dd><a href="followupdetail.html">陆琪<em>2017-08-11</em></a><span>随访阶段：准备手术</span></dd>
+                        <dd class="ya-access-name">计划名称：前期用药，后期手术</dd>
+                        <dd class="ya-access-address">地址：湖南省长沙市开福区德雅路191号</dd>
+                    </dl>
+                    <dl class="clearfix">
+                        <dt><a href="followupdetail.html"><img src="../../imgs/doctor02.jpg"></a></dt>
+                        <dd><a href="followupdetail.html">周思源<em>2017-08-04</em></a><span>随访阶段：准备手术</span></dd>
+                        <dd class="ya-access-name">计划名称：前期用药，后期手术</dd>
+                        <dd class="ya-access-address">地址：湖南省长沙市开福区德雅路191号</dd>
+                    </dl>
+                    <dl class="clearfix">
+                        <dt><a href="followupdetail.html"><img src="../../imgs/doctor01.jpg"></a></dt>
+                        <dd><a href="followupdetail.html">陈佳佳<em>2017-08-01</em></a><span>随访阶段：准备手术</span></dd>
+                        <dd class="ya-access-name">计划名称：前期用药，后期手术</dd>
+                        <dd class="ya-access-address">地址：湖南省长沙市开福区德雅路191号</dd>
+                    </dl>
+                </div>
             </div>
         </div>
     </div>

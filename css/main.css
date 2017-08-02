@@ -883,6 +883,7 @@ input:-webkit-autofill {
     height: 56px;
     line-height: 56px;
     padding-left: 20px;
+    color:#1369c0
 }
 
 .consul_form .pop-form {
@@ -1001,22 +1002,57 @@ input:-webkit-autofill {
 }
 
 /*工作台 author:zhang*/
+.userbody,.usercolumn {
+    background-color:#F9F9F9;
+}
+.usercolumn .ya-boxRight{
+    background-color:#FFF;
+    overflow:hidden;
+    position:relative;
+    padding:15px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius:2px;
+    box-shadow:0 1px 3px #eee;
+}
 .ya-myworkbench-box {
-    padding: 20px 0;
+    padding: 40px 0 10px;
+    position:relative;
 }
-
 .ya-myworkbench-box .ya-boxLeft {
-    width: 16%;
-    float: left;
+    width: 200px;
+    /*float: left;*/
+    background-color:#fff;
+    position:absolute;
+    left:0px;
+    top:40px;
+    bottom:10px;
+    box-shadow:0 1px 3px #efefef;
 }
-
-.ya-myworkbench-box .ya-boxLeft ul li {
-    border-bottom: 1px solid #DEDEDE;
+.menu_left {
+    background: #fff;
+    height:120px;
+    border-bottom: 1px solid #efefef;
+}
+.menu_left span{
+    font-size:24px;
+    padding:20px;
+    display:block;
+    color:#808080;
+}
+.ya-boxLeft ul{
+    padding:20px 15px 0;
+}
+ .ya-boxLeft ul li {
+    border-bottom: 1px solid #efefef;
     font-size: 16px;
 }
-
-.ya-myworkbench-box .ya-boxLeft ul li.active {
+/*.ya-boxLeft ul li:last-child{
+    border-bottom: none;
+}*/
+.ya-boxLeft ul li.active {
     background: #379eec;
+    border-bottom: 1px solid #379eec;
 }
 
 .ya-myworkbench-box .ya-boxLeft ul li.active a {
@@ -1029,63 +1065,103 @@ input:-webkit-autofill {
     display: block;
     text-align: center;
 }
-
 .ya-myworkbench-box .ya-boxRight {
-    width: 84%;
+    width: 80%;
     float: right;
-    padding: 0 35px;
+    min-height:680px;
 }
-
-.ya-myworkbench-box .ya-boxRight .ya-personalLeft {
-    width: 450px;
-    height: 300px;
+.ya-boxRight .ya-personalLeft,
+.ya-boxRight .ya-personalRight {
+    width: 48.5%;
+    height: 350px;
+    overflow:hidden;
+    position:relative;
     float: left;
-    margin-right: 30px;
-    margin-bottom: 10px;
+    padding:15px;
+    margin-top:30px;
+    background-color:#fff;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius:2px;
+    box-shadow:0 1px 3px #eee;
 }
-
-.ya-myworkbench-box .ya-boxRight .ya-personalRight {
-    width: 450px;
-    height: 300px;
-    float: right;
-    margin-bottom: 10px;
+.ya-boxRight>div:first-child,
+.ya-boxRight>div:first-child+div{
+    margin-top:0;
 }
-
+.ya-boxRight .ya-personalLeft {
+    margin-right: 3%;
+}
 /*我的患者 begin*/
 .ya-myworkbench-box .ya-boxRight h3 {
     position: relative;
     color: #222222;
-    line-height: 40px;
     font-size: 16px;
     font-weight: normal;
-    padding-left: 15px;
-    border-bottom: 1px solid #DEDEDE;
-    margin-bottom: 10px;
+    padding:5px 8px 15px;
+    border-bottom: 1px solid #efefef;
 }
-
-.ya-myworkbench-box .ya-boxRight h3:before {
+/*.ya-boxRight h3:before {
     content: "";
     position: absolute;
-    bottom: 0px;
+    bottom: 15px;
     left: 0px;
-    width: 5px;
-    height: 40px;
+    width: 4px;
+    height: 20px;
     background-color: #379eec;
-}
-
-.ya-myworkbench-box .ya-boxRight h3 .ya-more,
-.ya-myworkbench-box .ya-boxRight h3 .ya-add {
+}*/
+.ya-boxRight h3 .ya-more,
+.ya-boxRight h3 .ya-add {
     position: absolute;
     right: 5px;
     top: 0;
-    font-size: 12px;
-    color: #379eec;
+    font-size: 14px;
+    color: #666;
+    padding:5px 10px;
+    border-radius:3px;
 }
-
-.ya-myworkbench-box .ya-boxRight h3 .ya-add {
-    right: 100px;
+.ya-boxRight h3 .ya-add:hover,
+.ya-boxRight h3 .ya-more:hover{
+    /*color:#1374DF;*/
+    background-color:#efefef;
 }
-
+.ya-boxRight h3 .ya-add {
+    right: 70px;
+}
+.ya-boxRight h3 .ya-add i{
+    font-size:13px;
+}
+.ya-todoList ul {
+    padding-top:10px;
+}
+.ya-todoList ul li {
+    overflow:hidden;
+}
+.ya-todoList ul li a{
+	color: #222;
+	display: inline-block;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	line-height: 48px;
+	max-width: 72%;
+    float:left;
+}
+.ya-todoList ul li a:hover{
+	color: #1369C0;
+}
+.ya-todoList .meta-list-arrow{
+	float: left;
+	color: #1369C0;
+	font-size: 24px;
+	margin-right: 8px;
+    margin-left: 5px;
+	line-height: 46px;
+}
+.ya-todoList .meta-list-time{
+	float: right;
+	line-height: 48px;
+}
 .ya-myworkbench-box .ya-boxRight .ya-myPatients #ya-category {
     height: 30px;
     width: 100%;
@@ -1155,6 +1231,101 @@ input:-webkit-autofill {
 /*我的患者 end*/
 
 /*我的会诊和我的转诊 begin*/
+.ya-tab {
+    position: absolute;
+    top: 18px;
+    left: 110px;
+    font-size: 14px;
+    width:44%;
+}
+.ya-tab span{
+    float:left;
+    height:40px;
+    line-height:30px;
+    padding:0px 8px;
+    position:relative;
+    text-align:center;
+    cursor:pointer;
+}
+.ya-tab span:hover{
+    color:#1369C0;
+}
+.ya-tab span:after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:0;
+    height:2px;
+    width:100%;
+    background:#ddd;
+}
+.ya-tab span.line{
+    font-size:14px;
+    color:#CCC;
+    width:8px;
+    padding:0;
+    cursor:default;
+    line-height: 29px;
+    user-select:none;
+}
+.ya-tab span.active{
+    color:#1369C0;
+}
+.ya-tab span.active:after{
+    background:currentColor;
+}
+.ya-tab span.active:before{
+    content: '';
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid currentColor; 
+    position: absolute;
+    left: 50%;
+    margin-left:-2px;
+    bottom: 2px;
+}
+.ya-tabcont ul li{
+    border-top:1px solid #f3f3f3;
+    text-align:justify;
+}
+.ya-tabcont ul li a {
+    display:block;
+    color:#333;
+    padding:13px 10px;
+    overflow:hidden;
+    position:relative;
+}
+.ya-tabcont ul li a:hover{
+    background-color:#FAFAFA;
+}
+.ya-tabcont ul li:first-child{
+    border-top:none;
+}
+.ya-tabcont .ya-list-title{
+    color:#1369C0;
+    font-size:15px;
+    display:block;
+    margin-bottom:5px;
+    padding-right:120px;
+    font-weight:bold;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.ya-tabcont .ya-list-time{
+    position:absolute;
+    right:10px;
+    top:15px;
+    color:#666;
+}
+.ya-tabcont p{
+    max-height:40px;
+    line-height:20px;
+    overflow:hidden;    
+    /*overflow:hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;*/
+}
 
 .ya-myworkbench-box .ya-boxRight .ya-myConsult .ya-consultTitle span {
     float: left;
@@ -1268,9 +1439,82 @@ input:-webkit-autofill {
 
 /*待办事项 end*/
 /*我的随访begin*/
-.ya-myfollowUp {
-
+.ya-access dl{
+    position:relative;
+    padding:12px 10px;
+    border-top:1px solid #f3f3f3;
 }
+.ya-access dl:first-child{
+    border-top:none;
+}
+.ya-access dl dt{
+    position:absolute;
+    left:10px;
+    top:10px;
+}
+.ya-access dl dt img{
+    display:block;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+}
+.ya-access dl dd{
+    margin-left:70px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.ya-access dl dd a{
+    font-weight:bold;
+    float:left;
+    font-size:15px;
+}
+.ya-access dl dd em{
+    font-size:13px;
+    margin-left:15px;
+    font-weight:normal;
+    font-style:normal;
+    color:#808080;
+}
+.ya-access dl dd span{
+    float:right;
+    color:#1369C0;
+    margin-right:10px;
+}
+.ya-access dl dd.ya-access-name{
+    padding:5px 0;
+}
+.ya-access dl dd.ya-access-address{
+    color:#808080;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/*覆盖start*/
+.ya-patient dl dd{
+    padding-top:5px;
+}
+.ya-patient dl dd em {
+    font-size: 14px;
+    color:#666;
+}
+.ya-patient dl dd.ya-access-address{
+    color:#666;
+    margin-top:8px;
+}
+.ya-disease .ya-list-title {
+    padding-right:0;
+    display:inline;
+}
+.ya-disease .ya-list-time {
+    position:static;
+    right:0;
+    top:0;
+    margin-left:10px;
+}
+.ya-file ul li a{
+    padding:0;
+}
+/*覆盖end*/
 
 .ya-myfollowUp .ya-followDetail {
     color: #333;
@@ -1567,19 +1811,6 @@ input:-webkit-autofill {
 }
 /*我的文件夹 分页end*/
 /*患者详情 begin*/
-.ya-boxRight .ya-patientsdetail-page h3{
-    font-size: 16px;
-    line-height: 40px;
-}
-.ya-boxRight .ya-patientsdetail-page h3:before {
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 5px;
-    height: 40px;
-    background-color: #18c0ec;
-}
 .ya-boxRight .ya-patientsdetail-page #ya-con{
     margin: 10px 0;
     border-bottom: 1px solid #DEDEDE;
