@@ -1614,13 +1614,13 @@ input:-webkit-autofill {
 .ya-boxRight .ya-patientsdetail-page .ya-prevpatient ul li{
     margin-top: 10px;
     border-bottom: 1px dashed #f5f5f5;
+    font-size: 14px;
 }
-.ya-boxRight .ya-patientsdetail-page .ya-prevpatient ul .ya-describtime{
-   margin-right: 30px;
+.ya-boxRight .ya-patientsdetail-page .ya-prevpatient ul li span{
+    margin-right: 30px;
 }
 .ya-boxRight .ya-patientsdetail-page .ya-prevpatient ul .ya-describeword{
-    font-size: 14px;
-    margin-top:10px
+    margin:10px 0;
 }
 .ya-boxRight .ya-patientsdetail-page .ya-prevpatient ul .ya-describeimg img{
     float: left;
