@@ -1273,7 +1273,7 @@ input:-webkit-autofill {
     bottom:0;
     height:2px;
     width:100%;
-    background:#ddd;
+    background:#efefef;
 }
 .ya-tab span.line{
     font-size:14px;
@@ -1334,10 +1334,21 @@ input:-webkit-autofill {
     top:15px;
     color:#666;
 }
+.ya-tabcont span em{
+    color:#1369C0;
+    font-weight:normal;
+    font-style:normal;
+    font-size:14px;
+    margin-right:5px;
+}
+.ya-tabcont span em:before{
+    font-size:13px;
+}
 .ya-tabcont p{
     max-height:40px;
     line-height:20px;
-    overflow:hidden;    
+    overflow:hidden;  
+    font-size:13px;  
     /*overflow:hidden;
     text-overflow:ellipsis;
     white-space: nowrap;*/
