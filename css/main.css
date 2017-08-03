@@ -1136,7 +1136,6 @@ input:-webkit-autofill {
 }
 .ya-todoList ul li {
     overflow:hidden;
-    border-bottom:1px solid #f3f3f3;
     position:relative;
 }
 .ya-todoList ul li a{
@@ -1161,7 +1160,7 @@ input:-webkit-autofill {
     background-color:#379eec;
 	color: #fff;
 	font-size: 12px;
-    border-radius:3px;
+    border-radius:2px;
     float:left;
     margin:16px 5px 0 0;
 	line-height: 16px;
@@ -1170,7 +1169,7 @@ input:-webkit-autofill {
     content: '';
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent;
-    border-right: 7px solid #fff; 
+    border-right: 6px solid #fff; 
     position:absolute;
     right:0;
     top:0;
@@ -1298,7 +1297,7 @@ input:-webkit-autofill {
     border-bottom: 4px solid currentColor; 
     position: absolute;
     left: 50%;
-    margin-left:-2px;
+    margin-left:-4px;
     bottom: 2px;
 }
 .ya-tabcont ul li{
