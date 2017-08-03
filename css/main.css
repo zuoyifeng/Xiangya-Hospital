@@ -1336,12 +1336,13 @@ input:-webkit-autofill {
 }
 .ya-tabcont span em{
     color:#1369C0;
+    color:#16a93d;
     font-weight:normal;
     font-style:normal;
     font-size:14px;
     margin-right:5px;
 }
-.ya-tabcont span em:before{
+.ya-tabcont span em i{
     font-size:13px;
 }
 .ya-tabcont p{
@@ -2120,6 +2121,42 @@ input:-webkit-autofill {
 }
 
 /*分页结束*/
+/*文字颜色闪烁*/
+.unread,.unread a{    
+    animation: blink .75s linear infinite;  
+    /* 其它浏览器兼容性前缀 */
+    -webkit-animation: blink .75s linear infinite;
+    -moz-animation: blink .75s linear infinite;
+    -o-animation: blink .75s linear infinite;
+}
+@keyframes blink{
+  0%{color: #21c643;}
+  50%{color: #fb9609;}
+  100%{color: #222;}
+}
+@-webkit-keyframes blink {
+    0%{color: #21c643;}
+    50%{color: #fb9609;}
+    100%{color: #222;}
+}
+
+@-moz-keyframes blink {
+  0%{color: #21c643;}
+  50%{color: #fb9609;}
+  100%{color: #222;}
+}
+
+@-ms-keyframes blink {
+  0%{color: #21c643;}
+  50%{color: #fb9609;}
+  100%{color: #222;}
+}
+
+@-o-keyframes blink {
+  0%{color: #21c643;}
+  50%{color: #fb9609;}
+  100%{color: #222;}
+}
 /*响应式*/
 @media screen and (max-width: 1400px) {
 
