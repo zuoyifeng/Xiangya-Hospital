@@ -1113,7 +1113,7 @@ input:-webkit-autofill {
 .ya-boxRight h3 .ya-more,
 .ya-boxRight h3 .ya-add {
     position: absolute;
-    right: 5px;
+    right: 0;
     top: 0;
     font-size: 14px;
     color: #666;
