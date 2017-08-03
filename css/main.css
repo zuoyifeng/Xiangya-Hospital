@@ -883,7 +883,7 @@ input:-webkit-autofill {
     height: 56px;
     line-height: 56px;
     padding-left: 20px;
-    color:#1369c0
+    color:#000
 }
 
 .consul_form .pop-form {
@@ -1136,6 +1136,8 @@ input:-webkit-autofill {
 }
 .ya-todoList ul li {
     overflow:hidden;
+    border-bottom:1px solid #f3f3f3;
+    position:relative;
 }
 .ya-todoList ul li a{
 	color: #222;
@@ -1144,19 +1146,26 @@ input:-webkit-autofill {
 	text-overflow:ellipsis;
 	white-space: nowrap;
 	line-height: 48px;
-	max-width: 72%;
+	max-width: 65%;
     float:left;
 }
 .ya-todoList ul li a:hover{
 	color: #1369C0;
 }
 .ya-todoList .meta-list-arrow{
-	float: left;
-	color: #1369C0;
-	font-size: 24px;
-	margin-right: 8px;
-    margin-left: 5px;
-	line-height: 46px;
+	/*position:absolute;
+    left:5px;
+    top:15px;*/
+    padding:0px 5px;
+    background-color:#379eec;
+	color: #fff;
+	font-size: 12px;
+    border-radius:3px;
+    float:left;
+    margin:15px 5px 0;
+	line-height: 18px;
+}
+.ya-todoList .meta-list-arrow i{
 }
 .ya-todoList .meta-list-time{
 	float: right;
