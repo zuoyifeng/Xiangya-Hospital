@@ -29,11 +29,13 @@ a {
     background-position: center;
     background-size: auto 100%;
 }
-
+.head_top .container{
+    height:100%;
+}
 .head_top .head_logo {
     position: absolute;
-    left: 10px;
-    top: 30px;
+    left: 20px;
+    top: 25px;
 }
 
 .head_top .head_tool {
@@ -1151,7 +1153,15 @@ input:-webkit-autofill {
 .ya-todoList ul li a:hover{
 	color: #1369C0;
 }
-.ya-todoList .meta-list-arrow{
+.ya-todoList .meta-list-arrow {
+    float: left;
+	color: #1369C0;
+	font-size: 24px;
+	margin-right: 8px;
+    margin-left: 5px;
+	line-height: 46px;
+}
+.ya-todoList .meta-list-tag{
 	/*position:absolute;
     left:5px;
     top:15px;*/
@@ -1165,7 +1175,7 @@ input:-webkit-autofill {
     margin:16px 5px 0 0;
 	line-height: 16px;
 }
-.ya-todoList .meta-list-arrow:after{
+.ya-todoList .meta-list-tag:after{
     content: '';
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent;
@@ -1300,24 +1310,24 @@ input:-webkit-autofill {
     margin-left:-4px;
     bottom: 2px;
 }
-.ya-tabcont ul li{
+.ya-tab-list ul li{
     border-top:1px solid #f3f3f3;
     text-align:justify;
 }
-.ya-tabcont ul li a {
+.ya-tab-list ul li a {
     display:block;
     color:#333;
     padding:13px 10px;
     overflow:hidden;
     position:relative;
 }
-.ya-tabcont ul li a:hover{
+.ya-tab-list ul li a:hover{
     background-color:#FAFAFA;
 }
-.ya-tabcont ul li:first-child{
+.ya-tab-list ul li:first-child{
     border-top:none;
 }
-.ya-tabcont .ya-list-title{
+.ya-tab-list .ya-list-title{
     color:#1369C0;
     font-size:15px;
     display:block;
@@ -1328,13 +1338,13 @@ input:-webkit-autofill {
     text-overflow:ellipsis;
     white-space: nowrap;
 }
-.ya-tabcont .ya-list-time{
+.ya-tab-list .ya-list-time{
     position:absolute;
     right:10px;
     top:15px;
     color:#666;
 }
-.ya-tabcont span em{
+.ya-tab-list span em{
     color:#1369C0;
     color:#16a93d;
     font-weight:normal;
@@ -1342,10 +1352,10 @@ input:-webkit-autofill {
     font-size:14px;
     margin-right:5px;
 }
-.ya-tabcont span em i{
+.ya-tab-list span em i{
     font-size:13px;
 }
-.ya-tabcont p{
+.ya-tab-list p{
     max-height:40px;
     line-height:20px;
     overflow:hidden;  
@@ -1541,6 +1551,9 @@ input:-webkit-autofill {
 }
 .ya-file ul li a{
     padding:0;
+}
+.ya-file ul li a:hover{
+    background:none;
 }
 /*覆盖end*/
 
