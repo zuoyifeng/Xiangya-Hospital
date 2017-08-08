@@ -1098,7 +1098,7 @@ input:-webkit-autofill {
     background-color: #33A876;
 }
 .btn-creat {
-   min-width: 120px;
+    min-width: 120px;
 }
 .btn-refuse {
     width: 100px;
@@ -1163,7 +1163,7 @@ input:-webkit-autofill {
 .ya-boxLeft ul{
     padding:20px 15px 0;
 }
- .ya-boxLeft ul li {
+.ya-boxLeft ul li {
     border-bottom: 1px solid #efefef;
     font-size: 16px;
 }
@@ -1259,52 +1259,52 @@ input:-webkit-autofill {
     position:relative;
 }
 .ya-todoList ul li a{
-	color: #222;
-	display: inline-block;
-	overflow:hidden;
-	text-overflow:ellipsis;
-	white-space: nowrap;
-	line-height: 48px;
-	max-width: 65%;
+    color: #222;
+    display: inline-block;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    line-height: 48px;
+    max-width: 65%;
     float:left;
 }
 .ya-todoList ul li a:hover{
-	color: #1369C0;
+    color: #1369C0;
 }
 .ya-todoList .meta-list-arrow {
     float: left;
-	color: #1369C0;
-	font-size: 24px;
-	margin-right: 8px;
+    color: #1369C0;
+    font-size: 24px;
+    margin-right: 8px;
     margin-left: 5px;
-	line-height: 46px;
+    line-height: 46px;
 }
 .ya-todoList .meta-list-tag{
-	/*position:absolute;
+    /*position:absolute;
     left:5px;
     top:15px;*/
     position:relative;
     padding:0px 8px 0 3px;
     background-color:#379eec;
-	color: #fff;
-	font-size: 12px;
+    color: #fff;
+    font-size: 12px;
     border-radius:2px;
     float:left;
     margin:16px 5px 0 1%;
-	line-height: 16px;
+    line-height: 16px;
 }
 .ya-todoList .meta-list-tag:after{
     content: '';
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent;
-    border-right: 6px solid #fff; 
+    border-right: 6px solid #fff;
     position:absolute;
     right:0;
     top:0;
 }
 .ya-todoList .meta-list-time{
-	float: right;
-	line-height: 48px;
+    float: right;
+    line-height: 48px;
 }
 .ya-myworkbench-box .ya-boxRight .ya-myPatients #ya-category {
     height: 30px;
@@ -1422,7 +1422,7 @@ input:-webkit-autofill {
     content: '';
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
-    border-bottom: 4px solid currentColor; 
+    border-bottom: 4px solid currentColor;
     position: absolute;
     left: 50%;
     margin-left:-4px;
@@ -1476,8 +1476,8 @@ input:-webkit-autofill {
 .ya-tab-list p{
     max-height:40px;
     line-height:20px;
-    overflow:hidden;  
-    font-size:13px;  
+    overflow:hidden;
+    font-size:13px;
     /*overflow:hidden;
     text-overflow:ellipsis;
     white-space: nowrap;*/
@@ -2031,17 +2031,17 @@ input:-webkit-autofill {
 /*病历详情 end*/
 
 /*文字颜色闪烁*/
-.unread,.unread a{    
-    animation: blink .75s linear infinite;  
+.unread,.unread a{
+    animation: blink .75s linear infinite;
     /* 其它浏览器兼容性前缀 */
     -webkit-animation: blink .75s linear infinite;
     -moz-animation: blink .75s linear infinite;
     -o-animation: blink .75s linear infinite;
 }
 @keyframes blink{
-  0%{color: #21c643;}
-  50%{color: #fb9609;}
-  100%{color: #222;}
+    0%{color: #21c643;}
+    50%{color: #fb9609;}
+    100%{color: #222;}
 }
 @-webkit-keyframes blink {
     0%{color: #21c643;}
@@ -2050,23 +2050,188 @@ input:-webkit-autofill {
 }
 
 @-moz-keyframes blink {
-  0%{color: #21c643;}
-  50%{color: #fb9609;}
-  100%{color: #222;}
+    0%{color: #21c643;}
+    50%{color: #fb9609;}
+    100%{color: #222;}
 }
 
 @-ms-keyframes blink {
-  0%{color: #21c643;}
-  50%{color: #fb9609;}
-  100%{color: #222;}
+    0%{color: #21c643;}
+    50%{color: #fb9609;}
+    100%{color: #222;}
 }
 
 @-o-keyframes blink {
-  0%{color: #21c643;}
-  50%{color: #fb9609;}
-  100%{color: #222;}
+    0%{color: #21c643;}
+    50%{color: #fb9609;}
+    100%{color: #222;}
 }
 /*响应式*/
 @media screen and (max-width: 1400px) {
 
 }
+/*登录begin*/
+
+.head_top .head_tool{
+    line-height: 80px;
+    font-size: 20px;
+    color: #fff;
+}
+.login-box{
+    background-image: url("../imgs/big_banner.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+    height: 380px;
+    position: relative;
+}
+.login-box .login-form{
+    width: 300px;
+    height: 380px;
+    position: absolute;
+    right: 150px;
+    top:0;
+    background: #e0f2f5;
+    padding: 20px;
+    color: #379eec;
+}
+.login-box .login-form h3{
+    line-height: 40px;
+    border-bottom: 1px solid #f4f4f4;
+    font-size: 18px;
+}
+.login-form ul{
+    margin-top: 20px;
+}
+.login-form ul li{
+    margin-top: 20px;
+}
+.login-form ul li i{
+    float: left;
+    width: 30px;
+    height: 45px;
+    border: 1px solid #bdbdbd;
+    border-right: none;
+    font-size: 16px;
+    text-align: center;
+    line-height: 45px;
+}
+.login-form ul li input{
+    float: left;
+    width: 230px;
+    height: 45px;
+    color: #555;
+}
+.login-form ul li a:nth-child(1){
+    float: left;
+    font-size:12px;
+}
+.login-form ul li a:nth-child(2){
+    float: right;
+    font-size:12px;
+}
+.login-form .login-button{
+    line-height: 30px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 70px;
+    background: #18c0ec;
+}
+.login-form .login-button a{
+    color: #fff;
+}
+.login-footer{
+    background: #fff;
+}
+.login-footer .meta-siteinfo{
+    /*background: #fff;*/
+}
+.login-footer .meta-siteinfo{
+    color: #000;
+}
+/*登录end*/
+/*注册begin*/
+.head_top .head_register{
+    position: absolute;
+    left: 335px;
+    top: 20px;
+}
+.head_top .head_login a{
+    font-size: 16px;
+}
+#register-content{
+    margin-top: 30px;
+    border-bottom: 1px solid #DEDEDE;
+}
+#register-content .main{
+    margin: 50px auto 60px;
+    width: 830px;
+}
+.register-form{
+    width: 400px;
+    float: left;
+}
+.register-form ul li{
+    width: 398px;
+    height: 52px;
+    position: relative;
+    margin-bottom: 32px;
+}
+.register-form ul li span{
+    position: absolute;
+    top:0;
+    left: 0;
+    float: left;
+    width: 90px;
+    height: 52px;
+    line-height: 52px;
+}
+.register-form ul li input{
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 310px;
+    height: 52px;
+    line-height: 52px;
+    color: #555;
+}
+.register-form ul li .get-confirmcode{
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    width: 110px;
+    height: 46px;
+    border: none;
+    font-weight:bold;
+    letter-spacing:2px;
+    color:blue;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.register-form ul li .get-phonecode{
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    width: 110px;
+    height: 46px;
+    border: none;
+    background: #f2f2f2;
+    color: #333;
+    padding: 0;
+    cursor: pointer;
+}
+.register-btn {
+    width: 100%;
+    height: 54px;
+    color: #fff;
+    background: #38d0ee;
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+.form-bg{
+    float: right;
+}
+
+/*注册end*/
