@@ -2191,7 +2191,7 @@ input:-webkit-autofill {
     position: relative;
     margin-bottom: 32px;
 }
-.register-form ul li span{
+.register-form ul li label{
     position: absolute;
     top:0;
     left: 0;
@@ -2209,6 +2209,14 @@ input:-webkit-autofill {
     line-height: 52px;
     color: #555;
 }
+.register-form ul li span{
+    position: absolute;
+    bottom: -26px;
+    left: 0;
+    color: #cccccc;
+    font-size: 12px;
+    /*visibility: hidden;*/
+}
 .register-form ul li .get-phonecode{
     position: absolute;
     right: 3px;
@@ -2221,6 +2229,7 @@ input:-webkit-autofill {
     padding: 0;
     cursor: pointer;
 }
+
 .register-btn {
     width: 100%;
     height: 54px;
@@ -2229,6 +2238,7 @@ input:-webkit-autofill {
     border: 0;
     font-size: 16px;
     cursor: pointer;
+    margin-top: 32px;
 }
 .form-bg{
     float: right;
