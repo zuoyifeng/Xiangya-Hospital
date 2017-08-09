@@ -2075,19 +2075,19 @@ input:-webkit-autofill {
     font-size: 20px;
     color: #fff;
 }
-.login-box{
+
+.login-wrap{
     background-image: url("../imgs/big_banner.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto 100%;
     height: 380px;
-    position: relative;
 }
 .login-box .login-form{
     width: 300px;
     height: 380px;
     position: absolute;
-    right: 150px;
+    right: 0px;
     top:0;
     background: #e0f2f5;
     padding: 20px;
@@ -2102,7 +2102,8 @@ input:-webkit-autofill {
     margin-top: 20px;
 }
 .login-form ul li{
-    margin-top: 20px;
+    margin-top: 15px;
+    position: relative;
 }
 .login-form ul li i{
     float: left;
@@ -2120,6 +2121,21 @@ input:-webkit-autofill {
     height: 45px;
     color: #555;
 }
+#get-confirmcode{
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    width: 90px;
+    height: 39px;
+    border: none;
+    font-weight:bold;
+    letter-spacing:2px;
+    color:blue;
+    font-size: 26px;
+    cursor: pointer;
+    background: #f2f2f2;
+
+}
 .login-form ul li a:nth-child(1){
     float: left;
     font-size:12px;
@@ -2132,7 +2148,7 @@ input:-webkit-autofill {
     line-height: 30px;
     text-align: center;
     font-size: 16px;
-    margin-top: 70px;
+    margin-top: 60px;
     background: #18c0ec;
 }
 .login-form .login-button a{
@@ -2193,20 +2209,6 @@ input:-webkit-autofill {
     line-height: 52px;
     color: #555;
 }
-.register-form ul li .get-confirmcode{
-    position: absolute;
-    right: 3px;
-    top: 3px;
-    width: 110px;
-    height: 46px;
-    border: none;
-    font-weight:bold;
-    letter-spacing:2px;
-    color:blue;
-    font-size: 26px;
-    cursor: pointer;
-}
-
 .register-form ul li .get-phonecode{
     position: absolute;
     right: 3px;
