@@ -1,0 +1,51 @@
+﻿<div class="meta-crumb">
+    <ol class="breadcrumb">
+        <li>当前位置：</li>
+        <li class="active">用户中心</li>
+        <li><a id="goback">项目管理</a></li>
+        <li><a>成员配置</a></li>
+    </ol>
+</div>
+<div class="table-box">
+    <div class="operate-box">
+        <a class="btn btn-back" id="prevBack"><span class="glyphicon glyphicon-share-alt"></span> 返回</a>
+        <span>所属项目：</span>
+        <select id="projectAll" class="form-control"></select>
+        <span>成员姓名：</span>
+        <input id="searchName" class="form-control" type="text" />
+        <a id="btn-query" class="btn btn-query"><span class="glyphicon glyphicon-search"></span> 查询</a>
+        <div class="pull-right">
+            <a class="btn btn-add" id="addBtn"><span class="glyphicon glyphicon-plus"></span> 新增</a>
+            <a class="btn btn-dels" id="deleteBtn"><span class="glyphicon glyphicon-trash"></span> 删除</a>
+        </div>
+    </div>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th><input id="check_all" type="checkbox"/></th>
+            <th>成员姓名</th>
+            <th>成员登录名</th>
+            <th>成员角色</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody id="dataNote"></tbody>
+    </table>
+    <div class="et-page">
+        <div class="et-pagenum">
+            共<span id="pageCont"></span>条记录，每页展示
+            <select class="form-control" id="pageSelect">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+            </select>条
+        </div>
+        <div class="et-pagego">
+            <span class="et-pagetotal" id="pageNum"></span>
+            跳至第<input class="form-control" type="text" id="pageindex" value="1" onkeyup="value=value.replace(/[^\d]/g,'')" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" />页
+            <span class="btn btn-query" id="goPage">GO</span>
+        </div>
+        <ul class="pagination" id="pagePaging"></ul>
+    </div>
+</div>
+<script src="js/html/system/proMember.js"></script>

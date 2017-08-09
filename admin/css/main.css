@@ -30,6 +30,9 @@ input:-webkit-autofill {
     display:table-cell;
     vertical-align:middle;
 }
+.m-header-logo img {
+    width:200px;
+}
 .m-header .sel{
     position: relative;
     cursor: pointer;
