@@ -41,11 +41,11 @@
                     <ul>
                         <li class="clearfix">
                             <i class="fa fa-user"></i>
-                            <input type="text" placeholder="请输入登录名">
+                            <input type="text" placeholder="请输入登录名" id="username">
                         </li>
                         <li class="clearfix">
                             <i class="fa fa-key"></i>
-                            <input type="password" placeholder="请输入密码">
+                            <input type="password" placeholder="请输入密码" id="password">
                         </li>
                         <li class="clearfix">
                             <i class="fa fa-check-square"></i>
@@ -57,7 +57,10 @@
                             <a href="">忘记密码?</a>
                         </li>
                     </ul>
-                    <div class="login-button"><a href="../../index.html">登&nbsp;&nbsp;&nbsp;&nbsp;录</a></div>
+                    <a href="../../index.html" class="login-button" id="loginbtn">
+                        登&nbsp;&nbsp;&nbsp;&nbsp;录
+                    </a>
+                    <a href="##" id="info" class="info"></a>
                 </form>
 
             </div>
@@ -94,34 +97,78 @@
 </body>
 <script src="../../js/jquery.min.js"></script>
 <script>
-    var code ; //在全局定义验证码
-    //产生验证码
-    window.onload = function createCode(){
-        code = "";
-        var codeLength = 4;//验证码的长度
-        var checkCode = document.getElementById("get-confirmcode");
-        var random = new Array(0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R',
-            'S','T','U','V','W','X','Y','Z');//随机数
-        for(var i = 0; i < codeLength; i++) {//循环操作
-            var index = Math.floor(Math.random()*36);//取得随机数的索引（0~35）
-            code += random[index];//根据索引取得随机数加到code上
+    $(function(){
+        var code ; //在全局定义验证码
+        //产生验证码
+        window.onload = function createCode(){
+            code = "";
+            var codeLength = 4;//验证码的长度
+            var checkCode = document.getElementById("get-confirmcode");
+            var random = new Array(0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R',
+                'S','T','U','V','W','X','Y','Z');//随机数
+            for(var i = 0; i < codeLength; i++) {//循环操作
+                var index = Math.floor(Math.random()*36);//取得随机数的索引（0~35）
+                code += random[index];//根据索引取得随机数加到code上
+            }
+            checkCode.value = code;//把code值赋给验证码
         }
-        checkCode.value = code;//把code值赋给验证码
-    }
-    //校验验证码
-    function validate(){
-        var inputCode = document.getElementById("importcode").value.toUpperCase(); //取得输入的验证码并转化为大写
-        if(inputCode.length <= 0) { //若输入的验证码长度为0
-            alert("请输入验证码！"); //则弹出请输入验证码
+        //校验验证码
+        function validate(){
+            var inputCode = document.getElementById("importcode").value.toUpperCase(); //取得输入的验证码并转化为大写
+            if(inputCode.length <= 0) { //若输入的验证码长度为0
+                alert("请输入验证码！"); //则弹出请输入验证码
+            }
+            else if(inputCode != code ) { //若输入的验证码与产生的验证码不一致时
+                alert("验证码输入错误！@_@"); //则弹出验证码输入错误
+                createCode();//刷新验证码
+                document.getElementById("importcode").value = "";//清空文本框
+            }
+            else { //输入正确时
+                alert("正确"); //弹出^-^
+            }
         }
-        else if(inputCode != code ) { //若输入的验证码与产生的验证码不一致时
-            alert("验证码输入错误！@_@"); //则弹出验证码输入错误
-            createCode();//刷新验证码
-            document.getElementById("importcode").value = "";//清空文本框
-        }
-        else { //输入正确时
-            alert("^-^"); //弹出^-^
-        }
-    }
+
+        //用户名
+        var $username = $('#username');
+        //密码
+        var $password = $('#password');
+        //提示文字对象
+        var $info = $('#info');
+        //登录按钮
+        var $loginbtn = $('#loginbtn');
+        //验证码
+        var $importcode = $('#importcode');
+        //是否可以提交表单
+        $loginbtn.click(function(){
+            var username=$.trim($username.val());
+            var password=$.trim($password.val());
+            var importcode=$.trim($importcode.val());
+            if (!username) {
+                $info.css('visibility','visible').text('用户名不能为空');
+                $username.focus();
+                return false;
+            }
+            if (!password) {
+                $info.css('visibility','visible').text('密码不能为空');
+                $password.focus();
+                return false;
+            }
+            if(!importcode){
+                $info.css('visibility','visible').text('验证码不能为空');
+                $importcode.focus();
+                return false;
+            }
+
+            window.location = 'index.html';
+        });
+        //点击确定按钮提交表单
+        $(document).on('keyup',function(e){
+            if(e.keyCode=='13'){
+                $loginbtn.trigger('click');
+            }
+        })
+    })
+
+
 </script>
 </html>
