@@ -2145,14 +2145,22 @@ input:-webkit-autofill {
     font-size:12px;
 }
 .login-form .login-button{
+    display: block;
     line-height: 30px;
     text-align: center;
     font-size: 16px;
-    margin-top: 60px;
+    margin-top: 40px;
     background: #18c0ec;
-}
-.login-form .login-button a{
+    cursor: pointer;
     color: #fff;
+}
+.login-form .info{
+    float: left;
+    color: red;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 12px;
+    visibility: hidden;
 }
 .login-footer,.login-footer .meta-copyright{
     background: #fff;
