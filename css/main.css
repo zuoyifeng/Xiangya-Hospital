@@ -63,11 +63,21 @@ a {
     color: #fff;
     line-height: 40px;
     display: block;
-    width: 140px;
     text-align: center;
     font-size: 16px;
 }
-
+.head_menu ul.havepermission{
+    display: none;
+}
+.head_menu ul.havepermission li a{
+    width: 140px;
+}
+.head_menu ul.nopermission li a{
+    width: 236px;
+}
+.head_menu ul.nopermission{
+    display: block;
+}
 .head_menu ul li.menu_line {
     width: 4px;
     background-image: url(../imgs/menu_line.png);
@@ -2125,28 +2135,23 @@ input:-webkit-autofill {
     position: absolute;
     right: 3px;
     top: 3px;
-    width: 90px;
+    width: 105px;
     height: 39px;
     border: none;
-    font-weight:bold;
-    letter-spacing:2px;
-    color:blue;
-    font-size: 26px;
     cursor: pointer;
-    background: #f2f2f2;
 
 }
-.login-form ul li a:nth-child(1){
+.login-form ul li span{
     float: left;
     font-size:12px;
 }
-.login-form ul li a:nth-child(2){
+.login-form ul li a:nth-child(1){
     float: right;
     font-size:12px;
 }
 .login-form .login-button{
     display: block;
-    line-height: 30px;
+    line-height: 40px;
     text-align: center;
     font-size: 16px;
     margin-top: 40px;
