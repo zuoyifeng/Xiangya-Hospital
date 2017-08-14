@@ -67,16 +67,19 @@ a {
     font-size: 16px;
 }
 .head_menu ul.havepermission{
-    display: none;
+    /*display: none;*/
 }
-.head_menu ul.havepermission li a{
+.head_menu ul.doctorpermission li a{
     width: 140px;
+}
+.head_menu ul.systempermission li a{
+    width: 196px;
 }
 .head_menu ul.nopermission li a{
     width: 236px;
 }
 .head_menu ul.nopermission{
-    display: block;
+    /*display: block;*/
 }
 .head_menu ul li.menu_line {
     width: 4px;
