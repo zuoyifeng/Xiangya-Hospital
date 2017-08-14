@@ -29,13 +29,11 @@
 
                 </div>
                 <div class="head_tool">
-                    <a href="../workbench/login.html"><i class="fa fa-user" aria-hidden="true"></i> 登录</a>
-                    <a href="../workbench/register.html"><i class="fa fa-user-plus" aria-hidden="true"></i> 注册</a>
                 </div>
             </div>
         </div>
         <div class="head_menu">
-            <ul class="container clearfix">
+            <ul class="container clearfix doctorpermission">
                 <li><a href="../../index.html">首页·HOME</a></li>
                 <li class="menu_line"></li>
                 <li><a href="../workbench/dashboard.html">我的工作台</a></li>
@@ -137,6 +135,8 @@
     <script src="../../js/fancybox/jquery.fancybox.pack.js"></script>
     <script>
         $(function () {
+            var data = JSON.parse(sessionStorage.getItem('USER'));
+            $('.head_tool').html('欢迎登录'+'<span>'+data.userName+'</span>');
             $(".consul_imgs a[rel=upimg]").fancybox({
                 openEffect: 'elastic',
                 closeEffect: 'elastic',

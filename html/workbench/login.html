@@ -116,14 +116,14 @@
                 "role": "1",
                 "passwd": "0a594152643e2501c10effcfdb4bc6a0",
                 "uUserDTO": {
-                    "id": 9,
+                    "id": 8,
                     "createdTime": "2017-06-29 17:15:28",
                     "email": "123456",
                     "groupId": 1,
                     "mobileNo": "1213456",
                     "status": 1,
                     "tenantId": 1,
-                    "userName": "linan"
+                    "userName": "linannan"
                 }
             },
             "isValidateMessage": false,
@@ -133,9 +133,8 @@
 
         var userinfo = res.data.uUserDTO;
         userinfo.role = res.data.role;
-        console.log(userinfo);
+        console.log(userinfo.role);
         sessionStorage.setItem('USER', JSON.stringify(userinfo));
-//        sessionStorage.setItem('USER_INFO', JSON.stringify(userinfo));
         //是否可以提交表单
         $loginbtn.click(function(){
             var username=$.trim($username.val());
