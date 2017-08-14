@@ -65,21 +65,7 @@ a {
     display: block;
     text-align: center;
     font-size: 16px;
-    min-width: 140px;
-}
-.head_menu ul.havepermission{
-    /*display: none;*/
-}
-.head_menu ul.doctorpermission li a{
-}
-.head_menu ul.systempermission li a{
-    width: 196px;
-}
-.head_menu ul.nopermission li a{
-    width: 236px;
-}
-.head_menu ul.nopermission{
-    /*display: block;*/
+    width: 140px;
 }
 .head_menu ul li.menu_line {
     width: 4px;
