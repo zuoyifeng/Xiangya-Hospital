@@ -65,12 +65,12 @@ a {
     display: block;
     text-align: center;
     font-size: 16px;
+    min-width: 140px;
 }
 .head_menu ul.havepermission{
     /*display: none;*/
 }
 .head_menu ul.doctorpermission li a{
-    width: 140px;
 }
 .head_menu ul.systempermission li a{
     width: 196px;
