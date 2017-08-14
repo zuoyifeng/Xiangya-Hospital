@@ -27,6 +27,8 @@
 
             </div>
             <div class="head_tool">
+                <a href="../workbench/login.html"><i class="fa fa-user" aria-hidden="true"></i> 登录</a>
+                <a href="../workbench/register.html"><i class="fa fa-user-plus" aria-hidden="true"></i> 注册</a>
             </div>
         </div>
     </div>
@@ -168,8 +170,6 @@
 <script src="../../js/jqPaginator.min.js"></script>
 <script>
     $(function () {
-        var data = JSON.parse(sessionStorage.getItem('USER'));
-        $('.head_tool').html('欢迎登录'+'<span>'+data.userName+'</span>');
         var searchValue = $('#searchName').val(),//搜索
             pagenum = '',     //总数目
             pagesize = 10,    //每页显示数目
