@@ -22,20 +22,12 @@
             return false;
         }
         var res = {
-            "validateMessagesShowId": "_validatorMessage",
             "status": true,
             "httpstatus": 200,
             "data": {
                 "id": 7,
-                "loginName": "user",
+                "role": "1",
                 "passwd": "0a594152643e2501c10effcfdb4bc6a0",
-                "roles": [
-                    {
-                        "id": 1,
-                        "roleCode": "001",
-                        "roleName": "User"
-                    }
-                ],
                 "uUserDTO": {
                     "id": 8,
                     "createdTime": "2017-06-29 17:15:28",
@@ -51,10 +43,13 @@
             "messages": [],
             "validateMessages": {}
         }
+
         var userinfo = res.data.uUserDTO;
-                    userinfo.loginName = res.data.loginName;
+                    userinfo.role = res.data.loginName;
                     sessionStorage.setItem('USER_INFO', JSON.stringify(userinfo));
-                    window.location = 'index.html';
+        console.log(JSON.parse(sessionStorage.getItem('USER_INFO')));
+        window.location = 'index.html';
+
         /*$.ajax({
             url: GLOBAL_AJAX_URL.userLogin,
             type: "POST",

@@ -80,54 +80,133 @@ $(function () {
     var router = Router(routes);
     router.init();
     window.router=router;
-    if (isLogin()) {
-        //登录用户名
-        $('#topAdminName').text(getUserData().userName);
-        //加载登陆后的角色再切换菜单[待优化:页面加载菜单前,空白错乱...]
-        var roleName = getUserData().loginName;
-        if (roleName == 'admin') {
-            var jsondata = {
-                "t_menus": [
-                    {
-                        "id": 1,
-                        "name": "前台首页",
-                        "url": "../../../index.html",
-                        "active": "0"
-                    },
-                    {
-                        "id": 2,
-                        "name": "运维管理中心",
-                        "url": "",
-                        "active": "1"
-                    }
-                ],
-                "l_menus": {
-                    "id": 7,
-                    "menus": [
-                        {
-                            "name": "内容管理",
-                            "icon": "img/home_icon.png",
-                            "sub_menus": [
-                                {
-                                    "name": "租户管理",
-                                    "url": "/adminTenant"
-                                },
-                                {
-                                    "name": "用户管理",
-                                    "url": "/adminUser"
-                                },
-                                {
-                                    "name": "应用管理",
-                                    "url": "/adminApply"
-                                }
-                            ]
-                        }
-                    ]
-                }
+    // if (isLogin()) {
+    //     //登录用户名
+    //     $('#topAdminName').text(getUserData().userName);
+    //     //加载登陆后的角色再切换菜单[待优化:页面加载菜单前,空白错乱...]
+    //     var roleName = getUserData().loginName;
+    //     if (roleName == 'admin') {
+    //         var jsondata = {
+    //             "t_menus": [
+    //                 {
+    //                     "id": 1,
+    //                     "name": "前台首页",
+    //                     "url": "../../../index.html",
+    //                     "active": "0"
+    //                 },
+    //                 {
+    //                     "id": 2,
+    //                     "name": "运维管理中心",
+    //                     "url": "",
+    //                     "active": "1"
+    //                 }
+    //             ],
+    //             "l_menus": {
+    //                 "id": 7,
+    //                 "menus": [
+    //                     {
+    //                         "name": "内容管理",
+    //                         "icon": "img/home_icon.png",
+    //                         "sub_menus": [
+    //                             {
+    //                                 "name": "租户管理",
+    //                                 "url": "/adminTenant"
+    //                             },
+    //                             {
+    //                                 "name": "用户管理",
+    //                                 "url": "/adminUser"
+    //                             },
+    //                             {
+    //                                 "name": "应用管理",
+    //                                 "url": "/adminApply"
+    //                             }
+    //                         ]
+    //                     }
+    //                 ]
+    //             }
+    //         }
+    //         loadMenu(jsondata);
+    //         router.setRoute('/adminTenant');
+    //     } else {
+    //         //普通管理员
+    //         var jsondata = {
+    //             "t_menus": [
+    //                 {
+    //                     "id": 1,
+    //                     "name": "前台首页",
+    //                     "url": "../../../index.html",
+    //                     "active": "0"
+    //                 },
+    //                 {
+    //                     "id": 2,
+    //                     "name": "运维管理中心",
+    //                     "url": "",
+    //                     "active": "1"
+    //                 }
+    //             ],
+    //             "l_menus": {
+    //                 "id": 7,
+    //                 "menus": [
+    //                     {
+    //                         "name": "内容管理",
+    //                         "icon": "img/home_icon.png",
+    //                         "sub_menus": [
+    //                             {
+    //                                 "name": "用户管理",
+    //                                 "url": "/userUser"
+    //                             },
+    //                             {
+    //                                 "name": "组织管理",
+    //                                 "url": "/userGroup"
+    //                             },
+    //                             {
+    //                                 "name": "权限管理",
+    //                                 "url": "/userRole"
+    //                             },
+    //                             {
+    //                                 "name": "角色管理",
+    //                                 "url": "/userProject"
+    //                             }
+    //                         ]
+    //                     }
+    //                 ]
+    //             }
+    //         }
+    //         loadMenu(jsondata);
+    //         router.setRoute('/userUser');
+    //     }
+    // }
+    window.history.forward();
+    var res = {
+        "status": true,
+        "httpstatus": 200,
+        "data": {
+            "id": 7,
+            "role": "1",
+            "passwd": "0a594152643e2501c10effcfdb4bc6a0",
+            "uUserDTO": {
+                "id": 8,
+                "createdTime": "2017-06-29 17:15:28",
+                "email": "123456",
+                "groupId": 1,
+                "mobileNo": "1213456",
+                "status": 1,
+                "tenantId": 1,
+                "userName": "linan"
             }
-            loadMenu(jsondata);
-            router.setRoute('/adminTenant');
-        } else {
+        },
+        "isValidateMessage": false,
+        "messages": [],
+        "validateMessages": {}
+    }
+    var userinfo = res.data.uUserDTO;
+    userinfo.role = res.data.loginName;
+    sessionStorage.setItem('USER_INFO', JSON.stringify(userinfo));
+    var  username=JSON.parse(sessionStorage.getItem('USER_INFO')).userName;
+    //登录用户名
+        $('#topAdminName').text(username);
+
+    //加载登陆后的角色再切换菜单[待优化:页面加载菜单前,空白错乱...]
             //普通管理员
             var jsondata = {
                 "t_menus": [
@@ -156,26 +235,25 @@ $(function () {
                                     "url": "/userUser"
                                 },
                                 {
-                                    "name": "分组管理",
+                                    "name": "组织管理",
                                     "url": "/userGroup"
                                 },
                                 {
-                                    "name": "角色管理",
+                                    "name": "权限管理",
                                     "url": "/userRole"
                                 },
                                 {
-                                    "name": "项目管理",
+                                    "name": "角色管理",
                                     "url": "/userProject"
                                 }
                             ]
                         }
                     ]
                 }
-            }
+            };
             loadMenu(jsondata);
             router.setRoute('/userUser');
-        }
-    }
+
     function loadMenu(data) {
         var t_menus = data.t_menus;
         var l_menus = data.l_menus.menus;
@@ -223,6 +301,7 @@ $(function () {
     //左侧菜单绑定点击事件
     $doc.on('click', '.expand dl dt', function () {
         var $this = $(this);
+        console.log($this);
         var $parent = $this.parent();
         var $siblings = $parent.siblings();
         $parent.toggleClass('active');
@@ -438,6 +517,6 @@ $(function () {
             state: 'success',
             message: '已成功退出系统！'
         });
-        setTimeout("window.location = 'login.html'", 2000);
+        setTimeout("window.location = llogin1.html", 2000);
     });
 });
