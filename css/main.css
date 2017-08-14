@@ -24,7 +24,7 @@ a {
 .head_top {
     height: 120px;
     margin: 0px auto;
-    background-color: #318BE7;
+    background-color: #A24041;
     background-image: url(../imgs/header_bg.jpg);
     background-position: center;
     background-size: auto 100%;
@@ -35,7 +35,7 @@ a {
 .head_top .head_logo {
     position: absolute;
     left: 20px;
-    top: 25px;
+    top: 20px;
 }
 
 .head_top .head_tool {
@@ -51,7 +51,7 @@ a {
 }
 
 .head_menu {
-    background: #1369C0;
+    background: #822A2C;
 }
 
 .head_menu ul li {
@@ -120,7 +120,7 @@ a {
     font-size: 20px;
     font-weight: normal;
     padding-left: 15px;
-    border-bottom: 1px solid #379eec;
+    border-bottom: 1px solid #822A2C;
     margin-bottom: 10px;
 }
 
@@ -131,7 +131,7 @@ a {
     left: 0px;
     width: 5px;
     height: 22px;
-    background-color: #379eec;
+    background-color: #822A2C;
 }
 
 .meta-title a {
@@ -139,7 +139,7 @@ a {
     right: 0px;
     bottom: 0;
     padding: 5px 0 5px 10px;
-    color: #379eec;
+    color: #822A2C;
     font-size: 12px;
 }
 
@@ -183,7 +183,7 @@ a {
     position: absolute;
     bottom: 20px;
     right: 10px;
-    color: #0085d0;
+    color: #822A2C;
     font-size: 14px;
     margin: 0;
 }
@@ -247,7 +247,7 @@ a {
 }
 
 .meta-list ul li a:hover {
-    color: #379eec;
+    color: #822A2C;
     text-decoration: underline;
 }
 
@@ -286,7 +286,7 @@ a {
     left: 10px;
     right: 0;
     height: 1px;
-    background-color: #379eec;
+    background-color: #822A2C;
 }
 
 .meta_stitle a {
@@ -294,7 +294,7 @@ a {
     right: 0px;
     bottom: 0;
     padding: 5px 0 5px 10px;
-    color: #379eec;
+    color: #822A2C;
     font-size: 12px;
 }
 
@@ -434,7 +434,7 @@ a {
 /*底部*/
 .meta-footer {
     margin-top: 30px;
-    background-color: #1369c0;
+    background-color: #822A2C;
 }
 
 .meta-copyright {
@@ -442,12 +442,12 @@ a {
     text-align: left;
     position: relative;
     /*ie8以下不兼容处理背景色*/
-    background-color: #1369c0;
+    background-color: #822A2C;
 }
 
 .meta-copyright .meta-sitemap {
-    text-align: center;
-    padding: 0px 0 30px;
+    text-align: justify;
+    padding: 0px 0 10px;
     word-wrap: break-word;
 }
 
@@ -467,24 +467,24 @@ a {
     color: #fff;
     position: relative;
     padding: 10px 400px 0px 100px;
-    height: 200px;
+    min-height: 170px;
 }
 
 .meta-siteinfo p {
     line-height: 24px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .meta-siteinfo img.logo_bottom {
     position: absolute;
     left: 10px;
-    top: 50px;
+    top: 45px;
 }
 
 .meta-siteinfo .img_code {
     position: absolute;
     right: 0;
-    top: 0px;
+    top: 0;
     overflow: hidden;
     width: 350px;
 }
@@ -492,12 +492,12 @@ a {
 .meta-siteinfo .img_code div {
     float: left;
     width: 50%;
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
 }
 
 .meta-siteinfo .img_code div img {
-    width: 120px;
+    width: 100px;
     margin: 15px auto 0;
     display: block;
 }
@@ -1190,11 +1190,9 @@ input:-webkit-autofill {
 }
 .ya-boxRight .ya-personalLeft,
 .ya-boxRight .ya-personalRight {
-    width: 48.5%;
     height: 350px;
     overflow:hidden;
     position:relative;
-    float: left;
     padding:15px;
     margin-top:30px;
     background-color:#fff;
@@ -1203,12 +1201,8 @@ input:-webkit-autofill {
     border-radius:2px;
     box-shadow:0 1px 3px #eee;
 }
-.ya-boxRight>div:first-child,
-.ya-boxRight>div:first-child+div{
+.ya-boxRight>div:first-child{
     margin-top:0;
-}
-.ya-boxRight .ya-personalLeft {
-    margin-right: 3%;
 }
 /*我的患者 begin*/
 .ya-myworkbench-box .ya-boxRight h3 {
