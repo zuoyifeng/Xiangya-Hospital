@@ -91,7 +91,7 @@ $(function () {
     //                 {
     //                     "id": 1,
     //                     "name": "前台首页",
-    //                     "url": "../../../index.html",
+    //                     "url": "../index.html",
     //                     "active": "0"
     //                 },
     //                 {
@@ -134,7 +134,7 @@ $(function () {
     //                 {
     //                     "id": 1,
     //                     "name": "前台首页",
-    //                     "url": "../../../index.html",
+    //                     "url": "../index.html",
     //                     "active": "0"
     //                 },
     //                 {
@@ -213,7 +213,7 @@ $(function () {
                     {
                         "id": 1,
                         "name": "前台首页",
-                        "url": "../../../index.html",
+                        "url": "../index.html",
                         "active": "0"
                     },
                     {

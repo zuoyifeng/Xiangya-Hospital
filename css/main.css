@@ -441,7 +441,7 @@ a {
     text-align: left;
     position: relative;
     /*ie8以下不兼容处理背景色*/
-    background-color: #822A2C;
+    /*background-color: #822A2C;*/
 }
 
 .meta-copyright .meta-sitemap {
