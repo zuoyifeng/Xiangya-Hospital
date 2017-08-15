@@ -1,6 +1,6 @@
 ﻿/*项目页面内样式集合*/
 body {
-    font-family: "微软雅黑";
+    font-family: "微软雅黑", serif;
     line-height: 1.42857143;
 }
 
@@ -16,14 +16,14 @@ a {
 
 .container {
     width: 1200px;
-    margin: 0px auto;
+    margin: 0 auto;
     position: relative;
 }
 
 /*头部开始*/
 .head_top {
     height: 120px;
-    margin: 0px auto;
+    margin: 0 auto;
     background-color: #A24041;
     background-image: url(../imgs/header_bg.jpg);
     background-position: center;
@@ -49,6 +49,9 @@ a {
     font-size: 16px;
     margin: 0 5px;
 }
+.head_top .head_tool .quit{
+    cursor: pointer;
+}
 
 .head_menu {
     background: #822A2C;
@@ -56,15 +59,15 @@ a {
 
 .head_menu ul li {
     float: left;
-    height: 40px;
+    height: 50px;
 }
 
 .head_menu ul li a {
     color: #fff;
-    line-height: 40px;
+    line-height: 50px;
     display: block;
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
     width: 140px;
 }
 .head_menu ul li.menu_line {
@@ -72,6 +75,7 @@ a {
     background-image: url(../imgs/menu_line.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: auto 100%;
 }
 
 /*头部结束*/
@@ -192,7 +196,7 @@ a {
 }
 
 .new_box dl dd a:hover {
-    color: #379eec;
+    color: #D35D59;
 }
 
 .new_box_second dl.first_list dt {
@@ -682,7 +686,7 @@ a {
 .pop-form .files_upRar {
     display: inline-block;
     vertical-align: 2px;
-    color: #379eec;
+    color: #D35D59;
     max-width: 480px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -900,7 +904,7 @@ a {
 }
 
 .et-page .et-pagetotal {
-    margin: 0px 10px;
+    margin:0 10px;
 }
 
 .btnGoPage {
@@ -1168,8 +1172,8 @@ input:-webkit-autofill {
     border-bottom: none;
 }*/
 .ya-boxLeft ul li.active {
-    background: #379eec;
-    border-bottom: 1px solid #379eec;
+    background: #D35D59;
+    border-bottom: 1px solid #D35D59;
 }
 
 .ya-myworkbench-box .ya-boxLeft ul li.active a {
@@ -1260,11 +1264,11 @@ input:-webkit-autofill {
     float:left;
 }
 .ya-todoList ul li a:hover{
-    color: #1369C0;
+    color: #a15151;
 }
 .ya-todoList .meta-list-arrow {
     float: left;
-    color: #1369C0;
+    color: #a15151;
     font-size: 24px;
     margin-right: 8px;
     margin-left: 5px;
@@ -1276,7 +1280,7 @@ input:-webkit-autofill {
     top:15px;*/
     position:relative;
     padding:0px 8px 0 3px;
-    background-color:#379eec;
+    background-color:#D35D59;
     color: #fff;
     font-size: 12px;
     border-radius:2px;
@@ -1340,7 +1344,7 @@ input:-webkit-autofill {
 }
 
 .ya-myworkbench-box .ya-boxRight .ya-myPatients #ya-category span.select {
-    background: #379eec;
+    background: #D35D59;
     color: #fff;
 }
 
@@ -1351,7 +1355,7 @@ input:-webkit-autofill {
 .ya-myworkbench-box .ya-boxRight .ya-myPatients #ya-con li .fa-user {
     float: left;
     font-size: 50px;
-    color: #379eec;
+    color: #D35D59;
 }
 
 .ya-myworkbench-box .ya-boxRight .ya-myPatients #ya-con .ya-info {
@@ -1383,7 +1387,7 @@ input:-webkit-autofill {
     cursor:pointer;
 }
 .ya-tab span:hover{
-    color:#1369C0;
+    color:#D35D59;
 }
 .ya-tab span:after{
     content:'';
@@ -1404,7 +1408,7 @@ input:-webkit-autofill {
     user-select:none;
 }
 .ya-tab span.active{
-    color:#1369C0;
+    color:#D35D59;
 }
 .ya-tab span.active:after{
     background:currentColor;
@@ -1437,7 +1441,7 @@ input:-webkit-autofill {
     border-top:none;
 }
 .ya-tab-list .ya-list-title{
-    color:#1369C0;
+    color:#a15151;
     font-size:15px;
     display:block;
     margin-bottom:5px;
@@ -1454,7 +1458,7 @@ input:-webkit-autofill {
     color:#666;
 }
 .ya-tab-list span em{
-    color:#1369C0;
+    color:#a15151;
     color:#16a93d;
     font-weight:normal;
     font-style:normal;
@@ -1487,7 +1491,7 @@ input:-webkit-autofill {
 }
 
 .ya-myworkbench-box .ya-boxRight .ya-myConsult .ya-consultTitle span.select {
-    background: #379eec;
+    background: #D35D59;
     color: #fff;
 }
 
@@ -1537,7 +1541,7 @@ input:-webkit-autofill {
 
 .ya-consultCon .ya-describe span {
     font-size: 14px;
-    color: #379eec;
+    color: #D35D59;
 }
 
 /*我的会诊和我的转诊 end*/
@@ -1552,7 +1556,7 @@ input:-webkit-autofill {
     margin-left: 5px;
     line-height: 30px;
     font-size: 14px;
-    color: #379eec;
+    color: #D35D59;
 }
 
 .ya-todoList .ya-todolistBox .ya-todolistTitle {
@@ -1568,7 +1572,7 @@ input:-webkit-autofill {
 
 .ya-todoList .ya-todolistBox .ya-todolistTitle:hover {
     text-decoration: underline;
-    color: #379eec;
+    color: #D35D59;
 }
 
 .ya-todoList .ya-todolistBox .ya-todolistTime {
@@ -1614,6 +1618,7 @@ input:-webkit-autofill {
     font-weight:bold;
     float:left;
     font-size:15px;
+    color: #a15151;
 }
 .ya-access dl dd em{
     font-size:13px;
@@ -1624,7 +1629,7 @@ input:-webkit-autofill {
 }
 .ya-access dl dd span{
     float:right;
-    color:#1369C0;
+    color:#D35D59;
     margin-right:10px;
 }
 .ya-access dl dd.ya-access-name{
@@ -1738,7 +1743,7 @@ input:-webkit-autofill {
 
 .ya-medicalRecord .ya-medicalInfo span {
     font-size: 12px;
-    color: #379eec;
+    color: #D35D59;
 }
 
 /*病历end*/
@@ -1760,7 +1765,7 @@ input:-webkit-autofill {
 }
 .ya-boxRight .ya-patients-page #ya-category span.select{
     color: #fff;
-    background: #18c0ec;
+    background: #D35D59;
 }
 .ya-boxRight .ya-patients-page #ya-con{
     margin-top: 20px;
@@ -1817,7 +1822,7 @@ input:-webkit-autofill {
 }
 .ya-boxRight .ya-myConsult-page .ya-consultTitle span.select{
     color: #fff;
-    background: #18c0ec;
+    background: #D35D59;
 }
 .ya-boxRight .ya-myConsult-page .ya-consultCon{
     margin-top: 20px;
@@ -1918,7 +1923,7 @@ input:-webkit-autofill {
 }
 .ya-boxRight .ya-medicalrecord-page .ya-medicalInfo span{
     font-size: 14px;
-    color: #379eec;
+    color: #D35D59;
 }
 /*病历 分页end*/
 /*我的文件夹 分页begin*/
@@ -1984,7 +1989,7 @@ input:-webkit-autofill {
 }
 .ya-boxRight .ya-patientsdetail-page .ya-prevpatient h4{
     font-size: 16px;
-    color: #008EE3;
+    color: #D35D59;
     font-weight: 400;
     margin-left:20px ;
 }
@@ -2084,7 +2089,7 @@ input:-webkit-autofill {
     top:0;
     background: #e0f2f5;
     padding: 20px;
-    color: #379eec;
+    color: #D35D59;
 }
 .login-box .login-form h3{
     line-height: 40px;
