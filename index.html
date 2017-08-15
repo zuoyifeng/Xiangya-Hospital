@@ -31,7 +31,7 @@
         </div>
     </div>
     <div class="head_menu">
-        <ul class="container clearfix">
+        <ul class="container clearfix" id="nav">
             <li><a href="index.html">首页</a></li>
             <li class="menu_line"></li>
             <li><a href="http://www.hancloudclinic.com:8084/FormParser">大数据平台</a></li>
@@ -447,7 +447,6 @@
 </footer>
 <script src="js/jquery.min.js"></script>
 <script src="js/superslide.min.js"></script>
-<script src="js/common.js"></script>
 <script>
     //轮播图
     jQuery("#imgList").slide({
@@ -457,6 +456,27 @@
         vis: 4,
         interTime: 50
     });
+
+    var data = JSON.parse(sessionStorage.getItem('USER'));
+    if (data && data.role == 1) {
+        var html = '<li><a href="./index.html">首页</a></li> <li class="menu_line"></li> <li><a href="html/workbench/dashboard.html">我的工作台</a></li> <li class="menu_line"></li> <li><a href="html/consul/consuladd.html">会诊/转诊</a></li> <li class="menu_line"></li> <li><a href="http://www.hancloudclinic.com:8084/FormParser">大数据平台</a></li> <li class="menu_line"></li> <li><a href="###">医联体论坛</a></li> <li class="menu_line"></li> <li><a href="###">便民服务</a></li><li class="menu_line"></li> <li><a href="###">在线咨询</a></li>';
+        $('#nav').html(html);
+        $('.head_tool').html('欢迎登录' + '<span>' + data.uUserDTO.userName + '</span>' + ',' + '<span class="quit">' + '退出' + '</span>');
+    } else if (data && data.role == 2) {
+        var html = '<li><a href="./index.html">首页·HOME</a></li> <li class="menu_line"></li> <li><a href="admin/index.html">运维管理</a></li> <li class="menu_line"></li> <li class="menu_line"></li> <li><a href="http://www.hancloudclinic.com:8084/FormParser">大数据平台</a></li> <li class="menu_line"></li> <li><a href="###">医联体论坛</a></li> <li class="menu_line"></li> <li><a href="###">便民服务</a></li><li class="menu_line"></li> <li><a href="###">在线咨询</a></li>';
+        $('#nav').html(html);
+        $('.head_tool').html('欢迎登录' + '<span>' + data.uUserDTO.userName + '</span>' + ',' + '<span class="quit">' + '退出' + '</span>');
+    } else if (data && data.role ==  3) {
+        window.history.back();
+        $('.head_tool').html('欢迎登录' + '<span>' + data.uUserDTO.userName + '</span>' + ',' + '<span class="quit">' + '退出' + '</span>');
+    } else {
+        var html = '<li><a href="./index.html">首页</a></li><li class="menu_line"></li><li><a href="http://www.hancloudclinic.com:8084/FormParser">大数据平台</a></li><li class="menu_line"></li><li><a href="###">医联体论坛</a></li><li class="menu_line"></li><li><a href="###">便民服务</a></li><li class="menu_line"></li><li><a href="###">在线咨询</a></li>';
+        $('#nav').html(html);
+    }
+    $('.head_tool').on('click', 'span.quit', function () {
+        sessionStorage.removeItem("USER");
+        window.location = 'index.html';
+    })
 </script>
 </body>
 </html>

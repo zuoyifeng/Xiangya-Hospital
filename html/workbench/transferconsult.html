@@ -32,22 +32,20 @@
         </div>
     </div>
     <div class="head_menu">
-        <ul class="container clearfix doctorpermission">
-            <li><a href="../../index.html">首页·HOME</a></li>
-            <li class="menu_line"></li>
-            <li><a href="../workbench/dashboard.html">我的工作台</a></li>
-            <li class="menu_line"></li>
-            <li><a href="../consul/consuladd.html">会诊</a></li>
-            <li class="menu_line"></li>
-            <li><a href="../referral/referraladd.html">转诊</a></li>
-            <li class="menu_line"></li>
-            <li><a href="http://www.hancloudclinic.com:8084/FormParser">大数据平台</a></li>
-            <li class="menu_line"></li>
-            <li><a href="###">医联体论坛</a></li>
-            <li class="menu_line"></li>
-            <li><a href="###">便民服务</a></li>
-            <li class="menu_line"></li>
-            <li><a href="###">在线咨询</a></li>
+        <ul class="container clearfix" id="nav">
+            <!--<li><a href="../../index.html">首页</a></li>-->
+            <!--<li class="menu_line"></li>-->
+            <!--<li><a href="../workbench/dashboard.html">我的工作台</a></li>-->
+            <!--<li class="menu_line"></li>-->
+            <!--<li><a href="../consul/consuladd.html">会诊/转诊</a></li>-->
+            <!--<li class="menu_line"></li>-->
+            <!--<li><a href="http://www.hancloudclinic.com:8084/FormParser">大数据平台</a></li>-->
+            <!--<li class="menu_line"></li>-->
+            <!--<li><a href="###">医联体论坛</a></li>-->
+            <!--<li class="menu_line"></li>-->
+            <!--<li><a href="###">便民服务</a></li>-->
+            <!--<li class="menu_line"></li>-->
+            <!--<li><a href="###">在线咨询</a></li>-->
         </ul>
     </div>
 </header>
@@ -154,50 +152,35 @@
 
 <footer class="meta-footer">
     <div class="container">
-        <div class="meta-copyright">
+        <div class="meta-copyright" id="footerBox">
             <div class="meta-sitemap">
-                <a>爱医学论坛</a>
-                <a>医学考试题库</a>
-                <a>执业医师考试题库</a>
-                <a>快速问医生</a>
-                <a>中医执业医师考试题库</a>
-                <a>新浪中医</a>
-                <a>医学资源下载</a>
-                <a>国家医学考试中心网</a>
-                <a>爱爱医病例中心</a>
-                <a>好大夫</a>
-                <a>99健康肉</a>
-                <a>A+医学百科</a>
-                <a>中国早教网</a>
-                <a>大众医药网</a>
-                <a>医脉通</a>
-                <a>放心医苑网</a>
-                <a>快易捷药品</a>
-                <a>中华康网</a>
-                <a>中华考试网</a>
-                <a>医学百科</a>
-                <a>仁和药房网</a>
-                <a>健康网</a>
-                <a>医学影像园</a>
-                <a>医学全在线</a>
-                <a>中国医学人才网</a>
+                <a title="中国政府网_中央人民政府门户网站" href="http://www.gov.cn/">中国政府网</a>
+                <a title="中华人民共和国国家卫生和计划生育委员会" href="http://www.nhfpc.gov.cn/">中华人民共和国国家卫生和计划生育委员会</a>
+                <a title="湖南卫生和计划生育委员会" href="http://wjw.hunan.gov.cn/">湖南卫生和计划生育委员会</a>
+                <a title="国家医学考试网" href="http://www.nmec.org.cn/">国家医学考试网</a>
+                <a title="丁香园_中国医疗领域的连接者" href="http://www.dxy.cn/">丁香园</a>
+                <a title="中南大学" href="http://www.csu.edu.cn/">中南大学</a>
+                <a title="中南大学湘雅医院" href="http://www.xiangya.com.cn/">中南大学湘雅医院</a>
+                <a title="中南大学湘雅二医院" href="http://www.xyeyy.com/">中南大学湘雅二医院</a>
+                <a title="中南大学湘雅三医院" href="http://www.xy3yy.com/">中南大学湘雅三医院</a>
+                <a title="湘雅海外校友会" href="http://www.xyoaa.org/">湘雅海外校友会</a>
             </div>
             <div class="meta-siteinfo">
-                <img class="logo_bottom" src="../../imgs/logo_btom.png"/>
+                <img class="logo_bottom" src="../../imgs/logo_hack.png"/>
                 <p>
-                    地址：中国湖南长沙市湘雅路87号<br>
-                    电话：0731-84328888 <br>
-                    传真：0731-84327332
+                    通讯地址：中国湖南长沙市湘雅路87号<br>
+                    座机电话：0731-89753406 <br>
+                    移动电话：13080564083
                 </p>
                 <p>湘ICP备09002748号 Copyright 2007-2017 版权申明 | 联系我们 | 网站地图 </p>
                 <div class="img_code">
                     <div>
                         <span>湘雅皮肤医生</span>
-                        <img src="../../imgs/code.jpg" />
+                        <img src="../../imgs/code.jpg"/>
                     </div>
                     <div>
                         <span>湘雅皮肤医联体</span>
-                        <img src="../../imgs/code.jpg" />
+                        <img src="../../imgs/code.jpg"/>
                     </div>
                 </div>
             </div>
@@ -207,17 +190,9 @@
 
 <script src="../../js/jquery.min.js"></script>
 <script src="../../js/jqPaginator.min.js"></script>
+<script src="../../js/common.js"></script>
 <script>
     $(function () {
-        var data = JSON.parse(sessionStorage.getItem('USER'));
-        $('.head_tool').html('欢迎登录'+'<span>'+data.userName+'</span>');
-        //tab切换
-        $('.ya-tab>.ya-tab-li').on('click', function () {
-            $(this).addClass('active').siblings('span.ya-tab-li').removeClass('active');
-            var showid = $(this).attr('show');
-            $('.ya-tabcont #' + showid).show().siblings('.ya-tabcont .ya-tab-ul').hide();
-        });
-
         var searchValue = $('#searchName').val(),//搜索
             pagenum = '',     //总数目
             pagesize = 10,    //每页显示数目
