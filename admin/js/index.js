@@ -227,7 +227,7 @@ $(function () {
                     "id": 7,
                     "menus": [
                         {
-                            "name": "内容管理",
+                            "name": "系统管理",
                             "icon": "img/home_icon.png",
                             "sub_menus": [
                                 {

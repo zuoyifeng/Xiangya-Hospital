@@ -2089,7 +2089,7 @@ input:-webkit-autofill {
     top:0;
     background: #e0f2f5;
     padding: 20px;
-    color: #D35D59;
+    color: #18c0ec;
 }
 .login-box .login-form h3{
     line-height: 40px;
@@ -2180,7 +2180,7 @@ input:-webkit-autofill {
 }
 #register-content .main{
     margin: 50px auto 60px;
-    width: 830px;
+    width: 960px;
 }
 .register-form{
     width: 400px;
