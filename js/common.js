@@ -71,6 +71,7 @@
         $('.head_menu').html();
         var html = '<ul class="container clearfix"><li><a href="###">首页</a></li><li class="menu_line"></li><li><a href="http://www.hancloudclinic.com:8084/FormParser">大数据平台</a></li><li class="menu_line"></li><li><a href="###">医联体论坛</a></li><li class="menu_line"></li><li><a href="###">便民服务</a></li><li class="menu_line"></li><li><a href="###">在线咨询</a></li></ul>';
         $('.head_menu').html(html);
+        
     }
 
 
