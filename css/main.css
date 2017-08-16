@@ -647,10 +647,12 @@ a {
 }
 
 .pop-form ul .form-control {
-    min-width: 180px;
+    min-width: 160px;
     height: 40px;
 }
-
+.pop-form ul .applytime .form-control{
+    width: 540px;
+}
 .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
     background-color: #fff;
     border: none;
@@ -658,7 +660,7 @@ a {
 }
 
 .pop-form .text-label {
-    width: 150px;
+    width: 130px;
     padding-left: 20px;
     text-align: left;
     line-height: 40px;
@@ -705,11 +707,12 @@ a {
 }
 
 .pop-form ul li .empty-tip {
-    float: left;
+    /* float: left; */
     width: 20px;
     line-height: 34px;
     color: #f00;
     text-align: center;
+    margin-left: 6px;
 }
 
 .pop-right label {
@@ -1014,7 +1017,11 @@ input:-webkit-autofill {
     height: 56px;
     line-height: 56px;
     padding-left: 20px;
-    color:#000
+    color:#000;
+}
+.consul_title span{
+    font-size: 15px;
+    color: #5d5d5d;
 }
 
 .consul_form .pop-form {
@@ -1047,15 +1054,15 @@ input:-webkit-autofill {
     font-style: normal;
 }
 .pop-row .form-control{
-    width:200px;
+    width: 183px;
 }
 .pop-row .pop-rowtitle{
     display:inline-block;
     text-align: left;
     line-height: 40px;
     font-size: 15px;
-    width:120px;
-    margin:0px 0 0 150px;
+    width: 85px;
+    margin: 0px 0 0 64px;
 }
 
 .btn-submit {
