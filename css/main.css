@@ -1211,7 +1211,7 @@ input:-webkit-autofill {
 .ya-myworkbench-box .ya-boxRight h3 {
     position: relative;
     color: #222222;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: normal;
     padding:5px 8px 15px;
     border-bottom: 1px solid #efefef;
@@ -1230,7 +1230,7 @@ input:-webkit-autofill {
     position: absolute;
     right: 0;
     top: 0;
-    font-size: 14px;
+    font-size: 16px;
     color: #666;
     padding:5px 10px;
     border-radius:3px;
@@ -1262,6 +1262,7 @@ input:-webkit-autofill {
     line-height: 48px;
     max-width: 65%;
     float:left;
+    font-size: 16px;
 }
 .ya-todoList ul li a:hover{
     color: #a15151;
@@ -1282,7 +1283,7 @@ input:-webkit-autofill {
     padding:0px 8px 0 3px;
     background-color:#D35D59;
     color: #fff;
-    font-size: 12px;
+    font-size: 16px;
     border-radius:2px;
     float:left;
     margin:16px 5px 0 1%;
@@ -1300,6 +1301,7 @@ input:-webkit-autofill {
 .ya-todoList .meta-list-time{
     float: right;
     line-height: 48px;
+    font-size: 16px;
 }
 .ya-myworkbench-box .ya-boxRight .ya-myPatients #ya-category {
     height: 30px;
@@ -1374,7 +1376,7 @@ input:-webkit-autofill {
     position: absolute;
     top: 18px;
     left: 110px;
-    font-size: 14px;
+    font-size: 16px;
     width:44%;
 }
 .ya-tab span{
@@ -1442,7 +1444,7 @@ input:-webkit-autofill {
 }
 .ya-tab-list .ya-list-title{
     color:#a15151;
-    font-size:15px;
+    font-size: 16px;
     display:block;
     margin-bottom:5px;
     padding-right:180px;
@@ -1456,13 +1458,14 @@ input:-webkit-autofill {
     right:10px;
     top:13px;
     color:#666;
+    font-size: 16px;
 }
 .ya-tab-list span em{
     color:#a15151;
     color:#16a93d;
     font-weight:normal;
     font-style:normal;
-    font-size:14px;
+    /* font-size: 16px; */
     margin-right:5px;
 }
 .ya-tab-list span em i{
@@ -1472,10 +1475,11 @@ input:-webkit-autofill {
     max-height:40px;
     line-height:20px;
     overflow:hidden;
-    font-size:13px;
+    font-size: 16px;
     /*overflow:hidden;
     text-overflow:ellipsis;
     white-space: nowrap;*/
+    margin-top: 10px;
 }
 
 .ya-myworkbench-box .ya-boxRight .ya-myConsult .ya-consultTitle span {
@@ -1610,18 +1614,20 @@ input:-webkit-autofill {
     border-radius:50%;
 }
 .ya-access dl dd{
-    margin-left:70px;
+    /* margin-left:70px; */
     overflow: hidden;
     white-space: nowrap;
+    margin-top: 10px;
+    font-size: 16px;
 }
 .ya-access dl dd a{
     font-weight:bold;
     float:left;
-    font-size:15px;
+    font-size: 16px;
     color: #a15151;
 }
 .ya-access dl dd em{
-    font-size:13px;
+    font-size: 16px;
     margin-left:15px;
     font-weight:normal;
     font-style:normal;
@@ -1631,6 +1637,7 @@ input:-webkit-autofill {
     float:right;
     color:#D35D59;
     margin-right:10px;
+    font-size: 16px;
 }
 .ya-access dl dd.ya-access-name{
     padding:5px 0;
@@ -1646,12 +1653,13 @@ input:-webkit-autofill {
     padding-top:5px;
 }
 .ya-patient dl dd em {
-    font-size: 14px;
+    font-size: 16px;
     color:#666;
 }
 .ya-patient dl dd.ya-access-address{
     color:#666;
     margin-top:8px;
+    font-size: 16px;
 }
 .ya-disease .ya-list-title {
     padding-right:0;
@@ -1799,9 +1807,11 @@ input:-webkit-autofill {
 .ya-boxRight .ya-patients-page #ya-con .ya-info span{
     font-weight: 700;
     margin-right: 40px;
+    font-size: 16px;
 }
 .ya-boxRight .ya-patients-page #ya-con .ya-address{
     margin: 10px 0;
+    font-size: 16px;
 }
 /*我的患者 分页end*/
 
