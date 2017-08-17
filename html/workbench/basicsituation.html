@@ -57,9 +57,7 @@
                 <li class="step-active"><p>患者基本资料</p></li>
                 <li class="step-active"><p>基本病情</p></li>
                 <li><p>申请会诊</p></li>
-                <li><p>上级医院审核</p></li>
-                <li><p>专家会诊</p></li>
-                <li><p>专家团队回复</p></li>
+                <li><p>等待专家团队回复</p></li>
             </ul>
         </div>
         <div class="step-content">
@@ -258,6 +256,7 @@
         });
 
         $('#subConsul').on('click', function () {
+            alert('提交成功，进入申请会诊');
             window.location.href = "applyconsul.html";
         })
 

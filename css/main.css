@@ -2457,7 +2457,7 @@ input:-webkit-autofill {
 .intro-list-left{
     float: left;
     text-align: right;
-    width: 28%;
+    width: 20%;
     font-size: 16px;
     font-weight: bold;
     font-family: 微软雅黑;
@@ -2466,11 +2466,18 @@ input:-webkit-autofill {
 }
 .intro-list-right{
     float: left;
-    width: 70%;
+    width: 80%;
     text-align: left;
     padding-bottom: 30px;
     background: url(../imgs/ling-bg.jpg) repeat-y 13px;
+    position: relative;
 
+}
+.intro-list-right i{
+    position: absolute;
+    right: 130px;
+    bottom: 5px;
+    cursor: pointer;
 }
 .intro-list-last .intro-list-right{
     padding-bottom: 0px;
@@ -2591,5 +2598,38 @@ input:-webkit-autofill {
 .apply-finish-footer p a{
     color: #009999;
 }
+.waitexpert{
+    height: 400px;
+    position: relative;
+}
+.waitexpert-con{
 
+}
+.waitexpert-con img{
+    display: block;
+    margin: 50px auto;
+}
+.waitexpert-con span{
+    display: block;
+    margin-left: 405px;
+    font-size: 24px;
+    color: #18c0ec;
+}
+.waitexpert-btn{
+    position: absolute;
+    left: 50%;
+    margin-top: 106px;
+    margin-left: -280px;
+}
+.waitexpert-btn a{
+    float: left;
+    margin:0 50px;
+    background: #18c0ec;
+}
 /*流程图end*/
+/*时间轴 病历start*/
+.detailmore{
+    margin-top: 75px;
+    margin-left: 64px;
+}
+/*时间轴 病历end*/
