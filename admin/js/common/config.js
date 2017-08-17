@@ -2,76 +2,77 @@
 var HEADER_STYLE_CONFIG = {
     headerLogoUrl: 'img/logo.png',//LOGO图片
     headerHeight: 60,   //头部高度
-    headerBgColor: '#0c61a5',//头部背景
+    headerBgColor: '#BD010F',//头部背景
     headerSelMarginR:5,//头部下拉右边marging
     headerSelPaddingL:10,//头部下拉左边padding
     headerSelBackgroundUrl:'img/down_arr.png',//头部下拉右边下拉小图标url
     headerSelItemPadding:'6px 10px',//头部下拉子项padding间距
     headerSelItemTBColor:'#014e8c',//头部下拉子项上边距颜色
     headerLogoLRPadding: 15,//头部LOGO左右padding间距
-    headerMenuBgColor: '#0C61A5',//头部菜单背景
+    headerMenuBgColor: 'transparent',//头部菜单背景
     headerMenuFontsize: 16,//头部菜单字体大小
     headerMenuFontcolor: '#fff',//头部菜单字体颜色
     headerMenuLRPadding: 20,//头部菜单左右padding间距
-    headerMenuBorder: "#0c61a5",//头部菜单左右边框颜色
-    headerMenuHover: '#3386ce',//头部菜单鼠标移入背景
+    headerMenuBorder: "transparent",//头部菜单左右边框颜色
+    headerMenuHover: '#CD0110',//头部菜单鼠标移入背景
     headerMenuHoverFontcolor: '#fff',//头部菜单鼠标移入字体颜色
-    headerMenuHoverBorder: "#134993",//头部菜单鼠标移入左右边框颜色
-    headerMenuActive: '#3386ce',//头部菜单选中背景
-    headerMenuActiveFontcolor: '#fff',//头部菜单选中字体颜色
-    headerMenuActiveBorder: "#134993",//头部菜单选中左右边框颜色
+    headerMenuHoverBorder: "transparent",//头部菜单鼠标移入左右边框颜色
+    headerMenuActive: '#A0010D',//头部菜单选中背景
+    headerMenuActiveFontcolor: '#FEF200',//头部菜单选中字体颜色
+    headerMenuActiveBorder: "#89010C",//头部菜单选中左右边框颜色
     headerMenuMargin: 0,//头部菜单左右间距
-    headerUserMarginRight: 15,//头部右侧用户名距离窗口右侧距离
+    headerUserMarginRight: 35,//头部右侧用户名距离窗口右侧距离
     headerUserFontsize: 16,//头部右侧用户名字体大小
     headerUserMinWidth: 100,//头部右侧用户名最低宽度
-    headerUserBgColor: '#0C61A5',//头部右侧用户名背景颜色
+    headerUserBgColor: '#A0010D',//头部右侧用户名背景颜色
     headerUserFontcolor: '#fff',//头部右侧用户名字体颜色
-    headerUserHoverBgColor: '#0C61A5',//头部右侧用户名鼠标移入背景颜色
+    headerUserHoverBgColor: '#A0010D',//头部右侧用户名鼠标移入背景颜色
     headerUserHoverFontcolor: '#fff',//头部右侧用户名鼠标移入字体颜色
     headerUserPopBgColor: '#fff',//头部右侧弹出用户栏目项背景颜色
     headerUserPopBorder: '#ddd',//头部右侧弹出外边框颜色
     headerUserPopFontsize: 15,//头部右侧弹出用户栏目项字体大小
     headerUserPopWidth: 120,//头部右侧弹出用户栏目项宽度
-    headerUserPopFontcolor: '#0c61a5',//头部右侧弹出用户栏目项字体颜色
+    headerUserPopFontcolor: '#222',//头部右侧弹出用户栏目项字体颜色
     headerUserPopBorderBottom: 'transparent',//头部右侧弹出外边框颜色
     headerUserHoverPopBgColor: '#f2f2f2',//头部右侧弹出用户栏目项鼠标移入背景颜色
-    headerUserHoverPopFontcolor: '#0c61a5'//头部右侧弹出用户栏目项鼠标移入字体颜色
-}
+    headerUserHoverPopFontcolor: '#D3000E'//头部右侧弹出用户栏目项鼠标移入字体颜色
+};
 //左侧菜单配置项
 var LEFT_MENU_CONFIG = {
     /*展开时菜单设置开始*/
-    textColor: '#fff',//菜单整体文字颜色
-    bgColor: '#015ca5',//菜单父容器整体背景颜色如(red,#f00,#ff0000,rgb(0,0,0),rgba(0,0,0,.3))
+    textColor: '#232323',//菜单整体文字颜色
+    bgColor: '#fff',//菜单父容器整体背景颜色如(red,#f00,#ff0000,rgb(0,0,0),rgba(0,0,0,.3))
     /*展开时菜单设置结束*/
     expandWidth: 200,//展开菜单宽度
-    expandHeight: 40,//展开菜单单独一个菜单高度
-    expandBgColor: '#014e8c',//展开菜单背景颜色
-    expandBBColor: '#013865',//展开菜单下划线颜色
-    expandHoverColor: '#095693',//展开菜单鼠标移入背景颜色
-    expandSelectedColor: '#013865',//展开菜单一级菜单选中和鼠标移入背景颜色
+    expandHeight: 42,//展开菜单单独一个菜单高度
+    expandBgColor: '#AD010E',//展开菜单背景颜色
+    expandBTColor: '#89010C',//展开菜单上划线颜色
+    expandHoverColor: '#C50110',//展开菜单鼠标移入背景颜色
+    expandSelectedColor: '#AD010E',//展开菜单一级菜单选中和鼠标移入背景颜色
     expandFirstMenuFontSize: 16,//展开菜单一级菜单字体大小
-    expandSecondMenuHeight: 36,//展开菜单二级菜单高度
+    expandSecondMenuHeight: 40,//展开菜单二级菜单高度
     expandSecondMenuFontSize: 14,//展开菜单二级菜单字体大小
-    expandSecondMenuBgColor: '#2c3540',//展开菜单二级菜单背景颜色
-    expandSecondMenuBTColor: '#243135',//展开菜单二级菜单上划线颜色
-    expandSecondMenuSelectedColor: '#1a212b',//展开菜单二级菜单选中和鼠标移入背景颜色
+    expandSecondMenuBgColor: '#fff',//展开菜单二级菜单背景颜色
+    expandSecondMenuBBColor: '#e5e5e5',//展开菜单二级菜单下划线颜色
+    expandSecondMenuSelectedColor: '#f5f7f6',//展开菜单二级菜单选中和鼠标移入背景颜色
+    expandSecondMenuSelectedFontColor: '',//展开菜单二级菜单选中字体颜色
     /*收缩时菜单设置开始*/
     tightWidth: 140,//收缩后弹出菜单宽度
-    tightBgColor: '#29323c',//收缩后弹出菜单背景颜色
-    tightFirstMenuHeight: 40,//收缩后弹出菜单一级菜单高度
+    tightBgColor: '#fff',//收缩后弹出菜单背景颜色
+    tightFirstMenuHeight: 43,//收缩后弹出菜单一级菜单高度
     tightFirstMenuFontSize: 16,//收缩后弹出菜单一级菜单字体大小
-    tightFirstMenuBgColor: '#014e8c',//收缩后弹出菜单一级菜单默认背景颜色
-    tightFirstMenuBBColor: '#013865',//收缩后弹出菜单一级菜单下划线颜色
-    tightFirstMenuSelectedColor: '#013865',//收缩后弹出菜单一级菜单选中背景颜色
-    tightSecondMenuHeight: 36,//收缩后弹出菜单二级菜单高度
+    tightFirstMenuBgColor: '#AD010E',//收缩后弹出菜单一级菜单默认背景颜色
+    tightFirstMenuBBColor: '#AD010E',//收缩后弹出菜单一级菜单下划线颜色
+    tightFirstMenuSelectedColor: '#AD010E',//收缩后弹出菜单一级菜单选中背景颜色
+    tightSecondMenuHeight: 40,//收缩后弹出菜单二级菜单高度
     tightSecondMenuFontSize: 14,//收缩后弹出菜单二级菜单字体大小
-    tightSecondMenuTBColor: '#243135',//收缩后弹出菜单二级菜单上划线颜色
-    tightSecondMenuSelectedColor: '#1a212b',//收缩后弹出菜单二级菜单选中和鼠标移入背景颜色
+    tightSecondMenuTBColor: '#e5e5e5',//收缩后弹出菜单二级菜单上划线颜色
+    tightSecondMenuSelectedColor: '#f5f7f6',//收缩后弹出菜单二级菜单选中和鼠标移入背景颜色
     /*收缩时菜单设置结束*/
     /*收缩或者展开控制条设置开始*/
-    ctrlBgColor: '#014e8c'//控制条背景颜色
+    ctrlBgColor: '#AD010E'//控制条背景颜色
     /*收缩或者展开控制条设置结束*/
-}
+};
 var GLOBAL_DEBUG = true;//是否本地调试，true本地调试,false生产环境//封装ajax请求
 //后台ajax请求地址
 var GLOBAL_AJAX_URL = {
@@ -125,8 +126,8 @@ var GLOBAL_AJAX_URL = {
     proMemberEdit: '/embracebigdata/api/project/memberEdit',//修改项目成员信息
     proMemberDetail: '/embracebigdata/api/project/memberSingleInfo',//项目成员详细
     projectAll: '/embracebigdata/api/project/nameListQuery',//所有项目列表
-    proMemberAll: '/embracebigdata/api/project/memberListAndPowerListQuery',//所有项目成员[除属该项目外]
-}
+    proMemberAll: '/embracebigdata/api/project/memberListAndPowerListQuery'//所有项目成员[除属该项目外]
+};
 //模拟的JSON数据
 var GLOBAL_JSON = {
     tenantList: {
@@ -316,7 +317,7 @@ var GLOBAL_JSON = {
         "status": true,
         "message": "查询成功",
         "data": {
-            "totals": 2,
+            "totals": 12,
             "list": [
                 {
                     "id": 119,

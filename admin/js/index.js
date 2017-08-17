@@ -32,14 +32,14 @@ $(function () {
             '.m-menu .mouse-menu p{height:' + LEFT_MENU_CONFIG.tightSecondMenuHeight + 'px;line-height:' + LEFT_MENU_CONFIG.tightSecondMenuHeight + 'px;font-size:' + LEFT_MENU_CONFIG.tightSecondMenuFontSize + 'px;border-top:1px solid ' + LEFT_MENU_CONFIG.tightSecondMenuTBColor + ';}' +
             '.m-menu .mouse-menu p:hover, .m-menu .mouse-menu p.active{background-color:' + LEFT_MENU_CONFIG.tightSecondMenuSelectedColor + ';}' +
             '.m-menu .ctrl{background-color:' + LEFT_MENU_CONFIG.ctrlBgColor + ';}' +
-            '.m-menu .menus > dl{width:' + LEFT_MENU_CONFIG.expandWidth + 'px;height:' + LEFT_MENU_CONFIG.expandHeight + 'px;border-bottom: 1px solid ' + LEFT_MENU_CONFIG.expandBBColor + ';background-color:' + LEFT_MENU_CONFIG.expandBgColor + '}' +
+            '.m-menu .menus > dl{width:' + LEFT_MENU_CONFIG.expandWidth + 'px;height:' + LEFT_MENU_CONFIG.expandHeight + 'px;border-top: 1px solid ' + LEFT_MENU_CONFIG.expandBTColor + ';background-color:' + LEFT_MENU_CONFIG.expandBgColor + '}' +
             '.m-menu .menus > dl:hover{background-color:' + LEFT_MENU_CONFIG.expandHoverColor + ';}' +
             '.m-menu .menus > dl > dt{height:' + LEFT_MENU_CONFIG.expandHeight + 'px;line-height:' + LEFT_MENU_CONFIG.expandHeight + 'px;font-size:' + LEFT_MENU_CONFIG.expandFirstMenuFontSize + 'px;}' +
             '.m-menu .menus > dl.selected > dt, .m-menu .menus > dl.selected > dt:hover{background-color:' + LEFT_MENU_CONFIG.expandSelectedColor + ';}' +
             '.m-menu .menus > dl > dt > i{top:' + (LEFT_MENU_CONFIG.expandHeight - 10) / 2 + 'px;}' +
             '.m-menu .menus > dl.active > dt > i{top:' + (LEFT_MENU_CONFIG.expandHeight - 6) / 2 + 'px;}' +
-            '.m-menu .menus > dl > dd{height:' + LEFT_MENU_CONFIG.expandSecondMenuHeight + 'px;line-height:' + LEFT_MENU_CONFIG.expandSecondMenuHeight + 'px;font-size:' + LEFT_MENU_CONFIG.expandSecondMenuFontSize + 'px;background-color:' + LEFT_MENU_CONFIG.expandSecondMenuBgColor + ';border-top: 1px solid ' + LEFT_MENU_CONFIG.expandSecondMenuBTColor + ';}' +
-            '.m-menu .menus > dl > dd:hover, .m-menu .menus > dl > dd.active{background-color:' + LEFT_MENU_CONFIG.expandSecondMenuSelectedColor + ';}' +
+            '.m-menu .menus > dl > dd{height:' + LEFT_MENU_CONFIG.expandSecondMenuHeight + 'px;line-height:' + LEFT_MENU_CONFIG.expandSecondMenuHeight + 'px;font-size:' + LEFT_MENU_CONFIG.expandSecondMenuFontSize + 'px;background-color:' + LEFT_MENU_CONFIG.expandSecondMenuBgColor + ';border-bottom: 1px solid ' + LEFT_MENU_CONFIG.expandSecondMenuBBColor + ';}' +
+            '.m-menu .menus > dl > dd:hover, .m-menu .menus > dl > dd.active{color:' + LEFT_MENU_CONFIG.expandSecondMenuSelectedFontColor + ';background-color:' + LEFT_MENU_CONFIG.expandSecondMenuSelectedColor + ';}' +
             '.m-content{top:' + HEADER_STYLE_CONFIG.headerHeight + 'px;left:' + LEFT_MENU_CONFIG.expandWidth + 'px;}';
     //左侧菜单动态样式设置
     if ('styleSheet' in style_dom) {
@@ -211,16 +211,16 @@ $(function () {
             var jsondata = {
                 "t_menus": [
                     {
-                        "id": 1,
-                        "name": "前台首页",
-                        "url": "../index.html",
-                        "active": "0"
-                    },
-                    {
                         "id": 2,
                         "name": "运维管理中心",
                         "url": "",
                         "active": "1"
+                    },
+                    {
+                        "id": 1,
+                        "name": "前台首页",
+                        "url": "../index.html",
+                        "active": "0"
                     }
                 ],
                 "l_menus": {
@@ -228,7 +228,7 @@ $(function () {
                     "menus": [
                         {
                             "name": "系统管理",
-                            "icon": "img/home_icon.png",
+                            "icon": "img/set.png",
                             "sub_menus": [
                                 {
                                     "name": "用户管理",
@@ -259,7 +259,7 @@ $(function () {
         var l_menus = data.l_menus.menus;
         for (var i = 0, ilen = t_menus.length; i < ilen; i++) {
             if (t_menus[i].active == 1) {
-                $h_menu.append('<li><a href="' + t_menus[i].url + '" class="active" target="_blank" >' + t_menus[i].name + '</a></li>');
+                $h_menu.append('<li><a href="' + t_menus[i].url + '" class="active" >' + t_menus[i].name + '</a></li>');
             } else {
                 $h_menu.append('<li><a href="' + t_menus[i].url + '" target="_blank">' + t_menus[i].name + '</a></li>');
             }
@@ -268,7 +268,7 @@ $(function () {
             var $dl = null;
             var first_item = l_menus[j];
             if (j == 0) {
-                $dl = $('<dl class="selected active"><dt style="background-image: url(' + first_item.icon + ')">' + first_item.name + '<i></i></dt></dl>').height(LEFT_MENU_CONFIG.expandHeight + first_item.sub_menus.length * (LEFT_MENU_CONFIG.expandSecondMenuHeight));
+                $dl = $('<dl class="selected active"><dt style="background-image: url(' + first_item.icon + ')">' + first_item.name + '<i></i></dt></dl>').height(LEFT_MENU_CONFIG.expandHeight + first_item.sub_menus.length * (LEFT_MENU_CONFIG.expandSecondMenuHeight)+1);
             } else {
                 $dl = $('<dl><dt style="background-image: url(' + first_item.icon + ')">' + first_item.name + '<i></i></dt></dl>');
             }
@@ -301,7 +301,6 @@ $(function () {
     //左侧菜单绑定点击事件
     $doc.on('click', '.expand dl dt', function () {
         var $this = $(this);
-        console.log($this);
         var $parent = $this.parent();
         var $siblings = $parent.siblings();
         $parent.toggleClass('active');
@@ -517,6 +516,6 @@ $(function () {
             state: 'success',
             message: '已成功退出系统！'
         });
-        setTimeout("window.location = llogin1.html", 2000);
+        setTimeout("window.location = '../../login.html'", 2000);
     });
 });

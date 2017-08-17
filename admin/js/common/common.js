@@ -61,15 +61,15 @@ function getUserData() {
 }
 
 //isLogin 检测是否已经登录
-// function isLogin() {
-//     var userid = getUserData();
-//     if (userid && userid != 'undefined') {
-//         return userid.id;
-//     } else {
-//         //提示并跳转到登陆页
-//        window.location.href = "login.html";
-//     }
-// }
+function isLogin() {
+    var userid = getUserData();
+    if (userid && userid != 'undefined') {
+        return userid.id;
+    } else {
+        //提示并跳转到登陆页
+       window.location.href = "login.html";
+    }
+}
 
 //清除登录信息
 function clearUserid() {

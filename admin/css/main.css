@@ -31,7 +31,7 @@ input:-webkit-autofill {
     vertical-align:middle;
 }
 .m-header-logo img {
-    width:200px;
+    width:240px;
 }
 .m-header .sel{
     position: relative;
@@ -99,7 +99,7 @@ input:-webkit-autofill {
 	cursor:pointer;
 	position:absolute;
 	top:60px;
-	right:10px;    
+	right:-10px;
 	text-align:center;
     padding-top:10px;
 }
@@ -125,7 +125,7 @@ input:-webkit-autofill {
 	content:"";
 	display:block;
 	height:0;
-	right:10px;
+	right:30px;
 	pointer-events:none;
 	position:absolute;
 	top:-8px;
@@ -160,53 +160,57 @@ input:-webkit-autofill {
     z-index: 666;
     left: 50px;
     top: 0;
+    border-bottom:1px solid #efefef;
 }
 
 .m-menu .mouse-menu h3 {
     margin: 0;
     padding-left: 15px;
+    color: #fff;
 }
-
+.m-menu .mouse-menu h3.selected{
+    color:#FEF200;
+}
 .m-menu .mouse-menu p {
     margin-bottom: 0;
     padding-left: 18px;
     cursor: pointer;
+    border-left:1px solid #efefef;
+    border-right:1px solid #efefef;
 }
-
-.m-menu .mouse-menu p:first-child {
+.m-menu .mouse-menu p.active{
+    color: #D3000E;
+}
+.m-menu .mouse-menu h3+p {
     border-top: none;
 }
 
 .m-menu .ctrl {
-    height: 30px;
+    height: 40px;
     text-align: center;
 }
 
 .m-menu .ctrl > i {
-    position: relative;
-    top: 10px;
     display: block;
-    width: 15px;
-    height: 12px;
-    background: url(../img/icon_ctrl.png) no-repeat;
+    width: 40px;
+    height: 40px;
+    background: url(../img/icon_ctrl.png) center no-repeat;
     cursor: pointer;
     margin: 0 auto;
 }
 
 .m-menu .ctrl > i.shou {
-    top: 8px;
-    background: url(../img/icon_ctrl_shou.png) no-repeat;
-    width: 18px;
-    height: 15px;
+    background: url(../img/icon_ctrl_shou.png) center no-repeat;
 }
 
 .m-menu .menus {
     position: absolute;
-    top:30px;
+    top:40px;
     left:0;
     right:0;
     bottom:0;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .m-menu .menus > dl {
@@ -223,10 +227,13 @@ input:-webkit-autofill {
     font-weight: normal;
     padding-left: 50px;
     cursor: pointer;
-    background-position: 17px center;
+    color:#fff;
+    background-position: 15px center;
     background-repeat: no-repeat;
 }
-
+.m-menu .menus > dl.selected > dt{
+    color:#FEF200;
+}
 .m-menu .menus > dl > dt > i {
     position: absolute;
     width: 7px;
@@ -250,7 +257,10 @@ input:-webkit-autofill {
 .m-menu .menus > dl > dd:first-child {
     border-top: none;
 }
-
+.m-menu .menus > dl > dd.active{
+    color: #D3000E;
+    border-bottom-color: #BD010F;
+}
 /*左侧菜单结束*/
 /*分页开始*/
 .m-pagenav { overflow: hidden; font-size: 14px; margin-top: 15px; }
@@ -400,6 +410,10 @@ input:-webkit-autofill {
 .meta-crumb .breadcrumb > .active{
     color:#333;
 }
+.meta-crumb .breadcrumb a{
+    color:#BD010F;
+    text-decoration: none;
+}
 /*面包屑组件结束*/
 /*系统管理样式开始*/
 .table-box {
@@ -429,14 +443,14 @@ input:-webkit-autofill {
     top:-1px;
 }
 .table-box .btn-query{
-    background-color: #459DF6;
+    background-color: #CD0110;
     color:#fff;
 }
 .table-box .btn-query:hover{
-    background-color:#55A6F7;
+    background-color:#DC0111;
 }
 .table-box .btn-query:active{
-    background-color:#288EF4;
+    background-color:#B6010F;
 }
 .table-box .btn-back {
     background: #f4f4f4 linear-gradient(to bottom, #f4f4f4 0px, #eaeaea 100%) repeat-x scroll 0 0;
@@ -464,27 +478,27 @@ input:-webkit-autofill {
     transform:rotateY(-180deg);
 }
 .table-box .btn-add{
-    background-color:#39BA82;
+    background-color:#00A54F;
     color:#fff;
 }
 .table-box .btn-add .glyphicon-plus{
     font-size:12px;
 }
 .table-box .btn-add:hover{
-    background-color:#3EC48A;
+    background-color:#00BD5A;
 }
 .table-box .btn-add:active{
-    background-color:#33A876;
+    background-color:#009747;
 }
 .table-box .btn-dels{
-    background-color:#D9686E;
+    background-color:#EB1C24;
     color:#fff;
 }
 .table-box .btn-dels:hover{
-    background-color:#DC7479;
+    background-color:#EF434B;
 }
 .table-box .btn-dels:active{
-    background-color:#D55960;
+    background-color:#DC141E;
 }
 .table-box table{
     margin-bottom: 10px;
@@ -579,8 +593,15 @@ input:-webkit-autofill {
     margin-left:10px;
 }
 .pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
-    background-color: #459DF6;
-    border-color: #459DF6;
+    background-color: #eee;
+    border-color: #ddd;
+    color: #CD0110;
+}
+.pagination>li>a, .pagination>li>span{
+    color: #101010;
+}
+.pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover{
+    color: #CD0110;
 }
 /*弹窗表单样式开始*/
 .pop-form ul {
