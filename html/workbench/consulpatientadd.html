@@ -10,6 +10,7 @@
     <link href="../../css/reset.css" rel="stylesheet">
     <link href="../../css/main.css" rel="stylesheet">
     <link href="../../fonts/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="../../css/jquery.step.css">
     <!--[if lt IE 9]>
     <script src="../../js/html5shiv.min.js"></script>
     <script src="../../js/respond.min.js"></script>
@@ -50,62 +51,148 @@
     </div>
 </header>
 <div class="container">
-    <div class="consul_form clearfix">
-        <div class="consul_title">添加患者<span>(若为已有患者，则可以通过输入身份证号进行搜索)</span></div>
-        <div class="pop-form consultpatientadd">
+    <div class="step-body" id="myStep">
+        <div class="step-header clearfix" style="width:100%" id="stepAdd">
+            <!--<div class="step-bar"><div class="step-bar-active" style="width: 16.6667%;"></div></div>-->
             <ul>
-                <li>
-                    <span class="text-label">姓名：</span>
-                    <div class="pop-right pop-row">
-                        <input class="form-control" type="text" id="consulName"/>
-                        <span class="empty-tip">*</span>
-                        <span class="pop-rowtitle">性别：</span>
-                        <label><input type="radio" name="sex" value="1" checked> 男</label>
-                        <label><input type="radio" name="sex" value="0"> 女</label>
-                    </div>
-                    <span class="empty-tip">*</span>
-                </li>
-                <li>
-                    <span class="text-label">年龄：</span>
-                    <div class="pop-right pop-row">
-                        <input class="form-control" type="text" id="age"/>
-                        <span class="empty-tip">*</span>
-                        <span class="pop-rowtitle">手机号：</span>
-                        <input class="form-control" type="tel" id="tel"/>
-                    </div>
-                    <span class="empty-tip">*</span>
-                </li>
-                <li>
-                    <span class="text-label">医保类型：</span>
-                    <div class="pop-right pop-row">
-                        <input class="form-control" type="text" id="insurance"/>
-                        <span class="empty-tip">*</span>
-                        <span class="pop-rowtitle">籍贯：</span>
-                        <input class="form-control" type="tel" id="province"/>
-                    </div>
-                    <span class="empty-tip">*</span>
-                </li>
-                <li>
-                    <span class="text-label">身份证号：</span>
-                    <div class="pop-right">
-                        <input class="form-control" type="text" id="idcard"/>
-                    </div>
-                    <span class="empty-tip">*</span>
-                </li>
-                <li>
-                    <span class="text-label">家庭住址：</span>
-                    <div class="pop-right">
-                        <input class="form-control" type="text" id="address"/>
-                    </div>
-                    <span class="empty-tip">*</span>
-                </li>
+                <li class="step-active"><p>患者基本资料</p></li>
+                <li><p>基本病情</p></li>
+                <li><p>申请会诊</p></li>
+                <li><p>上级医院审核</p></li>
+                <li><p>专家会诊</p></li>
+                <li><p>专家团队回复</p></li>
             </ul>
-            <div class="pop-form-button">
-                <span class="et-btn btn-submit" id="subConsul">提交</span>
-            </div>
         </div>
-        <div class="form_bg"></div>
+        <div class="step-content">
+            <div class="step-lists">
+                <div class="consul_title">添加患者<span>(若为已有患者，则可以通过输入身份证号进行搜索)</span></div>
+                <div class="pop-form consultpatientadd">
+                    <ul>
+                        <li>
+                            <span class="text-label">姓名：</span>
+                            <div class="pop-right pop-row">
+                                <input class="form-control" type="text" id="consulName"/>
+                                <span class="empty-tip">*</span>
+                                <span class="pop-rowtitle">性别：</span>
+                                <label><input type="radio" name="sex" value="1" checked> 男</label>
+                                <label><input type="radio" name="sex" value="0"> 女</label>
+                            </div>
+                            <span class="empty-tip">*</span>
+                        </li>
+                        <li>
+                            <span class="text-label">年龄：</span>
+                            <div class="pop-right pop-row">
+                                <input class="form-control" type="text" id="age"/>
+                                <span class="empty-tip">*</span>
+                                <span class="pop-rowtitle">手机号：</span>
+                                <input class="form-control" type="tel" id="tel"/>
+                            </div>
+                            <span class="empty-tip">*</span>
+                        </li>
+                        <li>
+                            <span class="text-label">医保类型：</span>
+                            <div class="pop-right pop-row">
+                                <input class="form-control" type="text" id="insurance"/>
+                                <span class="empty-tip">*</span>
+                                <span class="pop-rowtitle">籍贯：</span>
+                                <input class="form-control" type="tel" id="province"/>
+                            </div>
+                            <span class="empty-tip">*</span>
+                        </li>
+                        <li>
+                            <span class="text-label">身份证号：</span>
+                            <div class="pop-right">
+                                <input class="form-control" type="text" id="idcard"/>
+                            </div>
+                            <span class="empty-tip">*</span>
+                        </li>
+                        <li>
+                            <span class="text-label">家庭住址：</span>
+                            <div class="pop-right">
+                                <input class="form-control" type="text" id="address"/>
+                            </div>
+                            <span class="empty-tip">*</span>
+                        </li>
+                    </ul>
+                    <div class="form_bg"></div>
+                </div>
+                <div class="footer-btn">
+                    <div class="common-btn">
+                        <span class="et-btn btn-submit btn-shares" id="subConsul">提交，下一步</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
     </div>
+
+    <!--<div class="consul_form clearfix">-->
+        <!--<div class="consul_title">添加患者<span>(若为已有患者，则可以通过输入身份证号进行搜索)</span></div>-->
+        <!--<div class="pop-form consultpatientadd">-->
+            <!--<ul>-->
+                <!--<li>-->
+                    <!--<span class="text-label">姓名：</span>-->
+                    <!--<div class="pop-right pop-row">-->
+                        <!--<input class="form-control" type="text" id="consulName"/>-->
+                        <!--<span class="empty-tip">*</span>-->
+                        <!--<span class="pop-rowtitle">性别：</span>-->
+                        <!--<label><input type="radio" name="sex" value="1" checked> 男</label>-->
+                        <!--<label><input type="radio" name="sex" value="0"> 女</label>-->
+                    <!--</div>-->
+                    <!--<span class="empty-tip">*</span>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<span class="text-label">年龄：</span>-->
+                    <!--<div class="pop-right pop-row">-->
+                        <!--<input class="form-control" type="text" id="age"/>-->
+                        <!--<span class="empty-tip">*</span>-->
+                        <!--<span class="pop-rowtitle">手机号：</span>-->
+                        <!--<input class="form-control" type="tel" id="tel"/>-->
+                    <!--</div>-->
+                    <!--<span class="empty-tip">*</span>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<span class="text-label">医保类型：</span>-->
+                    <!--<div class="pop-right pop-row">-->
+                        <!--<input class="form-control" type="text" id="insurance"/>-->
+                        <!--<span class="empty-tip">*</span>-->
+                        <!--<span class="pop-rowtitle">籍贯：</span>-->
+                        <!--<input class="form-control" type="tel" id="province"/>-->
+                    <!--</div>-->
+                    <!--<span class="empty-tip">*</span>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<span class="text-label">身份证号：</span>-->
+                    <!--<div class="pop-right">-->
+                        <!--<input class="form-control" type="text" id="idcard"/>-->
+                    <!--</div>-->
+                    <!--<span class="empty-tip">*</span>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<span class="text-label">家庭住址：</span>-->
+                    <!--<div class="pop-right">-->
+                        <!--<input class="form-control" type="text" id="address"/>-->
+                    <!--</div>-->
+                    <!--<span class="empty-tip">*</span>-->
+                <!--</li>-->
+            <!--</ul>-->
+            <!--<div class="step-content">-->
+                <!--<div class="step-list">-->
+                    <!--<div class="footer-btn">-->
+                        <!--<div class="common-btn">-->
+                            <!--<a href="basicsituation.html" class="et-btn btn-submit" id="applyBtn">添加患者</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="pop-form-button">-->
+                <!--<span class="et-btn btn-submit" id="subConsul">提交</span>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="form_bg"></div>-->
+    <!--</div>-->
+
 </div>
 
 <footer class="meta-footer">
@@ -148,9 +235,36 @@
 
 <script src="../../js/jquery.min.js"></script>
 <script src="../../js/My97DatePicker/WdatePicker.js"></script>
+<script src="../../js/jquery.step.js"></script>
 <script src="../../js/common.js"></script>
 <script>
     $(function () {
+        var step= $("#myStep").step({
+            animate:true,
+            initStep:1,
+            speed:1000
+        });
+
+
+        $("#preBtn").click(function(event) {
+            var yes=step.preStep();
+
+        });
+        $("#applyBtn").click(function(event) {
+            var yes=step.nextStep();
+
+        });
+        $("#submitBtn").click(function(event) {
+            var yes=step.nextStep();
+
+
+        });
+        $("#goBtn").click(function(event) {
+            var yes=step.goStep(3);
+
+        });
+
+
         $('#creatCourse').on('click', function () {
             window.location.href = "../workbench/disease.html";
         })
@@ -159,6 +273,10 @@
             alert('已新增患者');
             window.location.href = "./basicsituation.html";
         })
+
+
+
+
     })
 </script>
 </body>

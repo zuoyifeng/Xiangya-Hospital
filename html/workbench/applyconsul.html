@@ -9,7 +9,8 @@
     <title>中南大学湘雅医院皮肤疾病与健康移动互联体</title>
     <link href="../../css/reset.css" rel="stylesheet">
     <link href="../../css/main.css" rel="stylesheet">
-    <link href="../../fonts/font-awesome.min.css" rel="stylesheet" />
+    <link href="../../fonts/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../css/jquery.step.css">
     <!--[if lt IE 9]>
     <script src="../../js/html5shiv.min.js"></script>
     <script src="../../js/respond.min.js"></script>
@@ -22,7 +23,7 @@
         <div class="container">
             <div class="head_logo">
                 <a href="../../index.html">
-                    <img src="../../imgs/logo.png" />
+                    <img src="../../imgs/logo.png"/>
                 </a>
 
             </div>
@@ -49,129 +50,204 @@
     </div>
 </header>
 <div class="container">
-    <div class="consul_form clearfix">
-        <div class="consul_title">申请会诊</div>
-        <div class="pop-form">
+    <div class="step-body" id="myStep">
+        <div class="step-header clearfix" style="width:100%" id="stepApply">
+            <!--<div class="step-bar"><div class="step-bar-active" style="width: 25.333%;"></div></div>-->
             <ul>
-                <li>
-                    <span class="text-label">会诊目的：</span>
-                    <div class="pop-right">
-                        <select class="form-control" id="consulType">
-                            <option value="">请选择会诊类型</option>
-                            <option value="1">明确诊断</option>
-                            <option value="2">协助治疗</option>
-                            <option value="3">要求转诊</option>
-                            <option value="4">其他</option>
-                        </select>
-                    </div>
-                    <span class="empty-tip">*</span>
-                </li>
-                <li>
-                    <span class="text-label">会诊类型：</span>
-                    <div class="pop-right">
-                        <select class="form-control" id="consulType">
-                            <option value="">请选择会诊类型</option>
-                            <option value="1">普通会诊</option>
-                            <option value="2">专家会诊</option>
-                            <option value="3">床旁会诊</option>
-                        </select>
-                    </div>
-                    <span class="empty-tip">*</span>
-                </li>
-                <li>
-                    <span class="text-label">会诊团队：</span>
-                    <div class="pop-right">
-                        <select class="form-control" id="consulExpert">
-                            <option value="">请选择专家团队</option>
-                            <option value="1">银屑病等红斑鳞屑性疾病团队</option>
-                            <option value="2">荨麻疹等过敏性疾病团队</option>
-                            <option value="3">皮肤肿瘤与皮肤外科团队</option>
-                            <option value="4">疑难病例及皮肤病理团队</option>
-                            <option value="5">玫瑰痤疮等损容性皮肤病团队</option>
-                            <option value="6">其他专家团队</option>
-                        </select>
-                    </div>
-                    <span class="empty-tip">*</span>
-                </li>
-                <li>
-                    <span class="text-label">转诊医院：</span>
-                    <div class="pop-right">
-                        <select class="form-control" id="hospital">
-                            <option value="">请选择转诊医院</option>
-                            <option value="1">湘雅一医院</option>
-                            <option value="2">湘雅二医院</option>
-                            <option value="3">湘雅三医院</option>
-                            <option value="4">长沙市一医院</option>
-                            <option value="5">湖南省肿瘤医院医院</option>
-                        </select>
-                    </div>
-                    <span class="empty-tip">*</span>
-                </li>
-                <li>
-                    <span class="text-label">转诊医生：</span>
-                    <div class="pop-right">
-                        <select class="form-control" id="doctor">
-                            <option value="">请选择转诊医生</option>
-                            <option value="1">盛夏</option>
-                            <option value="2">赵清</option>
-                            <option value="3">张弛</option>
-                            <option value="4">李强</option>
-                            <option value="5">黄超</option>
-                            <option value="6">马艾</option>
-                        </select>
-                    </div>
-                    <span class="empty-tip">*</span>
-                </li>
-                <li>
-                    <span class="text-label">期望转诊日期：</span>
-                    <div class="pop-right pop-row applytime">
-                        <input class="form-control" type="text" id="birthtime" onClick="WdatePicker({ el: this, dateFmt: 'yyyy-MM-dd', maxDate: '%y-%M-{%d}' })" />
-                    </div>
-                    <span class="empty-tip">*</span>
-                </li>
-                <!--<li>
-                    <span class="text-label">会诊标题：</span>
-                    <div class="pop-right">
-                        <input class="form-control" type="text" id="consulName" />
-                        <p class="pop-tips">请填写会诊名称</p>
-                    </div>
-                    <span class="empty-tip">*</span>
-                </li>
-
-                <li>
-                    <span class="text-label">选择医院：</span>
-                    <div class="pop-right">
-                        <select class="form-control" id="consulExpert">
-                            <option value="">请选择医院</option>
-                            <option value="1">湘雅医院</option>
-                        </select>
-                    </div>
-                </li>
-                <li>
-                    <span class="text-label">上传病历：</span>
-                    <div class="pop-right">
-                        <span class="upload_file">
-                            <i class="fa fa-file-zip-o fa-3x"></i>
-                            <input type="file" id="uploadAnnex" />
-                        </span>
-                        <span class="files_upRar" id="files_upRar"></span>
-                        <p class="pop-tips">请上传患者病历相关文件压缩包，只能上传一个文件，格式仅供 .rar、.zip；文件< 100 M</p>
-                    </div>
-                </li>
-                <li>
-                    <span class="text-label">会诊描述：</span>
-                    <div class="pop-right">
-                        <textarea id="consulCont" rows="6"></textarea>
-                        <p class="pop-tips">请简单的介绍初步会诊情况和相关诊断方案</p>
-                    </div>
-                </li>-->
-
+                <li class="step-active"><p>患者基本资料</p></li>
+                <li class="step-active"><p>基本病情</p></li>
+                <li class="step-active"><p>申请会诊</p></li>
+                <li><p>上级医院审核</p></li>
+                <li><p>专家会诊</p></li>
+                <li><p>专家团队回复</p></li>
             </ul>
-            <div class="pop-form-button">
-                <span class="et-btn btn-submit" id="subConsul">提交</span>
-            </div>
         </div>
-        <div class="form_bg"></div>
+        <div class="step-content">
+            <div class="step-lists">
+                <div class="consul_title">基本会诊</div>
+                <div class="pop-form">
+                    <ul>
+                        <li>
+                            <span class="text-label">会诊目的：</span>
+                            <div class="pop-right">
+                                <select class="form-control" id="consulType">
+                                    <option value="">请选择会诊类型</option>
+                                    <option value="1">明确诊断</option>
+                                    <option value="2">协助治疗</option>
+                                    <option value="3">要求转诊</option>
+                                    <option value="4">其他</option>
+                                </select>
+                            </div>
+                            <span class="empty-tip">*</span>
+                        </li>
+                        <li>
+                            <span class="text-label">会诊类型：</span>
+                            <div class="pop-right">
+                                <select class="form-control" id="consulType">
+                                    <option value="">请选择会诊类型</option>
+                                    <option value="1">普通会诊</option>
+                                    <option value="2">专家会诊</option>
+                                    <option value="3">床旁会诊</option>
+                                    <option value="4">床旁会诊</option>
+                                </select>
+                            </div>
+                            <span class="empty-tip">*</span>
+                        </li>
+                        <li>
+                            <span class="text-label">会诊团队：</span>
+                            <div class="pop-right">
+                                <select class="form-control" id="consulExpert">
+                                    <option value="">请选择专家团队</option>
+                                    <option value="1">银屑病等红斑鳞屑性疾病团队</option>
+                                    <option value="2">荨麻疹等过敏性疾病团队</option>
+                                    <option value="3">皮肤肿瘤与皮肤外科团队</option>
+                                    <option value="4">疑难病例及皮肤病理团队</option>
+                                    <option value="5">玫瑰痤疮等损容性皮肤病团队</option>
+                                    <option value="6">其他专家团队</option>
+                                </select>
+                            </div>
+                            <span class="empty-tip">*</span>
+                        </li>
+                        <li>
+                            <span class="text-label">转诊医院：</span>
+                            <div class="pop-right">
+                                <select class="form-control" id="hospital">
+                                    <option value="">请选择转诊医院</option>
+                                    <option value="1">湘雅一医院</option>
+                                    <option value="2">湘雅二医院</option>
+                                    <option value="3">湘雅三医院</option>
+                                    <option value="4">长沙市一医院</option>
+                                    <option value="5">湖南省肿瘤医院医院</option>
+                                </select>
+                            </div>
+                            <span class="empty-tip">*</span>
+                        </li>
+                        <li>
+                            <span class="text-label">转诊医生：</span>
+                            <div class="pop-right">
+                                <select class="form-control" id="doctor">
+                                    <option value="">请选择转诊医生</option>
+                                    <option value="1">盛夏</option>
+                                    <option value="2">赵清</option>
+                                    <option value="3">张弛</option>
+                                    <option value="4">李强</option>
+                                    <option value="5">黄超</option>
+                                    <option value="6">马艾</option>
+                                </select>
+                            </div>
+                            <span class="empty-tip">*</span>
+                        </li>
+                        <li>
+                            <span class="text-label">期望转诊日期：</span>
+                            <div class="pop-right pop-row applytime">
+                                <input class="form-control" type="text" id="birthtime"
+                                       onClick="WdatePicker({ el: this, dateFmt: 'yyyy-MM-dd', maxDate: '%y-%M-{%d}' })"/>
+                            </div>
+                            <span class="empty-tip">*</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="form_bg"></div>
+                <div class="footer-btn">
+                    <div class="common-btn">
+                        <span class="et-btn btn-submit btn-shares" id="subConsul">提交，下一步</span>
+                    </div>
+                </div>
+            </div>
+
+            <!--<div class="step-list">-->
+            <!--<div class="consul_title">申请会诊</div>-->
+            <!--<div class="pop-form">-->
+            <!--<ul>-->
+            <!--<li>-->
+            <!--<span class="text-label">会诊目的：</span>-->
+            <!--<div class="pop-right">-->
+            <!--<select class="form-control" id="consulType">-->
+            <!--<option value="">请选择会诊类型</option>-->
+            <!--<option value="1">明确诊断</option>-->
+            <!--<option value="2">协助治疗</option>-->
+            <!--<option value="3">要求转诊</option>-->
+            <!--<option value="4">其他</option>-->
+            <!--</select>-->
+            <!--</div>-->
+            <!--<span class="empty-tip">*</span>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<span class="text-label">会诊类型：</span>-->
+            <!--<div class="pop-right">-->
+            <!--<select class="form-control" id="consulType">-->
+            <!--<option value="">请选择会诊类型</option>-->
+            <!--<option value="1">普通会诊</option>-->
+            <!--<option value="2">专家会诊</option>-->
+            <!--<option value="3">床旁会诊</option>-->
+            <!--<option value="4">床旁会诊</option>-->
+            <!--</select>-->
+            <!--</div>-->
+            <!--<span class="empty-tip">*</span>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<span class="text-label">会诊团队：</span>-->
+            <!--<div class="pop-right">-->
+            <!--<select class="form-control" id="consulExpert">-->
+            <!--<option value="">请选择专家团队</option>-->
+            <!--<option value="1">银屑病等红斑鳞屑性疾病团队</option>-->
+            <!--<option value="2">荨麻疹等过敏性疾病团队</option>-->
+            <!--<option value="3">皮肤肿瘤与皮肤外科团队</option>-->
+            <!--<option value="4">疑难病例及皮肤病理团队</option>-->
+            <!--<option value="5">玫瑰痤疮等损容性皮肤病团队</option>-->
+            <!--<option value="6">其他专家团队</option>-->
+            <!--</select>-->
+            <!--</div>-->
+            <!--<span class="empty-tip">*</span>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<span class="text-label">转诊医院：</span>-->
+            <!--<div class="pop-right">-->
+            <!--<select class="form-control" id="hospital">-->
+            <!--<option value="">请选择转诊医院</option>-->
+            <!--<option value="1">湘雅一医院</option>-->
+            <!--<option value="2">湘雅二医院</option>-->
+            <!--<option value="3">湘雅三医院</option>-->
+            <!--<option value="4">长沙市一医院</option>-->
+            <!--<option value="5">湖南省肿瘤医院医院</option>-->
+            <!--</select>-->
+            <!--</div>-->
+            <!--<span class="empty-tip">*</span>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<span class="text-label">转诊医生：</span>-->
+            <!--<div class="pop-right">-->
+            <!--<select class="form-control" id="doctor">-->
+            <!--<option value="">请选择转诊医生</option>-->
+            <!--<option value="1">盛夏</option>-->
+            <!--<option value="2">赵清</option>-->
+            <!--<option value="3">张弛</option>-->
+            <!--<option value="4">李强</option>-->
+            <!--<option value="5">黄超</option>-->
+            <!--<option value="6">马艾</option>-->
+            <!--</select>-->
+            <!--</div>-->
+            <!--<span class="empty-tip">*</span>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<span class="text-label">期望转诊日期：</span>-->
+            <!--<div class="pop-right pop-row applytime">-->
+            <!--<input class="form-control" type="text" id="birthtime" onClick="WdatePicker({ el: this, dateFmt: 'yyyy-MM-dd', maxDate: '%y-%M-{%d}' })" />-->
+            <!--</div>-->
+            <!--<span class="empty-tip">*</span>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--<div class="form_bg"></div>-->
+            <!--</div>-->
+            <!--<div class="footer-btn">-->
+            <!--<div class="common-btn">-->
+            <!--<a href="./todolist.html" id="goBtn">提交，下一步</a>-->
+            <!--</div>-->
+            <!--</div>-->
+
+            <!--</div>-->
+
+        </div>
     </div>
 </div>
 
@@ -216,6 +292,7 @@
 <script src="../../js/jquery.min.js"></script>
 <script src="../../js/My97DatePicker/WdatePicker.js"></script>
 <script src="../../js/common.js"></script>
+<script src="../../js/jquery.step.js"></script>
 <script>
     $(function () {
         $("#uploadAnnex").change(function () {
@@ -226,16 +303,42 @@
         });
 
         $('#subConsul').on('click', function () {
-            alert('已提交成功，等待专家回复');
-            window.location.href = "todolist.html";
+            window.location.href = "./todolist.html";
         })
+
+        var step = $("#myStep").step({
+            animate: true,
+            initStep: 1,
+            speed: 1000
+        });
+
+
+        $("#preBtn").click(function (event) {
+            var yes = step.preStep();
+
+        });
+        $("#applyBtn").click(function (event) {
+            var yes = step.nextStep();
+
+        });
+        $("#submitBtn").click(function (event) {
+            var yes = step.nextStep();
+
+
+        });
+        $("#goBtn").click(function (event) {
+            var yes = step.goStep(3);
+
+        });
     })
+
     function getFileName(n) {
         var i = n.lastIndexOf("/"),
             r = n.lastIndexOf("\\"),
             t = Math.max(i, r);
         return t < 0 ? n : n.substring(t + 1)
     }
+
     function changeType(n) {
         for (var r = n.substring(n.lastIndexOf(".")).toLowerCase(), i = [".rar", ".zip"], t = 0; t < i.length; t++) if (r == i[t]) return !0;
         return !1
