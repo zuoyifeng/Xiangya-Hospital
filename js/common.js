@@ -43,6 +43,7 @@ function isLogin() {
     if (userid && userid != 'undefined') {
         return userid.id;
     } else {
+        alert('您还没有登录,暂时没有权限访问，请先登录!');
         //提示并跳转到登陆页
         window.location.href = "../../login.html";
     }
