@@ -80,134 +80,13 @@ $(function () {
     var router = Router(routes);
     router.init();
     window.router=router;
-    // if (isLogin()) {
-    //     //登录用户名
-    //     $('#topAdminName').text(getUserData().userName);
-    //     //加载登陆后的角色再切换菜单[待优化:页面加载菜单前,空白错乱...]
-    //     var roleName = getUserData().loginName;
-    //     if (roleName == 'admin') {
-    //         var jsondata = {
-    //             "t_menus": [
-    //                 {
-    //                     "id": 1,
-    //                     "name": "前台首页",
-    //                     "url": "../index.html",
-    //                     "active": "0"
-    //                 },
-    //                 {
-    //                     "id": 2,
-    //                     "name": "运维管理中心",
-    //                     "url": "",
-    //                     "active": "1"
-    //                 }
-    //             ],
-    //             "l_menus": {
-    //                 "id": 7,
-    //                 "menus": [
-    //                     {
-    //                         "name": "内容管理",
-    //                         "icon": "img/home_icon.png",
-    //                         "sub_menus": [
-    //                             {
-    //                                 "name": "租户管理",
-    //                                 "url": "/adminTenant"
-    //                             },
-    //                             {
-    //                                 "name": "用户管理",
-    //                                 "url": "/adminUser"
-    //                             },
-    //                             {
-    //                                 "name": "应用管理",
-    //                                 "url": "/adminApply"
-    //                             }
-    //                         ]
-    //                     }
-    //                 ]
-    //             }
-    //         }
-    //         loadMenu(jsondata);
-    //         router.setRoute('/adminTenant');
-    //     } else {
-    //         //普通管理员
-    //         var jsondata = {
-    //             "t_menus": [
-    //                 {
-    //                     "id": 1,
-    //                     "name": "前台首页",
-    //                     "url": "../index.html",
-    //                     "active": "0"
-    //                 },
-    //                 {
-    //                     "id": 2,
-    //                     "name": "运维管理中心",
-    //                     "url": "",
-    //                     "active": "1"
-    //                 }
-    //             ],
-    //             "l_menus": {
-    //                 "id": 7,
-    //                 "menus": [
-    //                     {
-    //                         "name": "内容管理",
-    //                         "icon": "img/home_icon.png",
-    //                         "sub_menus": [
-    //                             {
-    //                                 "name": "用户管理",
-    //                                 "url": "/userUser"
-    //                             },
-    //                             {
-    //                                 "name": "组织管理",
-    //                                 "url": "/userGroup"
-    //                             },
-    //                             {
-    //                                 "name": "权限管理",
-    //                                 "url": "/userRole"
-    //                             },
-    //                             {
-    //                                 "name": "角色管理",
-    //                                 "url": "/userProject"
-    //                             }
-    //                         ]
-    //                     }
-    //                 ]
-    //             }
-    //         }
-    //         loadMenu(jsondata);
-    //         router.setRoute('/userUser');
-    //     }
-    // }
-    window.history.forward();
-    var res = {
-        "status": true,
-        "httpstatus": 200,
-        "data": {
-            "id": 7,
-            "role": "1",
-            "passwd": "0a594152643e2501c10effcfdb4bc6a0",
-            "uUserDTO": {
-                "id": 8,
-                "createdTime": "2017-06-29 17:15:28",
-                "email": "123456",
-                "groupId": 1,
-                "mobileNo": "1213456",
-                "status": 1,
-                "tenantId": 1,
-                "userName": "linan"
-            }
-        },
-        "isValidateMessage": false,
-        "messages": [],
-        "validateMessages": {}
-    }
-    var userinfo = res.data.uUserDTO;
-    userinfo.role = res.data.loginName;
-    sessionStorage.setItem('USER_INFO', JSON.stringify(userinfo));
-    var  username=JSON.parse(sessionStorage.getItem('USER_INFO')).userName;
-    //登录用户名
-        $('#topAdminName').text(username);
-
-    //加载登陆后的角色再切换菜单[待优化:页面加载菜单前,空白错乱...]
-            //普通管理员
+    if (isLogin()) {
+        //登录用户名
+        $('#topAdminName').text(getUserData().userName);
+        //加载登陆后的角色再切换菜单[待优化:页面加载菜单前空白错乱]
+        var role = getUserData().roleLogin;
+        if (role == '3') {
+            //系统管理员
             var jsondata = {
                 "t_menus": [
                     {
@@ -253,7 +132,48 @@ $(function () {
             };
             loadMenu(jsondata);
             router.setRoute('/userUser');
-
+        } else if(role == '2'){
+            //内容编辑
+            var jsondata = {
+                "t_menus": [
+                    {
+                        "id": 1,
+                        "name": "前台首页",
+                        "url": "../index.html",
+                        "active": "0"
+                    },
+                    {
+                        "id": 2,
+                        "name": "运维管理中心",
+                        "url": "",
+                        "active": "1"
+                    }
+                ],
+                "l_menus": {
+                    "id": 7,
+                    "menus": [
+                        {
+                            "name": "内容管理",
+                            "icon": "img/actonce.png",
+                            "sub_menus": [
+                                {
+                                    "name": "文章管理",
+                                    "url": "/article"
+                                },
+                                {
+                                    "name": "单页管理",
+                                    "url": "/artonce"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+            loadMenu(jsondata);
+            router.setRoute('/article');
+        }
+    }
+    // 加载菜单
     function loadMenu(data) {
         var t_menus = data.t_menus;
         var l_menus = data.l_menus.menus;

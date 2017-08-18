@@ -5,7 +5,7 @@ body {
 }
 
 a {
-    color: #337ab7;
+    color: #BD010F;
 }
 
 .meta-banner-fluid,
@@ -47,12 +47,19 @@ a {
 .head_top .head_tool a {
     color: #fff;
     font-size: 16px;
-    margin: 0 5px;
+    margin: 0 10px;
 }
-.head_top .head_tool .quit{
+.head_top .head_tool span{
     cursor: pointer;
 }
-
+.head_top .head_tool .userlogin{
+    color:#FEF200;
+    font-size: 18px;
+    margin:0;
+}
+.head_top .head_tool .quit{
+    text-decoration: underline;
+}
 .head_menu {
     background: #A0010D;
     border-top: 1px solid #7C010B;
@@ -104,16 +111,6 @@ a {
 
 .meta-row-right {
     width: 35.5%;
-    float: right;
-}
-
-.meta-row-centerL {
-    width: 47.5%;
-    float: left;
-}
-
-.meta-row-centerR {
-    width: 47.5%;
     float: right;
 }
 
@@ -197,40 +194,6 @@ a {
 
 .new_box dl dd a:hover {
     color: #D35D59;
-}
-
-.new_box_second dl.first_list dt {
-    width: 150px;
-}
-
-.new_box_second dl.first_list dd {
-    width: 62%;
-    float: right;
-}
-
-.new_box_second dl dd.new_title {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.new_box_second dl {
-    padding: 24px 0;
-}
-
-.new_box_second dl dd {
-    width: auto;
-    float: none;
-}
-
-.meta-row-centerL.new_box dl dd,
-.meta-row-centerR.new_box dl dd {
-    width: 62%;
-}
-
-.meta-row-centerL.new_box dl,
-.meta-row-centerR.new_box dl {
-    margin-bottom: 10px;
 }
 
 .meta-list ul li {
@@ -335,103 +298,6 @@ a {
     font-size: 18px;
     color: #454545;
     text-align: center;
-}
-
-/*健康咨询*/
-.meta-panel-cont ul {
-    margin-bottom: 0;
-    overflow: hidden;
-    zoom: 1;
-}
-
-.meta-panel-cont ul li {
-    float: left;
-    _display: inline;
-    overflow: hidden;
-    text-align: center;
-    margin: 0px 12px;
-    position: relative;
-    width: 275px;
-    background-color: #f4f3f3;
-    border: 1px solid #ddd;
-}
-
-.meta-panel-cont ul li img {
-    display: block;
-    width: 80px;
-    height: 80px;
-    margin: 25px auto 15px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-}
-
-.meta-panel-cont ul li .doctor_name {
-    font-size: 16px;
-    color: #000;
-    display: block;
-    font-weight: bold;
-}
-
-.meta-panel-cont ul li p {
-    color: #454545;
-    font-size: 16px;
-    overflow: hidden;
-    padding: 2px 25px;
-    line-height: 24px;
-}
-
-.meta-panel-cont ul li p.text_over {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.meta-panel-cont ul li .doctor_num {
-    overflow: hidden;
-    padding: 20px 0;
-    font-size: 16px;
-}
-
-.meta-panel-cont ul li .doctor_num span {
-    display: inline-block;
-    float: left;
-    width: 50%;
-}
-
-.meta-panel-cont ul li .doctor_num span b {
-    font-weight: normal;
-    color: #f00;
-}
-
-.meta-panel-cont ul li p.text_tworow {
-    height: 56px;
-    padding-top: 8px;
-    background-color: #fff;
-}
-
-.meta-panel-cont ul li .doctor_opera {
-    background-color: #fff;
-}
-
-.meta-panel-cont ul li .doctor_opera {
-    overflow: hidden;
-    padding: 13px 0 5px;
-}
-
-.meta-panel-cont ul li .doctor_opera span {
-    float: left;
-    width: 33.33%;
-}
-
-.meta-panel-cont ul li .doctor_opera span a {
-    display: block;
-    width: 70px;
-    margin: 0px auto;
-    height: 30px;
-    line-height: 30px;
-    color: #fff;
-    cursor: pointer;
-    background: url(../imgs/btn.png) center no-repeat;
 }
 
 /*底部*/
@@ -2096,8 +1962,8 @@ input:-webkit-autofill {
 
 .head_top .head_tool{
     line-height: 80px;
-    font-size: 20px;
     color: #fff;
+    font-size: 16px;
 }
 
 .login-wrap{
