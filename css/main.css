@@ -2613,7 +2613,7 @@ input:-webkit-autofill {
     display: block;
     margin-left: 405px;
     font-size: 24px;
-    color: #18c0ec;
+    color: #18b408;
 }
 .waitexpert-btn{
     position: absolute;
@@ -2624,7 +2624,7 @@ input:-webkit-autofill {
 .waitexpert-btn a{
     float: left;
     margin:0 50px;
-    background: #18c0ec;
+    background: #18b408;
 }
 /*流程图end*/
 /*时间轴 病历start*/
