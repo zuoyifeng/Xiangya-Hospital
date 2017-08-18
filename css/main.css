@@ -2473,7 +2473,7 @@ input:-webkit-autofill {
     position: relative;
 
 }
-.intro-list-right i{
+.intro-list-right p{
     position: absolute;
     right: 130px;
     bottom: 5px;
@@ -2499,9 +2499,9 @@ input:-webkit-autofill {
 }
 .intro-list-content{
     float: left;
-    border: 1px solid #A8E0DC;
+    border: 1px solid #7ce06d;
     border-radius: 6px;
-    background-color: #F2FFFC;
+    background-color: #eaffce;
     color: #666666;
     font-size: 13px;
     font-family: 宋体;
@@ -2523,7 +2523,7 @@ input:-webkit-autofill {
 .intro-list-content:after{
     left:-17px;
     top: 10px;
-    border-color:transparent #F2FFFC transparent transparent;
+    border-color:transparent #e3ffb3 transparent transparent;
 }
 .intro-list-active>.intro-list-left{
     color: #ff6600;
@@ -2553,21 +2553,20 @@ input:-webkit-autofill {
 }
 .common-btn{
     display: inline-block;
-    background: #D55960;
+
 }
-.common-btn a{
+.common-btn span{
     text-decoration: none;
     display: block;
     padding: 0 30px;
     line-height: 40px;
     color: #ffffff;
     font-size: 16px;
+    background: #18b408;
 }
-
-.common-btn a:hover{
-    background: url(../imgs/btn-bg-active.jpg);
+.common-btn span:hover{
+    background:#70b412;
 }
-
 .apply-finish{
     text-align: center;
     font-family: 微软雅黑;
@@ -2625,6 +2624,9 @@ input:-webkit-autofill {
     float: left;
     margin:0 50px;
     background: #18b408;
+}
+.waitexpert-btn a:hover{
+    background: #70b412;
 }
 /*流程图end*/
 /*时间轴 病历start*/
