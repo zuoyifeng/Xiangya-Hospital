@@ -9,7 +9,7 @@
         if(!e){e=window.event;}
     }
     //读取头部
-    var data = JSON.parse(sessionStorage.getItem('USER'));
+    var data = JSON.parse(sessionStorage.getItem('UserData'));
     if (data && data.role == 1) {
         $('#nav').html('<li><a href="../../index.html">首页</a></li> <li class="menu_line"></li> <li><a href="../workbench/todolist.html">我的工作台</a></li> <li class="menu_line"></li> <li><a href="../workbench/consulpatientadd.html">会诊/转诊</a></li> <li class="menu_line"></li> <li><a href="http://www.hancloudclinic.com:8084/FormParser">大数据平台</a></li> <li class="menu_line"></li> <li><a href="###">医联体论坛</a></li> <li class="menu_line"></li> <li><a href="###">便民服务</a></li><li class="menu_line"></li> <li><a href="###">在线咨询</a></li>');
         $('.head_tool').html('欢迎登录<span>' + data.uUserDTO.userName + '</span>' + '，' + '<span class="quit">' + '退出' + '</span>');
@@ -22,7 +22,6 @@
     } else {
         var html = '<li><a href="../../index.html">首页</a></li><li class="menu_line"></li><li><a href="http://www.hancloudclinic.com:8084/FormParser">大数据平台</a></li><li class="menu_line"></li><li><a href="###">医联体论坛</a></li><li class="menu_line"></li><li><a href="###">便民服务</a></li><li class="menu_line"></li><li><a href="###">在线咨询</a></li>';
         $('#nav').html(html);
-
     }
 
     //点击退出
@@ -40,7 +39,7 @@
 })
     // 清除session
     function clearUserid() {
-        sessionStorage.removeItem("USER");
+        sessionStorage.removeItem("UserData");
     }
     //ajax请求封装
     function _ajax(opt) {

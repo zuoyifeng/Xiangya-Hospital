@@ -56,12 +56,12 @@ function myToolhide() {
 
 //getUserData 获取当前用户标识
 function getUserData() {
-    //return JSON.parse(sessionStorage.getItem('USER_INFO'));
-    console.log(JSON.parse(sessionStorage.getItem('USER_INFO')));
+    return JSON.parse(sessionStorage.getItem('UserData'));
 }
 
 //isLogin 检测是否已经登录
 function isLogin() {
+    console.log(getUserData());
     var userid = getUserData();
     if (userid && userid != 'undefined') {
         return userid.id;
@@ -73,7 +73,7 @@ function isLogin() {
 
 //清除登录信息
 function clearUserid() {
-    sessionStorage.removeItem("USER_INFO");
+    sessionStorage.removeItem("UserData");
 }
 
 /******管理员相关方法结束********/

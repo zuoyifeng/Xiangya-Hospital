@@ -2,13 +2,13 @@
     <ol class="breadcrumb">
         <li>当前位置：</li>
         <li class="active">用户中心</li>
-        <li><a>租户管理</a></li>
+        <li><a>应用管理</a></li>
     </ol>
 </div>
 <div class="table-box">
     <div class="operate-box">
-        <span>租户名称：</span>
-        <input id="searchName" class="form-control" type="text"/>
+        <span>应用名称：</span>
+        <input id="searchName" class="form-control" type="text" />
         <a id="btn-query" class="btn btn-query"><span class="glyphicon glyphicon-search"></span> 查询</a>
         <div class="pull-right">
             <a class="btn btn-add" id="addBtn"><span class="glyphicon glyphicon-plus"></span> 新增</a>
@@ -17,15 +17,16 @@
     </div>
     <table class="table table-bordered">
         <thead>
-            <tr>
-                <th><input id="check_all" type="checkbox"/></th>
-                <th>租户名称</th>
-                <th>租户所有者</th>
-                <th>租户描述</th>
-                <th>创建时间</th>
-                <th>更新时间</th>
-                <th>操作</th>
-            </tr>
+        <tr>
+            <th><input id="check_all" type="checkbox"/></th>
+            <th>应用编码</th>
+            <th>应用名称</th>
+            <th>访问地址</th>
+            <th>顺序</th>
+            <th>创建时间</th>
+            <th>描述</th>
+            <th>操作</th>
+        </tr>
         </thead>
         <tbody id="dataNote"></tbody>
     </table>
@@ -43,7 +44,8 @@
             跳至第<input class="form-control" type="text" id="pageindex" value="1" onkeyup="value=value.replace(/[^\d]/g,'')" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" />页
             <span class="btn btn-query" id="goPage">GO</span>
         </div>
-        <ul class="pagination" id="pagePaging"></ul>        
+        <ul class="pagination" id="pagePaging"></ul>
     </div>
 </div>
-<script src="admin/js/admin/system/tenant.js"></script>
+<script src="admin/js/admin/apply.js"></script>
+

@@ -1,6 +1,6 @@
 //头部配置项
 var HEADER_STYLE_CONFIG = {
-    headerLogoUrl: 'img/logo.png',//LOGO图片
+    headerLogoUrl: 'admin/img/logo.png',//LOGO图片
     headerHeight: 60,   //头部高度
     headerBgColor: '#BD010F',//头部背景
     headerSelMarginR:5,//头部下拉右边marging

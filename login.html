@@ -7,13 +7,13 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>登录</title>
-    <link href="../../css/reset.css" rel="stylesheet">
-    <link href="../../css/main.css" rel="stylesheet">
-    <link href="../../fonts/font-awesome.min.css" rel="stylesheet"/>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="fonts/font-awesome.min.css" rel="stylesheet"/>
     <!--[if lt IE 9]>
-    <script src="../../js/html5shiv.min.js"></script>
-    <script src="../../js/respond.min.js"></script>
-    <script src="../../js/css3-mediaqueries.js"></script>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <script src="js/css3-mediaqueries.js"></script>
     <![endif]-->
 </head>
 <body>
@@ -21,8 +21,8 @@
     <div class="head_top">
         <div class="container">
             <div class="head_logo">
-                <a href="../../index.html">
-                    <img src="../../imgs/logo.png" />
+                <a href="index.html">
+                    <img src="imgs/logo.png"/>
                 </a>
             </div>
             <div class="head_tool">
@@ -49,10 +49,10 @@
                         <li class="clearfix">
                             <i class="fa fa-check-square"></i>
                             <input type="text" placeholder="请输入验证码" id="importcode">
-                            <img src="../../imgs/confirmcode.jpg" alt="" id="get-confirmcode">
+                            <img src="imgs/confirmcode.jpg" alt="" id="get-confirmcode">
                         </li>
                         <li class="clearfix">
-                            <a href="./register.html">立即注册</a>
+                            <a href="reg.html">立即注册</a>
                             <a href="">忘记密码?</a>
                         </li>
                     </ul>
@@ -71,7 +71,7 @@
     <div class="container">
         <div class="meta-copyright">
             <div class="meta-siteinfo">
-                <img class="logo_bottom" src="../../imgs/logo_hack.png"/>
+                <img class="logo_bottom" src="imgs/logo_hack.png"/>
                 <p>
                     通讯地址：中国湖南长沙市湘雅路87号<br>
                     座机电话：0731-89753406 <br>
@@ -81,18 +81,18 @@
                 <div class="img_code">
                     <div>
                         <span>湘雅皮肤医生</span>
-                        <img src="../../imgs/code.jpg" />
+                        <img src="imgs/code.jpg" />
                     </div>
                     <div>
                         <span>湘雅皮肤医联体</span>
-                        <img src="../../imgs/code.jpg" />
+                        <img src="imgs/code.jpg" />
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </footer>
-<script src="../../js/jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <script>
     //用户名
     var $username = $('#username');
@@ -138,13 +138,16 @@
             "messages": [],
             "validateMessages": {}
         }
-        sessionStorage.setItem('USER', JSON.stringify(res.data));
+        var userinfo = res.data.uUserDTO;
+            userinfo.role = res.data.role;
+        console.log(userinfo);
+        sessionStorage.setItem('UserData', JSON.stringify(userinfo));
         window.history.back();
     })
-    var url=document.referrer;
-    if(url.match('register')){
-        window.location.href='index.html';
-    }
+//    var url=document.referrer;
+//    if(url.match('register')){
+//        window.location.href='index.html';
+//    }
 </script>
 </body>
 </html>

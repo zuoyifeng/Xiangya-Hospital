@@ -51,30 +51,30 @@ $(function () {
     //页面路由设置
     var routes = {
         '/adminTenant': function(){
-            $content.load('admin/system/tenant.html');
+            $content.load('admin/admin/tenant.html');
         },
         '/adminApply': function(){
-            $content.load('admin/system/apply.html');
+            $content.load('admin/admin/apply.html');
         },
         '/adminUser': function(){
-            $content.load('admin/system/user.html');
+            $content.load('admin/admin/user.html');
         },
         '/userGroup': function(){
-            $content.load('html/system/group.html');
+            $content.load('admin/html/group.html');
         },
         '/userProject': function(){
-            $content.load('html/system/project.html');
+            $content.load('admin/html/project.html');
         },
         '/userMember/:memberId': function(memberId){
-            $content.load('html/system/proMember.html').data("ProjectInfo", {
+            $content.load('admin/html/proMember.html').data("ProjectInfo", {
                 id: memberId
             });
         },
         '/userRole': function(){
-            $content.load('html/system/role.html');
+            $content.load('admin/html/role.html');
         },
         '/userUser': function(){
-            $content.load('html/system/user.html');
+            $content.load('admin/html/user.html');
         }
     };
     var router = Router(routes);
@@ -219,7 +219,7 @@ $(function () {
                     {
                         "id": 1,
                         "name": "前台首页",
-                        "url": "../index.html",
+                        "url": "index.html",
                         "active": "0"
                     }
                 ],
@@ -228,7 +228,7 @@ $(function () {
                     "menus": [
                         {
                             "name": "系统管理",
-                            "icon": "img/set.png",
+                            "icon": "admin/img/set.png",
                             "sub_menus": [
                                 {
                                     "name": "用户管理",
