@@ -646,7 +646,7 @@ a {
 /*表单页面样式*/
 .pop-form{
     /* position: relative; */
-    min-height: 500px;
+    min-height: 430px;
 }
 .pop-form ul li {
     padding: 5px 0 20px;
@@ -752,10 +752,17 @@ a {
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
 }
+/*会诊类型的费用描述*/
+.pop-right .typedetail{
+    margin-top: 10px;
+}
+.pop-right .typedetail p{
+    color: #838176;
+}
 .pop-form ul {
     margin: 30px auto;
     position: absolute;
-    top: 150px;
+    top: 170px;
     left: 0px;
     width: 720px;
 }
