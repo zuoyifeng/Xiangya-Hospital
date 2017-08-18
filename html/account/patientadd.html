@@ -26,27 +26,11 @@
                         <img src="../../imgs/logo.png" />
                     </a>
                 </div>
-                <div class="head_tool">
-
-                </div>
+                <div class="head_tool" id="headAccount"></div>
             </div>
         </div>
         <div class="head_menu">
-            <ul class="container clearfix" id="nav">
-                <!--<li><a href="../../index.html">首页·HOME</a></li>-->
-                <!--<li class="menu_line"></li>-->
-                <!--<li><a href="../workbench/dashboard.html">我的工作台</a></li>-->
-                <!--<li class="menu_line"></li>-->
-                <!--<li><a href="../consul/consuladd.html">会诊/转诊</a></li>-->
-                <!--<li class="menu_line"></li>-->
-                <!--<li><a href="http://www.hancloudclinic.com:8084/FormParser">大数据平台</a></li>-->
-                <!--<li class="menu_line"></li>-->
-                <!--<li><a href="###">医联体论坛</a></li>-->
-                <!--<li class="menu_line"></li>-->
-                <!--<li><a href="###">便民服务</a></li>-->
-                <!--<li class="menu_line"></li>-->
-                <!--<li><a href="###">在线咨询</a></li>-->
-            </ul>
+            <ul class="container clearfix" id="nav"></ul>
         </div>
     </header>
     <div class="container">   
@@ -69,44 +53,74 @@
                 </ul>
             </div>
             <div class="ya-boxRight">
-                <div class="consul_title">创建病程</div>
+                <div class="consul_title">添加患者</div>
                 <div class="pop-form">
                     <ul>
                         <li>
-                            <span class="text-label">病程描述：</span>
+                            <span class="text-label">科室：</span>
                             <div class="pop-right pop-row">
-                                <select class="form-control" id="consulExpert">
-                                    <option value="">病程描述</option>
-                                    <option value="1">入院</option>
-                                    <option value="2">复查</option>
-                                    <option value="3">治疗</option>
-                                    <option value="4">康复</option>
+                                <select class="form-control" id="department">
+                                    <option value="">请选择科室</option>
+                                    <option value="1">皮肤美容</option>
+                                    <option value="2">红血丝</option>
+                                    <option value="3">荨麻疹</option>
+                                    <option value="4">雀斑</option>
                                 </select>
                                 <span class="pop-rowtitle">就诊日期：</span>
                                 <input class="form-control" type="text" id="startime" onClick="WdatePicker({ el: this, dateFmt: 'yyyy-MM-dd' })" />
                             </div>
                         </li>
                         <li>
-                            <span class="text-label">添加照片：</span>
-                            <div class="pop-right">
-                                <span class="upload_file">
-                                    <i class="fa fa-file-photo-o fa-3x"></i>
-                                    <input type="file" id="uploadImages" />
-                                </span>
-                                <p class="pop-tips">请上传患者患处图片，最多可以传 10 张图片，格式仅供 .gif、.jpg、.png；单张图片大小 < 3Mb</p>
+                            <span class="text-label">姓名：</span>
+                            <div class="pop-right pop-row">
+                                <input class="form-control" type="text" id="consulName" />
+                                <span class="pop-rowtitle">性别：</span>
+                                <label><input type="radio" name="sex" value="1" checked> 男</label>
+                                <label><input type="radio" name="sex" value="0"> 女</label>
                             </div>
                         </li>
                         <li>
-                            <span class="text-label">病历文字描述：</span>
+                            <span class="text-label">出生日期：</span>
+                            <div class="pop-right pop-row">
+                                <input class="form-control" type="text" id="birthtime" onClick="WdatePicker({ el: this, dateFmt: 'yyyy-MM-dd', maxDate: '%y-%M-{%d}' })" />
+                                <span class="pop-rowtitle">手机号：</span>
+                                <input class="form-control" type="tel" id="tel" />
+                            </div>
+                        </li>
+                        <li>
+                            <span class="text-label">住院号：</span>
+                            <div class="pop-right pop-row">
+                                <input class="form-control" type="text" id="hospital" />
+                                <span class="pop-rowtitle">身份证号：</span>
+                                <input class="form-control" type="text" id="idcard" />
+                            </div>
+                        </li>
+                        <li>
+                            <span class="text-label">诊断病症：</span>
+                            <div class="pop-right pop-row">
+                                <select class="form-control" id="consulExpert">
+                                    <option value="">请选择病症</option>
+                                    <option value="1">阿洪病</option>
+                                    <option value="2">红血丝</option>
+                                    <option value="3">荨麻疹</option>
+                                    <option value="4">白癜风</option>
+                                </select>
+                                <span class="pop-rowtitle">有无过敏史：</span>
+                                <label><input type="radio" name="allergy" value="1"> 是</label>
+                                <label><input type="radio" name="allergy" value="0"> 否</label>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="text-label">基本病情：</span>
                             <div class="pop-right">
                                 <textarea id="illnessCont" rows="7"></textarea>
-                                <p class="pop-tips">包括家庭遗传病史，对药物过敏等</p>
+                                <p class="pop-tips">请详细介绍患者病情状况和不良反应</p>
                             </div>
                         </li>
                         <li>
-                            <span class="text-label">备注：</span>
+                            <span class="text-label">添加病程：</span>
                             <div class="pop-right">
-                                <textarea id="content" rows="7"></textarea>
+                                <span class="et-btn btn-accept btn-creat" id="creatCourse"><i class="fa fa-plus"></i> 创建病程</span>
                             </div>
                         </li>
                     </ul>
@@ -161,9 +175,16 @@
     <script src="../../js/common.js"></script>
     <script>
         $(function () {
+            if(isLogin()){
+
+            }
+            $('#creatCourse').on('click', function () {
+                window.location.href = "/disease.html";
+            })
+
             $('#subConsul').on('click', function () {
-                alert('新增病历成功');
-                window.location.href = "../workbench/patientadd.html";
+                alert('已新增患者');
+                window.location.href = "/dashboard.html";
             })
         })
     </script>

@@ -27,26 +27,11 @@
                 </a>
 
             </div>
-            <div class="head_tool">
-            </div>
+            <div class="head_tool" id="headAccount"></div>
         </div>
     </div>
     <div class="head_menu">
-        <ul class="container clearfix" id="nav">
-            <!--<li><a href="../../index.html">首页</a></li>-->
-            <!--<li class="menu_line"></li>-->
-            <!--<li><a href="../workbench/dashboard.html">我的工作台</a></li>-->
-            <!--<li class="menu_line"></li>-->
-            <!--<li><a href="../consul/consuladd.html">会诊/转诊</a></li>-->
-            <!--<li class="menu_line"></li>-->
-            <!--<li><a href="http://www.hancloudclinic.com:8084/FormParser">大数据平台</a></li>-->
-            <!--<li class="menu_line"></li>-->
-            <!--<li><a href="###">医联体论坛</a></li>-->
-            <!--<li class="menu_line"></li>-->
-            <!--<li><a href="###">便民服务</a></li>-->
-            <!--<li class="menu_line"></li>-->
-            <!--<li><a href="###">在线咨询</a></li>-->
-        </ul>
+        <ul class="container clearfix" id="nav"></ul>
     </div>
 </header>
 <div class="container">
@@ -57,79 +42,76 @@
             </div>
             <ul>
                 <!--<li class="active"><a href="dashboard.html">工作台总览</a></li>-->
-                <li><a href="todolist.html">待办事项</a></li>
-                <li class="active"><a href="myconsult.html">会诊/转诊</a></li>
+                <li class="active"><a href="todolist.html">待办事项</a></li>
+                <li><a href="myconsult.html">会诊/转诊</a></li>
                 <!--<li><a href="transferconsult.html">我的转诊</a></li>-->
                 <li><a href="mypatients.html">我的患者</a></li>
                 <li><a href="followup.html">我的随访</a></li>
                 <li><a href="mytopic.html">我的话题</a></li>
                 <li><a href="mycollect.html">我的收藏</a></li>
                 <li><a href="medicalrecord.html">病历夹</a></li>
-                <li class="active"><a href="myfile.html">文件夹</a></li>
+                <li><a href="myfile.html">文件夹</a></li>
             </ul>
         </div>
         <div class="ya-boxRight">
-            <!--我的转诊-->
-            <div class="ya-myConsult">
+            <!--待办事项-->
+            <div class="ya-todoList">
                 <h3>
-                    我的转诊
-                    <a href="../referral/referraladd.html" class="ya-add"><i class="fa fa-plus"></i> 新增转诊</a>
+                    待办事项
                 </h3>
-                <div class="ya-tab">
-                    <span class="ya-tab-li active" show="turnIn">转入</span>
-                    <span class="line">|</span>
-                    <span class="ya-tab-li" show="turnOut">转出</span>
-                </div>
-                <div class="ya-tabcont ya-tab-list">
-                    <ul class="ya-tab-ul" id="turnIn">
-                        <li>
-                            <a href="../referral/referral.html">
-                                <span class="ya-list-title">过敏性荨麻疹</span>
-                                <span class="ya-list-time">时间：2017-08-09</span>
-                                <p>会诊描述：皮肤划痕在刺激后6～8小时出现风团与红斑，风团持续24～48小时。迟发性皮损不只一条，沿划痕形成小段或点，损害较深或宽，甚至向两侧扩展成块。局部发热，有压痛。</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../referral/referral.html">
-                                <span class="ya-list-title">银屑病</span>
-                                <span class="ya-list-time">时间：2017-05-15</span>
-                                <p>会诊描述：全身皮肤弥漫性潮红、肿胀和脱屑，伴有发热、畏寒、不适等全身症状，浅表淋巴结肿大，白细胞计数增高。</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../referral/referral.html">
-                                <span class="ya-list-title">慢性湿疹</span>
-                                <span class="ya-list-time">时间：2017-05-15</span>
-                                <p>会诊描述：小腿、手、足、肘窝、腘窝、外阴、肛门等处。病程不定，易复发，经久不愈。</p>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="ya-tab-ul" id="turnOut" style="display:none;">
-                        <li>
-                            <a href="../referral/referral.html">
-                                <span class="ya-list-title">慢性湿疹</span>
-                                <span class="ya-list-time">时间：2017-05-15</span>
-                                <p>会诊描述：小腿、手、足、肘窝、腘窝、外阴、肛门等处。病程不定，易复发，经久不愈。</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../referral/referral.html">
-                                <span class="ya-list-title">过敏性荨麻疹</span>
-                                <span class="ya-list-time">时间：2017-08-09</span>
-                                <p>会诊描述：皮肤划痕在刺激后6～8小时出现风团与红斑，风团持续24～48小时。迟发性皮损不只一条，沿划痕形成小段或点，损害较深或宽，甚至向两侧扩展成块。局部发热，有压痛。</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../referral/referral.html">
-                                <span class="ya-list-title">银屑病</span>
-                                <span class="ya-list-time">时间：2017-05-15</span>
-                                <p>会诊描述：全身皮肤弥漫性潮红、肿胀和脱屑，伴有发热、畏寒、不适等全身症状，浅表淋巴结肿大，白细胞计数增高。</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <ul>
+                    <li>
+                        <span class="meta-list-tag">会诊</span>
+                        <a href="###" title="皮肤科湿疹转诊住院申请">长沙县门诊部皮肤科湿疹转诊住院申请</a>
+                        <span class="meta-list-time">2017-08-10</span>
+                    </li>
+                    <li>
+                        <span class="meta-list-tag">转诊</span>
+                        <a href="###" title="浏阳市门诊部专家会诊申请">浏阳市门诊部专家会诊申请</a>
+                        <span class="meta-list-time">2017-08-09</span>
+                    </li>
+                    <li>
+                        <span class="meta-list-tag">转诊</span>
+                        <a href="###" title="长沙市天心区铁道社区医院专家会诊申请">长沙市天心区铁道社区医院专家会诊申请</a>
+                        <span class="meta-list-time">2017-08-09</span>
+                    </li>
+                    <li>
+                        <span class="meta-list-tag">会诊</span>
+                        <a href="###" title="长沙市岳麓区湘雅医院皮肤科转门诊申请">长沙市岳麓区湘雅医院皮肤科转门诊申请</a>
+                        <span class="meta-list-time">2017-07-29</span>
+                    </li>
+                    <li>
+                        <span class="meta-list-tag">咨询</span>
+                        <a href="###" title="长沙市岳麓区梅溪湖疾病中心皮肤科专家会诊申请">长沙市岳麓区梅溪湖疾病中心皮肤科专家会诊申请</a>
+                        <span class="meta-list-time">2017-07-29</span>
+                    </li>
+                    <li>
+                        <span class="meta-list-tag">会诊</span>
+                        <a href="###" title="皮肤科湿疹转诊住院申请">长沙县门诊部皮肤科湿疹转诊住院申请</a>
+                        <span class="meta-list-time">2017-08-10</span>
+                    </li>
+                    <li>
+                        <span class="meta-list-tag">转诊</span>
+                        <a href="###" title="浏阳市门诊部专家会诊申请">浏阳市门诊部专家会诊申请</a>
+                        <span class="meta-list-time">2017-08-09</span>
+                    </li>
+                    <li>
+                        <span class="meta-list-tag">转诊</span>
+                        <a href="###" title="长沙市天心区铁道社区医院专家会诊申请">长沙市天心区铁道社区医院专家会诊申请</a>
+                        <span class="meta-list-time">2017-08-09</span>
+                    </li>
+                    <li>
+                        <span class="meta-list-tag">会诊</span>
+                        <a href="###" title="长沙市岳麓区湘雅医院皮肤科转门诊申请">长沙市岳麓区湘雅医院皮肤科转门诊申请</a>
+                        <span class="meta-list-time">2017-07-29</span>
+                    </li>
+                    <li>
+                        <span class="meta-list-tag">咨询</span>
+                        <a href="###" title="长沙市岳麓区梅溪湖疾病中心皮肤科专家会诊申请">长沙市岳麓区梅溪湖疾病中心皮肤科专家会诊申请</a>
+                        <span class="meta-list-time">2017-07-29</span>
+                    </li>
+                </ul>
             </div>
-
             <div class="et-page">
                 <div class="et-pagenum">
                     共<span id="pageCont"></span>条记录，每页展示
@@ -193,6 +175,9 @@
 <script src="../../js/common.js"></script>
 <script>
     $(function () {
+        if(isLogin()){
+
+        }
         var searchValue = $('#searchName').val(),//搜索
             pagenum = '',     //总数目
             pagesize = 10,    //每页显示数目

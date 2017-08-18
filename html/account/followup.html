@@ -26,26 +26,11 @@
                     <img src="../../imgs/logo.png"/>
                 </a>
             </div>
-            <div class="head_tool">
-            </div>
+            <div class="head_tool" id="headAccount"></div>
         </div>
     </div>
     <div class="head_menu">
-        <ul class="container clearfix" id="nav">
-            <!--<li><a href="../../index.html">首页·HOME</a></li>-->
-            <!--<li class="menu_line"></li>-->
-            <!--<li><a href="../workbench/dashboard.html">我的工作台</a></li>-->
-            <!--<li class="menu_line"></li>-->
-            <!--<li><a href="../consul/consuladd.html">会诊/转诊</a></li>-->
-            <!--<li class="menu_line"></li>-->
-            <!--<li><a href="http://www.hancloudclinic.com:8084/FormParser">大数据平台</a></li>-->
-            <!--<li class="menu_line"></li>-->
-            <!--<li><a href="###">医联体论坛</a></li>-->
-            <!--<li class="menu_line"></li>-->
-            <!--<li><a href="###">便民服务</a></li>-->
-            <!--<li class="menu_line"></li>-->
-            <!--<li><a href="###">在线咨询</a></li>-->
-        </ul>
+        <ul class="container clearfix" id="nav"></ul>
     </div>
 </header>
 <div class="container">
@@ -156,110 +141,117 @@
 <script src="../../js/jquery.min.js"></script>
 <script src="../../js/jqPaginator.min.js"></script>
 <script src="../../js/common.js"></script>
-<script>
-    var searchValue = $('#searchName').val(),//搜索
-            pagenum = '',     //总数目
-            pagesize = 10,    //每页显示数目
-            pageindex = 1;    //当前页码
+<script type="text/javascript">
+    $(function () {
 
-    //分页生成
-    var totals = 25;
-    mypagination(totals, pagesize, pageindex);
+        if(isLogin()){
 
-    //每页显示条数切换
-    $('#pageSelect').on('change', function () {
-        pagesize = $(this).val();
-        var param = {
-            groupName: searchValue,
-            pageSize: pagesize,
-            pageIndex: 1
         }
-        ajaxLoading(param);
-    });
-    //跳转
-    $('#goPage').on('click', function () {
-        pageindex = $('#pageindex').val();
-        //需要做页面最大页数判断
-        var maxPage = Math.ceil(pagenum / pagesize);
-        if (pageindex > maxPage) {
-            var evframe = 'maxPage';
-            var config = {
-                ev: evframe,
-                title: '警告信息',
-                width: 350,
-                height: 200,
-                loadhtml: '您输入的页码超过最大页码，是否跳转到最后一页？',
-                callback: function () {
-                    closeMymodal(evframe + 'myModal');
-                    pageindex = maxPage;
-                    var param = {
-                        groupName: searchValue,
-                        pageSize: pagesize,
-                        pageIndex: pageindex
-                    }
-                    ajaxLoading(param);
-                }
-            }
-            loadMyModal(config);
-        } else if (pageindex < 1) {
-            var evframe = 'minPage';
-            var config = {
-                ev: evframe,
-                title: '警告信息',
-                width: 350,
-                height: 200,
-                loadhtml: '您输入的页码少于1，是否跳转到第一页？',
-                callback: function () {
-                    closeMymodal(evframe + 'myModal');
-                    pageindex = 1;
-                    var param = {
-                        groupName: searchValue,
-                        pageSize: pagesize,
-                        pageIndex: pageindex
-                    }
-                    ajaxLoading(param);
-                }
-            }
-            loadMyModal(config);
-        } else {
+        var searchValue = $('#searchName').val(),//搜索
+                pagenum = '',     //总数目
+                pagesize = 10,    //每页显示数目
+                pageindex = 1;    //当前页码
+
+        //分页生成
+        var totals = 25;
+        mypagination(totals, pagesize, pageindex);
+
+        //每页显示条数切换
+        $('#pageSelect').on('change', function () {
+            pagesize = $(this).val();
             var param = {
                 groupName: searchValue,
                 pageSize: pagesize,
-                pageIndex: pageindex
+                pageIndex: 1
             }
             ajaxLoading(param);
-        }
-    })
-    function mypagination(count, size, current) {
-        $.jqPaginator('#pagePaging', {
-            totalCounts: parseInt(count) || 1,//数据总数,如果页面数据记录为0条会报错
-            pageSize: parseInt(size),//每页显示数目
-            visiblePages: 5,//最多显示的页码数
-            currentPage: parseInt(current),//当前页码
-            activeClass: 'active',
-            first: '<li class="first"><a href="javascript:;">首页</a></li>',
-            prev: '<li class="prev"><a href="javascript:;">上一页</a></li>',
-            next: '<li class="next"><a href="javascript:;">下一页</a></li>',
-            last: '<li class="last"><a href="javascript:;">尾页</a></li>',
-            page: '<li class="page"><a href="javascript:;">{{page}}</a></li>',
-            onPageChange: function (num, type) {
-                //1、“目标页"的页码，Number类型 2、触发类型，可能的值：“init”（初始化），“change”（点击分页）
-                //console.log(type + '：' + num);
-                pagenum = parseInt(count) || 1;  //更新总数目
-                pageindex = num;    //更新当前页码
-                $('.et-pagenum').find('#pageCont').text(pagenum);
-                $('.et-pagego').find('#pageNum').html('共' + Math.ceil(pagenum / pagesize) + '页');
-                if (type == 'change') {
-                    //var param = {
-                    //    groupName: searchValue,
-                    //    pageSize: pagesize,
-                    //    pageIndex: num
-                    //}
-                    //ajaxLoading(param);
-                }
-            }
         });
-    }
+        //跳转
+        $('#goPage').on('click', function () {
+            pageindex = $('#pageindex').val();
+            //需要做页面最大页数判断
+            var maxPage = Math.ceil(pagenum / pagesize);
+            if (pageindex > maxPage) {
+                var evframe = 'maxPage';
+                var config = {
+                    ev: evframe,
+                    title: '警告信息',
+                    width: 350,
+                    height: 200,
+                    loadhtml: '您输入的页码超过最大页码，是否跳转到最后一页？',
+                    callback: function () {
+                        closeMymodal(evframe + 'myModal');
+                        pageindex = maxPage;
+                        var param = {
+                            groupName: searchValue,
+                            pageSize: pagesize,
+                            pageIndex: pageindex
+                        }
+                        ajaxLoading(param);
+                    }
+                }
+                loadMyModal(config);
+            } else if (pageindex < 1) {
+                var evframe = 'minPage';
+                var config = {
+                    ev: evframe,
+                    title: '警告信息',
+                    width: 350,
+                    height: 200,
+                    loadhtml: '您输入的页码少于1，是否跳转到第一页？',
+                    callback: function () {
+                        closeMymodal(evframe + 'myModal');
+                        pageindex = 1;
+                        var param = {
+                            groupName: searchValue,
+                            pageSize: pagesize,
+                            pageIndex: pageindex
+                        }
+                        ajaxLoading(param);
+                    }
+                }
+                loadMyModal(config);
+            } else {
+                var param = {
+                    groupName: searchValue,
+                    pageSize: pagesize,
+                    pageIndex: pageindex
+                }
+                ajaxLoading(param);
+            }
+        })
+        function mypagination(count, size, current) {
+            $.jqPaginator('#pagePaging', {
+                totalCounts: parseInt(count) || 1,//数据总数,如果页面数据记录为0条会报错
+                pageSize: parseInt(size),//每页显示数目
+                visiblePages: 5,//最多显示的页码数
+                currentPage: parseInt(current),//当前页码
+                activeClass: 'active',
+                first: '<li class="first"><a href="javascript:;">首页</a></li>',
+                prev: '<li class="prev"><a href="javascript:;">上一页</a></li>',
+                next: '<li class="next"><a href="javascript:;">下一页</a></li>',
+                last: '<li class="last"><a href="javascript:;">尾页</a></li>',
+                page: '<li class="page"><a href="javascript:;">{{page}}</a></li>',
+                onPageChange: function (num, type) {
+                    //1、“目标页"的页码，Number类型 2、触发类型，可能的值：“init”（初始化），“change”（点击分页）
+                    //console.log(type + '：' + num);
+                    pagenum = parseInt(count) || 1;  //更新总数目
+                    pageindex = num;    //更新当前页码
+                    $('.et-pagenum').find('#pageCont').text(pagenum);
+                    $('.et-pagego').find('#pageNum').html('共' + Math.ceil(pagenum / pagesize) + '页');
+                    if (type == 'change') {
+                        //var param = {
+                        //    groupName: searchValue,
+                        //    pageSize: pagesize,
+                        //    pageIndex: num
+                        //}
+                        //ajaxLoading(param);
+                    }
+                }
+            });
+        }
+
+    })
 </script>
 </body>
 </html>

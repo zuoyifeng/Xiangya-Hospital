@@ -25,10 +25,8 @@
                 <a href="../../index.html">
                     <img src="../../imgs/logo.png"/>
                 </a>
-
             </div>
-            <div class="head_tool">
-            </div>
+            <div class="head_tool" id="headAccount"></div>
         </div>
     </div>
     <div class="head_menu">
@@ -227,6 +225,9 @@
 <script src="../../js/common.js"></script>
 <script>
     $(function () {
+        if(isLogin()){
+
+        }
         //分页代码
         var searchValue = $('#searchName').val(),//搜索
                 pagenum = '',     //总数目

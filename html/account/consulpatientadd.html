@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>中南大学湘雅医院皮肤疾病与健康移动互联体</title>
+    <link href="../../css/reset.css" rel="stylesheet">
+    <link href="../../css/main.css" rel="stylesheet">
+    <link href="../../fonts/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="../../css/jquery.step.css">
+    <!--[if lt IE 9]>
+    <script src="../../js/html5shiv.min.js"></script>
+    <script src="../../js/respond.min.js"></script>
+    <script src="../../js/css3-mediaqueries.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<header class="meta-header">
+    <div class="head_top">
+        <div class="container">
+            <div class="head_logo">
+                <a href="../../index.html">
+                    <img src="../../imgs/logo.png"/>
+                </a>
+            </div>
+            <div class="head_tool" id="headAccount"></div>
+        </div>
+    </div>
+    <div class="head_menu">
+        <ul class="container clearfix" id="nav"></ul>
+    </div>
+</header>
+<div class="container">
+    <div class="step-body" id="myStep">
+        <div class="step-header clearfix" style="width:100%" id="stepAdd">
+            <!--<div class="step-bar"><div class="step-bar-active" style="width: 16.6667%;"></div></div>-->
+            <ul>
+                <li class="step-active"><p>患者基本资料</p></li>
+                <li><p>基本病情</p></li>
+                <li><p>申请会诊</p></li>
+                <li><p>等待专家团队回复</p></li>
+            </ul>
+        </div>
+        <div class="step-content">
+            <div class="step-lists">
+                <div class="consul_title">添加患者<span>(若为已有患者，则可以通过输入身份证号进行搜索)</span></div>
+                <div class="pop-form consultpatientadd">
+                    <ul>
+                        <li>
+                            <span class="text-label">姓名：</span>
+                            <div class="pop-right pop-row">
+                                <input class="form-control" type="text" id="consulName"/>
+                                <span class="empty-tip">*</span>
+                                <span class="pop-rowtitle">性别：</span>
+                                <label><input type="radio" name="sex" value="1" checked> 男</label>
+                                <label><input type="radio" name="sex" value="0"> 女</label>
+                            </div>
+                            <span class="empty-tip">*</span>
+                        </li>
+                        <li>
+                            <span class="text-label">年龄：</span>
+                            <div class="pop-right pop-row">
+                                <input class="form-control" type="text" id="age"/>
+                                <span class="empty-tip">*</span>
+                                <span class="pop-rowtitle">手机号：</span>
+                                <input class="form-control" type="tel" id="tel"/>
+                            </div>
+                            <span class="empty-tip">*</span>
+                        </li>
+                        <li>
+                            <span class="text-label">医保类型：</span>
+                            <div class="pop-right pop-row">
+                                <input class="form-control" type="text" id="insurance"/>
+                                <span class="empty-tip">*</span>
+                                <span class="pop-rowtitle">籍贯：</span>
+                                <input class="form-control" type="tel" id="province"/>
+                            </div>
+                            <span class="empty-tip">*</span>
+                        </li>
+                        <li>
+                            <span class="text-label">身份证号：</span>
+                            <div class="pop-right">
+                                <input class="form-control" type="text" id="idcard"/>
+                            </div>
+                            <span class="empty-tip">*</span>
+                        </li>
+                        <li>
+                            <span class="text-label">家庭住址：</span>
+                            <div class="pop-right">
+                                <input class="form-control" type="text" id="address"/>
+                            </div>
+                            <span class="empty-tip">*</span>
+                        </li>
+                    </ul>
+                    <div class="form_bg"></div>
+                </div>
+                <div class="footer-btn">
+                    <div class="common-btn">
+                        <span class="et-btn btn-submit btn-shares" id="subConsul">提交，下一步</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!--<div class="consul_form clearfix">-->
+        <!--<div class="consul_title">添加患者<span>(若为已有患者，则可以通过输入身份证号进行搜索)</span></div>-->
+        <!--<div class="pop-form consultpatientadd">-->
+            <!--<ul>-->
+                <!--<li>-->
+                    <!--<span class="text-label">姓名：</span>-->
+                    <!--<div class="pop-right pop-row">-->
+                        <!--<input class="form-control" type="text" id="consulName"/>-->
+                        <!--<span class="empty-tip">*</span>-->
+                        <!--<span class="pop-rowtitle">性别：</span>-->
+                        <!--<label><input type="radio" name="sex" value="1" checked> 男</label>-->
+                        <!--<label><input type="radio" name="sex" value="0"> 女</label>-->
+                    <!--</div>-->
+                    <!--<span class="empty-tip">*</span>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<span class="text-label">年龄：</span>-->
+                    <!--<div class="pop-right pop-row">-->
+                        <!--<input class="form-control" type="text" id="age"/>-->
+                        <!--<span class="empty-tip">*</span>-->
+                        <!--<span class="pop-rowtitle">手机号：</span>-->
+                        <!--<input class="form-control" type="tel" id="tel"/>-->
+                    <!--</div>-->
+                    <!--<span class="empty-tip">*</span>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<span class="text-label">医保类型：</span>-->
+                    <!--<div class="pop-right pop-row">-->
+                        <!--<input class="form-control" type="text" id="insurance"/>-->
+                        <!--<span class="empty-tip">*</span>-->
+                        <!--<span class="pop-rowtitle">籍贯：</span>-->
+                        <!--<input class="form-control" type="tel" id="province"/>-->
+                    <!--</div>-->
+                    <!--<span class="empty-tip">*</span>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<span class="text-label">身份证号：</span>-->
+                    <!--<div class="pop-right">-->
+                        <!--<input class="form-control" type="text" id="idcard"/>-->
+                    <!--</div>-->
+                    <!--<span class="empty-tip">*</span>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<span class="text-label">家庭住址：</span>-->
+                    <!--<div class="pop-right">-->
+                        <!--<input class="form-control" type="text" id="address"/>-->
+                    <!--</div>-->
+                    <!--<span class="empty-tip">*</span>-->
+                <!--</li>-->
+            <!--</ul>-->
+            <!--<div class="step-content">-->
+                <!--<div class="step-list">-->
+                    <!--<div class="footer-btn">-->
+                        <!--<div class="common-btn">-->
+                            <!--<a href="basicsituation.html" class="et-btn btn-submit" id="applyBtn">添加患者</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="pop-form-button">-->
+                <!--<span class="et-btn btn-submit" id="subConsul">提交</span>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="form_bg"></div>-->
+    <!--</div>-->
+
+</div>
+
+<footer class="meta-footer">
+    <div class="container">
+        <div class="meta-copyright" id="footerBox">
+            <div class="meta-sitemap">
+                <a title="中国政府网_中央人民政府门户网站" href="http://www.gov.cn/">中国政府网</a>
+                <a title="中华人民共和国国家卫生和计划生育委员会" href="http://www.nhfpc.gov.cn/">中华人民共和国国家卫生和计划生育委员会</a>
+                <a title="湖南卫生和计划生育委员会" href="http://wjw.hunan.gov.cn/">湖南卫生和计划生育委员会</a>
+                <a title="国家医学考试网" href="http://www.nmec.org.cn/">国家医学考试网</a>
+                <a title="丁香园_中国医疗领域的连接者" href="http://www.dxy.cn/">丁香园</a>
+                <a title="中南大学" href="http://www.csu.edu.cn/">中南大学</a>
+                <a title="中南大学湘雅医院" href="http://www.xiangya.com.cn/">中南大学湘雅医院</a>
+                <a title="中南大学湘雅二医院" href="http://www.xyeyy.com/">中南大学湘雅二医院</a>
+                <a title="中南大学湘雅三医院" href="http://www.xy3yy.com/">中南大学湘雅三医院</a>
+                <a title="湘雅海外校友会" href="http://www.xyoaa.org/">湘雅海外校友会</a>
+            </div>
+            <div class="meta-siteinfo">
+                <img class="logo_bottom" src="../../imgs/logo_hack.png"/>
+                <p>
+                    通讯地址：中国湖南长沙市湘雅路87号<br>
+                    座机电话：0731-89753406 <br>
+                    移动电话：13080564083
+                </p>
+                <p>湘ICP备09002748号 Copyright 2007-2017 版权申明 | 联系我们 | 网站地图 </p>
+                <div class="img_code">
+                    <div>
+                        <span>湘雅皮肤医生</span>
+                        <img src="../../imgs/code.jpg"/>
+                    </div>
+                    <div>
+                        <span>湘雅皮肤医联体</span>
+                        <img src="../../imgs/code.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/My97DatePicker/WdatePicker.js"></script>
+<script src="../../js/jquery.step.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+    $(function () {
+        if(isLogin()){
+
+        }
+        var step= $("#myStep").step({
+            animate:true,
+            initStep:1,
+            speed:1000
+        });
+
+
+        $("#preBtn").click(function(event) {
+            var yes=step.preStep();
+
+        });
+        $("#applyBtn").click(function(event) {
+            var yes=step.nextStep();
+
+        });
+        $("#submitBtn").click(function(event) {
+            var yes=step.nextStep();
+
+
+        });
+        $("#goBtn").click(function(event) {
+            var yes=step.goStep(3);
+
+        });
+
+
+        $('#creatCourse').on('click', function () {
+            window.location.href = "/disease.html";
+        })
+
+        $('#subConsul').on('click', function () {
+            alert('已新增患者');
+            window.location.href = "./basicsituation.html";
+        })
+
+
+
+
+    })
+</script>
+</body>
+</html>

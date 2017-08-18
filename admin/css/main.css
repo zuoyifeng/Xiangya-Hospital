@@ -82,6 +82,7 @@ input:-webkit-autofill {
     text-decoration: none;
     text-align:center;
 	position:relative;
+    padding: 0px 10px;
 }
 .m-header .info>li>a .info-arrow{
     display: inline-block;

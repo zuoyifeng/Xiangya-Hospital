@@ -27,26 +27,11 @@
                 </a>
 
             </div>
-            <div class="head_tool">
-            </div>
+            <div class="head_tool" id="headAccount"></div>
         </div>
     </div>
     <div class="head_menu">
-        <ul class="container clearfix" id="nav">
-            <!--<li><a href="../../index.html">首页</a></li>-->
-            <!--<li class="menu_line"></li>-->
-            <!--<li><a href="../workbench/dashboard.html">我的工作台</a></li>-->
-            <!--<li class="menu_line"></li>-->
-            <!--<li><a href="../consul/consuladd.html">会诊/转诊</a></li>-->
-            <!--<li class="menu_line"></li>-->
-            <!--<li><a href="http://www.hancloudclinic.com:8084/FormParser">大数据平台</a></li>-->
-            <!--<li class="menu_line"></li>-->
-            <!--<li><a href="###">医联体论坛</a></li>-->
-            <!--<li class="menu_line"></li>-->
-            <!--<li><a href="###">便民服务</a></li>-->
-            <!--<li class="menu_line"></li>-->
-            <!--<li><a href="###">在线咨询</a></li>-->
-        </ul>
+        <ul class="container clearfix" id="nav"></ul>
     </div>
 </header>
 <div class="container">
@@ -60,83 +45,55 @@
                 <li><a href="todolist.html">待办事项</a></li>
                 <li><a href="myconsult.html">会诊/转诊</a></li>
                 <!--<li><a href="transferconsult.html">我的转诊</a></li>-->
-                <li class="active"><a href="mypatients.html">我的患者</a></li>
+                <li><a href="mypatients.html">我的患者</a></li>
                 <li><a href="followup.html">我的随访</a></li>
                 <li><a href="mytopic.html">我的话题</a></li>
-                <li><a href="mycollect.html">我的收藏</a></li>
+                <li class="active"><a href="mycollect.html">我的收藏</a></li>
                 <li><a href="medicalrecord.html">病历夹</a></li>
                 <li><a href="myfile.html">文件夹</a></li>
             </ul>
         </div>
         <div class="ya-boxRight">
-            <!--我的患者-->
-            <div class="ya-myPatients">
+            <div class="ya-patients-page">
                 <h3>
-                    我的患者
-                    <a href="patientadd.html" class="ya-add"><i class="fa fa-plus"></i> 添加患者</a>
+                    我的收藏
                 </h3>
-                <div class="ya-tab">
-                    <span class="ya-tab-li active" show="xunMa">荨麻疹</span>
-                    <span class="line">|</span>
-                    <span class="ya-tab-li" show="shiZheng">湿疹</span>
-                    <span class="line">|</span>
-                    <span class="ya-tab-li" show="niuPixian">牛皮癣</span>
-                </div>
-                <div class="ya-tabcont">
-                    <div class="ya-tab-ul ya-access ya-patient" id="xunMa">
-                        <dl class="clearfix">
-                            <!--<dt><a href="patientsdetail.html"><img src="../../imgs/doctor02.jpg"></a></dt>-->
-                            <dd><a href="patientsdetail.html">周思源<em>年龄：28</em></a></dd>
-                            <dd class="ya-access-address">地址：湖南省长沙市开福区德雅路191号</dd>
-                        </dl>
-                        <dl class="clearfix">
-                            <!--<dt><a href="patientsdetail.html"><img src="../../imgs/doctor01.jpg"></a></dt>-->
-                            <dd><a href="patientsdetail.html">陆琪<em>年龄：21</em></a></dd>
-                            <dd class="ya-access-address">地址：湖南省长沙市开福区德雅路191号</dd>
-                        </dl>
-                        <dl class="clearfix">
-                            <!--<dt><a href="patientsdetail.html"><img src="../../imgs/doctor01.jpg"></a></dt>-->
-                            <dd><a href="patientsdetail.html">陈佳佳<em>年龄：22</em></a></dd>
-                            <dd class="ya-access-address">地址：湖南省长沙市开福区德雅路191号</dd>
-                        </dl>
-                    </div>
-                    <div class="ya-tab-ul ya-access ya-patient" id="shiZheng" style="display:none;">
-                        <dl class="clearfix">
-                            <!--<dt><a href="patientsdetail.html"><img src="../../imgs/doctor01.jpg"></a></dt>-->
-                            <dd><a href="patientsdetail.html">陈佳佳<em>年龄：22</em></a></dd>
-                            <dd class="ya-access-address">地址：湖南省长沙市开福区德雅路191号</dd>
-                        </dl>
-                        <dl class="clearfix">
-                            <!--<dt><a href="patientsdetail.html"><img src="../../imgs/doctor02.jpg"></a></dt>-->
-                            <dd><a href="patientsdetail.html">周思源<em>年龄：21</em></a></dd>
-                            <dd class="ya-access-address">地址：湖南省长沙市开福区德雅路191号</dd>
-                        </dl>
-                        <dl class="clearfix">
-                            <!--<dt><a href="patientsdetail.html"><img src="../../imgs/doctor01.jpg"></a></dt>-->
-                            <dd><a href="patientsdetail.html">陆琪<em>年龄：23</em></a></dd>
-                            <dd class="ya-access-address">地址：湖南省长沙市开福区德雅路191号</dd>
-                        </dl>
-                    </div>
-                    <div class="ya-tab-ul ya-access ya-patient" id="niuPixian" style="display:none;">
-                        <dl class="clearfix">
-                            <!--<dt><a href="patientsdetail.html"><img src="../../imgs/headpic01.jpg"></a></dt>-->
-                            <dd><a href="patientsdetail.html">周云达<em>年龄：28</em></a></dd>
-                            <dd class="ya-access-address">地址：湖南省长沙市开福区德雅路191号</dd>
-                        </dl>
-                        <dl class="clearfix">
-                            <!--<dt><a href="patientsdetail.html"><img src="../../imgs/doctor01.jpg"></a></dt>-->
-                            <dd><a href="patientsdetail.html">陆琪<em>年龄：29</em></a></dd>
-                            <dd class="ya-access-address">地址：湖南省长沙市开福区德雅路191号</dd>
-                        </dl>
-                        <dl class="clearfix">
-                            <!--<dt><a href="patientsdetail.html"><img src="../../imgs/doctor02.jpg"></a></dt>-->
-                            <dd><a href="patientsdetail.html">周思源<em>年龄：30</em></a></dd>
-                            <dd class="ya-access-address">地址：湖南省长沙市开福区德雅路191号</dd>
-                        </dl>
-                    </div>
-                </div>
-            </div>
+                <ul id="ya-con">
+                    <li class="show">
+                        <a href="#">
+                            <dl class="clearfix">
+                                <dt><img src="../../imgs/head.jpg" alt=""></dt>
+                                <dd class="ya-info">
+                                    <span>标题：女性背部白癜风怎么治疗好</span>
+                                </dd>
+                                <dd class="ya-address">描述：白癜风是一种常见的色素脱失性皮肤黏膜疾病，多发于肤色深的人群。
+                                    白癜风治疗比较困难，疗效并不理想，多采取综合疗法，疗程不少于三个月。白癜风忌食酸辣刺激性食物，少吃含丰富维生素C的食物，适当进行日光浴，有利于白癜风的恢复。</dd>
+                            </dl>
+                        </a>
+                        <a href="#">
+                            <dl class="clearfix">
+                                <dt><img src="../../imgs/head.jpg" alt=""></dt>
+                                <dd class="ya-info">
+                                    <span>标题：女性背部白癜风怎么治疗好</span>
+                                </dd>
+                                <dd class="ya-address">描述：白癜风是一种常见的色素脱失性皮肤黏膜疾病，多发于肤色深的人群。
+                                    白癜风治疗比较困难，疗效并不理想，多采取综合疗法，疗程不少于三个月。白癜风忌食酸辣刺激性食物，少吃含丰富维生素C的食物，适当进行日光浴，有利于白癜风的恢复。</dd>
+                            </dl>
+                        </a>
+                        <a href="#">
+                            <dl class="clearfix">
+                                <dt><img src="../../imgs/head.jpg" alt=""></dt>
+                                <dd class="ya-info">
+                                    <span>标题：女性背部白癜风怎么治疗好</span>
+                                </dd>
+                                <dd class="ya-address">描述：白癜风是一种常见的色素脱失性皮肤黏膜疾病，多发于肤色深的人群。
+                                    白癜风治疗比较困难，疗效并不理想，多采取综合疗法，疗程不少于三个月。白癜风忌食酸辣刺激性食物，少吃含丰富维生素C的食物，适当进行日光浴，有利于白癜风的恢复。</dd>
+                            </dl>
+                        </a>
+                    </li>
 
+                </ul>
+            </div>
             <div class="et-page">
                 <div class="et-pagenum">
                     共<span id="pageCont"></span>条记录，每页展示
@@ -200,10 +157,13 @@
 <script src="../../js/common.js"></script>
 <script>
     $(function () {
+        if(isLogin()){
+
+        }
         var searchValue = $('#searchName').val(),//搜索
-            pagenum = '',     //总数目
-            pagesize = 10,    //每页显示数目
-            pageindex = 1;    //当前页码
+                pagenum = '',     //总数目
+                pagesize = 10,    //每页显示数目
+                pageindex = 1;    //当前页码
 
         //分页生成
         var totals = 25;
