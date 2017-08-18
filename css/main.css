@@ -619,7 +619,13 @@ a {
     margin-bottom: 15px;
     overflow: hidden;
 }
-
+.consul_form .patientdetail b{
+     width: 150px;
+ }
+.consul_form .patientdetail span{
+    width: 250px;
+    margin-right: 100px;
+}
 .consuldetail > div b {
     float: left;
     width: 110px;
@@ -1104,11 +1110,11 @@ input:-webkit-autofill {
     line-height: 28px;
     font-size: 16px;
     margin-right: 40px;
-    background-color: #39BA82;
+    background-color: #18b408;
 }
 
 .btn-accept:hover {
-    background-color: #3EC48A;
+    background-color: #70b412;
 }
 
 .btn-accept:active {
@@ -1122,12 +1128,12 @@ input:-webkit-autofill {
     height: 40px;
     line-height: 28px;
     font-size: 16px;
-    background-color: #D9686E;
+    background-color: #18b408;
     color: #fff;
 }
 
 .btn-refuse:hover {
-    background-color: #DC7479;
+    background-color: #33A876;
 }
 
 .btn-refuse:active {
@@ -2050,6 +2056,8 @@ input:-webkit-autofill {
 .ya-boxRight #ya-medicalrecorddetail #ya-con{
     margin: 12px 20px;
 }
+
+
 /*病历详情 end*/
 
 /*文字颜色闪烁*/
@@ -2478,6 +2486,7 @@ input:-webkit-autofill {
     right: 130px;
     bottom: 5px;
     cursor: pointer;
+    color: #0cb407;
 }
 .intro-list-last .intro-list-right{
     padding-bottom: 0px;
@@ -2503,13 +2512,12 @@ input:-webkit-autofill {
     border-radius: 6px;
     background-color: #eaffce;
     color: #666666;
-    font-size: 13px;
-    font-family: 宋体;
+    font-size: 16px;
     padding: 10px 20px;
     position: relative;
     left: 25px;
     width: 80%;
-    line-height: 18px;
+    line-height: 24px;
 
 }
 .intro-list-content:before,.intro-list-content:after{
@@ -2633,5 +2641,17 @@ input:-webkit-autofill {
 .detailmore{
     margin-top: 75px;
     margin-left: 64px;
+    width: 80%;
+    font-size: 15px;
+    line-height: 36px;
+}
+.detailmore b{
+    color: #ec6349;
+}
+.detailmore span{
+
+}
+.detailmore img{
+    width: 100px;
 }
 /*时间轴 病历end*/
