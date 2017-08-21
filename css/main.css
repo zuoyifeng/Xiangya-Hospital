@@ -486,8 +486,8 @@ a {
     overflow: hidden;
 }
 .consul_form .patientdetail b{
-     width: 150px;
- }
+    width: 150px;
+}
 .consul_form .patientdetail span{
     width: 250px;
     margin-right: 100px;
@@ -512,7 +512,7 @@ a {
 /*表单页面样式*/
 .pop-form{
     /* position: relative; */
-    min-height: 430px;
+    min-height:500px;
 }
 .pop-form ul li {
     padding: 5px 0 20px;
@@ -956,9 +956,9 @@ input:-webkit-autofill {
 .btn-submit {
     color: #fff;
     min-width: 150px;
-    height: 40px;
-    line-height: 28px;
-    font-size: 16px;
+    height: 60px;
+    line-height: 40px;
+    font-size: 18px;
     background: #E72231;
     margin-left: 60px;
 }
@@ -973,15 +973,15 @@ input:-webkit-autofill {
 
 .btn-shares {
     margin-left: 0;
-    min-width: 180px;
+    min-width: 200px;
 }
 
 .btn-accept {
     color: #fff;
-    min-width: 160px;
-    height: 40px;
-    line-height: 28px;
-    font-size: 16px;
+    min-width: 200px;
+    height: 60px;
+    line-height: 45px;
+    font-size: 18px;
     margin-right: 40px;
     background-color: #18b408;
 }
@@ -998,9 +998,9 @@ input:-webkit-autofill {
 }
 .btn-refuse {
     width: 230px;
-    height: 40px;
-    line-height: 28px;
-    font-size: 16px;
+    height: 60px;
+    line-height: 45px;
+    font-size: 18px;
     background-color: #18b408;
     color: #fff;
 }
@@ -1012,6 +1012,13 @@ input:-webkit-autofill {
 .btn-refuse:active {
     background-color: #D55960;
 }
+.pop-form-button label{
+    font-size: 16px;
+    line-height: 28px;
+    margin-right: 31px;
+}
+
+
 
 /*工作台 author:zhang*/
 .userbody,.usercolumn {
@@ -1176,14 +1183,22 @@ input:-webkit-autofill {
     top:15px;*/
     position:relative;
     padding:0px 8px 0 3px;
-    background-color:#D35D59;
-    color: #fff;
     font-size: 16px;
     border-radius:2px;
     float:left;
-    margin:16px 5px 0 1%;
+    margin:16px 20px 0 20px;
     line-height: 16px;
 }
+.ya-todoList .meta-list-consul{
+    color:#D35D59;
+}
+.ya-todoList .meta-list-transfer{
+    color: #08d37a;
+}
+.ya-todoList .meta-list-ask{
+    color: #4d33d3;
+}
+
 .ya-todoList .meta-list-tag:after{
     content: '';
     border-top: 8px solid transparent;
@@ -1194,9 +1209,23 @@ input:-webkit-autofill {
     top:0;
 }
 .ya-todoList .meta-list-time{
-    float: right;
+    position: absolute;
+    top:0;
+    right: 0px;
     line-height: 48px;
     font-size: 16px;
+}
+.ya-todoList .meta-list-flag{
+    /* position: absolute; */
+    /* top: 14px; */
+    /* right: 0; */
+    color: #e1648c;
+    font-size: 16px;
+    left: 1%;
+    float: left;
+    line-height: 48px;
+    margin-right: 20px;
+    min-width: 64px;
 }
 .ya-myworkbench-box .ya-boxRight .ya-myPatients #ya-category {
     height: 30px;
@@ -1574,6 +1603,7 @@ input:-webkit-autofill {
 .fancybox-skin {
     background-color:#fff;
 }
+
 /*覆盖end*/
 
 .ya-myfollowUp .ya-followDetail {
@@ -2335,7 +2365,8 @@ input:-webkit-autofill {
 
 }
 
-.intro-list-left{
+.intro-list-left,
+.consul_advice .text-label{
     float: left;
     text-align: right;
     width: 20%;
@@ -2345,6 +2376,24 @@ input:-webkit-autofill {
     color: #333333;
     padding: 8px;
 }
+.consul_advice .pop-right{
+    float: left;
+    width: 69%;
+}
+.consul_form .consul_advice{
+    margin-top: 20px;
+}
+.consul_form .consul_transfer{
+    padding-left: 152px;
+    padding-top: 30px;
+    font-size: 16px;
+}
+.consul_form .consul_transfer span{
+    font-weight: 700;
+}
+.consul_form .consul_transfer label{
+    margin: 0 40px;
+}
 .intro-list-right{
     float: left;
     width: 80%;
@@ -2352,7 +2401,6 @@ input:-webkit-autofill {
     padding-bottom: 30px;
     background: url(../imgs/ling-bg.jpg) repeat-y 13px;
     position: relative;
-
 }
 .intro-list-right p{
     position: absolute;
@@ -2440,13 +2488,13 @@ input:-webkit-autofill {
     text-decoration: none;
     display: block;
     padding: 0 30px;
-    line-height: 40px;
+    line-height: 60px;
     color: #ffffff;
-    font-size: 16px;
-    background: #18b408;
+    font-size: 18px;
+    background: #03b469;
 }
 .common-btn span:hover{
-    background:#70b412;
+    background: #19b40c;
 }
 .apply-finish{
     text-align: center;
@@ -2506,9 +2554,18 @@ input:-webkit-autofill {
     margin:0 50px;
     background: #18b408;
 }
-.waitexpert-btn a:hover{
+.waitexpert-btn span{
+    display: block;
+    margin-left: 180px;
+    background: #18b408;
+    font-size: 18px;
+    line-height: 50px;
+}
+.waitexpert-btn a:hover,
+.waitexpert-btn span:hover{
     background: #70b412;
 }
+
 /*流程图end*/
 /*时间轴 病历start*/
 .detailmore{
@@ -2528,3 +2585,113 @@ input:-webkit-autofill {
     width: 100px;
 }
 /*时间轴 病历end*/
+/*同意和不同意的弹出框样式*/
+#refuseConsul .pop-form{
+    position: relative;
+}
+#refuseConsul .pop-form ul{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width: 600px;
+}
+#refuseConsul .pop-form ul li .pop-row {
+    width: 35%;
+}
+#refuseConsul ul .applytime .form-control {
+    width: 180px;
+}
+#refuseConsul .pop-form ul li #lineTime {
+    float: left;
+    width: 1%;
+    margin-left: -26px;
+    margin-top: 10px;
+}
+#refuseConsul .pop-form .pop-form-button{
+    position: absolute;
+    bottom:84px;
+    left: 158px;
+}
+/*导航条样式*/
+
+* {
+    margin: 0
+}
+
+.step-body {
+    position: relative;
+
+}
+
+.step-header {
+
+    width: 100%;
+    margin: 20px auto;
+    display: none;
+}
+
+.step-header ul {
+    padding: 0;
+}
+
+.step-header li {
+    list-style-type: none;
+    text-align: center;
+    float: left;
+    position: relative;
+}
+
+.step-header li p {
+    margin-top: 18px;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 微软雅黑;
+    color: #999999;
+
+}
+
+.step-header li span {
+    position: relative;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial;
+    color: #ffffff;
+    height: 40px;
+    line-height: 40px;
+    background: url(../imgs/cell.png) center top no-repeat;
+    display: block;
+}
+
+.step-header li.step-active span {
+    background: url(../imgs/cell-active.png) center top no-repeat;
+}
+
+.step-header li.step-active p {
+    color: #333333;
+}
+
+.step-bar, .step-bar-active {
+    height: 13px;
+    border-radius: 12px;
+}
+
+.step-bar {
+    width: 100%;
+    background: url(../imgs/bar-bg.png);
+    position: relative;
+    border-radius: 12px;
+    z-index: -1;
+    top: 26px;
+}
+
+.step-bar-active {
+    width: 0px;
+    background: url(../imgs/bar-bg-active.png);
+
+}
+
+.step-lists {
+    display: block;
+    clear: both;
+}

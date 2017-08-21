@@ -10,7 +10,6 @@
     <link href="../../css/reset.css" rel="stylesheet">
     <link href="../../css/main.css" rel="stylesheet">
     <link href="../../fonts/font-awesome.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="../../css/jquery.step.css">
     <!--[if lt IE 9]>
     <script src="../../js/html5shiv.min.js"></script>
     <script src="../../js/respond.min.js"></script>
@@ -38,9 +37,11 @@
         <div class="step-header clearfix" style="width:100%" id="stepApply">
             <!--<div class="step-bar"><div class="step-bar-active" style="width: 25.333%;"></div></div>-->
             <ul>
-                <li class="step-active"><p>患者基本资料</p></li>
-                <li class="step-active"><p>基本病情</p></li>
-                <li class="step-active"><p>申请会诊</p></li>
+                <li><p>患者基本资料</p></li>
+                <li><p>基本病情</p></li>
+                <li><p>填写会诊信息</p></li>
+                <li><p>提交医务处审核</p></li>
+                <li><p>上级医院审核</p></li>
                 <li><p>等待专家团队回复</p></li>
             </ul>
         </div>
@@ -101,6 +102,18 @@
                                     <option value="4">疑难病例及皮肤病理团队</option>
                                     <option value="5">玫瑰痤疮等损容性皮肤病团队</option>
                                     <option value="6">其他专家团队</option>
+                                </select>
+                            </div>
+                            <span class="empty-tip">*</span>
+                        </li>
+                        <li>
+                            <span class="text-label">紧急程度：</span>
+                            <div class="pop-right">
+                                <select class="form-control" id="consulUrgency">
+                                    <option value="">请选择紧急程度</option>
+                                    <option value="1">12小时内回复</option>
+                                    <option value="2">24小时内回复</option>
+                                    <option value="3">24-72小时内回复</option>
                                 </select>
                             </div>
                             <span class="empty-tip">*</span>
@@ -187,12 +200,12 @@
 
         $('#subConsul').on('click', function () {
             alert('提交成功，请等待专家团队回复')
-            window.location.href = "./waitexpert.html";
+            window.location.href = "./waitexpert01.html";
         })
         //进度条
         var step = $("#myStep").step({
             animate: true,
-            initStep: 1,
+            initStep: 3,
             speed: 1000
         });
         //会诊类型

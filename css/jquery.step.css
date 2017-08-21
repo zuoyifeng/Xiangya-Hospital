@@ -80,15 +80,3 @@
     display: block;
     clear: both;
 }
-#stepApply .step-bar-active{
-    width: 62.5%!important;
-}
-#stepBasic .step-bar-active{
-    width: 37.5%!important;
-}
-#stepAdd .step-bar-active{
-    width: 12.5%!important;
-}
-#waitexpert .step-bar-active{
-    width: 100%!important;
-}

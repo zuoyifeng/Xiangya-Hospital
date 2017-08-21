@@ -10,7 +10,6 @@
     <link href="../../css/reset.css" rel="stylesheet">
     <link href="../../css/main.css" rel="stylesheet">
     <link href="../../fonts/font-awesome.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" type="text/css" href="../../css/jquery.step.css">
     <!--[if lt IE 9]>
     <script src="../../js/html5shiv.min.js"></script>
     <script src="../../js/respond.min.js"></script>
@@ -40,9 +39,11 @@
         <div class="step-header clearfix" style="width:100%" id="stepAdd">
             <!--<div class="step-bar"><div class="step-bar-active" style="width: 16.6667%;"></div></div>-->
             <ul>
-                <li class="step-active"><p>患者基本资料</p></li>
+                <li><p>患者基本资料</p></li>
                 <li><p>基本病情</p></li>
-                <li><p>申请会诊</p></li>
+                <li><p>填写会诊信息</p></li>
+                <li><p>提交医务处审核</p></li>
+                <li><p>上级医院审核</p></li>
                 <li><p>等待专家团队回复</p></li>
             </ul>
         </div>
@@ -52,6 +53,13 @@
                 <div class="pop-form consultpatientadd clearfix">
                     <ul>
                         <li>
+                            <span class="text-label">身份证号：</span>
+                            <div class="pop-right">
+                                <input class="form-control" type="text" id="idcard"/>
+                            </div>
+                            <span class="empty-tip">*</span>
+                        </li>
+                        <li>
                             <span class="text-label">姓名：</span>
                             <div class="pop-right pop-row">
                                 <input class="form-control" type="text" id="consulName"/>
@@ -60,7 +68,6 @@
                                 <label><input type="radio" name="sex" value="1" checked> 男</label>
                                 <label><input type="radio" name="sex" value="0"> 女</label>
                             </div>
-                            <span class="empty-tip">*</span>
                         </li>
                         <li>
                             <span class="text-label">年龄：</span>
@@ -85,13 +92,6 @@
                                 <span class="empty-tip">*</span>
                                 <span class="pop-rowtitle">籍贯：</span>
                                 <input class="form-control" type="tel" id="province"/>
-                            </div>
-                            <span class="empty-tip">*</span>
-                        </li>
-                        <li>
-                            <span class="text-label">身份证号：</span>
-                            <div class="pop-right">
-                                <input class="form-control" type="text" id="idcard"/>
                             </div>
                             <span class="empty-tip">*</span>
                         </li>

@@ -10,7 +10,6 @@
     <link href="../../css/reset.css" rel="stylesheet">
     <link href="../../css/main.css" rel="stylesheet">
     <link href="../../fonts/font-awesome.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="../../css/jquery.step.css">
     <!--[if lt IE 9]>
     <script src="../../js/html5shiv.min.js"></script>
     <script src="../../js/respond.min.js"></script>
@@ -39,9 +38,11 @@
         <div class="step-header clearfix" style="width:100%" id="stepBasic">
             <!--<div class="step-bar"><div class="step-bar-active" style="width: 25.333%;"></div></div>-->
             <ul>
-                <li class="step-active"><p>患者基本资料</p></li>
-                <li class="step-active"><p>基本病情</p></li>
-                <li><p>申请会诊</p></li>
+                <li><p>患者基本资料</p></li>
+                <li><p>基本病情</p></li>
+                <li><p>填写会诊信息</p></li>
+                <li><p>提交医务处审核</p></li>
+                <li><p>上级医院审核</p></li>
                 <li><p>等待专家团队回复</p></li>
             </ul>
         </div>
@@ -250,7 +251,7 @@
 
         var step = $("#myStep").step({
             animate: true,
-            initStep: 1,
+            initStep: 2,
             speed: 1000
         });
 

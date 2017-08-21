@@ -10,7 +10,6 @@
     <link href="../../css/reset.css" rel="stylesheet">
     <link href="../../css/main.css" rel="stylesheet">
     <link href="../../fonts/font-awesome.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="../../css/jquery.step.css">
     <!--[if lt IE 9]>
     <script src="../../js/html5shiv.min.js"></script>
     <script src="../../js/respond.min.js"></script>
@@ -40,7 +39,9 @@
             <ul>
                 <li class="step-active"><p>患者基本资料</p></li>
                 <li class="step-active"><p>基本病情</p></li>
-                <li class="step-active"><p>申请会诊</p></li>
+                <li class="step-active"><p>填写会诊信息</p></li>
+                <li class="step-active"><p>提交医务处审核</p></li>
+                <li class="step-active"><p>上级医院审核</p></li>
                 <li class="step-active"><p>等待专家团队回复</p></li>
             </ul>
         </div>
@@ -50,7 +51,7 @@
                 <span>资料提交成功，请等待专家团队回复</span>
             </div>
             <div class="waitexpert-btn">
-                <a href="./totaldetail.html" class="et-btn btn-submit btn-shares">查看患者详情</a>
+                <a href="./totaldetail03.html" class="et-btn btn-submit btn-shares">查看患者详情</a>
                 <a href="./todolist.html" class="et-btn btn-submit btn-shares">查看待办事项</a>
             </div>
         </div>
@@ -118,7 +119,7 @@
 
         var step = $("#myStep").step({
             animate: true,
-            initStep: 1,
+            initStep: 6,
             speed: 1000
         });
 
