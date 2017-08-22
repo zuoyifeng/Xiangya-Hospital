@@ -1384,6 +1384,13 @@ input:-webkit-autofill {
     color:#666;
     font-size: 16px;
 }
+.ya-tab-list .ya-list-state{
+    position: absolute;
+    top:13px;
+    right: 233px;
+    color: #18b408;
+    font-size: 15px;
+}
 .ya-tab-list span em{
     color:#a15151;
     color:#16a93d;
