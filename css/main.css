@@ -2404,11 +2404,29 @@ input:-webkit-autofill {
 }
 .intro-list-right p{
     position: absolute;
-    right: 130px;
-    bottom: 5px;
+    right: 160px;
     cursor: pointer;
     color: #0cb407;
+    font-size: 16px;
+
 }
+.intro-list-right p.consulmore{
+    top: 10px;
+    display: none;
+}
+.intro-list-right p.consulretract{
+    bottom: 0px;
+}
+.intro-list-right p.consulmore.active {
+    display: block;
+}
+.intro-list-right .detailmore{
+    display: none;
+}
+.intro-list-right .detailmore.active{
+    display: block;
+}
+
 .intro-list-last .intro-list-right{
     padding-bottom: 0px;
     background: url(../imgs/ling-bg.jpg) repeat-y 13px;
@@ -2491,10 +2509,10 @@ input:-webkit-autofill {
     line-height: 60px;
     color: #ffffff;
     font-size: 18px;
-    background: #03b469;
+    background: #128f04;
 }
 .common-btn span:hover{
-    background: #19b40c;
+    background: #13b405;
 }
 .apply-finish{
     text-align: center;
@@ -2541,29 +2559,24 @@ input:-webkit-autofill {
     display: block;
     margin-left: 405px;
     font-size: 24px;
-    color: #18b408;
+    color: #128f04;
 }
 .waitexpert-btn{
     position: absolute;
-    left: 50%;
-    margin-top: 106px;
-    margin-left: -280px;
-}
-.waitexpert-btn a{
-    float: left;
-    margin:0 50px;
-    background: #18b408;
+    margin-top: 64px;
+    margin-left: 300px;
 }
 .waitexpert-btn span{
-    display: block;
-    margin-left: 180px;
-    background: #18b408;
+    float: left;
+    margin:0 50px;
+    background: #128f04;
     font-size: 18px;
     line-height: 50px;
 }
+
 .waitexpert-btn a:hover,
 .waitexpert-btn span:hover{
-    background: #70b412;
+    background: #13b405;
 }
 
 /*流程图end*/
@@ -2577,9 +2590,16 @@ input:-webkit-autofill {
 }
 .detailmore b{
     color: #ec6349;
+    float: left;
+    min-width: 110px;
 }
 .detailmore span{
 
+    /* float: right; */
+
+    float: left;
+
+    width: 85%;
 }
 .detailmore img{
     width: 100px;
@@ -2596,10 +2616,10 @@ input:-webkit-autofill {
     width: 600px;
 }
 #refuseConsul .pop-form ul li .pop-row {
-    width: 35%;
+    /*width: 35%;*/
 }
 #refuseConsul ul .applytime .form-control {
-    width: 180px;
+    width: 390px;
 }
 #refuseConsul .pop-form ul li #lineTime {
     float: left;
@@ -2691,7 +2711,7 @@ input:-webkit-autofill {
 
 }
 
-.step-lists {
-    display: block;
+.step-list {
+    display: none;
     clear: both;
 }

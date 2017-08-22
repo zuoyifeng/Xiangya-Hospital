@@ -52,6 +52,13 @@
                 <div class="pop-form clearfix">
                     <ul>
                         <li>
+                            <span class="text-label">初步诊断：</span>
+                            <div class="pop-right">
+                                <input type="text" id="firstconsul" class="form-control">
+                                <!--<textarea id="complaint" rows="6"></textarea>-->
+                            </div>
+                        </li>
+                        <li>
                             <span class="text-label">主诉：</span>
                             <div class="pop-right">
                                 <input type="text" id="complaint" class="form-control">
@@ -233,7 +240,11 @@
 <script src="../../js/common.js"></script>
 <script src="../../js/jquery.step.js"></script>
 <script>
+    window.addEventListener('hashchange', function(ev){
+        console.log(ev);
+    });
     $(function () {
+
         if(isLogin()){
 
         }

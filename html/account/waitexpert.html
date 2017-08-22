@@ -51,8 +51,8 @@
                 <span>资料提交成功，请等待专家团队回复</span>
             </div>
             <div class="waitexpert-btn">
-                <a href="./totaldetail03.html" class="et-btn btn-submit btn-shares">查看患者详情</a>
-                <a href="./todolist.html" class="et-btn btn-submit btn-shares">查看待办事项</a>
+                <span class="et-btn btn-submit btn-shares" id="goTotalDetail">查看患者详情</span>
+                <span class="et-btn btn-submit btn-shares" id="goTodoList">查看待办事项</span>
             </div>
         </div>
 
@@ -113,8 +113,11 @@
             $("#files_upRar").html(getFileName(n));
         });
 
-        $('#subConsul').on('click', function () {
-            window.location.href = "./todolist.html";
+        $('#goTotalDetail').click(function () {
+            window.location.href='./totaldetail03.html';
+        })
+        $('#goTodoList').click(function () {
+            window.location.href='./todolist.html';
         })
 
         var step = $("#myStep").step({

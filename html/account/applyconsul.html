@@ -175,20 +175,23 @@
 <script src="../../js/jquery.step.js"></script>
 <script>
     $(function () {
-        if(isLogin()){
+        if (isLogin()) {
 
         }
         //如果选中要求转诊，则转诊医院，转诊医生和期望转诊时间显示
         $('#consulAim').change(function () {
             var val = $('#consulAim option:selected').val();
             console.log(val);
-            if(val=='1'){
+            if (val == '1') {
                 console.log(2);
             }
-            if(val==3){
-                var html='<li><span class="text-label">转诊医院：</span> <div class="pop-right"> <select class="form-control" id="hospital"> <option value="">请选择转诊医院</option> <option value="1">湘雅一医院</option> <option value="2">湘雅二医院</option> <option value="3">湘雅三医院</option> <option value="4">长沙市一医院</option> <option value="5">湖南省肿瘤医院医院</option> </select> </div> <span class="empty-tip">*</span> </li> <li> <span class="text-label">转诊医生：</span> <div class="pop-right"> <select class="form-control" id="doctor"> <option value="">请选择转诊医生</option> <option value="1">盛夏</option> <option value="2">赵清</option> <option value="3">张弛</option> <option value="4">李强</option> <option value="5">黄超</option> <option value="6">马艾</option> </select> </div> <span class="empty-tip">*</span> </li> <li class="bb1"> <span class="text-label">期望转诊日期：</span> <div class="pop-right pop-row applytime"> <input class="form-control" type="text" id="birthtime" onClick=\'WdatePicker({ el: this, dateFmt: "yyyy-MM-dd", maxDate: "%y-%M-{%d}"})\'/></div> <span class="empty-tip">*</span></li>';
+            if (val == 3) {
+             var html = '<li class="transferinfo"><span class="text-label">转诊医院：</span> <div class="pop-right"> <select class="form-control" id="hospital"> <option value="">请选择转诊医院</option> <option value="1">湘雅一医院</option> <option value="2">湘雅二医院</option> <option value="3">湘雅三医院</option> <option value="4">长沙市一医院</option> <option value="5">湖南省肿瘤医院医院</option> </select> </div> <span class="empty-tip">*</span> </li> <li class="transferinfo"> <span class="text-label">转诊医生：</span> <div class="pop-right"> <select class="form-control" id="doctor"> <option value="">请选择转诊医生</option> <option value="1">盛夏</option> <option value="2">赵清</option> <option value="3">张弛</option> <option value="4">李强</option> <option value="5">黄超</option> <option value="6">马艾</option> </select> </div> <span class="empty-tip">*</span> </li> <li class="bb1 transferinfo"> <span class="text-label">期望转诊日期：</span> <div class="pop-right pop-row applytime"> <input class="form-control" type="text" id="birthtime" onClick=\'WdatePicker({ el: this, dateFmt: "yyyy-MM-dd", maxDate: "%y-%M-{%d}"})\'/></div> <span class="empty-tip">*</span></li>';
                 $('.pop-form ul').append(html);
+            }else {
+                $('.pop-form ul li.transferinfo').remove();
             }
+
 
         })
         $("#uploadAnnex").change(function () {
@@ -210,19 +213,20 @@
         });
         //会诊类型
         var d = {
-            select:'.consultype', //定义下拉对象
-            con:'.typedetail' //定义切换对象
+            select: '.consultype', //定义下拉对象
+            con: '.typedetail' //定义切换对象
         };
-        var o = $.extend(d,o);
+        var o = $.extend(d, o);
         var $option = $(d.select).find('option');//遍历下拉对象下的option
-        for(var i = 0; i < $option.length; i++){
-            $option.eq(i).attr('i',i); //设置option 属性i从下标为0开始赋值
+        for (var i = 0; i < $option.length; i++) {
+            $option.eq(i).attr('i', i); //设置option 属性i从下标为0开始赋值
         }
         selectFn();
-        $(d.select).change(function(){
+        $(d.select).change(function () {
             selectFn();
         });
-        function selectFn(){
+
+        function selectFn() {
             var selectedIndex = $(d.select).find('option:selected').attr('i'); //保存被选中的option的属性i的值
             $(d.con).eq(selectedIndex).show().siblings(d.con).hide(); //显示对应显示的对象
         }
