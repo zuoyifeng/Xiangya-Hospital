@@ -805,23 +805,29 @@ a {
     cursor: pointer;
     border: 1px solid transparent;
     border-radius: 4px;
-    background-color: #459DF6;
+    background-color: #CD0110;
     color: #fff;
     user-select: none;
 }
 
 .btnGoPage:hover {
-    background-color: #55A6F7;
+    background-color:#DC0111;
 }
 
 .btnGoPage:active {
-    background-color: #288EF4;
+    background-color:#B6010F;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.125) inset;
 }
-
 .pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
-    background-color: #459DF6;
-    border-color: #459DF6;
+    background-color: #eee;
+    border-color: #ddd;
+    color: #CD0110;
+}
+.pagination>li>a, .pagination>li>span{
+    color: #101010;
+}
+.pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover{
+    color: #CD0110;
 }
 
 /*分页结束*/
@@ -1074,8 +1080,8 @@ input:-webkit-autofill {
     border-bottom: none;
 }*/
 .ya-boxLeft ul li.active {
-    background: #D35D59;
-    border-bottom: 1px solid #D35D59;
+    background: #BD010F;
+    border-bottom: 1px solid #BD010F;
 }
 
 .ya-myworkbench-box .ya-boxLeft ul li.active a {
@@ -1155,6 +1161,9 @@ input:-webkit-autofill {
     overflow:hidden;
     position:relative;
 }
+.ya-todoList ul li:hover{
+    background-color: #f9f9f9;
+}
 .ya-todoList ul li a{
     color: #222;
     display: inline-block;
@@ -1165,67 +1174,81 @@ input:-webkit-autofill {
     max-width: 65%;
     float:left;
     font-size: 16px;
+    margin-left: 48px;
 }
 .ya-todoList ul li a:hover{
-    color: #a15151;
+    color: #BD010F;
 }
 .ya-todoList .meta-list-arrow {
     float: left;
-    color: #a15151;
+    color: #BD010F;
     font-size: 24px;
     margin-right: 8px;
     margin-left: 5px;
     line-height: 46px;
 }
 .ya-todoList .meta-list-tag{
-    /*position:absolute;
+    position:absolute;
     left:5px;
-    top:15px;*/
-    position:relative;
-    padding:0px 8px 0 3px;
-    font-size: 16px;
-    border-radius:2px;
-    float:left;
-    margin:16px 20px 0 20px;
-    line-height: 16px;
+    top:15px;
+    padding:0px 4px 0 4px;
+    background-color: #BD010F;
+    color: #fff;
+    font-size: 12px;
+    border-radius:1px;
+    line-height:18px;
+    user-select:none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
 }
-.ya-todoList .meta-list-consul{
-    color:#D35D59;
-}
-.ya-todoList .meta-list-transfer{
-    color: #08d37a;
-}
-.ya-todoList .meta-list-ask{
-    color: #4d33d3;
-}
-
 .ya-todoList .meta-list-tag:after{
     content: '';
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-    border-right: 6px solid #fff;
-    position:absolute;
-    right:0;
-    top:0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #BD010F;
+    position: absolute;
+    right: -4px;
+    top: 4px;
+}
+.ya-todoList .color-consul{
+    background-color: #E6B451;
+}
+.ya-todoList .color-consul:after{
+    border-left-color: #E6B451;
+}
+.ya-todoList .color-transfer{
+    background-color: #DA742C;
+}
+.ya-todoList .color-transfer:after{
+    border-left-color: #DA742C;
+}
+.ya-todoList .color-ask{
+    background-color: #269D81;
+}
+.ya-todoList .color-ask:after{
+    border-left-color: #269D81;
 }
 .ya-todoList .meta-list-time{
-    position: absolute;
-    top:0;
-    right: 0px;
+    float: right;
     line-height: 48px;
-    font-size: 16px;
+    font-size: 14px;
+    color: #666;
+    margin-right: 10px;
 }
 .ya-todoList .meta-list-flag{
-    /* position: absolute; */
-    /* top: 14px; */
-    /* right: 0; */
-    color: #e1648c;
-    font-size: 16px;
-    left: 1%;
     float: left;
-    line-height: 48px;
-    margin-right: 20px;
-    min-width: 64px;
+    line-height: 46px;
+    margin-left: 10px;
+}
+.ya-todoList .meta-list-flag i{
+    display: inline-block;
+    vertical-align: middle;
+    width: 18px;
+    height:18px;
+    background: url("../imgs/qi.png") center no-repeat;
+}
+.ya-topic ul li a{
+    margin-left: 0;
 }
 .ya-myworkbench-box .ya-boxRight .ya-myPatients #ya-category {
     height: 30px;
@@ -1298,7 +1321,7 @@ input:-webkit-autofill {
 /*我的会诊和我的转诊 begin*/
 .ya-tab {
     position: absolute;
-    top: 18px;
+    top: 21px;
     left: 110px;
     font-size: 16px;
     width:44%;
@@ -1307,7 +1330,7 @@ input:-webkit-autofill {
     float:left;
     height:40px;
     line-height:30px;
-    padding:0px 8px;
+    padding:0px 12px;
     position:relative;
     text-align:center;
     cursor:pointer;
@@ -1334,7 +1357,7 @@ input:-webkit-autofill {
     user-select:none;
 }
 .ya-tab span.active{
-    color:#D35D59;
+    color:#BD010F;
 }
 .ya-tab span.active:after{
     background:currentColor;
@@ -1367,7 +1390,7 @@ input:-webkit-autofill {
     border-top:none;
 }
 .ya-tab-list .ya-list-title{
-    color:#a15151;
+    color:#BD010F;
     font-size: 16px;
     display:block;
     margin-bottom:5px;
@@ -1392,7 +1415,6 @@ input:-webkit-autofill {
     font-size: 15px;
 }
 .ya-tab-list span em{
-    color:#a15151;
     color:#16a93d;
     font-weight:normal;
     font-style:normal;
@@ -1555,7 +1577,7 @@ input:-webkit-autofill {
     font-weight:bold;
     float:left;
     font-size: 16px;
-    color: #a15151;
+    color: #BD010F;
 }
 .ya-access dl dd em{
     font-size: 16px;
@@ -1566,7 +1588,7 @@ input:-webkit-autofill {
 }
 .ya-access dl dd span{
     float:right;
-    color:#D35D59;
+    color:#007BC6;
     margin-right:10px;
     font-size: 16px;
 }
