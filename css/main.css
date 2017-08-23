@@ -2645,10 +2645,10 @@ input:-webkit-autofill {
     width: 600px;
 }
 #refuseConsul .pop-form ul li .pop-row {
-    /*width: 35%;*/
+    width: 35%;
 }
 #refuseConsul ul .applytime .form-control {
-    width: 390px;
+    width: 180px;
 }
 #refuseConsul .pop-form ul li #lineTime {
     float: left;
