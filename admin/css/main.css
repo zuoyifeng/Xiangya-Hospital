@@ -788,4 +788,5 @@ input:-webkit-autofill {
     color: #fff;
     font-size: 18px;
     border-radius: 5%;
+    cursor: pointer;
 }

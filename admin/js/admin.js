@@ -201,7 +201,7 @@ $(function () {
             for (var k = 0, klen = first_item.sub_menus.length; k < klen; k++) {
                 var second_item = first_item.sub_menus[k];
                 var $dd = null;
-                if (j == 0 && k == 0) {
+                if (j == 0 && k == 4) {
                     $dd = $('<dd class="active" hrefurl="' + second_item.url + '">' + second_item.name + '</dd>');
                 } else {
                     $dd = $('<dd hrefurl="' + second_item.url + '">' + second_item.name + '</dd>');
