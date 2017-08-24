@@ -755,7 +755,7 @@ input:-webkit-autofill {
     float: left;
     width: 48%;
 }
-.form li .pop-left textarea{
+.form li textarea{
     min-height: 100px;
     width: 70%;
 }

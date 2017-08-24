@@ -5,59 +5,71 @@
         <li><a>详细信息</a></li>
     </ol>
 </div>
-<div class="form clearfix">
-    <ul>
-        <li class="clearfix">
-            <div class="pop-left">
-                <span class="pop-label">姓名：</span>
-                <input class="pop-info" type="text" id="consulName"/>
-            </div>
-            <div class="pop-right pop-row">
-                <span class="pop-label">性别：</span>
-                <label><input type="radio" name="sex" value="1" checked> 男</label>
-                <label><input type="radio" name="sex" value="0"> 女</label>
-            </div>
-        </li>
-        <li class="clearfix">
-            <div class="pop-left">
-                <span class="pop-label">年龄：</span>
-                <input class="pop-info" type="text" id="consulAge"/>
-            </div>
-            <div class="pop-right pop-row">
-                <span class="pop-label">手机号：</span>
-                <input class="pop-info" type="text" id="consulNum"/>
-            </div>
-        </li>
-        <li class="clearfix">
-            <div class="pop-left">
-                <span class="pop-label">医保类型：</span>
-                <select class="pop-info" id="insurance">
-                    <option value="">请选择医保类型</option>
-                    <option value="1">职工医保</option>
-                    <option value="2">新型农村合作医疗</option>
-                    <option value="3">城镇居民基本医疗保险</option>
-                    <option value="4">其他</option>
-                </select>
-            </div>
-            <div class="pop-right pop-row">
-                <span class="pop-label">籍贯：</span>
-                <input class="pop-info" type="tel" id="province"/>
-            </div>
-        </li>
-        <li class="clearfix">
-            <div class="pop-left">
-                <span class="pop-label">文字描述：</span>
-                <textarea name="" id="" rows="10"></textarea>
-            </div>
-        </li>
-        <li>
-            <div id="editor" type="text/plain" style="width:1024px;height :500px;"></div>
-        </li>
-        <li>
-            <div class="pop-btn">
-                <span>提交</span>
-            </div>
-        </li>
-    </ul>
+<div class="table-box">
+    <div class="form clearfix">
+        <ul>
+            <li>
+                <div>
+                    <span class="pop-label">姓名：</span>
+                    <input class="pop-info" type="text" id="consulName"/>
+                </div>
+
+            </li>
+            <li>
+                <div class="pop-row">
+                    <span class="pop-label">性别：</span>
+                    <label><input type="radio" name="sex" value="1" checked> 男</label>
+                    <label><input type="radio" name="sex" value="0"> 女</label>
+                </div>
+            </li>
+            <li class="clearfix">
+                <div>
+                    <span class="pop-label">年龄：</span>
+                    <input class="pop-info" type="text" id="consulAge"/>
+                </div>
+            </li>
+            <li>
+                <div class="pop-row">
+                    <span class="pop-label">手机号：</span>
+                    <input class="pop-info" type="text" id="consulNum"/>
+                </div>
+            </li>
+            <li class="clearfix">
+                <div>
+                    <span class="pop-label">医保类型：</span>
+                    <select class="pop-info" id="insurance">
+                        <option value="">请选择医保类型</option>
+                        <option value="1">职工医保</option>
+                        <option value="2">新型农村合作医疗</option>
+                        <option value="3">城镇居民基本医疗保险</option>
+                        <option value="4">其他</option>
+                    </select>
+                </div>
+
+            </li>
+            <li>
+                <div class="pop-row">
+                    <span class="pop-label">籍贯：</span>
+                    <input class="pop-info" type="tel" id="province"/>
+                </div>
+            </li>
+            <li class="clearfix">
+                <div>
+                    <span class="pop-label">文字描述：</span>
+                    <textarea name="" id="" rows="10"></textarea>
+                </div>
+            </li>
+            <li>
+
+                <div id="editor" type="text/plain" style="width:1024px;height :500px;"></div>
+            </li>
+            <li>
+                <div class="pop-btn">
+                    <span>提交</span>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>
+
 <script src="admin/js/html/editor.js"></script>
