@@ -64,11 +64,9 @@
                         <input type="text" placeholder="请输入手机验证码" class="required" id="phonecode">
                         <input type="button" value="获取验证码" class="get-phonecode">
                     </li>
-
                 </ul>
-                <div>
-                    <button type="submit" class="register-btn">立即注册</button>
-                </div>
+                <p class="agreement"><label><input type="checkbox" checked value="1" id="agreeBtn"/> 同意平台<a href="###">《注册协议》</a></label></p>
+                <a class="register-btn" id="regBtn">立即注册</a>
             </form>
         </div>
         <div class="form-bg">
@@ -129,14 +127,6 @@
             settime(this);
         })
 
-//        //input获得焦点
-//        $('.required').focus(function () {
-//            $(this).parent().find('span').css('visibility','visible');
-//        })
-//        //input失去焦点
-//        $('.required').blur(function () {
-//            $(this).parent().find('span').css('visibility','hidden');
-//        })
         //用户名正则表达式
         var uname_reg = /^[\u4e00-\u9fa5]{4,20}$|^[\dA-Za-z_\-]{4,20}$/;
         var uname_ok = false;
@@ -245,10 +235,21 @@
                 phone_ok = true;
             }
         });
-
+        //同意协议
+        $('#agreeBtn').on('click',function(){
+            var agree = $(this).is(':checked');
+            if(agree){
+                $('#regBtn').removeClass("disabled");
+            }else{
+                $('#regBtn').addClass("disabled");
+            }
+        })
+        //提交注册
+        $('#regBtn').on('click',function(){
+            if(!$(this).hasClass('disabled')){
+                alert('注册成功！请等待管理员审核哦！');
+            }
+        })
     })
-
-
-
 </script>
 </body>

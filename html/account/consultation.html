@@ -189,7 +189,7 @@
                                     <option value="">请选择会诊类型</option>
                                     <option value="1">明确诊断</option>
                                     <option value="2">协助治疗</option>
-                                    <option value="3" class="requiretransfer">要求转诊</option>
+                                    <option value="3">要求转诊</option>
                                     <option value="4">其他</option>
                                 </select>
                             </div>
@@ -199,27 +199,13 @@
                             <span class="text-label">会诊类型：</span>
                             <div class="pop-right">
                                 <select class="form-control consultype" id="consulType">
-                                    <option value="" selected="selected">请选择会诊类型</option>
-                                    <option value="1">普通会诊</option>
-                                    <option value="2">专家会诊</option>
-                                    <option value="3">特需会诊</option>
-                                    <option value="4">床旁会诊</option>
+                                    <option value="" selected="selected" bt-tips="请选择会诊类型">请选择会诊类型</option>
+                                    <option value="1" bt-tips="普通会诊团队由湘雅博士研究生、住院医师、经治、主治组成，该会诊不收任何费用">普通会诊</option>
+                                    <option value="2" bt-tips="专家会诊团队由湘雅副教授、教授组成，该会诊收取<strong>100元</strong>">专家会诊</option>
+                                    <option value="3" bt-tips="特需会诊团队由国家级教授、全院其他科室集体会诊，该会诊收取<strong>200元</strong>">特需会诊</option>
+                                    <option value="4" bt-tips="床旁会诊由专家会诊团队按预约的时间进行与患者实时视频会诊，该会诊收取<strong>150元</strong>">床旁会诊</option>
                                 </select>
-                                <div class="typedetail" style="display: none">
-                                    <p></p>
-                                </div>
-                                <div class="typedetail" style="display: none">
-                                    <p>会诊团队由湘雅博士研究生、住院医师、经治、主治组成，该会诊不收任何费用</p>
-                                </div>
-                                <div class="typedetail" style="display: none">
-                                    <p>会诊团队由湘雅副教授、教授组成，该会诊收取X元</p>
-                                </div>
-                                <div class="typedetail" style="display: none">
-                                    <p>会诊团队由国家级教授、全院其他科室集体会诊，该会诊收取X元</p>
-                                </div>
-                                <div class="typedetail" style="display: none">
-                                    <p>该会诊由专家会诊团队按预约的时间进行与患者实时视频会诊，该会诊收取X元</p>
-                                </div>
+                                <p class="pop-tips">请选择会诊类型</p>
                             </div>
                             <span class="empty-tip">*</span>
                         </li>
@@ -364,8 +350,12 @@
                     window.history.back();
                 }else{
                     var yes = step.preStep();
-                    window.history.pushState('forward', null, '#1');
-                    window.history.forward(1);
+                    if(yes){
+                        window.history.pushState('forward', null, '#1');
+                        window.history.forward(1);
+                    }else{
+                        window.history.back();
+                    }
                 }
             });
         }
@@ -387,40 +377,20 @@
         });
 
         //如果选中要求转诊，则转诊医院，转诊医生和期望转诊时间显示
-        $('#consulAim').change(function () {
-            var val = $('#consulAim option:selected').val();
-            console.log(val);
-            if (val == '1') {
-                console.log(2);
-            }
+        $('#consulAim').on('change', function () {
+            var val = $(this).val();
             if (val == 3) {
-                var html = '<li class="transferinfo"><span class="text-label">转诊医院：</span> <div class="pop-right"> <select class="form-control" id="hospital"> <option value="">请选择转诊医院</option> <option value="1">湘雅一医院</option> <option value="2">湘雅二医院</option> <option value="3">湘雅三医院</option> <option value="4">长沙市一医院</option> <option value="5">湖南省肿瘤医院医院</option> </select> </div> <span class="empty-tip">*</span> </li> <li class="transferinfo"> <span class="text-label">转诊医生：</span> <div class="pop-right"> <select class="form-control" id="doctor"> <option value="">请选择转诊医生</option> <option value="1">盛夏</option> <option value="2">赵清</option> <option value="3">张弛</option> <option value="4">李强</option> <option value="5">黄超</option> <option value="6">马艾</option> </select> </div> <span class="empty-tip">*</span> </li> <li class="bb1 transferinfo"> <span class="text-label">期望转诊日期：</span> <div class="pop-right pop-row applytime"> <input class="form-control" type="text" id="birthtime" onClick=\'WdatePicker({ el: this, dateFmt: "yyyy-MM-dd", maxDate: "%y-%M-{%d}"})\'/></div> <span class="empty-tip">*</span></li>';
-                $('.pop-form ul').append(html);
+                var html = '<li class="transferinfo"><span class="text-label">转诊医院：</span> <div class="pop-right"> <select class="form-control" id="hospital"> <option value="">请选择转诊医院</option> <option value="1">湘雅一医院</option> <option value="2">湘雅二医院</option> <option value="3">湘雅三医院</option> <option value="4">长沙市一医院</option> <option value="5">湖南省肿瘤医院医院</option> </select> </div> <span class="empty-tip">*</span> </li> <li class="transferinfo"> <span class="text-label">转诊医生：</span> <div class="pop-right"> <select class="form-control" id="doctor"> <option value="">请选择转诊医生</option> <option value="1">盛夏</option> <option value="2">赵清</option> <option value="3">张弛</option> <option value="4">李强</option> <option value="5">黄超</option> <option value="6">马艾</option> </select> </div> <span class="empty-tip">*</span> </li> <li class="transferinfo"> <span class="text-label">期望转诊日期：</span> <div class="pop-right"> <input class="form-control" type="text" id="hopedate" onClick=\'WdatePicker({ el: this, dateFmt: "yyyy-MM-dd", minDate: "%y-%M-{%d}"})\'/></div> <span class="empty-tip">*</span></li>';
+                $(this).parents('ul').append(html);
             } else {
-                $('.pop-form ul li.transferinfo').remove();
+                $(this).parents('li').siblings('li.transferinfo').remove();
             }
-
-
         })
-
         //会诊类型
-        var d = {
-            select: '.consultype', //定义下拉对象
-            con: '.typedetail' //定义切换对象
-        };
-        var o = $.extend(d, o);
-        var $option = $(d.select).find('option');//遍历下拉对象下的option
-        for (var i = 0; i < $option.length; i++) {
-            $option.eq(i).attr('i', i); //设置option 属性i从下标为0开始赋值
-        }
-        selectFn();
-        $(d.select).change(function () {
-            selectFn();
+        $('#consulType').on('change', function () {
+            var tip = $('#consulType option:selected').attr('bt-tips');
+            $(this).siblings('.pop-tips').html(tip);
         });
-        function selectFn() {
-            var selectedIndex = $(d.select).find('option:selected').attr('i'); //保存被选中的option的属性i的值
-            $(d.con).eq(selectedIndex).show().siblings(d.con).hide(); //显示对应显示的对象
-        }
 
         $('.subconsul').on('click', function () {
             window.location.replace("totaldetail01.html");
