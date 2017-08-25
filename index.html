@@ -256,13 +256,20 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/superslide.min.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
-<script>
+<script type="text/javascript">
     $(function () {
         //首页导航
         $('#home').attr('href','index.html');
         $('#account').attr('href','html/account/todolist.html');
-        $('#consultation').attr('href','html/account/consulpatientadd.html');
+        $('#consultation').attr('href','html/account/consultation.html');
         $('#systemManage').attr('href','admin.html');
+
+        //取消common.js绑定事件，新建新的事件处理
+        $('#headAccount').off("click", "span.quit").on("click", "span.quit",function(e){
+            clearUserid();
+            window.location.reload(true);
+        });
+
         //轮播图
         jQuery("#imgList").slide({
             mainCell: ".imgListbox ul",

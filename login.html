@@ -35,7 +35,7 @@
     <div class="login-wrap clearfix">
         <div class="container">
             <div class="login-box">
-                <form class="login-form">
+                <form class="login-form" action="#">
                     <h3>账户登录</h3>
                     <ul>
                         <li class="clearfix">
@@ -56,10 +56,10 @@
                             <a href="">忘记密码?</a>
                         </li>
                     </ul>
+                    <p id="info" class="info"></p>
                     <span class="login-button" id="loginbtn">
                         登&nbsp;&nbsp;&nbsp;&nbsp;录
                     </span>
-                    <a href="##" id="info" class="info"></a>
                 </form>
 
             </div>
@@ -96,7 +96,7 @@
 <script type="text/javascript">
     $(function(){
         if (JSON.parse(sessionStorage.getItem('UserData'))) {
-            window.location.href='index.html';
+            window.location.replace("index.html");
         }
         //用户名
         var $username = $('#username'),
@@ -108,12 +108,12 @@
             var username = $.trim($username.val());
             var password = $.trim($password.val());
             if (!username) {
-                $info.removeClass('hide').text('用户名不能为空');
+                $info.removeClass('hide').text('提示：用户名不能为空');
                 $username.focus();
                 return false;
             }
             if (!password) {
-                $info.removeClass('hide').text('密码不能为空');
+                $info.removeClass('hide').text('提示：密码不能为空');
                 $password.focus();
                 return false;
             }
@@ -141,12 +141,13 @@
             }
             var userinfo = res.data.uUserDTO;
             sessionStorage.setItem('UserData', JSON.stringify(userinfo));
-            if (document.referrer === '') {
+            window.location.replace("index.html");
+            /*if (document.referrer === '') {
                 // 没有来源页面信息的时候，改成首页URL地址
                 window.location.href='index.html';
             }else{
                 window.location.href=document.referrer;
-            }
+            }*/
             //roleLogin登录角色(1=医生,2=内容编辑,3=系统管理员)
             /*$.ajax({
                 url: GLOBAL_AJAX_URL.userLogin,

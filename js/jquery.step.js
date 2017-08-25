@@ -80,7 +80,7 @@
           if (i<page){
             $li.addClass('step-active');
             if(opts.scrollTop){
-             $('html,body').animate({scrollTop:0}, 'slow');
+             $('html,body').animate({scrollTop:0}, 'normal');
             }
         }
       });

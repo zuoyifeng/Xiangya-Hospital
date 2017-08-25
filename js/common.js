@@ -4,7 +4,7 @@
     if(loginData){
         if (loginData.roleLogin == 1) {
             //医生
-            $('#nav').html('<li><a id="home" href="../../index.html">首页</a></li> <li class="menu_line"></li> <li><a id="account" href="../account/todolist.html">我的工作台</a></li> <li class="menu_line"></li> <li><a id="consultation" href="../account/consulpatientadd.html">会诊/转诊</a></li> <li class="menu_line"></li> <li><a href="http://www.hancloudclinic.com:8084/FormParser">大数据平台</a></li> <li class="menu_line"></li> <li><a href="###">医联体论坛</a></li> <li class="menu_line"></li> <li><a href="###">便民服务</a></li><li class="menu_line"></li> <li><a href="###">在线咨询</a></li>');
+            $('#nav').html('<li><a id="home" href="../../index.html">首页</a></li> <li class="menu_line"></li> <li><a id="account" href="../account/todolist.html">我的工作台</a></li> <li class="menu_line"></li> <li><a id="consultation" href="../account/consultation.html">会诊/转诊</a></li> <li class="menu_line"></li> <li><a href="http://www.hancloudclinic.com:8084/FormParser">大数据平台</a></li> <li class="menu_line"></li> <li><a href="###">医联体论坛</a></li> <li class="menu_line"></li> <li><a href="###">便民服务</a></li><li class="menu_line"></li> <li><a href="###">在线咨询</a></li>');
             $('.head_menu ul li a').width(165);
         } else if (loginData.roleLogin == 3) {
             //系统管理
@@ -12,7 +12,7 @@
             $('.head_menu ul li a').width(195);
         }
         //登录信息
-        $('#headAccount').html('欢迎登录 <a class="userlogin">' + loginData.userName + '</a>' + '，' + '<span class="quit">' + '退出' + '</span>');
+        $('#headAccount').html('欢迎您 <a class="userlogin">' + loginData.userName + '</a>' + '，' + '<span class="quit">' + '退出' + '</span>');
     } else {
         $('#nav').html('<li><a id="home" href="../../index.html">首页</a></li><li class="menu_line"></li><li><a href="http://www.hancloudclinic.com:8084/FormParser">大数据平台</a></li><li class="menu_line"></li><li><a href="###">医联体论坛</a></li><li class="menu_line"></li><li><a href="###">便民服务</a></li><li class="menu_line"></li><li><a href="###">在线咨询</a></li>');
         $('#headAccount').html('<a href="login.html"><i class="fa fa-user"></i> 登录</a><a href="reg.html"><i class="fa fa-user-plus"></i> 注册</a>');
@@ -22,7 +22,8 @@
     //点击退出
     $('#headAccount').on('click', 'span.quit', function () {
         clearUserid();
-        window.location.reload(true);
+        // window.location.reload(true);
+        window.location.href = "../../login.html";
     })
     //tab切换
     $('.ya-tab>.ya-tab-li').on('click', function () {
@@ -41,10 +42,17 @@ function getUserData() {
 function isLogin() {
     var userid = getUserData();
     if (userid && userid != 'undefined') {
-        return userid.id;
+        if(userid.roleLogin==1){
+            return userid.id;
+        }else{
+            alert('很抱歉，您登录的账户暂时没有权限访问!');
+            // window.location.replace("../../index.html");
+            window.location.href = "../../index.html";
+        }
     } else {
-        alert('您还没有登录,暂时没有权限访问，请先登录!');
+        alert('很抱歉，请先登录您的账号!');
         //提示并跳转到登陆页
+        // window.location.replace("../../login.html");
         window.location.href = "../../login.html";
     }
 }
@@ -64,6 +72,13 @@ function _ajax(opt) {
         data: opt.data,
         success: opt.success
     });
+}
+
+//获取地址栏的参数
+function GetQueryParam(name){
+    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if(r!=null)return  unescape(r[2]); return null;
 }
 
 

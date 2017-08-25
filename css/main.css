@@ -511,8 +511,7 @@ a {
 /*子页面公共样式开始*/
 /*表单页面样式*/
 .pop-form{
-    /* position: relative; */
-    min-height:500px;
+    position: relative;
 }
 .pop-form ul li {
     padding: 5px 0 20px;
@@ -618,6 +617,16 @@ a {
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
 }
+.form_bg {
+    position: absolute;
+    right: 50px;
+    top:0;
+    width: 300px;
+    height: 400px;
+    background-image: url(../imgs/resul_bg.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+}
 /*会诊类型的费用描述*/
 .pop-right .typedetail{
     margin-top: 10px;
@@ -625,14 +634,6 @@ a {
 .pop-right .typedetail p{
     color: #838176;
 }
-.pop-form ul {
-    margin: 30px auto;
-    position: absolute;
-    top: 170px;
-    left: 0px;
-    width: 720px;
-}
-
 .pop-form-button {
     text-align: center;
     margin-top: 20px;
@@ -912,6 +913,7 @@ input:-webkit-autofill {
     line-height: 56px;
     padding-left: 20px;
     color:#000;
+    margin-top: 30px;
 }
 .consul_title span{
     font-size: 15px;
@@ -922,17 +924,6 @@ input:-webkit-autofill {
     width: 720px;
     margin-left: 10px;
     float: left;
-}
-
-.form_bg {
-    position: absolute;
-    right: 0;
-    top: 150px;
-    bottom: 0;
-    width: 400px;
-    background-image: url(../imgs/resul_bg.png);
-    background-position: center top;
-    background-repeat: no-repeat;
 }
 
 .refer_input {
@@ -1632,7 +1623,14 @@ input:-webkit-autofill {
 .fancybox-skin {
     background-color:#fff;
 }
-
+/*会诊转诊表单*/
+.consultation{
+    min-height: 400px;
+}
+.consultation ul {
+    margin-top: 30px;
+    width: 720px;
+}
 /*覆盖end*/
 
 .ya-myfollowUp .ya-followDetail {
@@ -2108,18 +2106,17 @@ input:-webkit-autofill {
     line-height: 40px;
     text-align: center;
     font-size: 16px;
-    margin-top: 40px;
+    margin-top: 20px;
     background: #18c0ec;
     cursor: pointer;
     color: #fff;
 }
 .login-form .info{
-    float: left;
     color: red;
+    height:20px;
+    text-align: center;
     cursor: pointer;
-    text-decoration: none;
-    font-size: 12px;
-    visibility: hidden;
+    font-size: 14px;
 }
 .login-footer,.login-footer .meta-copyright{
     background: #fff;
@@ -2521,27 +2518,28 @@ input:-webkit-autofill {
 }
 
 .footer-btn{
-    position: relative;
-    top: 30px;
-    text-align: center;
-    clear: both;
-    padding-bottom: 30px;
-}
-.common-btn{
-    display: inline-block;
-
+    padding-top: 30px;
 }
 .common-btn span{
-    text-decoration: none;
-    display: block;
     padding: 0 30px;
-    line-height: 60px;
+    line-height: 55px;
     color: #ffffff;
     font-size: 18px;
-    background: #128f04;
+    background: #00A650;
+    min-width: 250px;
+    margin-left: 280px;
 }
 .common-btn span:hover{
-    background: #13b405;
+    background: #00B757;
+}
+.common-btn span:active{
+    background: #009145;
+}
+.footer-center{
+    text-align: center;
+}
+.footer-center span{
+    margin: 0px auto;
 }
 .apply-finish{
     text-align: center;
@@ -2578,17 +2576,18 @@ input:-webkit-autofill {
     position: relative;
 }
 .waitexpert-con{
-
+    text-align: center;
+    padding: 20px 0 10px;
 }
-.waitexpert-con img{
-    display: block;
-    margin: 50px auto;
+.waitexpert-con i{
+    font-size: 100px;
+    color: #00A650;
 }
 .waitexpert-con span{
     display: block;
-    margin-left: 405px;
     font-size: 24px;
-    color: #128f04;
+    color: #00A650;
+    margin-top: 30px;
 }
 .waitexpert-btn{
     position: absolute;
@@ -2662,43 +2661,31 @@ input:-webkit-autofill {
     left: 158px;
 }
 /*导航条样式*/
-
-* {
-    margin: 0
-}
-
 .step-body {
     position: relative;
-
 }
-
 .step-header {
-
     width: 100%;
-    margin: 20px auto;
+    padding: 20px 0 30px;
     display: none;
 }
-
 .step-header ul {
     padding: 0;
+    overflow: hidden;
 }
-
 .step-header li {
     list-style-type: none;
     text-align: center;
     float: left;
     position: relative;
 }
-
 .step-header li p {
     margin-top: 18px;
     font-weight: bold;
     font-size: 14px;
     font-family: 微软雅黑;
     color: #999999;
-
 }
-
 .step-header li span {
     position: relative;
     margin: 0 auto;
@@ -2711,20 +2698,16 @@ input:-webkit-autofill {
     background: url(../imgs/cell.png) center top no-repeat;
     display: block;
 }
-
 .step-header li.step-active span {
     background: url(../imgs/cell-active.png) center top no-repeat;
 }
-
 .step-header li.step-active p {
     color: #333333;
 }
-
 .step-bar, .step-bar-active {
     height: 13px;
     border-radius: 12px;
 }
-
 .step-bar {
     width: 100%;
     background: url(../imgs/bar-bg.png);
@@ -2733,13 +2716,11 @@ input:-webkit-autofill {
     z-index: -1;
     top: 26px;
 }
-
 .step-bar-active {
     width: 0px;
     background: url(../imgs/bar-bg-active.png);
 
 }
-
 .step-list {
     display: none;
     clear: both;

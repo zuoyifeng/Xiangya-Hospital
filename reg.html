@@ -106,7 +106,7 @@
 <script type="text/javascript">
     $(function () {
         if (JSON.parse(sessionStorage.getItem('UserData'))) {
-            window.location.href='index.html';
+            window.location.replace("index.html");
         }
         //获取验证码倒计时
         var countdown=60;
