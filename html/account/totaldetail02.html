@@ -136,12 +136,12 @@
         </div>
         <div class="consul_transfer clearfix">
             <span>是否转为转诊：</span>
-            <label><input type="radio" name="boolean" value="1"> 是</label>
-            <label><input type="radio" name="boolean" value="0" checked> 否</label>
+            <label><input type="radio" name="sulboolean" value="1"> 是</label>
+            <label><input type="radio" name="sulboolean" value="0" checked> 否</label>
             <div class="pop-form" id="transferConsul"></div>
         </div>
-        <div class="pop-form-button">
-            <span class="et-btn btn-accept" id="subConsul">提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交</span>
+        <div class="pop-form-button common-btn footer-center">
+            <span class="et-btn" id="subConsul">提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交</span>
         </div>
     </div>
 
@@ -223,6 +223,7 @@
         });
         $('#subConsul').on('click', function () {
             alert('提交成功');
+            window.location.replace("todolist.html");
         })
 
         //点击更多
@@ -235,25 +236,8 @@
             $(this).parent('.detailmore').removeClass('active');
             $(this).parent('.detailmore').siblings('.consulmore').addClass('active');
         })
-
         //点击单选框
-//        $(':radio').click(function () {
-//            var val=$(this).val();
-//            if(val==1){
-//                $.fancybox.open('<div class="modal-form" id="refuseConsul"><div class="consul_title">转诊信息</div><div class="pop-form"><ul><li><span class="text-label">转诊医院：</span> <div class="pop-right"> <select class="form-control" id="hospital"> <option value="">请选择转诊医院</option> <option value="1">湘雅一医院</option> <option value="2">湘雅二医院</option> <option value="3">湘雅三医院</option> <option value="4">长沙市一医院</option> <option value="5">湖南省肿瘤医院医院</option> </select> </div> <span class="empty-tip">*</span> </li> <li> <span class="text-label">转诊医生：</span> <div class="pop-right"> <select class="form-control" id="doctor"> <option value="">请选择转诊医生</option> <option value="1">盛夏</option> <option value="2">赵清</option> <option value="3">张弛</option> <option value="4">李强</option> <option value="5">黄超</option> <option value="6">马艾</option> </select> </div> <span class="empty-tip">*</span> </li> <li class="bb1"> <span class="text-label">期望转诊日期：</span> <div class="pop-right pop-row applytime"> <input class="form-control" type="text" id="birthtime" onClick=\'WdatePicker({ el: this, dateFmt: "yyyy-MM-dd", maxDate: "%y-%M-{%d}"})\'/></div> <span class="empty-tip">*</span></li></ul><div class="pop-form-button"><span class="et-btn btn-submit" id="subRefuse">提交</span></div></div></div>', {
-//                    closeEffect: 'none',
-//                    minWidth: '600',
-//                    minHeight: '370',
-//                    helpers: {
-//                        overlay: {
-//                            closeClick: false
-//                        }
-//                    }
-//                });
-//            }
-//        })
-        //点击单选框
-        $(':radio').click(function () {
+        $('input:radio[name="sulboolean"]').click(function () {
             var val=$(this).val();
             if(val==1){
                 var html='<ul><li class="clearfix"><span class="text-label">转诊医院：</span> <div class="pop-right"> <select class="form-control" id="hospital"> <option value="">请选择转诊医院</option> <option value="1">湘雅一医院</option> <option value="2">湘雅二医院</option> <option value="3">湘雅三医院</option> <option value="4">长沙市一医院</option> <option value="5">湖南省肿瘤医院医院</option> </select> </div> <span class="empty-tip">*</span> </li> <li class="clearfix"> <span class="text-label">转诊医生：</span> <div class="pop-right"> <select class="form-control" id="doctor"> <option value="">请选择转诊医生</option> <option value="1">盛夏</option> <option value="2">赵清</option> <option value="3">张弛</option> <option value="4">李强</option> <option value="5">黄超</option> <option value="6">马艾</option> </select> </div> <span class="empty-tip">*</span> </li> <li> <span class="text-label">期望转诊日期：</span> <div class="pop-right"> <input class="form-control" type="text" id="birthtime" onClick=\'WdatePicker({ el: this, dateFmt: "yyyy-MM-dd", minDate: "%y-%M-{%d}"})\'/></div> <span class="empty-tip">*</span></li></ul>';
@@ -261,12 +245,6 @@
             }else{
                 $('.consul_transfer .pop-form ul').remove();
             }
-        })
-
-        $('body').on('click', '#subRefuse', function () {
-            alert('提交成功');
-            $.fancybox.close();
-            window.location.replace("todolist.html");
         })
     })
 </script>
