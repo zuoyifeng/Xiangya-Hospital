@@ -108,40 +108,71 @@
             var username = $.trim($username.val());
             var password = $.trim($password.val());
             if (!username) {
-                $info.removeClass('hide').text('提示：用户名不能为空');
+                $info.removeClass('hide').text('提示:用户名不能为空');
                 $username.focus();
                 return false;
             }
             if (!password) {
-                $info.removeClass('hide').text('提示：密码不能为空');
+                $info.removeClass('hide').text('提示:密码不能为空');
                 $password.focus();
                 return false;
+            }else if(password.length < 6) {
+                $info.removeClass('hide').text('提示:请输入至少六位数密码');
+                return false;
             }
-            var res = {
-                "status": true,
-                "httpstatus": 200,
-                "data": {
-                    "id": 7,
-                    "passwd": "0a594152643e2501c10effcfdb4bc6a0",
-                    "uUserDTO": {
-                        "id": 8,
-                        "roleLogin": "1",
-                        "createdTime": "2017-06-29 17:15:28",
-                        "email": "123456",
-                        "groupId": 1,
-                        "mobileNo": "1213456",
-                        "status": 1,
-                        "tenantId": 1,
-                        "userName": "Zhangjiu"
-                    }
-                },
-                "isValidateMessage": false,
-                "messages": [],
-                "validateMessages": {}
+            if(username=='admin'){
+                var res = {
+                    "status": true,
+                    "httpstatus": 200,
+                    "data": {
+                        "id": 7,
+                        "passwd": "0a594152643e2501c10effcfdb4bc6a0",
+                        "uUserDTO": {
+                            "id": 8,
+                            "roleLogin": "3",
+                            "createdTime": "2017-06-29 17:15:28",
+                            "email": "123456",
+                            "groupId": 1,
+                            "mobileNo": "1213456",
+                            "status": 1,
+                            "tenantId": 1,
+                            "userName": "Zhangjiu"
+                        }
+                    },
+                    "isValidateMessage": false,
+                    "messages": [],
+                    "validateMessages": {}
+                }
+                var userinfo = res.data.uUserDTO;
+                sessionStorage.setItem('UserData', JSON.stringify(userinfo));
+                window.location.replace("index.html");
+            }else{
+                var res = {
+                    "status": true,
+                    "httpstatus": 200,
+                    "data": {
+                        "id": 7,
+                        "passwd": "0a594152643e2501c10effcfdb4bc6a0",
+                        "uUserDTO": {
+                            "id": 8,
+                            "roleLogin": "1",
+                            "createdTime": "2017-06-29 17:15:28",
+                            "email": "123456",
+                            "groupId": 1,
+                            "mobileNo": "1213456",
+                            "status": 1,
+                            "tenantId": 1,
+                            "userName": "Zhangjiu"
+                        }
+                    },
+                    "isValidateMessage": false,
+                    "messages": [],
+                    "validateMessages": {}
+                }
+                var userinfo = res.data.uUserDTO;
+                sessionStorage.setItem('UserData', JSON.stringify(userinfo));
+                window.location.replace("index.html");
             }
-            var userinfo = res.data.uUserDTO;
-            sessionStorage.setItem('UserData', JSON.stringify(userinfo));
-            window.location.replace("index.html");
             /*if (document.referrer === '') {
                 // 没有来源页面信息的时候，改成首页URL地址
                 window.location.href='index.html';
