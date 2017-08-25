@@ -2057,13 +2057,13 @@ input:-webkit-autofill {
     position: absolute;
     right: 0px;
     top:0;
-    background: #e0f2f5;
+    background: #fcfcfc;
     padding: 20px;
-    color: #18c0ec;
+    color: #B4010F;
 }
 .login-box .login-form h3{
     line-height: 40px;
-    border-bottom: 1px solid #f4f4f4;
+    border-bottom: 1px solid #e5e5e5;
     font-size: 18px;
 }
 .login-form ul{
@@ -2075,17 +2075,17 @@ input:-webkit-autofill {
 }
 .login-form ul li i{
     float: left;
-    width: 30px;
+    width: 45px;
     height: 45px;
-    border: 1px solid #bdbdbd;
-    border-right: none;
-    font-size: 16px;
     text-align: center;
     line-height: 45px;
+    border: 1px solid #ccc;
+    border-right: none;
+    font-size: 18px;
 }
 .login-form ul li input{
     float: left;
-    width: 230px;
+    width: 215px;
     height: 45px;
     color: #555;
 }
@@ -2113,7 +2113,7 @@ input:-webkit-autofill {
     text-align: center;
     font-size: 16px;
     margin-top: 20px;
-    background: #18c0ec;
+    background: #B4010F;
     cursor: pointer;
     color: #fff;
 }
