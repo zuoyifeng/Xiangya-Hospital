@@ -35,7 +35,7 @@
     <div class="login-wrap clearfix">
         <div class="container">
             <div class="login-box">
-                <form class="login-form" action="#">
+                <form class="login-form" >
                     <h3>账户登录</h3>
                     <ul>
                         <li class="clearfix">
@@ -106,7 +106,8 @@
         //是否可以提交表单
         $loginbtn.click(function () {
             var username = $.trim($username.val());
-            var password = $.trim($password.val());
+            var password = $password.val();
+            var yancode  = $('#importcode').val();
             if (!username) {
                 $info.removeClass('hide').text('提示:用户名不能为空');
                 $username.focus();
@@ -118,6 +119,11 @@
                 return false;
             }else if(password.length < 6) {
                 $info.removeClass('hide').text('提示:请输入至少六位数密码');
+                return false;
+            }
+            if (!yancode) {
+                $info.removeClass('hide').text('提示:请输入验证码');
+                $('#importcode').focus();
                 return false;
             }
             if(username=='admin'){
@@ -199,6 +205,13 @@
                 }
             });*/
         })
+        $("#importcode").keydown(function(e){
+            var curKey = e.which;
+            if(curKey == 13){
+                $("#loginbtn").click();
+                return false;
+            }
+        });
     })
 </script>
 </body>

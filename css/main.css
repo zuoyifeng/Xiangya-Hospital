@@ -910,7 +910,7 @@ input:-webkit-autofill {
 
 /*会诊转诊*/
 .consul_form, .consul_referral {
-    padding: 40px 0 20px;
+    padding: 40px 0;
     position: relative;
 }
 
@@ -2400,13 +2400,8 @@ input:-webkit-autofill {
 
 }
 .intro-flow{
-    margin-top: 50px;
-
+    padding:50px 0;
 }
-.intro-list{
-
-}
-
 .intro-list-left{
     float: left;
     text-align: right;
@@ -2731,4 +2726,10 @@ input:-webkit-autofill {
 .step-list {
     display: none;
     clear: both;
+}
+/*分享微信弹出的样式*/
+.bd_weixin_popup{
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
 }
