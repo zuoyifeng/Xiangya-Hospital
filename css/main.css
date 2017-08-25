@@ -946,15 +946,11 @@ input:-webkit-autofill {
     font-style: normal;
 }
 .pop-row .form-control{
-    width: 183px;
+    width: 47%;
 }
-.pop-row .pop-rowtitle{
-    display:inline-block;
-    text-align: left;
-    line-height: 40px;
-    font-size: 15px;
-    width: 85px;
-    margin: 0px 0 0 64px;
+.pop-row em{
+    margin: 0px 5px;
+    font-style: normal;
 }
 
 .btn-submit {
@@ -1012,7 +1008,7 @@ input:-webkit-autofill {
 }
 
 .btn-refuse:active {
-    background-color: #D55960;
+    background-color: #18b408;
 }
 .pop-form-button label{
     font-size: 16px;
@@ -2576,7 +2572,8 @@ input:-webkit-autofill {
     text-align: center;
 }
 .footer-center span{
-    margin: 0px auto;
+    min-width: 200px;
+    margin: 0px 10px;
 }
 .apply-finish{
     text-align: center;
@@ -2650,7 +2647,7 @@ input:-webkit-autofill {
     line-height: 36px;
 }
 .detailmore b{
-    color: #ec6349;
+    color: #666;
     float: left;
     min-width: 110px;
 }
@@ -2667,21 +2664,6 @@ input:-webkit-autofill {
 }
 /*时间轴 病历end*/
 /*同意和不同意的弹出框样式*/
-#refuseConsul .pop-form{
-    position: relative;
-}
-#refuseConsul .pop-form ul li .pop-row {
-    width: 35%;
-}
-#refuseConsul ul .applytime .form-control {
-    width: 180px;
-}
-#refuseConsul .pop-form ul li #lineTime {
-    float: left;
-    width: 1%;
-    margin-left: -26px;
-    margin-top: 10px;
-}
 .modal_consul .pop-form ul{
     padding-top: 30px;
 }
