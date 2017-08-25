@@ -511,6 +511,7 @@ a {
 .pop-form{
     position: relative;
 }
+
 .pop-form ul li {
     padding: 5px 0 20px;
     overflow: hidden;
@@ -1404,10 +1405,13 @@ input:-webkit-autofill {
     color:#666;
     font-size: 16px;
 }
+.ya-tab-list .havedone .ya-list-state{
+    color: #ccc;
+}
 .ya-tab-list .ya-list-state{
     position: absolute;
     top:13px;
-    right: 233px;
+    right: 164px;
     color: #18b408;
     font-size: 15px;
 }
@@ -1426,10 +1430,12 @@ input:-webkit-autofill {
     line-height:20px;
     overflow:hidden;
     font-size: 16px;
-    /*overflow:hidden;
+    overflow:hidden;
     text-overflow:ellipsis;
-    white-space: nowrap;*/
+    white-space: nowrap;
     margin-top: 10px;
+    padding-right: 267px;
+
 }
 
 .ya-myworkbench-box .ya-boxRight .ya-myConsult .ya-consultTitle span {
@@ -2407,8 +2413,7 @@ input:-webkit-autofill {
 
 }
 
-.intro-list-left,
-.consul_advice .text-label{
+.intro-list-left{
     float: left;
     text-align: right;
     width: 20%;
@@ -2418,9 +2423,16 @@ input:-webkit-autofill {
     color: #333333;
     padding: 8px;
 }
+.consul_advice .text-label{
+    float: left;
+    text-align: right;
+    width: 20%;
+    font-size: 16px;
+    margin-right: 60px;
+}
 .consul_advice .pop-right{
     float: left;
-    width: 69%;
+    width: 64%;
 }
 .consul_form .consul_advice{
     margin-top: 20px;
@@ -2429,7 +2441,23 @@ input:-webkit-autofill {
     padding-left: 152px;
     padding-top: 30px;
     font-size: 16px;
+    position: relative;
+    margin-bottom: 20px;
 }
+/*会诊页面 是否转为转诊*/
+.consul_form .consul_transfer #transferConsul{
+    /*position: absolute;*/
+    /*bottom: 10px;*/
+    /*left: 157px;*/
+    width: 1000px;
+    min-height: 160px;
+}
+.consul_form .consul_transfer #transferConsul ul{
+    position: absolute;
+    top: 40px;
+    left: 168px;
+}
+.consul_form .consul_transfer .pop-form
 .consul_form .consul_transfer span{
     font-weight: 700;
 }
