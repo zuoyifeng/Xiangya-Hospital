@@ -120,7 +120,7 @@ a {
     font-size: 20px;
     font-weight: normal;
     padding-left: 15px;
-    border-bottom: 1px solid #822A2C;
+    border-bottom: 1px solid #BD010F;
     margin-bottom: 10px;
 }
 
@@ -130,8 +130,8 @@ a {
     bottom: 0px;
     left: 0px;
     width: 5px;
-    height: 22px;
-    background-color: #822A2C;
+    height: 24px;
+    background-color: #BD010F;
 }
 
 .meta-title a {
@@ -139,7 +139,6 @@ a {
     right: 0px;
     bottom: 0;
     padding: 5px 0 5px 10px;
-    color: #822A2C;
     font-size: 12px;
 }
 
@@ -183,7 +182,7 @@ a {
     position: absolute;
     bottom: 20px;
     right: 10px;
-    color: #822A2C;
+    color: #BD010F;
     font-size: 14px;
     margin: 0;
 }
@@ -193,7 +192,7 @@ a {
 }
 
 .new_box dl dd a:hover {
-    color: #D35D59;
+    color: #BD010F;
 }
 
 .meta-list ul li {
@@ -213,7 +212,7 @@ a {
 }
 
 .meta-list ul li a:hover {
-    color: #822A2C;
+    color: #BD010F;
     text-decoration: underline;
 }
 
@@ -252,7 +251,7 @@ a {
     left: 10px;
     right: 0;
     height: 1px;
-    background-color: #822A2C;
+    background-color: #BD010F;
 }
 
 .meta_stitle a {
@@ -260,7 +259,6 @@ a {
     right: 0px;
     bottom: 0;
     padding: 5px 0 5px 10px;
-    color: #822A2C;
     font-size: 12px;
 }
 
@@ -546,7 +544,7 @@ a {
 
 .pop-form ul li .pop-right {
     float: left;
-    width: 75%;
+    width: 77%;
 }
 
 .pop-form .pop-tips {
@@ -583,18 +581,32 @@ a {
 }
 
 .pop-form ul li .empty-tip {
-    /* float: left; */
+    float: left;
     width: 20px;
-    line-height: 34px;
+    line-height: 40px;
     color: #f00;
     text-align: center;
     margin-left: 6px;
 }
-
+.pop-form ul li .pop-form-left{
+    float: left;
+    width: 48%;
+}
+.pop-form ul li .pop-form-right{
+    float: right;
+    width: 48%;
+}
+.pop-form ul li  .pop-form-left .pop-right,
+.pop-form ul li  .pop-form-right .pop-right{
+    width: 52%;
+}
+.pop-form ul li  .pop-form-right .text-label{
+    padding-left: 50px;
+}
 .pop-right label {
     font-weight: normal;
     margin: 0 8px;
-    line-height: 34px;
+    line-height: 40px;
 }
 
 .pop-right label input[type="radio"],
@@ -842,6 +854,7 @@ a {
     font-size: 14px;
     line-height: 1.42857143;
     color: #555;
+    outline: none;
     background-color: #fff;
     background-image: none;
     border: 1px solid #ccc;
@@ -913,7 +926,6 @@ input:-webkit-autofill {
     line-height: 56px;
     padding-left: 20px;
     color:#000;
-    margin-top: 30px;
 }
 .consul_title span{
     font-size: 15px;

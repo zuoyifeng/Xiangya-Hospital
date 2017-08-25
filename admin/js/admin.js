@@ -177,6 +177,9 @@ $(function () {
             }
             loadMenu(jsondata);
             router.setRoute('/article');
+        }else{
+            alert('很抱歉，您登录的账户暂时没有权限访问!');
+            window.location.replace("index.html");
         }
     }
     // 加载菜单
@@ -442,6 +445,6 @@ $(function () {
             state: 'success',
             message: '已成功退出系统！'
         });
-        setTimeout("window.location = '../../login.html'", 2000);
+        setTimeout("window.location = 'login.html'", 2000);
     });
 });

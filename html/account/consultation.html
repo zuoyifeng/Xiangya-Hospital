@@ -60,47 +60,64 @@
                             <span class="empty-tip">*</span>
                         </li>
                         <li>
-                            <span class="text-label">姓名：</span>
-                            <div class="pop-right pop-row">
-                                <input class="form-control" type="text" id="consulName"/>
+                            <div class="pop-form-left">
+                                <span class="text-label">姓名：</span>
+                                <div class="pop-right">
+                                    <input class="form-control" type="text" id="realName"/>
+                                </div>
                                 <span class="empty-tip">*</span>
-                                <span class="pop-rowtitle">性别：</span>
-                                <label><input type="radio" name="sex" value="1" checked> 男</label>
-                                <label><input type="radio" name="sex" value="0"> 女</label>
+                            </div>
+                            <div class="pop-form-right">
+                                <span class="text-label">性别：</span>
+                                <div class="pop-right">
+                                    <label><input type="radio" name="sex" value="1" checked> 男</label>
+                                    <label><input type="radio" name="sex" value="0"> 女</label>
+                                </div>
                             </div>
                         </li>
                         <li>
-                            <span class="text-label">年龄：</span>
-                            <div class="pop-right pop-row">
-                                <input class="form-control" type="text" id="age"/>
+                            <div class="pop-form-left">
+                                <span class="text-label">年龄：</span>
+                                <div class="pop-right">
+                                    <input class="form-control" type="text" id="age"/>
+                                </div>
                                 <span class="empty-tip">*</span>
-                                <span class="pop-rowtitle">手机号：</span>
-                                <input class="form-control" type="tel" id="tel"/>
                             </div>
-                            <span class="empty-tip">*</span>
+                            <div class="pop-form-right">
+                                <span class="text-label">手机号：</span>
+                                <div class="pop-right">
+                                    <input class="form-control" type="tel" id="tel"/>
+                                </div>
+                                <span class="empty-tip">*</span>
+                            </div>
                         </li>
                         <li>
-                            <span class="text-label">医保类型：</span>
-                            <div class="pop-right pop-row">
-                                <select class="form-control" id="insurance">
-                                    <option value="">请选择医保类型</option>
-                                    <option value="1">职工医保</option>
-                                    <option value="2">新型农村合作医疗</option>
-                                    <option value="3">城镇居民基本医疗保险</option>
-                                    <option value="4">其他</option>
-                                </select>
+                            <div class="pop-form-left">
+                                <span class="text-label">医保类型：</span>
+                                <div class="pop-right">
+                                    <select class="form-control" id="insurance">
+                                        <option value="">请选择医保类型</option>
+                                        <option value="1">职工医保</option>
+                                        <option value="2">新型农村合作医疗</option>
+                                        <option value="3">城镇居民基本医疗保险</option>
+                                        <option value="4">其他</option>
+                                    </select>
+                                </div>
                                 <span class="empty-tip">*</span>
-                                <span class="pop-rowtitle">籍贯：</span>
-                                <input class="form-control" type="tel" id="province"/>
                             </div>
-                            <span class="empty-tip">*</span>
+                            <div class="pop-form-right">
+                                <span class="text-label">籍贯：</span>
+                                <div class="pop-right">
+                                    <input class="form-control" type="text" id="province"/>
+                                </div>
+                                <span class="empty-tip">*</span>
+                            </div>
                         </li>
                         <li>
-                            <span class="text-label">家庭住址：</span>
+                            <span class="text-label">家庭详细住址：</span>
                             <div class="pop-right">
                                 <input class="form-control" type="text" id="address"/>
                             </div>
-                            <span class="empty-tip">*</span>
                         </li>
                     </ul>
                     <div class="form_bg"></div>
@@ -117,14 +134,13 @@
                             <span class="text-label">初步诊断：</span>
                             <div class="pop-right">
                                 <input type="text" id="firstconsul" class="form-control">
-                                <!--<textarea id="complaint" rows="6"></textarea>-->
                             </div>
+                            <span class="empty-tip">*</span>
                         </li>
                         <li>
                             <span class="text-label">主诉：</span>
                             <div class="pop-right">
                                 <input type="text" id="complaint" class="form-control">
-                                <!--<textarea id="complaint" rows="6"></textarea>-->
                             </div>
                         </li>
                         <li>
@@ -133,16 +149,7 @@
                                 <textarea id="illnessCont" rows="6"></textarea>
                                 <p class="pop-tips">包括现病史、既往史、药敏史、体格检查、专科检查、诊断、目前已做检查、目前治疗情况</p>
                             </div>
-                        </li>
-                        <li>
-                            <span class="text-label">上传身份证：</span>
-                            <div class="pop-right">
-                                <span class="upload_file">
-                                <i class="fa fa-file-photo-o fa-3x"></i>
-                                <input type="file" id="idImages"/>
-                                </span>
-                                <p class="pop-tips">身份证正反面均需上传</p>
-                            </div>
+                            <span class="empty-tip">*</span>
                         </li>
                         <li>
                             <span class="text-label">上传图片：</span>
@@ -152,6 +159,16 @@
                                 <input type="file" id="uploadImages"/>
                                 </span>
                                 <p class="pop-tips">每张照片要有备注标签，最多可以传 10 张图片，格式仅供 .gif、.jpg、.png；</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="text-label">上传身份证：</span>
+                            <div class="pop-right">
+                                <span class="upload_file">
+                                <i class="fa fa-file-photo-o fa-3x"></i>
+                                <input type="file" id="idImages"/>
+                                </span>
+                                <p class="pop-tips">请上传身份证正反面均需上传</p>
                             </div>
                         </li>
                     </ul>
