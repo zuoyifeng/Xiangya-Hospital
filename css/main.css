@@ -1406,7 +1406,7 @@ input:-webkit-autofill {
     font-size: 16px;
 }
 .ya-tab-list .havedone .ya-list-state{
-    color: #ccc;
+    color: #999;
 }
 .ya-tab-list .ya-list-state{
     position: absolute;
@@ -2450,12 +2450,7 @@ input:-webkit-autofill {
     /*bottom: 10px;*/
     /*left: 157px;*/
     width: 1000px;
-    min-height: 160px;
-}
-.consul_form .consul_transfer #transferConsul ul{
-    position: absolute;
-    top: 40px;
-    left: 168px;
+    padding-top:20px;
 }
 .consul_form .consul_transfer .pop-form
 .consul_form .consul_transfer span{
