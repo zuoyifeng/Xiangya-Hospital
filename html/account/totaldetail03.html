@@ -46,29 +46,6 @@
             <div><b>家庭住址：</b><span>湖南省长沙市开福区xxx路xxx号</span></div>
         </div>
     </div>
-    <!--<div class="consul_form">-->
-    <!--<div class="consul_title">基本病情</div>-->
-    <!--<div class="consuldetail">-->
-    <!--<div><b>会诊标题：</b><span>长沙县皮肤科荨麻疹初诊情况</span></div>-->
-    <!--<div><b>会诊描述：</b><span>经初步会诊为过敏性荨麻疹，主要体现在每次发作时手脚特别痒，然后身上就会出一些黄豆大的水疱状的疹子</span></div>-->
-    <!--<div><b>会诊医院：</b><span>湘雅医院</span></div>-->
-    <!--<div><b>会诊专家：</b><span>周卫华</span></div>-->
-    <!--<div><b>病情描述：</b><span>由于过敏性机理引起的，每次发作时手脚特别痒，四肢麻木，呼吸也很困难，头也是麻木的，然后身上就会出一些黄豆大的水疱状的疹子。沿着划痕发生条状隆起，伴有瘙痒，不久消退。每次发病前都去过街上，而且基本都是晚上发作。</span></div>-->
-    <!--<div class="consul_imgs">-->
-    <!--<b>患处图片：</b>-->
-    <!--<span>-->
-    <!--<a rel="upimg" href="../../imgs/img_01.jpg"><img src="../../imgs/img_01.jpg" /></a>-->
-    <!--<a rel="upimg" href="../../imgs/img_02.jpg"><img src="../../imgs/img_02.jpg" /></a>-->
-    <!--<a rel="upimg" href="../../imgs/img_03.jpg"><img src="../../imgs/img_03.jpg" /></a>-->
-    <!--</span>-->
-    <!--</div>-->
-    <!--<div><b>附件下载：</b><a href="http://www.baidu.com/">患者病历.rar</a></div>-->
-    <!--</div>-->
-    <!--<div class="pop-form-button">-->
-    <!--<span class="et-btn btn-accept" id="subConsul">同意接受</span>-->
-    <!--<span class="et-btn btn-refuse" id="refuseBtn">拒绝接受，给出治疗意见</span>-->
-    <!--</div>-->
-    <!--</div>-->
     <div class="consul_form">
         <div class="consul_title">基本病情</div>
         <div class="intro-flow">
@@ -151,9 +128,9 @@
             </div>
         </div>
 
-        <div class="pop-form-button">
-            <span class="et-btn btn-accept" id="subConsul">同意接受</span>
-            <span class="et-btn btn-refuse" id="refuseBtn">拒绝接受，给出治疗意见</span>
+        <div class="pop-form-button common-btn footer-center">
+            <span class="et-btn" id="subConsul">同意转诊</span>
+            <span class="et-btn" id="refuseBtn">给出治疗意见</span>
         </div>
     </div>
 </div>
@@ -232,7 +209,7 @@
             }
         });
         $('#subConsul').on('click', function () {
-            $.fancybox.open('<div class="modal-form" id="refuseConsul"><div class="consul_title">转诊单</div><div class="pop-form"><ul><li class="clearfix"><span class="text-label">转诊期限:</span><div class="pop-right pop-row applytime" id="transferTime"> <input class="form-control" type="text" id="birthtime" onClick=\'WdatePicker({ el: this, dateFmt: "yyyy-MM-dd", maxDate: "%y-%M-{%d}"})\' value="开始时间"/></div><div id="lineTime">—</div><div class="pop-right pop-row applytime" id="transferTime"> <input class="form-control" type="text" id="birthtime" onClick=\'WdatePicker({ el: this, dateFmt: "yyyy-MM-dd", maxDate: "%y-%M-{%d}"})\' value="结束时间"/></div>  </li><li><span class="text-label">转诊说明：</span><div class="pop-right"><textarea id="consulCont" rows="8"></textarea></div></li></ul><div class="pop-form-button"><span class="et-btn btn-submit" id="subBtn">提交</span></div></div></div>', {
+            $.fancybox.open('<div class="modal-form modal_consul" id="refuseConsul"><div class="pop-form"><ul><li class="clearfix"><span class="text-label">转诊期限:</span><div class="pop-right pop-row applytime" id="transferTime"> <input class="form-control" type="text" id="birthtime" onClick=\'WdatePicker({ el: this, dateFmt: "yyyy-MM-dd", minDate: "%y-%M-{%d}"})\' value="开始时间"/></div><div id="lineTime">—</div><div class="pop-right pop-row applytime" id="transferTime"> <input class="form-control" type="text" id="birthtime" onClick=\'WdatePicker({ el: this, dateFmt: "yyyy-MM-dd", minDate: "%y-%M-{%d}"})\' value="结束时间"/></div>  </li><li class="clearfix"><span class="text-label">转诊医院：</span> <div class="pop-right"> <select class="form-control" id="hospital"> <option value="">请选择转诊医院</option> <option value="1">湘雅一医院</option> <option value="2">湘雅二医院</option> <option value="3">湘雅三医院</option> <option value="4">长沙市一医院</option> <option value="5">湖南省肿瘤医院医院</option> </select> </div> <span class="empty-tip">*</span> </li> <li class="clearfix"> <span class="text-label">转诊医生：</span> <div class="pop-right"> <select class="form-control" id="doctor"> <option value="">请选择转诊医生</option> <option value="1">盛夏</option> <option value="2">赵清</option> <option value="3">张弛</option> <option value="4">李强</option> <option value="5">黄超</option> <option value="6">马艾</option> </select> </div> <span class="empty-tip">*</span> </li> <li><span class="text-label">转诊说明：</span><div class="pop-right"><textarea id="consulCont" rows="8"></textarea></div></li></ul><div class="pop-form-button"><span class="et-btn btn-submit" id="subBtn">提交</span></div></div></div>', {
                 closeEffect: 'none',
                 minWidth: '600',
                 minHeight: '370',
@@ -246,13 +223,13 @@
         $('body').on('click', '#subBtn', function () {
             alert('提交成功');
             $.fancybox.close();
-            //location.reload();
+            window.location.replace("todolist.html");
         })
         $('#refuseBtn').on('click', function () {
-            $.fancybox.open('<div class="modal-form" id="refuseConsul"><div class="consul_title">拒绝回执单</div><div class="pop-form"><ul><li><span class="text-label">拒诊原因：</span><div class="pop-right"><textarea id="consulCont" rows="8"></textarea></div></li></ul><div class="pop-form-button"><span class="et-btn btn-submit" id="subRefuse">提交</span></div></div></div>', {
+            $.fancybox.open('<div class="modal-form modal_consul" id="refuseConsul"><div class="pop-form"><ul><li><span class="text-label">治疗意见：</span><div class="pop-right"><textarea id="consulCont" rows="8"></textarea></div></li></ul><div class="pop-form-button"><span class="et-btn btn-submit" id="subRefuse">提交</span></div></div></div>', {
                 closeEffect: 'none',
                 minWidth: '600',
-                minHeight: '370',
+                minHeight: '350',
                 helpers: {
                     overlay: {
                         closeClick: false
@@ -261,9 +238,9 @@
             });
         })
         $('body').on('click', '#subRefuse', function () {
-            alert('拒绝成功');
+            alert('回复成功');
             $.fancybox.close();
-            //location.reload();
+            window.location.replace("todolist.html");
         })
 
         //点击更多

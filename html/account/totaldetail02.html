@@ -140,7 +140,6 @@
             <label><input type="radio" name="boolean" value="0" checked> 否</label>
             <div class="pop-form" id="transferConsul"></div>
         </div>
-        <!--<div class="pop-form" id="transferConsul"></div>-->
         <div class="pop-form-button">
             <span class="et-btn btn-accept" id="subConsul">提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交</span>
         </div>
@@ -267,7 +266,7 @@
         $('body').on('click', '#subRefuse', function () {
             alert('提交成功');
             $.fancybox.close();
-            //location.reload();
+            window.location.replace("todolist.html");
         })
     })
 </script>
