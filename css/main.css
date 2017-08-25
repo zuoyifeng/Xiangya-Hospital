@@ -2677,10 +2677,11 @@ input:-webkit-autofill {
     position: relative;
 }
 #refuseConsul .pop-form ul{
-    position: absolute;
-    top:0px;
-    left: 0px;
+    /*position: absolute;*/
+    /*top:0px;*/
+    /*left: 0px;*/
     width: 600px;
+    padding-top: 20px;
 }
 #refuseConsul .pop-form ul li .pop-row {
     width: 35%;
@@ -2695,9 +2696,9 @@ input:-webkit-autofill {
     margin-top: 10px;
 }
 #refuseConsul .pop-form .pop-form-button{
-    position: absolute;
-    bottom:84px;
-    left: 158px;
+    /*position: absolute;*/
+    /*bottom:84px;*/
+    /*left: 158px;*/
 }
 /*导航条样式*/
 .step-body {
