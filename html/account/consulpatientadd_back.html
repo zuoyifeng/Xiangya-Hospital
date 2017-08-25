@@ -10,10 +10,11 @@
     <link href="../../css/reset.css" rel="stylesheet">
     <link href="../../css/main.css" rel="stylesheet">
     <link href="../../fonts/font-awesome.min.css" rel="stylesheet"/>
-    <!--[if lt IE 9]>
+    <!--[if lte IE 9]>
     <script src="../../js/html5shiv.min.js"></script>
     <script src="../../js/respond.min.js"></script>
     <script src="../../js/css3-mediaqueries.js"></script>
+    <script src="../../js/history.js"></script>
     <![endif]-->
 </head>
 <body>
@@ -62,7 +63,7 @@
                         <li>
                             <span class="text-label">姓名：</span>
                             <div class="pop-right pop-row">
-                                <input class="form-control" type="text" id="consulName"/>
+                                <input class="form-control" type="text" id="realname"/>
                                 <span class="empty-tip">*</span>
                                 <span class="pop-rowtitle">性别：</span>
                                 <label><input type="radio" name="sex" value="1" checked> 男</label>
@@ -107,10 +108,9 @@
                 </div>
                 <div class="footer-btn">
                     <div class="common-btn">
-                        <span class="et-btn btn-submit btn-shares nextbtn">下一步</span>
+                        <span class="et-btn btn-submit btn-shares nextbtn" id="patientSubmit" stepto="2">下一步</span>
                     </div>
                 </div>
-
             </div>
             <div class="step-list">
                 <div class="consul_title">基本病情</div>
@@ -162,7 +162,7 @@
                 <div class="form_bg"></div>
                 <div class="footer-btn">
                     <div class="common-btn">
-                        <span class="et-btn btn-submit btn-shares nextbtn">下一步</span>
+                        <span class="et-btn btn-submit btn-shares nextbtn" id="conditionSubmit" stepto="3">下一步</span>
                     </div>
                 </div>
             </div>
@@ -243,7 +243,7 @@
                 <div class="form_bg"></div>
                 <div class="footer-btn">
                     <div class="common-btn">
-                        <span class="et-btn btn-submit btn-shares nextbtn">下一步</span>
+                        <span class="et-btn btn-submit btn-shares nextbtn" id="consulteSubmit"  stepto="4">下一步</span>
                     </div>
                 </div>
             </div>
@@ -329,36 +329,38 @@
 <script src="../../js/My97DatePicker/WdatePicker.js"></script>
 <script src="../../js/jquery.step.js"></script>
 <script src="../../js/common.js"></script>
-<script>
+<script type="text/javascript">
     $(function () {
-        if (isLogin()) {
 
+        alert($('#idcard').val())
+        var commitData={};
+        var stepParam = GetQueryParam('step');
+        if(stepParam && stepParam<6 && stepParam>0){
+            var step = $("#myStep").step({
+                animate: false,
+                initStep: stepParam
+            });
+        }else{
+            window.location.replace("consulpatientadd.html?step=1");
         }
-        var step = $("#myStep").step({
-            animate: true,
-            initStep: 1,
-            speed: 1000
+        if (isLogin()) {
+        }
+        $(".nextbtn").on('click',function () {
+            var stepNext = $(this).attr('stepto');
+            window.location.href="consulpatientadd.html?step="+stepNext;
         });
-
-
-        $(".prebtn").click(function (event) {
-            var yes = step.preStep();
-
+        $('#patientSubmit').on('click',function(){
+            commitData.patient={};
+            commitData.patient.idcard = $('#idcard').val();
+            commitData.patient.realname = $('#realname').val();
+            alert(JSON.stringify(commitData))
         });
-        $("#applyBtn").click(function (event) {
-            var yes = step.nextStep();
-
+        $('#consulteSubmit').on('click',function(){
+            commitData.patient={};
+            commitData.patient.idcard = $('#idcard').val();
+            commitData.patient.realname = $('#realname').val();
+            alert(JSON.stringify(commitData));
         });
-        $(".nextbtn").click(function (event) {
-            var yes = step.nextStep();
-
-
-        });
-        $("#goBtn").click(function (event) {
-            var yes = step.goStep(3);
-
-        });
-
         //如果选中要求转诊，则转诊医院，转诊医生和期望转诊时间显示
         $('#consulAim').change(function () {
             var val = $('#consulAim option:selected').val();
@@ -375,7 +377,6 @@
 
 
         })
-
 
         //会诊类型
         var d = {
@@ -397,10 +398,8 @@
         }
 
         $('.subconsul').on('click', function () {
-            alert('查看详情');
-            window.location.href = "./totaldetail01.html";
+            window.location.replace("totaldetail01.html");
         })
-
 
     })
 </script>
