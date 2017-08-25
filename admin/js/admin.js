@@ -127,9 +127,6 @@ $(function () {
                                 {
                                     "name": "角色管理",
                                     "url": "/userProject"
-                                },{
-                                    "name": "详细信息",
-                                    "url": "/userDetail"
                                 }
                             ]
                         }
@@ -137,7 +134,7 @@ $(function () {
                 }
             };
             loadMenu(jsondata);
-            router.setRoute('/userDetail');
+            router.setRoute('/userUser');
         } else if(role == '2'){
             //内容编辑
             var jsondata = {
