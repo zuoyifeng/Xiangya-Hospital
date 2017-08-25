@@ -772,18 +772,17 @@ input:-webkit-autofill {
     width: 70%;
     height: 42px;
 }
+.form li #editor{
+    width: 70%;
+    float: left;
+}
 .form li .pop-btn{
     width: 200px;
     margin: 20px auto;
-}
-.form li .pop-btn span{
-    /* text-align: center; */
-    width: 200px;
     display: block;
     background: #BD010F;
     text-align: center;
     height: 60px;
-    /* margin: 0 auto; */
     line-height: 60px;
     color: #fff;
     font-size: 18px;
