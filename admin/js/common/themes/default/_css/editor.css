@@ -103,6 +103,7 @@
 }
 .edui-default .edui-editor-breadcrumb {
     margin: 2px 0 0 3px;
+    text-align: left;
 }
 
 .edui-default .edui-editor-breadcrumb span {
