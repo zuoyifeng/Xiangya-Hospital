@@ -2727,9 +2727,68 @@ input:-webkit-autofill {
     display: none;
     clear: both;
 }
+
 /*分享微信弹出的样式*/
 .bd_weixin_popup{
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
 }
+
+/*医务工作台*/
+/*.progressbox ul{*/
+    /*position: absolute;*/
+    /*top: 6px;*/
+    /*right: 110px;*/
+    /*width: 700px;*/
+    /*height: 20px;*/
+/*}*/
+.progressbox{
+    position: absolute;
+    top: 15px;
+    right: 110px;
+    background: #eee;
+    width: 700px;
+    height: 10px;
+}
+
+.progressbox .progress-step {
+    text-align: center;
+    position: relative;
+}
+.progressbox .progress-step span{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #b9b9b9;
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    margin-left: -10px;
+    color: #fff;
+}
+.progressbox .progress-step.active{
+
+    /*background: #00DD69;*/
+}
+.progressbox .progress-step.active span{
+    background: #009647;
+    z-index: 99;
+}
+.progressbox ul li.active{
+    background: #00DD69;
+}
+.progressbox ul li.active span{
+    background: #009647;
+}
+.progress{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    height: 10px;
+    background: #00DD69;
+    width: 8.7%;
+    /*background: red;*/
+    /*width: 700px;*/
+}
+
