@@ -2736,16 +2736,21 @@ input:-webkit-autofill {
 }
 
 /*医务工作台*/
-/*.progressbox ul{*/
-    /*position: absolute;*/
-    /*top: 6px;*/
-    /*right: 110px;*/
-    /*width: 700px;*/
-    /*height: 20px;*/
-/*}*/
+.ya-medicalwork ul li{
+    height: 90px;
+    margin-bottom: 20px;
+}
+.ya-medicalwork .meta-list-tag{
+    line-height: 40px;
+    font-size: 14px;
+    top:10px;
+}
+.ya-medicalwork .meta-list-tag::after{
+    top:15px;
+}
 .progressbox{
     position: absolute;
-    top: 15px;
+    top: 23px;
     right: 110px;
     background: #eee;
     width: 700px;
@@ -2756,24 +2761,69 @@ input:-webkit-autofill {
     text-align: center;
     position: relative;
 }
+.progressbox .progress-step .circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #eee;
+    position: absolute;
+    top: 0;
+}
+.progressbox .startstep .circle{
+    left: -3px;
+}
+.progressbox .endstep .circle{
+   right: -3px;
+}
 .progressbox .progress-step span{
     width: 20px;
     height: 20px;
     border-radius: 50%;
     background: #b9b9b9;
     position: absolute;
-    top: -4px;
-    left: 50%;
-    margin-left: -10px;
+    top: -5px;
+    right: 0;
     color: #fff;
 }
-.progressbox .progress-step.active{
+.progressbox .progress-step:nth-child(5) span{
+    right:24%;
+}
 
-    /*background: #00DD69;*/
+.progressbox .progress-step.active{
+    background: #00DD69;
+}
+.progressbox .progress-step.active .circle{
+    background: #00DD69;
 }
 .progressbox .progress-step.active span{
     background: #009647;
     z-index: 99;
+}
+.progressbox .progress-step p{
+    margin-top: 28px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #999999;
+    position: absolute;
+    right: -19px;
+}
+.progressbox .progress-step:nth-child(5) p{
+    right: 30px;
+}
+.progressbox .progress-step.active p{
+    color: #333;
+}
+.ya-todoList .next-step{
+    cursor: pointer;
+    background: #00DD69;
+    color: #fff;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 65px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 5%;
 }
 .progressbox ul li.active{
     background: #00DD69;
@@ -2787,7 +2837,7 @@ input:-webkit-autofill {
     left: 0px;
     height: 10px;
     background: #00DD69;
-    width: 8.7%;
+    width: 0%;
     /*background: red;*/
     /*width: 700px;*/
 }
