@@ -2577,17 +2577,20 @@ input:-webkit-autofill {
     top:15px;
 }
 .progressbox{
-    position: absolute;
-    top: 23px;
-    right: 110px;
+    position: relative;
+    margin-top: 23px;
+    margin-left: 110px;
     background: #eee;
     width: 700px;
     height: 10px;
+    display: flex;
+
 }
 
 .progressbox .progress-step {
     text-align: center;
     position: relative;
+    width: 140px;
 }
 .progressbox .progress-step .circle{
     width: 10px;
@@ -2610,7 +2613,8 @@ input:-webkit-autofill {
     background: #b9b9b9;
     position: absolute;
     top: -5px;
-    right: 0;
+    left: 50%;
+    margin-left: -10px;
     color: #fff;
 }
 .progressbox .progress-step:nth-child(5) span{
@@ -2618,7 +2622,7 @@ input:-webkit-autofill {
 }
 
 .progressbox .progress-step.active{
-    background: #00DD69;
+    /*background: #00DD69;*/
 }
 .progressbox .progress-step.active .circle{
     background: #00DD69;
@@ -2633,25 +2637,23 @@ input:-webkit-autofill {
     font-size: 14px;
     color: #999999;
     position: absolute;
-    right: -19px;
+    right:42px;
 }
-.progressbox .progress-step:nth-child(5) p{
-    right: 30px;
-}
+
 .progressbox .progress-step.active p{
     color: #333;
 }
 .ya-todoList .next-step{
+    width: 65px;
     cursor: pointer;
     background: #00DD69;
     color: #fff;
-    float: right;
-    margin-right: 10px;
-    margin-top: 10px;
-    width: 65px;
     line-height: 40px;
     text-align: center;
     border-radius: 5%;
+    position: absolute;
+    right: -115px;
+    top: -10px;
 }
 .progressbox ul li.active{
     background: #00DD69;
