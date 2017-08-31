@@ -772,6 +772,10 @@ input:-webkit-autofill {
     width: 70%;
     height: 42px;
 }
+.form li label{
+    margin-top: 10px;
+    margin-right: 100px;
+}
 .form li #editor{
     width: 70%;
     float: left;
