@@ -281,8 +281,10 @@
             //获取当前患者的进度
             var step = parseInt($(this).attr('data-step'));
             //获取当前患者的进度名称
-            var nowinfo=$(this).parent().find('.progress-step:nth-of-type('+(step+1)+') p').html();
-            var flag=confirm('确定将患者'+nowname+'进入'+nowinfo+'流程吗？');
+            var nowinfo=$(this).parent().find('.progress-step:nth-of-type('+step+') p').html();
+            //获得下一步的进度名称
+            var nextinfo=$(this).parent().find('.progress-step:nth-of-type('+(step+1)+') p').html();
+            var flag=confirm('确定患者'+nowname+'完成'+nowinfo+'进入'+nextinfo+'流程吗？');
             if(flag==true){
                 step++;
                 console.log(step);
