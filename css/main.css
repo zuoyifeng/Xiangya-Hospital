@@ -2232,8 +2232,8 @@ input:-webkit-autofill {
 }
 .intro-list-left{
     float: left;
-    text-align: right;
-    width: 20%;
+    text-align: center;
+    width: 15%;
     font-size: 16px;
     font-weight: bold;
     font-family: 微软雅黑;
@@ -2278,7 +2278,7 @@ input:-webkit-autofill {
 }
 .intro-list-right{
     float: left;
-    width: 80%;
+    width: 85%;
     text-align: left;
     padding-bottom: 30px;
     background: url(../imgs/ling-bg.jpg) repeat-y 13px;
@@ -2286,7 +2286,7 @@ input:-webkit-autofill {
 }
 .intro-list-right p{
     position: absolute;
-    right: 160px;
+    right: 90px;
     cursor: pointer;
     color: #0cb407;
     font-size: 16px;
@@ -2328,7 +2328,7 @@ input:-webkit-autofill {
 
 }
 .intro-list-content{
-    float: left;
+    float: right;
     border: 1px solid #7ce06d;
     border-radius: 6px;
     background-color: #eaffce;
@@ -2336,10 +2336,10 @@ input:-webkit-autofill {
     font-size: 16px;
     padding: 10px 20px;
     position: relative;
-    left: 25px;
-    width: 80%;
+    /* left: -49px; */
+    right: 49px;
+    width: 85%;
     line-height: 24px;
-
 }
 .intro-list-content:before,.intro-list-content:after{
     content:"";
@@ -2464,7 +2464,7 @@ input:-webkit-autofill {
 /*时间轴 病历start*/
 .detailmore{
     margin-top: 75px;
-    margin-left: 64px;
+    margin-left: 127px;
     width: 80%;
     font-size: 15px;
     line-height: 36px;
@@ -2474,12 +2474,12 @@ input:-webkit-autofill {
     float: left;
     min-width: 110px;
 }
+.detailmore span.active{
+    color: #009647;
+}
 .detailmore span{
-
     /* float: right; */
-
     float: left;
-
     width: 85%;
 }
 .detailmore img{
@@ -2567,21 +2567,34 @@ input:-webkit-autofill {
 .ya-medicalwork ul li{
     height: 90px;
     margin-bottom: 20px;
+    border-bottom: 1px solid #efefef;
 }
-.ya-medicalwork .meta-list-tag{
-    line-height: 40px;
-    font-size: 14px;
-    top:10px;
+.ya-medicalwork ul li:hover .meta-list-name{
+    background: #f9f9f9;
 }
-.ya-medicalwork .meta-list-tag::after{
-    top:15px;
+.ya-medicalwork .meta-list-name{
+    position: absolute;
+    left: 5px;
+    top: 15px;
+    padding: 0px 4px 0 4px;
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    border-radius: 1px;
+    user-select: none;
+    -webkit-user-select: none;
+    width: 65px;
+    line-height: 25px;
+    font-weight: 700;
+    text-align: center;
 }
+
 .progressbox{
     position: relative;
     margin-top: 23px;
     margin-left: 110px;
     background: #eee;
-    width: 700px;
+    width: 680px;
     height: 10px;
     display: flex;
 
@@ -2590,7 +2603,7 @@ input:-webkit-autofill {
 .progressbox .progress-step {
     text-align: center;
     position: relative;
-    width: 140px;
+    width: 170px;
 }
 .progressbox .progress-step .circle{
     width: 10px;
@@ -2604,7 +2617,7 @@ input:-webkit-autofill {
     left: -3px;
 }
 .progressbox .endstep .circle{
-   right: -3px;
+    right: -3px;
 }
 .progressbox .progress-step span{
     width: 20px;
@@ -2616,6 +2629,7 @@ input:-webkit-autofill {
     left: 50%;
     margin-left: -10px;
     color: #fff;
+    z-index: 99;
 }
 .progressbox .progress-step:nth-child(5) span{
     right:24%;
@@ -2633,11 +2647,10 @@ input:-webkit-autofill {
 }
 .progressbox .progress-step p{
     margin-top: 28px;
-    font-weight: bold;
     font-size: 14px;
     color: #999999;
     position: absolute;
-    right:42px;
+    right:58px;
 }
 
 .progressbox .progress-step.active p{
@@ -2654,6 +2667,8 @@ input:-webkit-autofill {
     position: absolute;
     right: -115px;
     top: -10px;
+    border: none;
+    outline: none;
 }
 .progressbox ul li.active{
     background: #00DD69;
