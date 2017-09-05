@@ -2686,4 +2686,17 @@ input:-webkit-autofill {
     /*background: red;*/
     /*width: 700px;*/
 }
+/*demo.htmk的样式*/
+ .meta-content-images{
+    width: 100%;
+     background-color: #FAFAFA;
+ }
+.meta-content-images img{
+    display: block;
+    width: 100%;
+    margin:20px auto;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+
+}
 

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>中南大学湘雅皮肤疾病与健康互联体</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="fonts/font-awesome.min.css" rel="stylesheet"/>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <script src="js/css3-mediaqueries.js"></script>
+    <![endif]-->
+</head>
+<body>
+<header class="meta-header">
+    <div class="head_top">
+        <div class="container">
+            <div class="head_logo">
+                <img src="imgs/logo.png"/>
+            </div>
+            <div class="head_tool" id="headAccount"></div>
+        </div>
+    </div>
+    <div class="head_menu">
+        <ul class="container clearfix" id="nav">
+            <li><a href="index.html">首页</a></li>
+            <li class="menu_line"></li>
+            <li><a href="http://www.hancloudclinic.com:8084/FormParser">大数据平台</a></li>
+            <li class="menu_line"></li>
+            <li><a href="">医联体论坛</a></li>
+            <li class="menu_line"></li>
+            <li><a href="#">便民服务</a></li>
+            <li class="menu_line"></li>
+            <li><a href="#">在线咨询</a></li>
+        </ul>
+    </div>
+</header>
+<div class="meta-banner-fluid"></div>
+<div class="meta-content-images">
+    <img src="imgs/01.jpg" alt="">
+    <img src="imgs/02.jpg" alt="">
+    <img src="imgs/03.jpg" alt="">
+    <img src="imgs/04.jpg" alt="">
+    <img src="imgs/05.jpg" alt="">
+    <img src="imgs/06.jpg" alt="">
+    <img src="imgs/07.jpg" alt="">
+    <img src="imgs/08.jpg" alt="">
+    <img src="imgs/09.jpg" alt="">
+</div>
+<!--<div class="container"></div>-->
+<footer class="meta-footer">
+    <div class="container">
+        <div class="meta-copyright">
+            <div class="meta-sitemap">
+                <a title="中国政府网_中央人民政府门户网站" href="http://www.gov.cn/">中国政府网</a>
+                <a title="中华人民共和国国家卫生和计划生育委员会" href="http://www.nhfpc.gov.cn/">中华人民共和国国家卫生和计划生育委员会</a>
+                <a title="湖南卫生和计划生育委员会" href="http://wjw.hunan.gov.cn/">湖南卫生和计划生育委员会</a>
+                <a title="国家医学考试网" href="http://www.nmec.org.cn/">国家医学考试网</a>
+                <a title="丁香园_中国医疗领域的连接者" href="http://www.dxy.cn/">丁香园</a>
+                <a title="中南大学" href="http://www.csu.edu.cn/">中南大学</a>
+                <a title="中南大学湘雅医院" href="http://www.xiangya.com.cn/">中南大学湘雅医院</a>
+                <a title="中南大学湘雅二医院" href="http://www.xyeyy.com/">中南大学湘雅二医院</a>
+                <a title="中南大学湘雅三医院" href="http://www.xy3yy.com/">中南大学湘雅三医院</a>
+                <a title="湘雅海外校友会" href="http://www.xyoaa.org/">湘雅海外校友会</a>
+            </div>
+            <div class="meta-siteinfo">
+                <img class="logo_bottom" src="imgs/logo_hack.png"/>
+                <p>
+                    通讯地址：中国湖南长沙市湘雅路87号<br>
+                    座机电话：0731-89753406 <br>
+                    移动电话：13080564083
+                </p>
+                <p>湘ICP备09002748号 Copyright 2007-2017 版权申明 | 联系我们 | 网站地图 </p>
+                <div class="img_code">
+                    <div>
+                        <span>湘雅皮肤医生</span>
+                        <img src="imgs/code.jpg"/>
+                    </div>
+                    <div>
+                        <span>湘雅皮肤医联体</span>
+                        <img src="imgs/code.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/superslide.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+    $(function () {
+        //首页导航
+        $('#home').attr('href','index.html');
+        $('#account').attr('href','html/account/todolist.html');
+        $('#consultation').attr('href','html/account/consultation.html');
+        $('#systemManage').attr('href','admin.html');
+
+        //取消common.js绑定事件，新建新的事件处理
+        $('#headAccount').off("click", "span.quit").on("click", "span.quit",function(e){
+            clearUserid();
+            window.location.reload(true);
+        });
+
+        //轮播图
+        jQuery("#imgList").slide({
+            mainCell: ".imgListbox ul",
+            autoPlay: true,
+            effect: "leftMarquee",
+            vis: 4,
+            interTime: 50
+        });
+    })
+</script>
+</body>
+</html>
