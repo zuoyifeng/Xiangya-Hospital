@@ -2689,14 +2689,19 @@ input:-webkit-autofill {
 /*demo.htmk的样式*/
  .meta-content-images{
     width: 100%;
-     background-color: #FAFAFA;
+     min-height: 412px;
+     background-color: #f5f5f5;
  }
 .meta-content-images img{
     display: block;
-    width: 100%;
+    width: 49%;
     margin:20px auto;
-    border-top: 1px solid #dedede;
-    border-bottom: 1px solid #dedede;
+}
+.meta-content-images img:nth-of-type(1){
+    float: left;
+}
+.meta-content-images img:nth-of-type(2){
+    float: right;
 
 }
 
