@@ -26,12 +26,14 @@ a {
     margin: 0 auto;
     background-color: #B4010F;
     background-image: url(../imgs/header_bg.jpg);
-    background-position:center;
+    background-position: center;
     background-size: auto 100%;
 }
-.head_top .container{
-    height:100%;
+
+.head_top .container {
+    height: 100%;
 }
+
 .head_top .head_logo {
     position: absolute;
     left: 20px;
@@ -49,17 +51,21 @@ a {
     font-size: 16px;
     margin: 0 10px;
 }
-.head_top .head_tool span{
+
+.head_top .head_tool span {
     cursor: pointer;
 }
-.head_top .head_tool .userlogin{
-    color:#FEF200;
+
+.head_top .head_tool .userlogin {
+    color: #FEF200;
     font-size: 18px;
-    margin:0;
+    margin: 0;
 }
-.head_top .head_tool .quit{
+
+.head_top .head_tool .quit {
     text-decoration: underline;
 }
+
 .head_menu {
     background: #A0010D;
     border-top: 1px solid #7C010B;
@@ -76,8 +82,9 @@ a {
     display: block;
     text-align: center;
     font-size: 18px;
-    width: 140px;
+    width: 168px;
 }
+
 .head_menu ul li.menu_line {
     width: 4px;
     background-image: url(../imgs/menu_line.png);
@@ -483,13 +490,16 @@ a {
     margin-bottom: 15px;
     overflow: hidden;
 }
-.consul_form .patientdetail b{
+
+.consul_form .patientdetail b {
     width: 150px;
 }
-.consul_form .patientdetail span{
+
+.consul_form .patientdetail span {
     width: 250px;
     margin-right: 100px;
 }
+
 .consuldetail > div b {
     float: left;
     width: 110px;
@@ -508,7 +518,7 @@ a {
 
 /*子页面公共样式开始*/
 /*表单页面样式*/
-.pop-form{
+.pop-form {
     position: relative;
 }
 
@@ -525,6 +535,7 @@ a {
     min-width: 160px;
     height: 40px;
 }
+
 .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
     background-color: #fff;
     border: none;
@@ -551,9 +562,11 @@ a {
     margin-top: 5px;
     height: 17px;
 }
-.pop-form .pop-tips strong{
+
+.pop-form .pop-tips strong {
     color: #ff0000;
 }
+
 .pop-form .upload_file {
     position: relative;
     overflow: hidden;
@@ -589,21 +602,26 @@ a {
     text-align: center;
     margin-left: 6px;
 }
-.pop-form ul li .pop-form-left{
+
+.pop-form ul li .pop-form-left {
     float: left;
     width: 48%;
 }
-.pop-form ul li .pop-form-right{
+
+.pop-form ul li .pop-form-right {
     float: right;
     width: 48%;
 }
-.pop-form ul li  .pop-form-left .pop-right,
-.pop-form ul li  .pop-form-right .pop-right{
+
+.pop-form ul li .pop-form-left .pop-right,
+.pop-form ul li .pop-form-right .pop-right {
     width: 52%;
 }
-.pop-form ul li  .pop-form-right .text-label{
+
+.pop-form ul li .pop-form-right .text-label {
     padding-left: 50px;
 }
+
 .pop-right label {
     font-weight: normal;
     margin: 0 8px;
@@ -630,22 +648,25 @@ a {
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
 }
+
 .form_bg {
     position: absolute;
     right: 50px;
-    top:0;
+    top: 0;
     width: 300px;
     height: 400px;
     background-image: url(../imgs/resul_bg.png);
     background-position: center top;
     background-repeat: no-repeat;
 }
+
 /*会诊类型的费用描述*/
 .pop-form-button {
     text-align: center;
     margin-top: 20px;
     padding-top: 20px;
 }
+
 /*分页开始*/
 /*单页*/
 .meta-pagination {
@@ -803,7 +824,7 @@ a {
 }
 
 .et-page .et-pagetotal {
-    margin:0 10px;
+    margin: 0 10px;
 }
 
 .btnGoPage {
@@ -819,22 +840,25 @@ a {
 }
 
 .btnGoPage:hover {
-    background-color:#DC0111;
+    background-color: #DC0111;
 }
 
 .btnGoPage:active {
-    background-color:#B6010F;
+    background-color: #B6010F;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.125) inset;
 }
+
 .pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
     background-color: #eee;
     border-color: #ddd;
     color: #CD0110;
 }
-.pagination>li>a, .pagination>li>span{
+
+.pagination > li > a, .pagination > li > span {
     color: #101010;
 }
-.pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover{
+
+.pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover {
     color: #CD0110;
 }
 
@@ -920,9 +944,10 @@ input:-webkit-autofill {
     height: 56px;
     line-height: 56px;
     padding-left: 20px;
-    color:#000;
+    color: #000;
 }
-.consul_title span{
+
+.consul_title span {
     font-size: 15px;
     color: #5d5d5d;
 }
@@ -945,10 +970,12 @@ input:-webkit-autofill {
     margin: 0px 5px;
     font-style: normal;
 }
-.pop-row .form-control{
+
+.pop-row .form-control {
     width: 47%;
 }
-.pop-row em{
+
+.pop-row em {
     margin: 0px 5px;
     font-style: normal;
 }
@@ -991,9 +1018,11 @@ input:-webkit-autofill {
 .btn-accept:active {
     background-color: #33A876;
 }
+
 .btn-creat {
     min-width: 120px;
 }
+
 .btn-refuse {
     width: 230px;
     height: 60px;
@@ -1010,64 +1039,71 @@ input:-webkit-autofill {
 .btn-refuse:active {
     background-color: #18b408;
 }
-.pop-form-button label{
+
+.pop-form-button label {
     font-size: 16px;
     line-height: 28px;
     margin-right: 31px;
 }
 
-
-
 /*工作台 author:zhang*/
-.userbody,.usercolumn {
-    background-color:#F9F9F9;
+.userbody, .usercolumn {
+    background-color: #F9F9F9;
 }
-.usercolumn .ya-boxRight{
-    background-color:#FFF;
-    overflow:hidden;
-    position:relative;
-    padding:15px;
+
+.usercolumn .ya-boxRight {
+    background-color: #FFF;
+    overflow: hidden;
+    position: relative;
+    padding: 15px;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
-    border-radius:2px;
-    box-shadow:0 1px 3px #eee;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px #eee;
 }
 
-.usercolumn .ya-boxRight h3 .ya-add{
+.usercolumn .ya-boxRight h3 .ya-add {
     right: 5px;
 }
+
 .ya-myworkbench-box {
     padding: 40px 0 10px;
-    position:relative;
+    position: relative;
 }
+
 .ya-myworkbench-box .ya-boxLeft {
     width: 200px;
     /*float: left;*/
-    background-color:#fff;
-    position:absolute;
-    left:0px;
-    top:40px;
-    bottom:10px;
-    box-shadow:0 1px 3px #efefef;
+    background-color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 40px;
+    bottom: 10px;
+    box-shadow: 0 1px 3px #efefef;
 }
+
 .menu_left {
     background: #fff;
-    height:120px;
+    height: 120px;
     border-bottom: 1px solid #efefef;
 }
-.menu_left span{
-    font-size:24px;
-    padding:20px;
-    display:block;
-    color:#808080;
+
+.menu_left span {
+    font-size: 24px;
+    padding: 20px;
+    display: block;
+    color: #808080;
 }
-.ya-boxLeft ul{
-    padding:20px 15px 0;
+
+.ya-boxLeft ul {
+    padding: 20px 15px 0;
 }
+
 .ya-boxLeft ul li {
     border-bottom: 1px solid #efefef;
     font-size: 16px;
 }
+
 /*.ya-boxLeft ul li:last-child{
     border-bottom: none;
 }*/
@@ -1086,36 +1122,41 @@ input:-webkit-autofill {
     display: block;
     text-align: center;
 }
+
 .ya-myworkbench-box .ya-boxRight {
     width: 80%;
     float: right;
-    min-height:680px;
+    min-height: 680px;
 }
+
 .ya-boxRight .ya-personalLeft,
 .ya-boxRight .ya-personalRight {
     height: 350px;
-    overflow:hidden;
-    position:relative;
-    padding:15px;
-    margin-top:30px;
-    background-color:#fff;
+    overflow: hidden;
+    position: relative;
+    padding: 15px;
+    margin-top: 30px;
+    background-color: #fff;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
-    border-radius:2px;
-    box-shadow:0 1px 3px #eee;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px #eee;
 }
-.ya-boxRight>div:first-child{
-    margin-top:0;
+
+.ya-boxRight > div:first-child {
+    margin-top: 0;
 }
+
 /*我的患者 begin*/
 .ya-myworkbench-box .ya-boxRight h3 {
     position: relative;
     color: #222222;
     font-size: 18px;
     font-weight: normal;
-    padding:5px 8px 15px;
+    padding: 5px 8px 15px;
     border-bottom: 1px solid #efefef;
 }
+
 /*.ya-boxRight h3:before {
     content: "";
     position: absolute;
@@ -1132,45 +1173,54 @@ input:-webkit-autofill {
     top: 0;
     font-size: 16px;
     color: #666;
-    padding:5px 10px;
-    border-radius:3px;
+    padding: 5px 10px;
+    border-radius: 3px;
 }
+
 .ya-boxRight h3 .ya-add:hover,
-.ya-boxRight h3 .ya-more:hover{
+.ya-boxRight h3 .ya-more:hover {
     /*color:#1374DF;*/
-    background-color:#efefef;
+    background-color: #efefef;
 }
+
 .ya-boxRight h3 .ya-add {
     right: 70px;
 }
-.ya-boxRight h3 .ya-add i{
-    font-size:13px;
+
+.ya-boxRight h3 .ya-add i {
+    font-size: 13px;
 }
+
 .ya-todoList ul {
-    padding-top:10px;
+    padding-top: 10px;
 }
+
 .ya-todoList ul li {
-    overflow:hidden;
-    position:relative;
+    overflow: hidden;
+    position: relative;
 }
-.ya-todoList ul li:hover{
+
+.ya-todoList ul li:hover {
     background-color: #f9f9f9;
 }
-.ya-todoList ul li a{
+
+.ya-todoList ul li a {
     color: #222;
     display: inline-block;
-    overflow:hidden;
-    text-overflow:ellipsis;
+    overflow: hidden;
+    text-overflow: ellipsis;
     white-space: nowrap;
     line-height: 48px;
     max-width: 65%;
-    float:left;
+    float: left;
     font-size: 16px;
     margin-left: 48px;
 }
-.ya-todoList ul li a:hover{
+
+.ya-todoList ul li a:hover {
     color: #BD010F;
 }
+
 .ya-todoList .meta-list-arrow {
     float: left;
     color: #BD010F;
@@ -1179,21 +1229,23 @@ input:-webkit-autofill {
     margin-left: 5px;
     line-height: 46px;
 }
-.ya-todoList .meta-list-tag{
-    position:absolute;
-    left:5px;
-    top:15px;
-    padding:0px 4px 0 4px;
+
+.ya-todoList .meta-list-tag {
+    position: absolute;
+    left: 5px;
+    top: 15px;
+    padding: 0px 4px 0 4px;
     background-color: #BD010F;
     color: #fff;
     font-size: 12px;
-    border-radius:1px;
-    line-height:18px;
-    user-select:none;
+    border-radius: 1px;
+    line-height: 18px;
+    user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
 }
-.ya-todoList .meta-list-tag:after{
+
+.ya-todoList .meta-list-tag:after {
     content: '';
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
@@ -1202,46 +1254,57 @@ input:-webkit-autofill {
     right: -4px;
     top: 4px;
 }
-.ya-todoList .color-consul{
+
+.ya-todoList .color-consul {
     background-color: #E6B451;
 }
-.ya-todoList .color-consul:after{
+
+.ya-todoList .color-consul:after {
     border-left-color: #E6B451;
 }
-.ya-todoList .color-transfer{
+
+.ya-todoList .color-transfer {
     background-color: #DA742C;
 }
-.ya-todoList .color-transfer:after{
+
+.ya-todoList .color-transfer:after {
     border-left-color: #DA742C;
 }
-.ya-todoList .color-ask{
+
+.ya-todoList .color-ask {
     background-color: #269D81;
 }
-.ya-todoList .color-ask:after{
+
+.ya-todoList .color-ask:after {
     border-left-color: #269D81;
 }
-.ya-todoList .meta-list-time{
+
+.ya-todoList .meta-list-time {
     float: right;
     line-height: 48px;
     font-size: 14px;
     color: #666;
     margin-right: 10px;
 }
-.ya-todoList .meta-list-flag{
+
+.ya-todoList .meta-list-flag {
     float: left;
     line-height: 46px;
     margin-left: 10px;
 }
-.ya-todoList .meta-list-flag i{
+
+.ya-todoList .meta-list-flag i {
     display: inline-block;
     vertical-align: middle;
     width: 18px;
-    height:18px;
+    height: 18px;
     background: url("../imgs/qi.png") center no-repeat;
 }
-.ya-topic ul li a{
+
+.ya-topic ul li a {
     margin-left: 0;
 }
+
 .ya-myworkbench-box .ya-boxRight .ya-myPatients #ya-category {
     height: 30px;
     width: 100%;
@@ -1316,116 +1379,134 @@ input:-webkit-autofill {
     top: 21px;
     left: 110px;
     font-size: 16px;
-    width:44%;
+    width: 44%;
 }
-.ya-tab span{
-    float:left;
-    height:40px;
-    line-height:30px;
-    padding:0px 12px;
-    position:relative;
-    text-align:center;
-    cursor:pointer;
+
+.ya-tab span {
+    float: left;
+    height: 40px;
+    line-height: 30px;
+    padding: 0px 12px;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
 }
-.ya-tab span:hover{
-    color:#D35D59;
+
+.ya-tab span:hover {
+    color: #D35D59;
 }
-.ya-tab span:after{
-    content:'';
-    position:absolute;
-    left:0;
-    bottom:0;
-    height:2px;
-    width:100%;
-    background:#efefef;
+
+.ya-tab span:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: #efefef;
 }
-.ya-tab span.line{
-    font-size:14px;
-    color:#CCC;
-    width:8px;
-    padding:0;
-    cursor:default;
+
+.ya-tab span.line {
+    font-size: 14px;
+    color: #CCC;
+    width: 8px;
+    padding: 0;
+    cursor: default;
     line-height: 29px;
-    user-select:none;
+    user-select: none;
 }
-.ya-tab span.active{
-    color:#BD010F;
+
+.ya-tab span.active {
+    color: #BD010F;
 }
-.ya-tab span.active:after{
-    background:currentColor;
+
+.ya-tab span.active:after {
+    background: currentColor;
 }
-.ya-tab span.active:before{
+
+.ya-tab span.active:before {
     content: '';
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
     border-bottom: 4px solid currentColor;
     position: absolute;
     left: 50%;
-    margin-left:-4px;
+    margin-left: -4px;
     bottom: 2px;
 }
-.ya-tab-list ul li{
-    border-top:1px solid #f3f3f3;
-    text-align:justify;
+
+.ya-tab-list ul li {
+    border-top: 1px solid #f3f3f3;
+    text-align: justify;
 }
+
 .ya-tab-list ul li a {
-    display:block;
-    color:#333;
-    padding:13px 10px;
-    overflow:hidden;
-    position:relative;
+    display: block;
+    color: #333;
+    padding: 13px 10px;
+    overflow: hidden;
+    position: relative;
 }
-.ya-tab-list ul li a:hover{
-    background-color:#FAFAFA;
+
+.ya-tab-list ul li a:hover {
+    background-color: #FAFAFA;
 }
-.ya-tab-list ul li:first-child{
-    border-top:none;
+
+.ya-tab-list ul li:first-child {
+    border-top: none;
 }
-.ya-tab-list .ya-list-title{
-    color:#BD010F;
+
+.ya-tab-list .ya-list-title {
+    color: #BD010F;
     font-size: 16px;
-    display:block;
-    margin-bottom:5px;
-    padding-right:180px;
-    font-weight:bold;
-    overflow:hidden;
-    text-overflow:ellipsis;
+    display: block;
+    margin-bottom: 5px;
+    padding-right: 180px;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
     white-space: nowrap;
 }
-.ya-tab-list .ya-list-time{
-    position:absolute;
-    right:10px;
-    top:13px;
-    color:#666;
+
+.ya-tab-list .ya-list-time {
+    position: absolute;
+    right: 10px;
+    top: 13px;
+    color: #666;
     font-size: 16px;
 }
-.ya-tab-list .havedone .ya-list-state{
+
+.ya-tab-list .havedone .ya-list-state {
     color: #999;
 }
-.ya-tab-list .ya-list-state{
+
+.ya-tab-list .ya-list-state {
     position: absolute;
-    top:13px;
+    top: 13px;
     right: 164px;
     color: #18b408;
     font-size: 15px;
 }
-.ya-tab-list span em{
-    color:#16a93d;
-    font-weight:normal;
-    font-style:normal;
+
+.ya-tab-list span em {
+    color: #16a93d;
+    font-weight: normal;
+    font-style: normal;
     /* font-size: 16px; */
-    margin-right:5px;
+    margin-right: 5px;
 }
-.ya-tab-list span em i{
-    font-size:13px;
+
+.ya-tab-list span em i {
+    font-size: 13px;
 }
-.ya-tab-list p{
-    max-height:40px;
-    line-height:20px;
-    overflow:hidden;
+
+.ya-tab-list p {
+    max-height: 40px;
+    line-height: 20px;
+    overflow: hidden;
     font-size: 16px;
-    overflow:hidden;
-    text-overflow:ellipsis;
+    overflow: hidden;
+    text-overflow: ellipsis;
     white-space: nowrap;
     margin-top: 10px;
     padding-right: 267px;
@@ -1544,99 +1625,117 @@ input:-webkit-autofill {
 
 /*待办事项 end*/
 /*我的随访begin*/
-.ya-access dl{
-    position:relative;
-    padding:12px 10px;
-    border-top:1px solid #f3f3f3;
+.ya-access dl {
+    position: relative;
+    padding: 12px 10px;
+    border-top: 1px solid #f3f3f3;
 }
-.ya-access dl:first-child{
-    border-top:none;
+
+.ya-access dl:first-child {
+    border-top: none;
 }
-.ya-access dl dt{
-    position:absolute;
-    left:10px;
-    top:10px;
+
+.ya-access dl dt {
+    position: absolute;
+    left: 10px;
+    top: 10px;
 }
-.ya-access dl dt img{
-    display:block;
-    width:60px;
-    height:60px;
-    border-radius:50%;
+
+.ya-access dl dt img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
 }
-.ya-access dl dd{
+
+.ya-access dl dd {
     /* margin-left:70px; */
     overflow: hidden;
     white-space: nowrap;
     margin-top: 10px;
     font-size: 16px;
 }
-.ya-access dl dd a{
-    font-weight:bold;
-    float:left;
+
+.ya-access dl dd a {
+    font-weight: bold;
+    float: left;
     font-size: 16px;
     color: #BD010F;
 }
-.ya-access dl dd em{
+
+.ya-access dl dd em {
     font-size: 16px;
-    margin-left:15px;
-    font-weight:normal;
-    font-style:normal;
-    color:#808080;
+    margin-left: 15px;
+    font-weight: normal;
+    font-style: normal;
+    color: #808080;
 }
-.ya-access dl dd span{
-    float:right;
-    color:#007BC6;
-    margin-right:10px;
+
+.ya-access dl dd span {
+    float: right;
+    color: #007BC6;
+    margin-right: 10px;
     font-size: 16px;
 }
-.ya-access dl dd.ya-access-name{
-    padding:5px 0;
+
+.ya-access dl dd.ya-access-name {
+    padding: 5px 0;
 }
-.ya-access dl dd.ya-access-address{
-    color:#808080;
+
+.ya-access dl dd.ya-access-address {
+    color: #808080;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
 /*覆盖start*/
-.ya-patient dl dd{
-    padding-top:5px;
+.ya-patient dl dd {
+    padding-top: 5px;
 }
+
 .ya-patient dl dd em {
     font-size: 16px;
-    color:#666;
+    color: #666;
 }
-.ya-patient dl dd.ya-access-address{
-    color:#666;
-    margin-top:8px;
+
+.ya-patient dl dd.ya-access-address {
+    color: #666;
+    margin-top: 8px;
     font-size: 16px;
 }
+
 .ya-disease .ya-list-title {
-    padding-right:0;
-    display:inline;
+    padding-right: 0;
+    display: inline;
 }
+
 .ya-disease .ya-list-time {
-    position:static;
-    right:0;
-    top:0;
-    margin-left:10px;
+    position: static;
+    right: 0;
+    top: 0;
+    margin-left: 10px;
 }
 
 /*弹出框内表单样式*/
 .modal-form .pop-form ul li .pop-right {
     width: 65%;
 }
+
 .fancybox-skin {
-    background-color:#fff;
+    background-color: #fff;
 }
+
 /*会诊转诊表单*/
-.consultation{
+.consultation {
     min-height: 400px;
 }
+
 .consultation ul {
     margin-top: 30px;
     width: 720px;
 }
+
 /*覆盖end*/
 
 .ya-myfollowUp .ya-followDetail {
@@ -1674,7 +1773,8 @@ input:-webkit-autofill {
     color: darkgray;
 
 }
-.ya-myfollowUp .ya-followDetail .ya-followPlan{
+
+.ya-myfollowUp .ya-followDetail .ya-followPlan {
     float: left;
     width: 200px;
     overflow: hidden;
@@ -1682,13 +1782,15 @@ input:-webkit-autofill {
     white-space: nowrap;
 
 }
-.ya-myfollowUp .ya-followDetail .ya-followStage{
+
+.ya-myfollowUp .ya-followDetail .ya-followStage {
     float: right;
     width: 127px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
 .ya-myfollowUp .ya-followDetail .ya-followAddress {
     margin: 4px;
 }
@@ -1698,10 +1800,12 @@ input:-webkit-autofill {
 .ya-medicalRecord .ya-medicalDetails {
     margin: 5px 0;
 }
+
 .ya-medicalRecord .ya-medicalDetails span {
     float: left;
     margin: 0 10px;
 }
+
 .ya-medicalRecord .ya-medicalInfo {
     margin: 0 10px 17px;
     font-size: 14px;
@@ -1715,13 +1819,15 @@ input:-webkit-autofill {
 /*病历end*/
 
 /*我的患者 分页begin*/
-.ya-myworkbench-box .ya-boxRight .ya-patients-page{
-    width:100%;
+.ya-myworkbench-box .ya-boxRight .ya-patients-page {
+    width: 100%;
 }
-.ya-boxRight .ya-patients-page #ya-category{
+
+.ya-boxRight .ya-patients-page #ya-category {
     height: 60px;
 }
-.ya-boxRight .ya-patients-page #ya-category span{
+
+.ya-boxRight .ya-patients-page #ya-category span {
     float: left;
     width: 33.3%;
     line-height: 60px;
@@ -1729,58 +1835,70 @@ input:-webkit-autofill {
     font-size: 16px;
     cursor: pointer;
 }
-.ya-boxRight .ya-patients-page #ya-category span.select{
+
+.ya-boxRight .ya-patients-page #ya-category span.select {
     color: #fff;
     background: #D35D59;
 }
-.ya-boxRight .ya-patients-page #ya-con{
+
+.ya-boxRight .ya-patients-page #ya-con {
     margin-top: 20px;
 }
-.ya-boxRight .ya-patients-page #ya-con li.show{
+
+.ya-boxRight .ya-patients-page #ya-con li.show {
     display: block;
 }
-.ya-boxRight .ya-patients-page #ya-con li{
+
+.ya-boxRight .ya-patients-page #ya-con li {
     display: none;
 }
-.ya-boxRight .ya-patients-page #ya-con li dl{
+
+.ya-boxRight .ya-patients-page #ya-con li dl {
     margin: 15px 0;
 }
-.ya-boxRight .ya-patients-page #ya-con dt{
+
+.ya-boxRight .ya-patients-page #ya-con dt {
     float: left;
 }
-.ya-boxRight .ya-patients-page #ya-con dt img{
+
+.ya-boxRight .ya-patients-page #ya-con dt img {
     display: block;
     width: 120px;
     height: 120px;
-    margin:0 20px;
+    margin: 0 20px;
 
 }
+
 .ya-boxRight .ya-patients-page #ya-con .ya-info span,
 .ya-boxRight .ya-patients-page #ya-con .ya-address,
-.ya-boxRight .ya-patients-page #ya-con .ya-patient-prev{
+.ya-boxRight .ya-patients-page #ya-con .ya-patient-prev {
     font-size: 14px;
     color: #333;
 }
 
-.ya-boxRight .ya-patients-page #ya-con .ya-info span{
+.ya-boxRight .ya-patients-page #ya-con .ya-info span {
     font-weight: 700;
     margin-right: 40px;
     font-size: 16px;
 }
-.ya-boxRight .ya-patients-page #ya-con .ya-address{
+
+.ya-boxRight .ya-patients-page #ya-con .ya-address {
     margin: 10px 0;
     font-size: 16px;
 }
+
 /*我的患者 分页end*/
 
 /*我的会诊和我的转诊 分页begin*/
-.ya-myworkbench-box .ya-boxRight .ya-myConsult-page{
+.ya-myworkbench-box .ya-boxRight .ya-myConsult-page {
     width: 100%;
 }
-.ya-boxRight .ya-myConsult-page .ya-consultTitle{
+
+.ya-boxRight .ya-myConsult-page .ya-consultTitle {
     height: 60px;
 }
-.ya-boxRight .ya-myConsult-page .ya-consultTitle span{
+
+.ya-boxRight .ya-myConsult-page .ya-consultTitle span {
     float: left;
     width: 50%;
     line-height: 60px;
@@ -1788,19 +1906,24 @@ input:-webkit-autofill {
     font-size: 16px;
     cursor: pointer;
 }
-.ya-boxRight .ya-myConsult-page .ya-consultTitle span.select{
+
+.ya-boxRight .ya-myConsult-page .ya-consultTitle span.select {
     color: #fff;
     background: #D35D59;
 }
-.ya-boxRight .ya-myConsult-page .ya-consultCon{
+
+.ya-boxRight .ya-myConsult-page .ya-consultCon {
     margin-top: 20px;
 }
-.ya-boxRight .ya-myConsult-page .ya-consultCon li.show{
+
+.ya-boxRight .ya-myConsult-page .ya-consultCon li.show {
     display: block;
 }
-.ya-boxRight .ya-myConsult-page .ya-consultCon li{
+
+.ya-boxRight .ya-myConsult-page .ya-consultCon li {
     display: none;
 }
+
 .ya-boxRight .ya-myConsult-page .ya-consultCon .ya-list-arrow,
 .ya-boxRight .ya-myConsult-page .ya-consultCon .ya-list-consult,
 .ya-boxRight .ya-myConsult-page .ya-consultCon .ya-list-time {
@@ -1808,104 +1931,128 @@ input:-webkit-autofill {
     font-size: 14px;
     line-height: 45px;
 }
-.ya-boxRight .ya-myConsult-page .ya-consultCon .ya-list-time{
+
+.ya-boxRight .ya-myConsult-page .ya-consultCon .ya-list-time {
     float: right;
 }
-.ya-boxRight .ya-myConsult-page .ya-consultCon .ya-describe{
+
+.ya-boxRight .ya-myConsult-page .ya-consultCon .ya-describe {
     width: 100%;
     font-size: 14px;
     line-height: 45px;
     white-space: normal;
 }
+
 /*我的会诊和我的转诊 分页end*/
 /*待办事项 分页begin*/
-.ya-todolist-page .ya-todolistBox{
+.ya-todolist-page .ya-todolistBox {
     height: 50px;
     font-size: 14px;
     line-height: 50px;
 }
-.ya-todolist-page .ya-todolistBox .ya-todolistTime{
+
+.ya-todolist-page .ya-todolistBox .ya-todolistTime {
     float: right;
 }
+
 /*待办事项 分页end*/
 /*我的随访 分页begin*/
-.ya-myworkbench-box .ya-boxRight .ya-myfollowup-page{
+.ya-myworkbench-box .ya-boxRight .ya-myfollowup-page {
     width: 100%;
 }
-.ya-boxRight .ya-myfollowup-page .ya-followDetail{
+
+.ya-boxRight .ya-myfollowup-page .ya-followDetail {
     margin-top: 20px;
 }
-.ya-boxRight .ya-myfollowup-page .ya-followDetail li{
+
+.ya-boxRight .ya-myfollowup-page .ya-followDetail li {
     margin: 20px 0;
 }
-.ya-boxRight .ya-myfollowup-page .ya-followDetail dl dt{
+
+.ya-boxRight .ya-myfollowup-page .ya-followDetail dl dt {
     float: left;
 }
-.ya-boxRight .ya-myfollowup-page .ya-followDetail dl dt img{
+
+.ya-boxRight .ya-myfollowup-page .ya-followDetail dl dt img {
     display: block;
     width: 120px;
     height: 120px;
     margin: 0 20px;
 }
-.ya-boxRight .ya-myfollowup-page .ya-followDetail dl dd{
+
+.ya-boxRight .ya-myfollowup-page .ya-followDetail dl dd {
     font-size: 14px;
     color: #333;
     line-height: 30px;
-    margin-left:20px;
+    margin-left: 20px;
 }
-.ya-boxRight .ya-myfollowup-page  .ya-followDetail  li span {
+
+.ya-boxRight .ya-myfollowup-page .ya-followDetail li span {
 
     margin-right: 40px;
 }
-.ya-boxRight .ya-myfollowup-page  .ya-followDetail  .ya-followName,
-.ya-boxRight .ya-myfollowup-page  .ya-followDetail  .ya-followAge,
-.ya-boxRight .ya-myfollowup-page  .ya-followDetail  .ya-followTime{
+
+.ya-boxRight .ya-myfollowup-page .ya-followDetail .ya-followName,
+.ya-boxRight .ya-myfollowup-page .ya-followDetail .ya-followAge,
+.ya-boxRight .ya-myfollowup-page .ya-followDetail .ya-followTime {
     font-weight: 700;
 }
-.ya-boxRight .ya-myfollowup-page  .ya-followDetail  .ya-followAddress{
+
+.ya-boxRight .ya-myfollowup-page .ya-followDetail .ya-followAddress {
     color: darkgray;
 }
-.ya-boxRight .ya-myfollowup-page  .ya-followDetail  .ya-followPlan,
-.ya-boxRight .ya-myfollowup-page  .ya-followDetail  .ya-followStage{
+
+.ya-boxRight .ya-myfollowup-page .ya-followDetail .ya-followPlan,
+.ya-boxRight .ya-myfollowup-page .ya-followDetail .ya-followStage {
 
 }
+
 /*我的随访 分页end*/
 /*病历 分页begin*/
-.ya-myworkbench-box .ya-boxRight .ya-medicalrecord-page{
+.ya-myworkbench-box .ya-boxRight .ya-medicalrecord-page {
     width: 100%;
 }
-.ya-myworkbench-box .ya-boxRight .ya-medicalrecord-page a{
+
+.ya-myworkbench-box .ya-boxRight .ya-medicalrecord-page a {
     color: #333;
 }
-.ya-boxRight .ya-medicalrecord-page .ya-medicalDetails{
+
+.ya-boxRight .ya-medicalrecord-page .ya-medicalDetails {
     margin-top: 20px;
     font-size: 14px;
     line-height: 40px;
 }
-.ya-boxRight .ya-medicalrecord-page .ya-medicalDetails span{
+
+.ya-boxRight .ya-medicalrecord-page .ya-medicalDetails span {
     font-weight: 700;
     margin-right: 40px;
 }
-.ya-boxRight .ya-medicalrecord-page .ya-medicalInfo{
+
+.ya-boxRight .ya-medicalrecord-page .ya-medicalInfo {
     font-size: 14px;
 }
-.ya-boxRight .ya-medicalrecord-page .ya-medicalInfo span{
+
+.ya-boxRight .ya-medicalrecord-page .ya-medicalInfo span {
     font-size: 14px;
     color: #D35D59;
 }
+
 /*病历 分页end*/
 /*我的文件夹 分页begin*/
 .ya-myworkbench-box .ya-boxRight .ya-myflie-page {
     width: 100%;
 }
-.ya-boxRight .ya-myflie-page #ya-category{
+
+.ya-boxRight .ya-myflie-page #ya-category {
     height: 50px;
     line-height: 50px;
 }
+
 .ya-boxRight .ya-myflie-page #ya-category span.select {
     color: #fff;
     background: #18c0ec;
 }
+
 .ya-boxRight .ya-myflie-page #ya-category span {
     float: left;
     width: 33.3%;
@@ -1913,167 +2060,223 @@ input:-webkit-autofill {
     text-align: center;
     font-size: 16px;
 }
-.ya-boxRight .ya-myflie-page #ya-con{
+
+.ya-boxRight .ya-myflie-page #ya-con {
     margin-top: 20px;
     font-size: 14px;
 }
-.ya-boxRight .ya-myflie-page #ya-con li.show{
+
+.ya-boxRight .ya-myflie-page #ya-con li.show {
     display: block;
 }
-.ya-boxRight .ya-myflie-page #ya-con li{
+
+.ya-boxRight .ya-myflie-page #ya-con li {
     display: none;
 }
-.ya-boxRight .ya-myflie-page #ya-con li div{
+
+.ya-boxRight .ya-myflie-page #ya-con li div {
     line-height: 50px;
     color: #333;
 }
-.ya-boxRight .ya-myflie-page #ya-con li div .ya-todolistTitle{
+
+.ya-boxRight .ya-myflie-page #ya-con li div .ya-todolistTitle {
     color: #333;
 
 }
-.ya-boxRight .ya-myflie-page #ya-con li div .ya-todolistTime{
+
+.ya-boxRight .ya-myflie-page #ya-con li div .ya-todolistTime {
     float: right;
 }
+
 /*我的文件夹 分页end*/
 /*患者详情 begin*/
-.ya-boxRight .ya-patientsdetail-page #ya-con{
+.ya-boxRight .ya-patientsdetail-page #ya-con {
     margin: 10px 0;
     border-bottom: 1px solid #DEDEDE;
 }
-.ya-boxRight .ya-patientsdetail-page #ya-con img{
+
+.ya-boxRight .ya-patientsdetail-page #ya-con img {
     float: left;
     width: 120px;
     height: 120px;
     margin: 0 20px;
 }
-.ya-boxRight .ya-patientsdetail-page #ya-con .ya-detail{
+
+.ya-boxRight .ya-patientsdetail-page #ya-con .ya-detail {
     overflow: hidden;
     color: #333;
     font-size: 14px;
     line-height: 30px;
 }
-.ya-boxRight .ya-patientsdetail-page .ya-prevpatient{
+
+.ya-boxRight .ya-patientsdetail-page .ya-prevpatient {
 
 }
-.ya-boxRight .ya-patientsdetail-page .ya-prevpatient h4{
+
+.ya-boxRight .ya-patientsdetail-page .ya-prevpatient h4 {
     font-size: 16px;
     color: #D35D59;
     font-weight: 400;
-    margin-left:20px ;
+    margin-left: 20px;
 }
-.ya-boxRight .ya-patientsdetail-page .ya-prevpatient ul{
+
+.ya-boxRight .ya-patientsdetail-page .ya-prevpatient ul {
     margin-left: 20px;
     margin-top: 10px;
     color: #333;
     font-size: 14px;
 }
-.ya-boxRight .ya-patientsdetail-page .ya-prevpatient ul li{
+
+.ya-boxRight .ya-patientsdetail-page .ya-prevpatient ul li {
     margin-top: 10px;
     border-bottom: 1px dashed #f5f5f5;
     font-size: 14px;
 }
-.ya-boxRight .ya-patientsdetail-page .ya-prevpatient ul li span{
+
+.ya-boxRight .ya-patientsdetail-page .ya-prevpatient ul li span {
     margin-right: 30px;
 }
-.ya-boxRight .ya-patientsdetail-page .ya-prevpatient ul .ya-describeword{
-    margin:10px 0;
+
+.ya-boxRight .ya-patientsdetail-page .ya-prevpatient ul .ya-describeword {
+    margin: 10px 0;
 }
-.ya-boxRight .ya-patientsdetail-page .ya-prevpatient ul .ya-describeimg img{
+
+.ya-boxRight .ya-patientsdetail-page .ya-prevpatient ul .ya-describeimg img {
     float: left;
     width: 80px;
     height: 80px;
     margin: 10px 30px;
 }
+
 /*患者详情 end*/
 /*病历详情 begin*/
-.ya-boxRight #ya-medicalrecorddetail{
+.ya-boxRight #ya-medicalrecorddetail {
 
 }
-.ya-boxRight #ya-medicalrecorddetail #ya-con{
+
+.ya-boxRight #ya-medicalrecorddetail #ya-con {
     margin: 12px 20px;
 }
-
 
 /*病历详情 end*/
 
 /*文字颜色闪烁*/
-.unread,.unread a{
+.unread, .unread a {
     animation: blink .75s linear infinite;
     /* 其它浏览器兼容性前缀 */
     -webkit-animation: blink .75s linear infinite;
     -moz-animation: blink .75s linear infinite;
     -o-animation: blink .75s linear infinite;
 }
-@keyframes blink{
-    0%{color: #21c643;}
-    50%{color: #fb9609;}
-    100%{color: #222;}
+
+@keyframes blink {
+    0% {
+        color: #21c643;
+    }
+    50% {
+        color: #fb9609;
+    }
+    100% {
+        color: #222;
+    }
 }
+
 @-webkit-keyframes blink {
-    0%{color: #21c643;}
-    50%{color: #fb9609;}
-    100%{color: #222;}
+    0% {
+        color: #21c643;
+    }
+    50% {
+        color: #fb9609;
+    }
+    100% {
+        color: #222;
+    }
 }
 
 @-moz-keyframes blink {
-    0%{color: #21c643;}
-    50%{color: #fb9609;}
-    100%{color: #222;}
+    0% {
+        color: #21c643;
+    }
+    50% {
+        color: #fb9609;
+    }
+    100% {
+        color: #222;
+    }
 }
 
 @-ms-keyframes blink {
-    0%{color: #21c643;}
-    50%{color: #fb9609;}
-    100%{color: #222;}
+    0% {
+        color: #21c643;
+    }
+    50% {
+        color: #fb9609;
+    }
+    100% {
+        color: #222;
+    }
 }
 
 @-o-keyframes blink {
-    0%{color: #21c643;}
-    50%{color: #fb9609;}
-    100%{color: #222;}
+    0% {
+        color: #21c643;
+    }
+    50% {
+        color: #fb9609;
+    }
+    100% {
+        color: #222;
+    }
 }
+
 /*响应式*/
 @media screen and (max-width: 1400px) {
 
 }
+
 /*登录begin*/
 
-.head_top .head_tool{
+.head_top .head_tool {
     line-height: 80px;
     color: #fff;
     font-size: 16px;
 }
 
-.login-wrap{
+.login-wrap {
     background-image: url("../imgs/big_banner.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto 100%;
     height: 380px;
 }
-.login-box .login-form{
+
+.login-box .login-form {
     width: 300px;
     height: 380px;
     position: absolute;
     right: 0px;
-    top:0;
+    top: 0;
     background: #fcfcfc;
     padding: 20px;
     color: #B4010F;
 }
-.login-box .login-form h3{
+
+.login-box .login-form h3 {
     line-height: 40px;
     border-bottom: 1px solid #e5e5e5;
     font-size: 18px;
 }
-.login-form ul{
+
+.login-form ul {
     margin-top: 20px;
 }
-.login-form ul li{
+
+.login-form ul li {
     margin-top: 15px;
     position: relative;
 }
-.login-form ul li i{
+
+.login-form ul li i {
     float: left;
     width: 45px;
     height: 45px;
@@ -2083,13 +2286,15 @@ input:-webkit-autofill {
     border-right: none;
     font-size: 18px;
 }
-.login-form ul li input{
+
+.login-form ul li input {
     float: left;
     width: 215px;
     height: 45px;
     color: #555;
 }
-#get-confirmcode{
+
+#get-confirmcode {
     position: absolute;
     right: 3px;
     top: 3px;
@@ -2099,15 +2304,18 @@ input:-webkit-autofill {
     cursor: pointer;
 
 }
-.login-form ul li span{
+
+.login-form ul li span {
     float: left;
-    font-size:12px;
+    font-size: 12px;
 }
-.login-form ul li a:nth-child(1){
+
+.login-form ul li a:nth-child(1) {
     float: right;
-    font-size:12px;
+    font-size: 12px;
 }
-.login-form .login-button{
+
+.login-form .login-button {
     display: block;
     line-height: 40px;
     text-align: center;
@@ -2117,69 +2325,82 @@ input:-webkit-autofill {
     cursor: pointer;
     color: #fff;
 }
-.login-form .info{
+
+.login-form .info {
     color: red;
-    height:20px;
+    height: 20px;
     text-align: center;
     cursor: pointer;
     font-size: 14px;
 }
-.login-footer,.login-footer .meta-copyright{
+
+.login-footer, .login-footer .meta-copyright {
     background: #fff;
 }
-.login-footer .meta-siteinfo{
+
+.login-footer .meta-siteinfo {
     /*background: #fff;*/
 }
-.login-footer .meta-siteinfo{
+
+.login-footer .meta-siteinfo {
     color: #000;
 }
+
 /*登录end*/
 /*注册begin*/
-.head_top .head_register{
+.head_top .head_register {
     position: absolute;
     left: 485px;
     top: 20px;
 }
-.head_top .head_login a{
+
+.head_top .head_login a {
     font-size: 16px;
 }
-#register-content{
+
+#register-content {
     margin-top: 30px;
     border-bottom: 1px solid #DEDEDE;
 }
-#register-content .main{
+
+#register-content .main {
     margin: 50px auto 60px;
     width: 960px;
 }
-.register-form{
+
+.register-form {
     width: 400px;
     float: left;
 }
-.register-form ul li{
+
+.register-form ul li {
     width: 398px;
     height: 52px;
     position: relative;
     margin-bottom: 32px;
 }
-.register-form ul li label{
+
+.register-form ul li label {
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     float: left;
     width: 90px;
     height: 52px;
     line-height: 52px;
 }
-.register-form ul li input{
+
+.register-form ul li input {
     position: absolute;
-    top:0;
+    top: 0;
     right: 0;
     width: 310px;
     height: 52px;
     line-height: 52px;
     color: #555;
 }
-.register-form ul li span{
+
+.register-form ul li span {
     position: absolute;
     bottom: -26px;
     left: 0;
@@ -2187,7 +2408,8 @@ input:-webkit-autofill {
     font-size: 12px;
     /*visibility: hidden;*/
 }
-.register-form ul li .get-phonecode{
+
+.register-form ul li .get-phonecode {
     position: absolute;
     right: 3px;
     top: 3px;
@@ -2199,12 +2421,15 @@ input:-webkit-autofill {
     padding: 0;
     cursor: pointer;
 }
-.register-form .agreement{
+
+.register-form .agreement {
     line-height: 20px;
 }
-.register-form .agreement input{
+
+.register-form .agreement input {
     vertical-align: top;
 }
+
 .register-btn {
     display: block;
     line-height: 54px;
@@ -2216,21 +2441,24 @@ input:-webkit-autofill {
     margin-top: 32px;
     text-align: center;
 }
-.register-btn.disabled{
+
+.register-btn.disabled {
     background: #ccc;
     cursor: not-allowed;
 }
-.form-bg{
+
+.form-bg {
     float: right;
 }
 
 /*注册end*/
 /*流程图start*/
 
-.intro-flow{
-    padding:50px 0;
+.intro-flow {
+    padding: 50px 0;
 }
-.intro-list-left{
+
+.intro-list-left {
     float: left;
     text-align: center;
     width: 15%;
@@ -2240,43 +2468,51 @@ input:-webkit-autofill {
     color: #333333;
     padding: 8px;
 }
-.consul_advice .text-label{
+
+.consul_advice .text-label {
     float: left;
     text-align: right;
     width: 20%;
     font-size: 16px;
     margin-right: 60px;
 }
-.consul_advice .pop-right{
+
+.consul_advice .pop-right {
     float: left;
     width: 64%;
 }
-.consul_form .consul_advice{
+
+.consul_form .consul_advice {
     margin-top: 20px;
 }
-.consul_form .consul_transfer{
+
+.consul_form .consul_transfer {
     padding-left: 152px;
     padding-top: 30px;
     font-size: 16px;
     position: relative;
     margin-bottom: 20px;
 }
+
 /*会诊页面 是否转为转诊*/
-.consul_form .consul_transfer #transferConsul{
+.consul_form .consul_transfer #transferConsul {
     /*position: absolute;*/
     /*bottom: 10px;*/
     /*left: 157px;*/
     width: 1000px;
-    padding-top:20px;
+    padding-top: 20px;
 }
+
 .consul_form .consul_transfer .pop-form
-.consul_form .consul_transfer span{
+.consul_form .consul_transfer span {
     font-weight: 700;
 }
-.consul_form .consul_transfer label{
+
+.consul_form .consul_transfer label {
     margin: 0 40px;
 }
-.intro-list-right{
+
+.intro-list-right {
     float: left;
     width: 85%;
     text-align: left;
@@ -2284,7 +2520,8 @@ input:-webkit-autofill {
     background: url(../imgs/ling-bg.jpg) repeat-y 13px;
     position: relative;
 }
-.intro-list-right p{
+
+.intro-list-right p {
     position: absolute;
     right: 90px;
     cursor: pointer;
@@ -2292,29 +2529,34 @@ input:-webkit-autofill {
     font-size: 16px;
 
 }
-.intro-list-right p.consulmore{
+
+.intro-list-right p.consulmore {
     top: 10px;
     display: none;
 }
-.intro-list-right p.consulretract{
+
+.intro-list-right p.consulretract {
     bottom: 0px;
 }
+
 .intro-list-right p.consulmore.active {
     display: block;
 }
-.intro-list-right .detailmore{
+
+.intro-list-right .detailmore {
     display: none;
 }
-.intro-list-right .detailmore.active{
+
+.intro-list-right .detailmore.active {
     display: block;
 }
 
-.intro-list-last .intro-list-right{
+.intro-list-last .intro-list-right {
     padding-bottom: 0px;
     background: url(../imgs/ling-bg.jpg) repeat-y 13px;
 }
 
-.intro-list-right>span{
+.intro-list-right > span {
     float: left;
     background: url(../imgs/circle.png);
     width: 36px;
@@ -2327,7 +2569,8 @@ input:-webkit-autofill {
     display: block;
 
 }
-.intro-list-content{
+
+.intro-list-content {
     float: right;
     border: 1px solid #7ce06d;
     border-radius: 6px;
@@ -2341,42 +2584,49 @@ input:-webkit-autofill {
     width: 85%;
     line-height: 24px;
 }
-.intro-list-content:before,.intro-list-content:after{
-    content:"";
-    border-width:9px;
-    position:absolute;
-    left:-18px;
-    border-style:solid dashed dashed;
-    border-color:transparent #A8E0DC transparent transparent;
+
+.intro-list-content:before, .intro-list-content:after {
+    content: "";
+    border-width: 9px;
+    position: absolute;
+    left: -18px;
+    border-style: solid dashed dashed;
+    border-color: transparent #A8E0DC transparent transparent;
 }
-.intro-list-content:after{
-    left:-17px;
+
+.intro-list-content:after {
+    left: -17px;
     top: 10px;
-    border-color:transparent #e3ffb3 transparent transparent;
+    border-color: transparent #e3ffb3 transparent transparent;
 }
-.intro-list-active>.intro-list-left{
+
+.intro-list-active > .intro-list-left {
     color: #ff6600;
 
 }
-.intro-list-active>.intro-list-right>span{
+
+.intro-list-active > .intro-list-right > span {
     background: url(../imgs/circle-active.png);
 }
 
-.intro-list-active .intro-list-content{
+.intro-list-active .intro-list-content {
     border-color: #FFB48F;
-    background-color:#FFF8F0;
-}
-.intro-list-active .intro-list-content:before,.intro-list-active .intro-list-content:after{
-    border-color:transparent #FFB48F transparent transparent;
-}
-.intro-list-active .intro-list-content:after{
-    border-color:transparent #FFF8F0 transparent transparent;
+    background-color: #FFF8F0;
 }
 
-.footer-btn{
+.intro-list-active .intro-list-content:before, .intro-list-active .intro-list-content:after {
+    border-color: transparent #FFB48F transparent transparent;
+}
+
+.intro-list-active .intro-list-content:after {
+    border-color: transparent #FFF8F0 transparent transparent;
+}
+
+.footer-btn {
     padding: 30px 0 50px;
 }
-.common-btn span{
+
+.common-btn span {
     padding: 0 30px;
     line-height: 55px;
     color: #ffffff;
@@ -2385,130 +2635,155 @@ input:-webkit-autofill {
     min-width: 250px;
     margin-left: 280px;
 }
-.common-btn span:hover{
+
+.common-btn span:hover {
     background: #00B757;
 }
-.common-btn span:active{
+
+.common-btn span:active {
     background: #009145;
 }
-.footer-center{
+
+.footer-center {
     text-align: center;
 }
-.footer-center span{
+
+.footer-center span {
     min-width: 200px;
     margin: 0px 10px;
 }
-.apply-finish{
+
+.apply-finish {
     text-align: center;
     font-family: 微软雅黑;
 }
-.apply-finish-header{
-    padding-top:50px;
+
+.apply-finish-header {
+    padding-top: 50px;
 }
-.apply-finish-msg{
+
+.apply-finish-msg {
     font-weight: bold;
     font-size: 24px;
     color: #009899;
     margin-top: 30px;
 }
 
-.apply-finish-footer{
+.apply-finish-footer {
     margin-top: 100px;
 }
-.apply-finish-footer p{
+
+.apply-finish-footer p {
     font-size: 16px;
     font-weight: bold;
     color: #4C4C4C;
-    letter-spacing:1px;
+    letter-spacing: 1px;
     line-height: 45px;
 }
-.apply-finish-footer p span{
+
+.apply-finish-footer p span {
     color: red;
 }
-.apply-finish-footer p a{
+
+.apply-finish-footer p a {
     color: #009999;
 }
-.waitexpert-con{
+
+.waitexpert-con {
     text-align: center;
     padding: 20px 0 10px;
 }
-.waitexpert-con i{
+
+.waitexpert-con i {
     font-size: 100px;
     color: #00A650;
 }
-.waitexpert-con span{
+
+.waitexpert-con span {
     display: block;
     font-size: 24px;
     color: #00A650;
     margin-top: 30px;
 }
-.waitexpert-btn{
+
+.waitexpert-btn {
     position: absolute;
     margin-top: 64px;
     margin-left: 300px;
 }
-.waitexpert-btn span{
+
+.waitexpert-btn span {
     float: left;
-    margin:0 50px;
+    margin: 0 50px;
     background: #128f04;
     font-size: 18px;
     line-height: 50px;
 }
 
 .waitexpert-btn a:hover,
-.waitexpert-btn span:hover{
+.waitexpert-btn span:hover {
     background: #13b405;
 }
 
 /*流程图end*/
 /*时间轴 病历start*/
-.detailmore{
+.detailmore {
     margin-top: 75px;
     margin-left: 127px;
     width: 80%;
     font-size: 15px;
     line-height: 36px;
 }
-.detailmore b{
+
+.detailmore b {
     color: #666;
     float: left;
     min-width: 110px;
 }
-.detailmore span.active{
+
+.detailmore span.active {
     color: #009647;
 }
-.detailmore span{
+
+.detailmore span {
     /* float: right; */
     float: left;
     width: 85%;
 }
-.detailmore img{
+
+.detailmore img {
     width: 100px;
 }
+
 /*时间轴 病历end*/
 /*同意和不同意的弹出框样式*/
-.modal_consul .pop-form ul{
+.modal_consul .pop-form ul {
     padding-top: 30px;
 }
+
 /*导航条样式*/
 .step-body {
     position: relative;
 }
+
 .step-header {
     width: 100%;
     padding: 20px 0 30px;
     display: none;
 }
+
 .step-header ul {
     padding: 0;
     overflow: hidden;
 }
+
 .step-header li {
     list-style-type: none;
     text-align: center;
     float: left;
     position: relative;
 }
+
 .step-header li p {
     margin-top: 18px;
     font-weight: bold;
@@ -2516,6 +2791,7 @@ input:-webkit-autofill {
     font-family: 微软雅黑;
     color: #999999;
 }
+
 .step-header li span {
     position: relative;
     margin: 0 auto;
@@ -2528,16 +2804,20 @@ input:-webkit-autofill {
     background: url(../imgs/cell.png) center top no-repeat;
     display: block;
 }
+
 .step-header li.step-active span {
     background: url(../imgs/cell-active.png) center top no-repeat;
 }
+
 .step-header li.step-active p {
     color: #333333;
 }
+
 .step-bar, .step-bar-active {
     height: 13px;
     border-radius: 12px;
 }
+
 .step-bar {
     width: 100%;
     background: url(../imgs/bar-bg.png);
@@ -2546,33 +2826,37 @@ input:-webkit-autofill {
     z-index: -1;
     top: 26px;
 }
+
 .step-bar-active {
     width: 0px;
     background: url(../imgs/bar-bg-active.png);
 
 }
+
 .step-list {
     display: none;
     clear: both;
 }
 
 /*分享微信弹出的样式*/
-.bd_weixin_popup{
+.bd_weixin_popup {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
 }
 
 /*医务工作台*/
-.ya-medicalwork ul li{
+.ya-medicalwork ul li {
     height: 90px;
     margin-bottom: 20px;
     border-bottom: 1px solid #efefef;
 }
-.ya-medicalwork ul li:hover .meta-list-name{
+
+.ya-medicalwork ul li:hover .meta-list-name {
     background: #f9f9f9;
 }
-.ya-medicalwork .meta-list-name{
+
+.ya-medicalwork .meta-list-name {
     position: absolute;
     left: 5px;
     top: 15px;
@@ -2589,7 +2873,7 @@ input:-webkit-autofill {
     text-align: center;
 }
 
-.progressbox{
+.progressbox {
     position: relative;
     margin-top: 23px;
     margin-left: 110px;
@@ -2605,7 +2889,8 @@ input:-webkit-autofill {
     position: relative;
     width: 170px;
 }
-.progressbox .progress-step .circle{
+
+.progressbox .progress-step .circle {
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -2613,13 +2898,16 @@ input:-webkit-autofill {
     position: absolute;
     top: 0;
 }
-.progressbox .startstep .circle{
+
+.progressbox .startstep .circle {
     left: -3px;
 }
-.progressbox .endstep .circle{
+
+.progressbox .endstep .circle {
     right: -3px;
 }
-.progressbox .progress-step span{
+
+.progressbox .progress-step span {
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -2631,32 +2919,37 @@ input:-webkit-autofill {
     color: #fff;
     z-index: 99;
 }
-.progressbox .progress-step:nth-child(5) span{
-    right:24%;
+
+.progressbox .progress-step:nth-child(5) span {
+    right: 24%;
 }
 
-.progressbox .progress-step.active{
+.progressbox .progress-step.active {
     /*background: #00DD69;*/
 }
-.progressbox .progress-step.active .circle{
+
+.progressbox .progress-step.active .circle {
     background: #00DD69;
 }
-.progressbox .progress-step.active span{
+
+.progressbox .progress-step.active span {
     background: #009647;
     z-index: 99;
 }
-.progressbox .progress-step p{
+
+.progressbox .progress-step p {
     margin-top: 28px;
     font-size: 14px;
     color: #999999;
     position: absolute;
-    right:58px;
+    right: 58px;
 }
 
-.progressbox .progress-step.active p{
+.progressbox .progress-step.active p {
     color: #333;
 }
-.ya-todoList .next-step{
+
+.ya-todoList .next-step {
     width: 65px;
     cursor: pointer;
     background: #00DD69;
@@ -2670,15 +2963,18 @@ input:-webkit-autofill {
     border: none;
     outline: none;
 }
-.progressbox ul li.active{
+
+.progressbox ul li.active {
     background: #00DD69;
 }
-.progressbox ul li.active span{
+
+.progressbox ul li.active span {
     background: #009647;
 }
-.progress{
+
+.progress {
     position: absolute;
-    top:0px;
+    top: 0px;
     left: 0px;
     height: 10px;
     background: #00DD69;
@@ -2686,22 +2982,28 @@ input:-webkit-autofill {
     /*background: red;*/
     /*width: 700px;*/
 }
+
 /*demo.htmk的样式*/
- .meta-content-images{
+.meta-content-images {
     width: 100%;
-     min-height: 412px;
-     background-color: #f5f5f5;
- }
-.meta-content-images img{
+    height: 830px;
+    background-color: #f5f5f5;
+}
+
+.meta-content-images img {
     display: block;
     width: 49%;
-    margin:20px auto;
+    margin: 20px auto;
 }
-.meta-content-images img:nth-of-type(1){
+
+.meta-content-images img:nth-child(even) {
+    float: right;
+}
+
+.meta-content-images img:nth-child(odd) {
     float: left;
 }
-.meta-content-images img:nth-of-type(2){
-    float: right;
-
+#demoFooter{
+    margin-top: 0px;
 }
 

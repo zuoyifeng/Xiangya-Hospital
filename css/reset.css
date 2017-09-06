@@ -227,3 +227,6 @@ table {
 ul, ol, dl {
     list-style-type: none;
 }
+.clear{
+    clear: both;
+}

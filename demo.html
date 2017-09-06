@@ -23,12 +23,19 @@
             <div class="head_logo">
                 <img src="imgs/logo.png"/>
             </div>
-            <div class="head_tool" id="headAccount"></div>
+            <div class="head_tool" id="headAccount">
+                欢迎您 <a class="userlogin">admin</a>,
+                <span class="quit">退出</span>
+            </div>
         </div>
     </div>
     <div class="head_menu">
-        <ul class="container clearfix" id="nav">
+        <ul class="container clear" id="nav">
             <li><a href="index.html">首页</a></li>
+            <li class="menu_line"></li>
+            <li><a href="html/account/todolist.html">我的工作台</a></li>
+            <li class="menu_line"></li>
+            <li><a href="html/account/consultation.html">会诊/转诊</a></li>
             <li class="menu_line"></li>
             <li><a href="http://www.hancloudclinic.com:8084/FormParser">大数据平台</a></li>
             <li class="menu_line"></li>
@@ -41,16 +48,14 @@
     </div>
 </header>
 <div class="meta-banner-fluid"></div>
-<div class="meta-content-images clearfix">
+<div class="meta-content-images clear">
     <img src="imgs/01.jpg" alt="">
     <img src="imgs/02.jpg" alt="">
-</div>
-<div class="meta-content-images clearfix">
     <img src="imgs/03.jpg" alt="">
     <img src="imgs/04.jpg" alt="">
 </div>
 <!--<div class="container"></div>-->
-<footer class="meta-footer">
+<footer class="meta-footer" id="demoFooter">
     <div class="container">
         <div class="meta-copyright">
             <div class="meta-sitemap">
@@ -89,7 +94,7 @@
 </footer>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/superslide.min.js"></script>
-<script type="text/javascript" src="js/common.js"></script>
+<!--<script type="text/javascript" src="js/common.js"></script>-->
 <script type="text/javascript">
     $(function () {
         //首页导航
@@ -100,7 +105,7 @@
 
         //取消common.js绑定事件，新建新的事件处理
         $('#headAccount').off("click", "span.quit").on("click", "span.quit",function(e){
-            clearUserid();
+//            clearUserid();
             window.location.reload(true);
         });
 
@@ -112,6 +117,14 @@
             vis: 4,
             interTime: 50
         });
+
+        //点击退出
+        $('#headAccount').on('click', 'span.quit', function () {
+//            clearUserid();
+            // window.location.reload(true);
+//            $('#headAccount').html('<a href="login.html"><i class="fa fa-user"></i> 登录</a><a href="reg.html"><i class="fa fa-user-plus"></i> 注册</a>');
+            //window.location.href = "./login.html";
+        })
     })
 </script>
 </body>
